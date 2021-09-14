@@ -11,7 +11,7 @@
     "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
     "prepare": "husky install",
     "lint": "npm run lint:script && npm run lint:style",
-    "test": "jest --passWithNoTests",
+    "test": "jest",
     "storybook": "npx nuxt storybook"
   },
   "lint-staged": {
