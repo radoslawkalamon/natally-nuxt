@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import Logo from '@/components/components/Logo/Logo.vue'
+import Logo from './Logo.vue'
 
 describe('Components/Logo', () => {
   test('is renderable', () => {

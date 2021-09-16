@@ -1,13 +1,13 @@
-import Logo from './Logo.vue';
+import Logo from './Logo.vue'
 
 export default {
   title: 'Components/Logo',
   component: Logo,
-};
+}
 
 export const Default = () => ({
   components: {
-    Logo
+    Logo,
   },
   template: '<Logo />',
-});
+})
