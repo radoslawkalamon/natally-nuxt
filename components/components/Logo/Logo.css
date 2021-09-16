@@ -1,6 +1,6 @@
 .logo {
   box-sizing: border-box;
   display: block;
-  fill: var(--color-base);
+  fill: var(--color-text-base);
   font-size: 0;
 }

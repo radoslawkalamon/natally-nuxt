@@ -1,3 +1,49 @@
 body {
-  --color-base: #000;
+  /* Colors */
+  --color-white: rgba(255,255,255,1.0);
+  --color-off-white-1: rgba(249,249,249,1.0);
+  --color-off-white-2: rgba(243,243,243,1.0);
+  --color-off-white-transparent: rgba(243,243,243,0.15);
+  --color-black: rgba(0,0,0,1.0);
+  --color-off-black-1: rgba(30,30,30,1.0);
+  --color-off-black-2: rgba(45,45,45,1.0);
+  --color-off-black-transparent: rgba(30,30,30,0.15);
+  --color-red: rgba(192,57,43,1.0);
+  --color-gray: rgba(128,128,128,1.0);
+  
+  /* Fonts */
+  --font-family-sans: 'Tahoma', 'Segoe UI', 'Geneva', 'Verdana', sans-serif;
+  --font-family-serif: 'Georgia', 'Times', 'Times New Roman', serif;
+  
+  /* Font sizes */
+  --font-size-footnotes: 12px;
+  --font-size-base: 16px;
+  --font-size-header-4: 16px;
+  --font-size-header-3: 18px;
+  --font-size-header-2: 24px;
+  --font-size-header-1: 32px;
+  --line-height-footnotes: 1em;
+  --line-height-base: 1.5em;
+  --line-height-header: 1.25em;
+  --line-height-text: 1.6875em;
+
+  /* Borders */
+  --border-radius: 8px;
+  --border-size: 1px;
+  
+  /* Gaps */
+  --gap: 16px;
+  --gap-section: 32px;
+  
+  /* Max widths */
+  --max-width-body: 600px;
+  --max-width-poems: 400px;
+
+  /* Contents */
+  --content-arrows-left: '«';
+  --content-arrows-right: '»';
+  --content-after-header: '_';
+
+  /* Miscellaneous */
+  --time-animation: 0.25s;
 }

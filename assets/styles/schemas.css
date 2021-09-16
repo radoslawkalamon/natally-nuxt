@@ -1,0 +1,36 @@
+body {
+  --color-text-base: var(--color-off-black-1);
+  --color-text-contra: var(--color-off-white-1);
+  --color-border: var(--color-off-black-transparent);
+  --color-shadow: var(--color-off-black-transparent);
+  --color-background-1: var(--color-off-white-1);
+  --color-background-2: var(--color-off-white-2);
+  --color-accent: var(--color-red);
+  --color-betwixt: var(--color-gray);
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    --color-text-base: var(--color-off-black-1);
+    --color-text-contra: var(--color-off-white-1);
+    --color-border: var(--color-off-black-transparent);
+    --color-shadow: var(--color-off-black-transparent);
+    --color-background-1: var(--color-off-white-1);
+    --color-background-2: var(--color-off-white-2);
+    --color-accent: var(--color-red);
+    --color-betwixt: var(--color-gray);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --color-text-base: var(--color-off-white-1);
+    --color-text-contra: var(--color-off-black-1);
+    --color-border: var(--color-off-white-transparent);
+    --color-shadow: var(--color-off-white-transparent);
+    --color-background-1: var(--color-off-black-1);
+    --color-background-2: var(--color-off-black-2);
+    --color-accent: var(--color-red);
+    --color-betwixt: var(--color-gray);
+  }
+}
