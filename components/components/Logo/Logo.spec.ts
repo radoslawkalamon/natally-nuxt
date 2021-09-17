@@ -4,6 +4,6 @@ import Logo from './Logo.vue'
 describe('Components/Logo', () => {
   test('is renderable', () => {
     const wrapper = mount(Logo)
-    expect(wrapper.find('[data-test="logo"]').isVisible()).toBeTruthy()
+    expect(wrapper.find('[data-test="components-logo"]').isVisible()).toBeTruthy()
   })
 })

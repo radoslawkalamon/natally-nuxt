@@ -6,9 +6,20 @@ module.exports = {
   },
   extends: [
     '@nuxtjs/eslint-config-typescript',
-    'plugin:nuxt/recommended',
-    'prettier'
+    'plugin:nuxt/recommended'
   ],
   plugins: [],
-  rules: {}
+  rules: {
+    'vue/max-attributes-per-line': ['error', {
+      singleline: {
+        max: 1,
+        allowFirstLine: true
+      },
+      multiline: {
+        max: 1,
+        allowFirstLine: false
+      }
+    }],
+    'vue/order-in-components': 'error'
+  }
 }

@@ -2,12 +2,12 @@ import Logo from './Logo.vue'
 
 export default {
   title: 'Components/Logo',
-  component: Logo,
+  component: Logo
 }
 
 export const Default = () => ({
   components: {
-    Logo,
+    Logo
   },
-  template: '<Logo />',
+  template: '<Logo />'
 })

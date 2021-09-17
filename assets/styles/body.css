@@ -1,8 +1,8 @@
 body {
+  background-color: var(--color-background-2);
+  color: var(--color-text-base);
   font-family: var(--font-family-serif);
   font-size: var(--font-size-base);
-  color: var(--color-text-base);
-  background-color: var(--color-background-2);
   margin: 0;
-  padding: 0
+  padding: 0;
 }
