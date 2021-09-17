@@ -1,7 +1,7 @@
 import Logo from './Logo.vue'
 
 export default {
-  title: 'Components/Logo',
+  title: 'Components / 169cm.pl Logo',
   component: Logo
 }
 

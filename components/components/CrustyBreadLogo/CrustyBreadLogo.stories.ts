@@ -1,7 +1,7 @@
 import CrustyBreadLogo from './CrustyBreadLogo.vue'
 
 export default {
-  title: 'Components/CrustyBreadLogo',
+  title: 'Components / Crusty Bread Logo',
   component: CrustyBreadLogo
 }
 
