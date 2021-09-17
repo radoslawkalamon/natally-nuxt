@@ -1,5 +1,13 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'ComponentsText'
+  name: 'ComponentsText',
+  computed: {
+    wrapperClasses () {
+      return ['text']
+    },
+    wrapperTestId () {
+      return 'wrappers-text'
+    }
+  }
 })
