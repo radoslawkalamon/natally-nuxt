@@ -1,9 +1,11 @@
 module.exports = {
   extends: [
-    'stylelint-config-standard',
-    'stylelint-config-prettier'
+    'stylelint-config-standard'
   ],
-  // add your custom config here
-  // https://stylelint.io/user-guide/configuration
-  rules: {}
+  plugins: [
+    'stylelint-order'
+  ],
+  rules: {
+    'order/properties-alphabetical-order': true
+  }
 }

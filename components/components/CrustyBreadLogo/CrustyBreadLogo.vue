@@ -1,7 +1,7 @@
 <template v-once>
   <svg
     class="crusty-bread-logo"
-    data-test="crusty-bread-logo"
+    data-test="components-crusty-bread-logo"
     width="56"
     height="128"
     viewBox="0 0 56 128"

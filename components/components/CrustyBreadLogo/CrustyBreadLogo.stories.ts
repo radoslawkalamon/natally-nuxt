@@ -1,13 +1,13 @@
 import CrustyBreadLogo from './CrustyBreadLogo.vue'
 
 export default {
-  title: 'Components/CrustyBreadLogo',
-  component: CrustyBreadLogo,
+  title: 'Components / Crusty Bread Logo',
+  component: CrustyBreadLogo
 }
 
 export const Default = () => ({
   components: {
-    CrustyBreadLogo,
+    CrustyBreadLogo
   },
-  template: '<CrustyBreadLogo />',
+  template: '<CrustyBreadLogo />'
 })

@@ -21,7 +21,7 @@ export default {
   css: [
     '@/assets/styles/variables.css',
     '@/assets/styles/schemas.css',
-    '@/assets/styles/body.css',
+    '@/assets/styles/body.css'
   ],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -35,15 +35,33 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
-    '@nuxt/image',
+    '@nuxt/image'
   ],
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/content
-    '@nuxt/content',
+    '@nuxt/content'
   ],
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {},
+  storybook: {
+    parameters: {
+      controls: {
+        hideNoControlsWarning: true
+      },
+      layout: 'centered',
+      options: {
+        storySort: {
+          method: 'alphabetical'
+        }
+      },
+      previewTabs: {
+        'storybook/docs/panel': {
+          hidden: true
+        }
+      }
+    }
+  }
 }

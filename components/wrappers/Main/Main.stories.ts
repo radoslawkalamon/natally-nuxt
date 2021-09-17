@@ -8,25 +8,15 @@ export default {
       description: '-',
       table: {
         type: null,
-        defaultValue: null,
-      },
-    },
-  },
-  parameters: {
-    docs: {
-      source: {
-        code: '<Main><!-- Default Slot --></Main>'
-      },
-      description: {
-        component: 'Main wrapper for page content',
-      },
+        defaultValue: null
+      }
     }
   }
 }
 
 export const Default = () => ({
   components: {
-    Main,
+    Main
   },
-  template: '<Main>#Slot/Default</Main>',
+  template: '<Main>Default Slot</Main>'
 })
