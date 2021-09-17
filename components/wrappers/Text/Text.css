@@ -1,0 +1,53 @@
+.text {
+  color: inherit;
+  font-family: var(--font-family-serif);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-text);
+}
+
+.text h1,
+.text h2,
+.text h3,
+.text h4,
+.text p,
+.text ul,
+.text ol {
+  margin: var(--gap) 0;
+}
+
+.text ul,
+.text ol {
+  padding-left: calc(2 * var(--gap));
+}
+
+.text h1,
+.text h2,
+.text h3,
+.text h4 {
+  font-family: var(--font-family-sans);
+  line-height: var(--line-height-header);
+}
+
+.text h1::after,
+.text h2::after,
+.text h3::after,
+.text h4::after {
+  color: var(--color-accent);
+  content: var(--content-after-header);
+}
+
+.text h1 {
+  font-size: var(--font-size-header-1);
+}
+
+.text h2 {
+  font-size: var(--font-size-header-2);
+}
+
+.text h3 {
+  font-size: var(--font-size-header-3);
+}
+
+.text h4 {
+  font-size: var(--font-size-header-4);
+}
