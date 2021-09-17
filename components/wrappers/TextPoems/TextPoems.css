@@ -1,0 +1,10 @@
+.text-poems-wrapper {
+  align-items: center;
+  display: flex;
+  min-height: 70vh;
+  width: 100%;
+}
+
+.text-poems-wrapper > * {
+  width: 100%;
+}
