@@ -1,7 +1,7 @@
 <template>
   <div
-    class="text"
-    data-test="wrappers-text"
+    :class="wrapperClasses"
+    :data-test="wrapperTestId"
   >
     <slot />
   </div>
