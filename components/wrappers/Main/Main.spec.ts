@@ -7,7 +7,7 @@ describe('Wrappers/Main', () => {
     expect(wrapper.find('[data-test="wrappers-main"]').isVisible()).toBeTruthy()
   })
 
-  test('Default slot', () => {
+  test('has default slot', () => {
     const slotText = 'This is slot test!'
     const wrapper = mount(Main, {
       slots: {

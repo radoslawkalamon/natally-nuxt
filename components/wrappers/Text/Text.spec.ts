@@ -7,7 +7,7 @@ describe('Wrappers/Text', () => {
     expect(wrapper.find('[data-test="wrappers-text"]').isVisible()).toBeTruthy()
   })
 
-  test('Default slot', () => {
+  test('has default slot', () => {
     const slotText = 'This is slot test!'
     const wrapper = mount(TextBase, {
       slots: {

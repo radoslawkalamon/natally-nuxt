@@ -5,7 +5,7 @@ export default {
   component: TextBase,
   argTypes: {
     default: {
-      description: '`<h1>`, `<h2>`, `<h3>`, `<h4>` & `<p>` gets design systems styling',
+      description: '`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<p>`, `<ol>` & `<ul>` gets design system styling',
       table: {
         type: null,
         defaultValue: null
