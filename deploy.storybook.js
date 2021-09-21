@@ -6,12 +6,12 @@
   const ftpDeploy = new FtpDeploy()
 
   const config = {
-    user: process.env.STORYBOOK_DEPLOY_FTP_USERNAME,
-    password: process.env.STORYBOOK_DEPLOY_FTP_PASSWORD,
-    host: process.env.STORYBOOK_DEPLOY_FTP_HOST,
-    port: process.env.STORYBOOK_DEPLOY_FTP_PORT,
-    localRoot: path.resolve(__dirname, process.env.STORYBOOK_DEPLOY_FTP_LOCAL_CATALOG),
-    remoteRoot: process.env.STORYBOOK_DEPLOY_FTP_REMOTE_CATALOG,
+    user: process.env.DEPLOY_STORYBOOK_USERNAME,
+    password: process.env.DEPLOY_STORYBOOK_PASSWORD,
+    host: process.env.DEPLOY_STORYBOOK_HOST,
+    port: process.env.DEPLOY_STORYBOOK_PORT,
+    localRoot: path.resolve(__dirname, process.env.DEPLOY_STORYBOOK_LOCAL_CATALOG),
+    remoteRoot: process.env.DEPLOY_STORYBOOK_REMOTE_CATALOG,
     include: ['*', '**/*'],
     exclude: ['**/*.map'],
     deleteRemote: true,
