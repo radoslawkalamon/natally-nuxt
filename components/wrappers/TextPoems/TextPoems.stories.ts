@@ -1,6 +1,7 @@
+import { Meta, Story } from '@storybook/vue'
 import TextPoems from './TextPoems.vue'
 
-export default {
+const meta: Meta = {
   title: 'Wrappers / Text Poems',
   component: TextPoems,
   argTypes: {
@@ -13,11 +14,10 @@ export default {
     }
   }
 }
+export default meta
 
-export const Default = () => ({
-  components: {
-    TextPoems
-  },
+export const Default: Story = () => ({
+  components: { TextPoems },
   template: `<TextPoems>
     <h1>Header 1</h1>
     <h2>Header 2</h2>

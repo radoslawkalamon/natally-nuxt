@@ -1,6 +1,7 @@
+import { Meta, Story } from '@storybook/vue'
 import TextBase from './Text.vue'
 
-export default {
+const meta: Meta = {
   title: 'Wrappers / Text',
   component: TextBase,
   argTypes: {
@@ -13,11 +14,10 @@ export default {
     }
   }
 }
+export default meta
 
-export const Default = () => ({
-  components: {
-    TextBase
-  },
+export const Default: Story = () => ({
+  components: { TextBase },
   template: `<TextBase>
     <h1>Header 1</h1>
     <h2>Header 2</h2>
