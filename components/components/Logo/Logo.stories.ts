@@ -1,13 +1,13 @@
+import { Meta, Story } from '@storybook/vue'
 import Logo from './Logo.vue'
 
-export default {
+const meta: Meta = {
   title: 'Components / 169cm.pl Logo',
   component: Logo
 }
+export default meta
 
-export const Default = () => ({
-  components: {
-    Logo
-  },
+export const Default: Story = () => ({
+  components: { Logo },
   template: '<Logo />'
 })

@@ -1,10 +1,11 @@
 import { Meta, Story } from '@storybook/vue'
 import TextMeta from './TextMeta.vue'
 
-export default {
+const meta: Meta = {
   component: TextMeta,
   title: 'Components / Text Meta'
-} as Meta
+}
+export default meta
 
 const Template: Story = (_args, { argTypes }) => ({
   components: { TextMeta },
