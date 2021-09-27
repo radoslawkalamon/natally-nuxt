@@ -1,9 +1,6 @@
-import { mount } from '@vue/test-utils'
 import CrustyBreadLogo from './CrustyBreadLogo.vue'
+import { shallRender } from '@/utils/commonTestSpecs'
 
-describe('Components/CrustyBreadLogo', () => {
-  test('is renderable', () => {
-    const wrapper = mount(CrustyBreadLogo)
-    expect(wrapper.find('[data-test="components-crusty-bread-logo"]').isVisible()).toBeTruthy()
-  })
+describe('Components/Logo', () => {
+  shallRender(CrustyBreadLogo, 'components-crusty-bread-logo')
 })
