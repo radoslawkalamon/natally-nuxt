@@ -50,7 +50,7 @@ export function shallHavePropInfluenceOverClassNames (
       }
     })
     const wrapper = mount(component, wrapperOptions)
-    const isTextHeaderHaveUnderscoreClass = wrapper.classes().some(cls => cls.includes(classNameSuffix))
-    expect(isTextHeaderHaveUnderscoreClass).toBeTruthy()
+    const isWrapperHaveClass = wrapper.classes().some(cls => cls.includes(classNameSuffix))
+    expect(isWrapperHaveClass).toBeTruthy()
   })
 }

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'ComponentsTextHeader',
+  name: 'ComponentsTitle',
   props: {
     title: {
       type: String,
@@ -20,14 +20,14 @@ export default Vue.extend({
     }
   },
   computed: {
-    headerTag () {
+    titleTag () {
       return `h${this.type}`
     },
-    headerClasses () {
+    titleClasses () {
       return {
-        'text-header': true,
-        [`text-header--type-${this.type}`]: true,
-        'text-header--underscore': this.shallShowUnderscore
+        title: true,
+        [`title--type-${this.type}`]: true,
+        'title--underscore': this.shallShowUnderscore
       }
     }
   }

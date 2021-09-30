@@ -1,27 +1,27 @@
-.text-header {
+.title {
   color: inherit;
   font-family: var(--font-family-sans);
   line-height: var(--line-height-header);
   margin: var(--gap) 0;
 }
 
-.text-header--type-1 {
+.title--type-1 {
   font-size: var(--font-size-header-1);
 }
 
-.text-header--type-2 {
+.title--type-2 {
   font-size: var(--font-size-header-2);
 }
 
-.text-header--type-3 {
+.title--type-3 {
   font-size: var(--font-size-header-3);
 }
 
-.text-header--type-4 {
+.title--type-4 {
   font-size: var(--font-size-header-4);
 }
 
-.text-header--underscore::after {
+.title--underscore::after {
   color: var(--color-accent);
   content: var(--content-after-header);
 }

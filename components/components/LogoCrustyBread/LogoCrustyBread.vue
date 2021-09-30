@@ -1,7 +1,7 @@
 <template v-once>
   <svg
-    class="crusty-bread-logo"
-    data-test="components-crusty-bread-logo"
+    class="logo-crusty-bread"
+    data-test="components-logo-crusty-bread"
     width="56"
     height="128"
     viewBox="0 0 56 128"
@@ -38,5 +38,5 @@
   </svg>
 </template>
 
-<script src="./CrustyBreadLogo.ts" lang="ts"></script>
-<style src="./CrustyBreadLogo.css" scoped></style>
+<script src="./LogoCrustyBread.ts" lang="ts"></script>
+<style src="./LogoCrustyBread.css" scoped></style>

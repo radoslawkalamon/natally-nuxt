@@ -1,7 +1,7 @@
 import TextPoems from './TextPoems.vue'
 import { shallHaveSlot, shallRender } from '@/utils/commonTestSpecs'
 
-describe('Wrappers/Text Poems', () => {
+describe('Wrappers / Text Poems', () => {
   const defaultOptions = {
     stubs: {
       WrappersText: {

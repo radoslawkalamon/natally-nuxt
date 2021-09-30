@@ -1,7 +1,7 @@
 import TextMeta from './TextMeta.vue'
 import { shallHaveStringProp, shallRender } from '@/utils/commonTestSpecs'
 
-describe('Wrappers/Text Meta', () => {
+describe('Wrappers / Text Meta', () => {
   const defaultOptions = {
     propsData: {
       text: 'Default Prop Text'

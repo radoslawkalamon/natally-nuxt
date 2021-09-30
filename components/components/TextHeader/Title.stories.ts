@@ -1,9 +1,9 @@
 import { Meta, Story } from '@storybook/vue'
-import TextHeader from './TextHeader.vue'
+import Title from './Title.vue'
 
 const meta: Meta = {
-  component: TextHeader,
-  title: 'Components / Text Header',
+  component: Title,
+  title: 'Components / Title',
   argTypes: {
     type: {
       options: [1, 2, 3, 4],
@@ -16,9 +16,9 @@ const meta: Meta = {
 export default meta
 
 const Template: Story = (_args, { argTypes }) => ({
-  components: { TextHeader },
+  components: { Title },
   props: Object.keys(argTypes),
-  template: '<TextHeader v-bind="$props" />'
+  template: '<Title v-bind="$props" />'
 })
 
 export const withUnderscore: Story = Template.bind({})

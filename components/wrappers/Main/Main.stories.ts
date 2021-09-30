@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/vue'
 import Main from './Main.vue'
 
 const meta: Meta = {
-  title: 'Wrappers/Main',
+  title: 'Wrappers / Main',
   component: Main,
   argTypes: {
     default: {
