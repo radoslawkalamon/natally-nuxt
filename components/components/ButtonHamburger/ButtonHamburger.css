@@ -17,7 +17,7 @@
 }
 
 .button-hamburger__line {
-  background-color: var(--color-text-base);
+  background-color: var(--color-base);
   border-radius: var(--button-hamburger-line-border-radius);
   height: var(--button-hamburger-line-height);
   width: var(--button-hamburger-size);
