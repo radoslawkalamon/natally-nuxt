@@ -35,3 +35,22 @@ export function shallHaveStringProp (component: typeof Vue, propName: string, de
     expect(wrapper.html()).toContain(text)
   })
 }
+
+export function shallHavePropInfluenceOverClassNames (
+  component: typeof Vue,
+  propName: string,
+  propValue: unknown,
+  classNameSuffix: string,
+  defaultOptions?: object
+) {
+  test(`shall have ${typeof propValue} prop '${propName}' influence over class names`, () => {
+    const wrapperOptions = merge(defaultOptions, {
+      propsData: {
+        [propName]: propValue
+      }
+    })
+    const wrapper = mount(component, wrapperOptions)
+    const isTextHeaderHaveUnderscoreClass = wrapper.classes().some(cls => cls.includes(classNameSuffix))
+    expect(isTextHeaderHaveUnderscoreClass).toBeTruthy()
+  })
+}
