@@ -1,0 +1,54 @@
+.button-hamburger {
+  --button-hamburger-line-height: 4px;
+  --button-hamburger-line-border-radius: calc(var(--button-hamburger-line-height) / 2);
+  --button-hamburger-gap: 4px;
+  --button-hamburger-size: 24px;
+
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: grid;
+  gap: var(--button-hamburger-gap);
+  height: var(--button-hamburger-size);
+  padding: 0;
+  position: relative;
+  width: var(--button-hamburger-size);
+}
+
+.button-hamburger__line {
+  background-color: var(--color-text-base);
+  border-radius: var(--button-hamburger-line-border-radius);
+  height: var(--button-hamburger-line-height);
+  width: var(--button-hamburger-size);
+}
+
+.button-hamburger__line--1 {
+  transform-origin: bottom left;
+  transition: transform var(--time-animation) ease;
+}
+
+.button-hamburger__line--1[data-open="true"] {
+  transform: translate(2px, 1px) rotate(45deg);
+}
+
+.button-hamburger__line--2 {
+  transition: opacity var(--time-animation) ease;
+}
+
+.button-hamburger__line--2[data-open="true"] {
+  opacity: 0;
+}
+
+.button-hamburger__line--2[data-open="false"] {
+  opacity: 1;
+}
+
+.button-hamburger__line--3 {
+  transform-origin: top left;
+  transition: transform var(--time-animation) ease;
+}
+
+.button-hamburger__line--3[data-open="true"] {
+  transform: translate(2px, 1px) rotate(-45deg);
+}
