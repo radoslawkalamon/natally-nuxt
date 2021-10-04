@@ -11,14 +11,14 @@ describe('Components / Button Hamburger', () => {
 
   shallRender(ButtonHamburger, 'components-button-hamburger', defaultOptions)
 
-  test('shall click trigger toggle event', () => {
+  test('shall click trigger toggle event', (): void => {
     const wrapper = mount(ButtonHamburger, defaultOptions)
     wrapper.trigger('click')
     const toggleCalls = wrapper.emitted('toggle')
     expect(toggleCalls).toHaveLength(1)
   })
 
-  test('shall state change aria-label', async () => {
+  test('shall state change aria-label', async (): Promise<void> => {
     const wrapper = mount(ButtonHamburger, defaultOptions)
     const closedAriaLabel = wrapper.element.getAttribute('aria-label') || ''
     await wrapper.setProps({ isOpen: true })
@@ -26,7 +26,7 @@ describe('Components / Button Hamburger', () => {
     expect(closedAriaLabel).not.toMatch(openedAriaLabel)
   })
 
-  test('shall state change data-open', async () => {
+  test('shall state change data-open', async (): Promise<void> => {
     const wrapper = mount(ButtonHamburger, defaultOptions)
     expect(wrapper.find('[data-open="false"]').isVisible()).toBeTruthy()
     await wrapper.setProps({ isOpen: true })

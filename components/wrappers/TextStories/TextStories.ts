@@ -5,10 +5,10 @@ export default Vue.extend({
   name: 'ComponentsTextStories',
   extends: TextBase,
   computed: {
-    wrapperClasses () {
+    wrapperClasses (): string[] {
       return ['text', 'text-stories']
     },
-    wrapperTestId () {
+    wrapperTestId (): string {
       return 'wrappers-text-stories'
     }
   }

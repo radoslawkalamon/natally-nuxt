@@ -9,17 +9,17 @@ export default Vue.extend({
     }
   },
   computed: {
-    ariaLabel () {
+    ariaLabel (): string {
       return this.isOpen
         ? 'Zamknij menu nawigacyjne'
         : 'Otwórz menu nawigacyjne'
     }
   },
   methods: {
-    clickCallback () {
+    clickCallback (): void {
       this.$emit('toggle')
     },
-    lineClassNames (index: number) {
+    lineClassNames (index: number): string[] {
       return [
         'button-hamburger__line',
         `button-hamburger__line--${index}`

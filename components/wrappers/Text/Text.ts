@@ -3,10 +3,10 @@ import Vue from 'vue'
 export default Vue.extend({
   name: 'ComponentsText',
   computed: {
-    wrapperClasses () {
+    wrapperClasses (): string[] {
       return ['text']
     },
-    wrapperTestId () {
+    wrapperTestId (): string {
       return 'wrappers-text'
     }
   }

@@ -20,10 +20,10 @@ export default Vue.extend({
     }
   },
   computed: {
-    titleTag () {
+    titleTag (): string {
       return `h${this.type}`
     },
-    titleClasses () {
+    titleClasses (): { [key: string]: boolean } {
       return {
         title: true,
         [`title--type-${this.type}`]: true,
