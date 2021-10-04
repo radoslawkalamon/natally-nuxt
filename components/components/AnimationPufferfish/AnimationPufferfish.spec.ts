@@ -1,6 +1,6 @@
-import AnimationPufferfish from './AnimationPufferfish'
+import AnimationPufferfish from './AnimationPufferfish.vue'
 import { shallRender } from '@/utils/commonTestSpecs'
 
 describe('Components / Animation Pufferfish', () => {
-  shallRender(AnimationPufferfish, 'components-button-hamburger')
+  shallRender(AnimationPufferfish, 'component-animation-pufferfish')
 })
