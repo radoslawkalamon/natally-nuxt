@@ -3,6 +3,7 @@
   "version": "3.0.0",
   "private": true,
   "scripts": {
+    "bootstrap:component": "ts-node ./bootstrap.component.ts",
     "build": "nuxt build",
     "deploy:storybook": "npm run storybook:build && node ./deploy.storybook.js",
     "deploy:stage": "npm run generate && node ./deploy.stage.js",
