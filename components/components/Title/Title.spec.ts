@@ -9,7 +9,7 @@ describe('Components/Logo', () => {
     }
   }
 
-  shallRender(Title, 'components-title', defaultOptions)
+  shallRender(Title, defaultOptions)
 
   describe('Props', () => {
     shallHaveStringProp(Title, 'title', defaultOptions)

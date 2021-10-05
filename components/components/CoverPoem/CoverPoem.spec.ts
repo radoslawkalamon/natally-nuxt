@@ -9,7 +9,7 @@ describe('Components / Cover Poem', () => {
     }
   }
 
-  shallRender(CoverPoem, 'components-cover-poem', defaultOptions)
+  shallRender(CoverPoem, defaultOptions)
 
   test("shall have string prop 'image' influence over style", (): void => {
     const image = 'https://via.placeholder.com/100x150.webp'

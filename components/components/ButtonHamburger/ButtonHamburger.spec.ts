@@ -9,7 +9,7 @@ describe('Components / Button Hamburger', () => {
     }
   }
 
-  shallRender(ButtonHamburger, 'components-button-hamburger', defaultOptions)
+  shallRender(ButtonHamburger, defaultOptions)
 
   test('shall click trigger toggle event', (): void => {
     const wrapper = mount(ButtonHamburger, defaultOptions)

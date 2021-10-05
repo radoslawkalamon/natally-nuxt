@@ -10,6 +10,6 @@ describe('Wrappers / Text Poems', () => {
     }
   }
 
-  shallRender(TextPoems, 'wrappers-text-poems', defaultOptions)
+  shallRender(TextPoems, defaultOptions)
   shallHaveSlot(TextPoems, 'default', defaultOptions)
 })

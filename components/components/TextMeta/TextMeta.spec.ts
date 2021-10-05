@@ -8,6 +8,6 @@ describe('Wrappers / Text Meta', () => {
     }
   }
 
-  shallRender(TextMeta, 'components-text-meta', defaultOptions)
+  shallRender(TextMeta, defaultOptions)
   shallHaveStringProp(TextMeta, 'text', defaultOptions)
 })

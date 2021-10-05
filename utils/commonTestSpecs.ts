@@ -2,10 +2,10 @@ import Vue from 'vue'
 import { mount } from '@vue/test-utils'
 import { merge } from 'lodash'
 
-export function shallRender (component: typeof Vue, dataTestID: string, defaultOptions?: object): void {
+export function shallRender (component: typeof Vue, defaultOptions?: object): void {
   test('shall render', (): void => {
     const wrapper = mount(component, defaultOptions)
-    const isWrapperVisible = wrapper.find(`[data-test="${dataTestID}"]`).isVisible()
+    const isWrapperVisible = wrapper.isVisible()
     expect(isWrapperVisible).toBeTruthy()
   })
 }
