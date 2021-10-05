@@ -14,8 +14,8 @@
     "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
     "prepare": "husky install",
     "start": "nuxt start",
-    "storybook:run": "npx nuxt storybook",
-    "storybook:build": "npx nuxt storybook build",
+    "storybook:run": "nuxt storybook",
+    "storybook:build": "nuxt storybook build",
     "test": "jest"
   },
   "lint-staged": {
