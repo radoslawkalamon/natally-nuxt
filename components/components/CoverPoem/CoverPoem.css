@@ -1,0 +1,9 @@
+.cover-poem {
+  background-color: var(--color-betwixt);
+  background-position: center;
+  background-repeat: repeat;
+  border-radius: var(--border-radius);
+  height: 64px;
+  max-width: var(--max-width-body);
+  width: 100%;
+}
