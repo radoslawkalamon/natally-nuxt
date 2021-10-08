@@ -1,0 +1,24 @@
+.cover-story {
+  display: block;
+  max-width: var(--max-width-body);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.cover-story::before {
+  content: '';
+  display: block;
+  padding-top: 50%;
+}
+
+.cover-story__image {
+  border-radius: var(--border-radius);
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
