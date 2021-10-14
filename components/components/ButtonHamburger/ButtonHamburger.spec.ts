@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 import ButtonHamburger from './ButtonHamburger.vue'
-import { shallRender } from '@/utils/commonTestSpecs'
+import { shallRender, shallClickTriggerEvent } from '@/utils/commonTestSpecs'
 
 describe('Components / Button Hamburger', () => {
   const defaultOptions = {
@@ -10,13 +10,7 @@ describe('Components / Button Hamburger', () => {
   }
 
   shallRender(ButtonHamburger, defaultOptions)
-
-  test('shall click trigger toggle event', (): void => {
-    const wrapper = mount(ButtonHamburger, defaultOptions)
-    wrapper.trigger('click')
-    const toggleCalls = wrapper.emitted('toggle')
-    expect(toggleCalls).toHaveLength(1)
-  })
+  shallClickTriggerEvent(ButtonHamburger, 'toggle', defaultOptions)
 
   test('shall state change aria-label', async (): Promise<void> => {
     const wrapper = mount(ButtonHamburger, defaultOptions)
