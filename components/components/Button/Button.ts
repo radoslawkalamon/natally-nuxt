@@ -9,24 +9,24 @@ export default Vue.extend({
     }
   },
   computed: {
-    tag () {
+    tag (): string {
       return 'button'
     },
-    attributes () {
+    attributes (): { [key: string]: string } {
       return {
         class: 'button',
         'data-test': 'components-button',
         type: 'button'
       }
     },
-    listeners () {
+    listeners (): { [key: string]: Function } {
       return {
         click: this.onClick
       }
     }
   },
   methods: {
-    onClick () {
+    onClick (): void {
       this.$emit('click')
     }
   }
