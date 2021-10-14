@@ -58,7 +58,7 @@ export function shallHavePropInfluenceOverClassNames (
 export function shallClickTriggerEvent (component: typeof Vue, eventName: string, defaultOptions?: object) {
   test(`shall click trigger ${eventName} event`, (): void => {
     const wrapper = mount(component, defaultOptions)
-    wrapper.trigger(eventName)
+    wrapper.trigger('click')
     const toggleCalls = wrapper.emitted(eventName)
     expect(toggleCalls).toHaveLength(1)
   })
