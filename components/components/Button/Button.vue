@@ -1,8 +1,9 @@
 <template>
-  <component
-    :is="tag"
-    v-bind="attributes"
-    v-on="listeners"
+  <button
+    class="button"
+    data-test="components-button"
+    type="button"
+    @click="onClick"
     v-text="label"
   />
 </template>
