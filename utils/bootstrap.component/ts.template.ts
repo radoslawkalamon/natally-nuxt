@@ -1,4 +1,4 @@
-import capitalize from '../capitalize'
+import capitalize from '../formatters/capitalize'
 
 export default (type: string, name: string): string => {
   const typeNameCapitalized = capitalize(`${type}${name}`)

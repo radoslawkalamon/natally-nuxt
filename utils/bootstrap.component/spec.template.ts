@@ -1,5 +1,5 @@
-import capitalize from '../capitalize'
-import spacelize from '../spacelize'
+import capitalize from '../formatters/capitalize'
+import spacelize from '../formatters/spacelize'
 
 export default (type: string, name: string): string => {
   const title = `${capitalize(type)} / ${spacelize(name)}`

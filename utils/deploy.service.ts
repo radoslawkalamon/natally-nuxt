@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
 import { Client, FileInfo, FTPResponse } from 'basic-ftp'
 import { ProgressInfo } from 'basic-ftp/dist/ProgressTracker'
-import capitalize from './capitalize'
-import spacelize from './spacelize'
+import capitalize from './formatters/capitalize'
+import spacelize from './formatters/spacelize'
 
 type DeployServiceConfig = {
   host: string;
