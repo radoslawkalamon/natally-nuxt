@@ -1,0 +1,65 @@
+.card-poem {
+  border-radius: var(--border-radius);
+  box-shadow: 0 var(--border-size) 0 var(--color-shadow);
+  box-sizing: border-box;
+  color: var(--color-white);
+  display: block;
+  height: 72px;
+  max-width: 400px;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  transition: box-shadow var(--time-animation) ease, opacity var(--time-animation) ease;
+  width: 100%;
+}
+
+.card-poem:hover {
+  opacity: 0.9;
+  text-decoration: underline;
+}
+
+.card-poem:active {
+  box-shadow: 0 0 0 var(--color-shadow);
+  opacity: 0.75;
+}
+
+.card-poem__cover {
+  border: var(--border-size) solid var(--color-border);
+  box-sizing: border-box;
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.card-poem__content {
+  align-items: center;
+  background-color: var(--color-off-black-transparent);
+  box-sizing: border-box;
+  display: flex;
+  gap: var(--gap);
+  height: 100%;
+  justify-content: space-between;
+  left: 0;
+  padding: 1em;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.card-poem__title {
+  margin: 0;
+}
+
+.card-poem:hover .card-poem__title {
+  text-decoration: underline;
+}
+
+.card-poem__meta {
+  min-width: 100px;
+  text-align: right;
+}
