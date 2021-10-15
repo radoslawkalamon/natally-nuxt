@@ -50,7 +50,6 @@ export default {
       controls: {
         hideNoControlsWarning: true
       },
-      layout: 'centered',
       options: {
         storySort: {
           method: 'alphabetical'
