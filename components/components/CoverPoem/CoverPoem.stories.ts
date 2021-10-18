@@ -10,10 +10,10 @@ export default meta
 const Template: Story = (_args, { argTypes }) => ({
   components: { CoverPoem },
   props: Object.keys(argTypes),
-  template: '<div style="width: 320px"><CoverPoem v-bind="$props" /></div>'
+  template: '<CoverPoem v-bind="$props" />'
 })
 
 export const Default: Story = Template.bind({})
 Default.args = {
-  image: 'https://via.placeholder.com/100x150.webp'
+  image: 'https://www.fillmurray.com/100/150'
 }

@@ -24,7 +24,7 @@
 }
 
 .card-poem__cover {
-  border: var(--border-size) solid var(--color-border);
+  box-shadow: inset 0 0 0 var(--border-size) var(--color-shadow);
   box-sizing: border-box;
   height: 100%;
   left: 0;
@@ -52,7 +52,7 @@
 }
 
 .card-poem__title {
-  margin: 0;
+  margin: 0 !important;
 }
 
 .card-poem:hover .card-poem__title {

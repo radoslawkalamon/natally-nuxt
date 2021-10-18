@@ -1,8 +1,9 @@
 .cover-story {
-  display: block;
+  background-color: var(--color-betwixt);
+  background-position: center;
+  background-size: cover;
+  border-radius: var(--border-radius);
   max-width: var(--max-width-body);
-  overflow: hidden;
-  position: relative;
   width: 100%;
 }
 
@@ -10,15 +11,4 @@
   content: '';
   display: block;
   padding-top: 50%;
-}
-
-.cover-story__image {
-  border-radius: var(--border-radius);
-  height: 100%;
-  left: 0;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1;
 }
