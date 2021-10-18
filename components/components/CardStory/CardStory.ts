@@ -19,6 +19,9 @@ export default Vue.extend({
     datePublished (): string {
       return this.storyPostExcerpt.datePublished
     },
+    datePublishedLabel (): string {
+      return `Opublikowano ${this.datePublished}`
+    },
     isAudiobook (): boolean {
       return this.storyPostExcerpt.isAudiobook
     },
@@ -28,8 +31,16 @@ export default Vue.extend({
         !this.isAudiobook ? 'card-story__audiobook--disabled' : ''
       ]
     },
+    isAudiobookLabel (): string {
+      return this.isAudiobook
+        ? 'Post posiada wersję dźwiękową'
+        : 'Post nie posiada wersji dźwiękowej'
+    },
     readingTime (): string {
       return this.storyPostExcerpt.readingTime
+    },
+    readingTimeLabel (): string {
+      return `Tekst przeczytasz w ${this.readingTime}`
     },
     title (): string {
       return this.storyPostExcerpt.title
