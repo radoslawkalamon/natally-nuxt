@@ -5,14 +5,14 @@ import { shallRender } from '@/utils/commonTestSpecs'
 describe('Components / Cover Poem', () => {
   const defaultOptions = {
     propsData: {
-      image: 'https://via.placeholder.com/100x150.webp'
+      image: 'https://www.fillmurray.com/100/150'
     }
   }
 
   shallRender(CoverPoem, defaultOptions)
 
   test("shall have string prop 'image' influence over style", (): void => {
-    const image = 'https://via.placeholder.com/100x150.webp'
+    const image = 'https://www.fillmurray.com/100/150'
     const wrapper = mount(CoverPoem, {
       propsData: {
         ...defaultOptions.propsData,

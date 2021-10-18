@@ -6,8 +6,8 @@ describe('Components / Cover Story', () => {
   const defaultOptions = {
     propsData: {
       alternativeText: 'Lorem ipsum',
-      image: 'https://via.placeholder.com/600x300.webp',
-      image2X: 'https://via.placeholder.com/1200x600.webp'
+      image: 'https://www.fillmurray.com/600/300',
+      image2X: 'https://www.fillmurray.com/1200/600'
     }
   }
 
@@ -26,7 +26,7 @@ describe('Components / Cover Story', () => {
   })
 
   test("shall have string prop 'image' influence over image.src & image.srcset", (): void => {
-    const image = 'https://via.placeholder.com/300x150.webp'
+    const image = 'https://www.fillmurray.com/300/150'
     const wrapper = mount(CoverStory, {
       propsData: {
         ...defaultOptions.propsData,
@@ -42,7 +42,7 @@ describe('Components / Cover Story', () => {
   })
 
   test("shall have string prop 'image2X' influence over image.srcset", (): void => {
-    const image2X = 'https://via.placeholder.com/500x250.webp'
+    const image2X = 'https://www.fillmurray.com/500/250'
     const wrapper = mount(CoverStory, {
       propsData: {
         ...defaultOptions.propsData,

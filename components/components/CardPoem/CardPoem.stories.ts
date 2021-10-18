@@ -18,7 +18,7 @@ export const Default: Story = Template.bind({})
 Default.args = {
   poemPostExcerpt: new PoemPostExcerpt({
     id: '1234',
-    coverImage: 'https://via.placeholder.com/100x150.webp',
+    coverImage: 'https://www.fillmurray.com/100/150',
     datePublished: 1634302144717,
     title: 'Hello world',
     url: '/poezja-314/hello-world'

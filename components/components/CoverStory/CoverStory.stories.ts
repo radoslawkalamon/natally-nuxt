@@ -16,6 +16,6 @@ const Template: Story = (_args, { argTypes }) => ({
 export const Default: Story = Template.bind({})
 Default.args = {
   alternativeText: 'Lorem ipsum',
-  image: 'https://via.placeholder.com/600x300.webp',
-  image2X: 'https://via.placeholder.com/1200x600.webp'
+  image: 'https://www.fillmurray.com/600/350',
+  image2X: 'https://www.fillmurray.com/1200/600'
 }
