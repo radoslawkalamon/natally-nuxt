@@ -24,7 +24,7 @@ describe('Components / Card Story', () => {
         template: '<div data-stub="components-cover-story" />'
       },
       ComponentsTextMeta: {
-        template: '<span data-stub="components-text-meta" />'
+        template: '<p data-stub="components-text-meta" />'
       },
       ComponentsTitle: {
         template: '<h1 data-stub="components-title" />'
@@ -44,9 +44,9 @@ describe('Components / Card Story', () => {
       wrapper = mount(CardStory, defaultOptions)
     })
 
-    test('shall isAudiobook: true have influence over components-card-story-audiobook aria-hidden', (): void => {
+    test('shall isAudiobook: true have influence over components-card-story-audiobook aria-label', (): void => {
       const audiobookMeta = wrapper.find('[data-test="components-card-story-audiobook"]')
-      expect(audiobookMeta.element.getAttribute('aria-hidden')).toBe('false')
+      expect(audiobookMeta.element.getAttribute('aria-label')).toBe('Post posiada wersję dźwiękową')
     })
 
     test('shall isAudiobook: true have no influence over components-card-story-audiobook classes', (): void => {
@@ -69,9 +69,9 @@ describe('Components / Card Story', () => {
       wrapper = mount(CardStory, options)
     })
 
-    test('shall isAudiobook: false have influence over components-card-story-audiobook aria-hidden', (): void => {
+    test('shall isAudiobook: false have influence over components-card-story-audiobook aria-label', (): void => {
       const audiobookMeta = wrapper.find('[data-test="components-card-story-audiobook"]')
-      expect(audiobookMeta.element.getAttribute('aria-hidden')).toBe('true')
+      expect(audiobookMeta.element.getAttribute('aria-label')).toBe('Post nie posiada wersji dźwiękowej')
     })
 
     test('shall isAudiobook: false have no influence over components-card-story-audiobook classes', (): void => {

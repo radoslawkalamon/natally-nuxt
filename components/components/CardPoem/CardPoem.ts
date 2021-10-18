@@ -16,6 +16,9 @@ export default Vue.extend({
     datePublished (): string {
       return this.poemPostExcerpt.datePublished
     },
+    datePublishedLabel (): string {
+      return `Opublikowano ${this.datePublished}`
+    },
     title (): string {
       return this.poemPostExcerpt.title
     },

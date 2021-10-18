@@ -25,7 +25,19 @@ describe('Components/Logo', () => {
       expect(wrapper.element.tagName.toLowerCase()).toBe('h3')
     })
 
-    shallHavePropInfluenceOverClassNames(Title, 'type', 4, 'type-4', defaultOptions)
+    test("shall have number prop 'type' no influence over wrapper classes", () => {
+      const type = 3
+      const wrapper = mount(Title, {
+        propsData: {
+          ...defaultOptions.propsData,
+          type
+        }
+      })
+      const isWrapperHaveClass = wrapper.classes().some(cls => cls.includes('design-3'))
+      expect(isWrapperHaveClass).toBeFalsy()
+    })
+
+    shallHavePropInfluenceOverClassNames(Title, 'design', 4, 'design-4', defaultOptions)
     shallHavePropInfluenceOverClassNames(Title, 'shallShowUnderscore', true, 'underscore', defaultOptions)
   })
 })

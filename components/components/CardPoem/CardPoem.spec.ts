@@ -15,16 +15,16 @@ describe('Components / Card Poem', () => {
     },
     stubs: {
       ComponentsCoverPoem: {
-        template: '<div><slot /></div>'
+        template: '<div data-stub="components-cover-poem" />'
       },
       ComponentsTextMeta: {
-        template: '<div><slot /></div>'
+        template: '<p data-stub="components-text-meta" />'
       },
       ComponentsTitle: {
-        template: '<div><slot /></div>'
+        template: '<h1 data-stub="components-title" />'
       },
       NuxtLink: {
-        template: '<div><slot /></div>'
+        template: '<a data-stub="nuxt-link" href="#"><slot /></a>'
       }
     }
   }

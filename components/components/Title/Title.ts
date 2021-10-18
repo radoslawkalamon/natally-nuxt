@@ -1,8 +1,15 @@
 import Vue from 'vue'
 
+const tagValidator = (v: number) => [1, 2, 3, 4].includes(v)
+
 export default Vue.extend({
   name: 'ComponentsTitle',
   props: {
+    design: {
+      type: Number,
+      default: 1,
+      validator: tagValidator
+    },
     title: {
       type: String,
       required: true
@@ -10,9 +17,7 @@ export default Vue.extend({
     type: {
       type: Number,
       default: 1,
-      validator (v) {
-        return [1, 2, 3, 4].includes(v)
-      }
+      validator: tagValidator
     },
     shallShowUnderscore: {
       type: Boolean,
@@ -26,7 +31,7 @@ export default Vue.extend({
     titleClasses (): { [key: string]: boolean } {
       return {
         title: true,
-        [`title--type-${this.type}`]: true,
+        [`title--design-${this.design}`]: true,
         'title--underscore': this.shallShowUnderscore
       }
     }
