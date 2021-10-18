@@ -5,19 +5,19 @@
   margin: var(--gap) 0;
 }
 
-.title--type-1 {
+.title--design-1 {
   font-size: var(--font-size-header-1);
 }
 
-.title--type-2 {
+.title--design-2 {
   font-size: var(--font-size-header-2);
 }
 
-.title--type-3 {
+.title--design-3 {
   font-size: var(--font-size-header-3);
 }
 
-.title--type-4 {
+.title--design-4 {
   font-size: var(--font-size-header-4);
 }
 
