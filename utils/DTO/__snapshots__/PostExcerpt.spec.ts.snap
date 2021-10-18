@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Utils / DTO / Post Excerpt shall format data properly 1`] = `
+Object {
+  "datePublished": "Mocked date formatter",
+  "id": "123",
+  "title": "Test title",
+  "url": "/test-url",
+}
+`;
