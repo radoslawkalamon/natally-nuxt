@@ -15,9 +15,11 @@ describe('Utils / DTO / Post Excerpt', () => {
   })
 
   test('shall format data properly', () => {
-    expect(postExcerpt.id).toBe('123')
-    expect(postExcerpt.datePublished).toBe('Mocked date formatter')
-    expect(postExcerpt.title).toBe('Test title')
-    expect(postExcerpt.url).toBe('/test-url')
+    expect(postExcerpt).toMatchSnapshot({
+      id: '123',
+      datePublished: 'Mocked date formatter',
+      title: 'Test title',
+      url: '/test-url'
+    })
   })
 })

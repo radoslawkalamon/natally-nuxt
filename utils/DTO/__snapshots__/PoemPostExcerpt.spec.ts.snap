@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Utils / DTO / Poem Post Excerpt shall format data properly 1`] = `
+Object {
+  "coverImage": "/cover-image-url.webp",
+  "datePublished": "Mocked date formatter",
+  "id": "123",
+  "title": "Test title",
+  "url": "/test-url",
+}
+`;

@@ -16,10 +16,12 @@ describe('Utils / DTO / Poem Post Excerpt', () => {
   })
 
   test('shall format data properly', () => {
-    expect(poemPostExcerpt.id).toBe('123')
-    expect(poemPostExcerpt.coverImage).toBe('/cover-image-url.webp')
-    expect(poemPostExcerpt.datePublished).toBe('Mocked date formatter')
-    expect(poemPostExcerpt.title).toBe('Test title')
-    expect(poemPostExcerpt.url).toBe('/test-url')
+    expect(poemPostExcerpt).toMatchSnapshot({
+      id: '123',
+      coverImage: '/cover-image-url.webp',
+      datePublished: 'Mocked date formatter',
+      title: 'Test title',
+      url: '/test-url'
+    })
   })
 })
