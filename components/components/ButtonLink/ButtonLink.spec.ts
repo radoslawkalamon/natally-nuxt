@@ -5,6 +5,11 @@ describe('Components / Button Link', () => {
   const defaultOptions = {
     propsData: {
       label: 'Click here'
+    },
+    stubs: {
+      NuxtLink: {
+        template: '<a href="#"><slot /></a>'
+      }
     }
   }
 
