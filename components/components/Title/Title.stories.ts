@@ -5,6 +5,12 @@ const meta: Meta = {
   component: Title,
   title: 'Components / Title',
   argTypes: {
+    design: {
+      options: [1, 2, 3, 4],
+      control: {
+        type: 'inline-radio'
+      }
+    },
     type: {
       options: [1, 2, 3, 4],
       control: {
@@ -23,6 +29,7 @@ const Template: Story = (_args, { argTypes }) => ({
 
 export const withUnderscore: Story = Template.bind({})
 withUnderscore.args = {
+  design: 1,
   title: 'Title',
   type: 1,
   shallShowUnderscore: true
@@ -30,6 +37,7 @@ withUnderscore.args = {
 
 export const withoutUnderscore: Story = Template.bind({})
 withoutUnderscore.args = {
+  design: 1,
   title: 'Title',
   type: 1,
   shallShowUnderscore: false
