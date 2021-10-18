@@ -1,0 +1,82 @@
+.card-story {
+  background-color: var(--color-betwixt);
+  border-radius: var(--border-radius);
+  box-shadow: inset 0 0 0 var(--border-size) var(--color-shadow), 0 var(--border-size) 0 var(--color-shadow);
+  box-sizing: border-box;
+  color: var(--color-white);
+  display: block;
+  height: 200px;
+  max-width: 400px;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  transition: box-shadow var(--time-animation) ease, opacity var(--time-animation) ease;
+  width: 100%;
+}
+
+.card-story:hover {
+  opacity: 0.9;
+  text-decoration: underline;
+}
+
+.card-story:active {
+  box-shadow: inset 0 0 0 var(--border-size) var(--color-shadow), 0 0 0 var(--color-shadow);
+  opacity: 0.75;
+}
+
+.card-story__cover {
+  box-shadow: inset 0 0 0 var(--border-size) var(--color-shadow);
+  box-sizing: border-box;
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.card-story__content {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  bottom: 0;
+  box-sizing: border-box;
+  display: grid;
+  gap: var(--gap);
+  grid-template:
+    'date-published reading-time audiobook'
+    'title title title';
+  left: 0;
+  padding: 3em 1em 1em;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.card-story__date-published {
+  grid-area: date-published;
+  text-align: left;
+}
+
+.card-story__reading-time {
+  grid-area: reading-time;
+  text-align: center;
+}
+
+.card-story__audiobook {
+  grid-area: audiobook;
+  text-align: right;
+}
+
+.card-story__audiobook--disabled {
+  opacity: 0.33;
+  text-decoration: line-through;
+}
+
+.card-story__title {
+  grid-area: title;
+  margin: 0 !important;
+}
+
+.card-story:hover .card-story__title {
+  text-decoration: underline;
+}
