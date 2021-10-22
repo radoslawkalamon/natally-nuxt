@@ -1,0 +1,57 @@
+<template v-once>
+  <table
+    class="miedzy-wierszami"
+    data-test="poems-miedzy-wierszami"
+  >
+    <tr>
+      <th>Rozmiar</th>
+      <th>Klatka</th>
+      <th>Talia</th>
+      <th>Biodra</th>
+    </tr>
+    <tr class="miedzy-wierszami__first-column-bold">
+      <td>34</td>
+      <td>88</td>
+      <td>70</td>
+      <td>92</td>
+    </tr>
+    <tr class="miedzy-wierszami__poetic miedzy-wierszami__text-align-left">
+      <td colspan="4">
+        Znaleźliśmy się między wierszami
+      </td>
+    </tr>
+    <tr class="miedzy-wierszami__first-column-bold">
+      <td>
+        36
+      </td>
+      <td>92</td>
+      <td>74</td>
+      <td>96</td>
+    </tr>
+    <tr class="miedzy-wierszami__poetic miedzy-wierszami__text-align-center">
+      <td colspan="4">
+        tabeli rozmiarów
+      </td>
+    </tr>
+    <tr class="miedzy-wierszami__first-column-bold">
+      <td>38</td>
+      <td>96</td>
+      <td>78</td>
+      <td>100</td>
+    </tr>
+    <tr class="miedzy-wierszami__poetic miedzy-wierszami__text-align-right">
+      <td colspan="4">
+        masowo produkowanego świata.
+      </td>
+    </tr>
+    <tr class="miedzy-wierszami__first-column-bold">
+      <td>40</td>
+      <td>100</td>
+      <td>82</td>
+      <td>104</td>
+    </tr>
+  </table>
+</template>
+
+<script src="./MiedzyWierszami.ts" lang="ts"></script>
+<style src="./MiedzyWierszami.css" scoped></style>
