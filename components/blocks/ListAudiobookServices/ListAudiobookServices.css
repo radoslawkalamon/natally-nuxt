@@ -1,0 +1,15 @@
+.list-audiobook-services {
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--gap);
+  justify-content: center;
+  list-style: none;
+  margin: 0 auto;
+  max-width: var(--max-width-body);
+  padding: 0;
+}
+
+.list-audiobook-services__item {
+  max-width: 260px;
+  width: 100%;
+}
