@@ -1,15 +1,15 @@
 .button-hamburger {
   --button-hamburger-line-height: 4px;
   --button-hamburger-line-border-radius: calc(var(--button-hamburger-line-height) / 2);
-  --button-hamburger-gap: 4px;
-  --button-hamburger-size: 24px;
+  --button-hamburger-size: calc(5 * var(--button-hamburger-line-height));
+  --button-hamburger-transform: calc(2 * var(--button-hamburger-line-height));
 
   appearance: none;
   background-color: transparent;
   border: none;
   cursor: pointer;
   display: grid;
-  gap: var(--button-hamburger-gap);
+  gap: var(--button-hamburger-line-height);
   height: var(--button-hamburger-size);
   padding: 0;
   position: relative;
@@ -20,16 +20,16 @@
   background-color: var(--color-base);
   border-radius: var(--button-hamburger-line-border-radius);
   height: var(--button-hamburger-line-height);
-  width: var(--button-hamburger-size);
+  width: 100%;
 }
 
 .button-hamburger__line--1 {
-  transform-origin: bottom left;
+  transform-origin: center;
   transition: transform var(--time-animation) ease;
 }
 
 .button-hamburger__line--1[data-open="true"] {
-  transform: translate(2px, 1px) rotate(45deg);
+  transform: translateY(var(--button-hamburger-transform)) rotate(45deg);
 }
 
 .button-hamburger__line--2 {
@@ -45,10 +45,10 @@
 }
 
 .button-hamburger__line--3 {
-  transform-origin: top left;
+  transform-origin: center;
   transition: transform var(--time-animation) ease;
 }
 
 .button-hamburger__line--3[data-open="true"] {
-  transform: translate(2px, 1px) rotate(-45deg);
+  transform: translateY(calc(-1 * var(--button-hamburger-transform))) rotate(-45deg);
 }
