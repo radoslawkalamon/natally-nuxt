@@ -1,6 +1,5 @@
 body {
   /* Colors */
-  --color-white: rgba(255, 255, 255, 1);
   --color-off-white-1: rgba(249, 249, 249, 1);
   --color-off-white-2: rgba(243, 243, 243, 1);
   --color-off-white-transparent: rgba(243, 243, 243, 0.15);
