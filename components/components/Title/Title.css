@@ -2,7 +2,7 @@
   color: inherit;
   font-family: var(--font-family-sans);
   line-height: var(--line-height-header);
-  margin: var(--gap) 0;
+  margin: 0;
 }
 
 .title--design-1 {

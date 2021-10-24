@@ -78,10 +78,6 @@
   text-decoration: line-through;
 }
 
-.card-story__title {
-  margin: 0 !important;
-}
-
 .card-story:hover .card-story__title {
   text-decoration: underline;
 }

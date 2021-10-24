@@ -4,11 +4,3 @@
   gap: var(--gap);
   text-align: center;
 }
-
-.page-meta__title {
-  margin: 0 !important;
-}
-
-.page-meta__date-published {
-  margin: 0 !important;
-}

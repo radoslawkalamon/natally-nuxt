@@ -56,10 +56,6 @@
   z-index: 1;
 }
 
-.card-poem__title {
-  margin: 0 !important;
-}
-
 .card-poem:hover .card-poem__title {
   text-decoration: underline;
 }
