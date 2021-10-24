@@ -1,9 +1,9 @@
 import fs from 'fs'
-import vueTemplate from './utils/bootstrap.component/vue.template'
-import tsTemplate from './utils/bootstrap.component/ts.template'
-import cssTemplate from './utils/bootstrap.component/css.template'
-import specTemplate from './utils/bootstrap.component/spec.template'
-import storiesTemplate from './utils/bootstrap.component/stories.template'
+import vueTemplate from './devtools/bootstrap.component/vue.template'
+import tsTemplate from './devtools/bootstrap.component/ts.template'
+import cssTemplate from './devtools/bootstrap.component/css.template'
+import specTemplate from './devtools/bootstrap.component/spec.template'
+import storiesTemplate from './devtools/bootstrap.component/stories.template'
 
 const [type, name] = process.argv.slice(2)
 
