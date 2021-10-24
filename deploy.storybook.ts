@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import path from 'path'
 import dotenv from 'dotenv'
-import DeployService from './utils/deploy.service'
+import DeployService from './devtools/deploy.service'
 
 dotenv.config();
 
