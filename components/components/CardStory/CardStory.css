@@ -1,7 +1,6 @@
 .card-story {
-  background-color: var(--color-betwixt);
   border-radius: var(--border-radius);
-  box-shadow: inset 0 0 0 var(--border-size) var(--color-shadow), 0 var(--border-size) 0 var(--color-shadow);
+  box-shadow: 0 var(--border-size) 0 var(--color-shadow);
   box-sizing: border-box;
   color: var(--color-white);
   display: block;
@@ -20,7 +19,7 @@
 }
 
 .card-story:active {
-  box-shadow: inset 0 0 0 var(--border-size) var(--color-shadow), 0 0 0 var(--color-shadow);
+  box-shadow: 0 0 0 var(--color-shadow);
   opacity: 0.75;
 }
 
@@ -38,7 +37,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: -1;
 }
 
 .card-story__content {
