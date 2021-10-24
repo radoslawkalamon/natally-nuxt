@@ -1,0 +1,46 @@
+.modal {
+  background-color: var(--color-shadow);
+  box-sizing: border-box;
+  height: 100%;
+  left: 0;
+  overflow-y: auto;
+  padding: var(--gap);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+.modal__frame {
+  background-color: var(--color-background-1);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 32px var(--color-shadow);
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: var(--max-width-body);
+  padding: var(--gap-section);
+  width: 100%;
+}
+
+.modal__canvas >>> > *:first-child {
+  margin-top: 0;
+}
+
+.modal__canvas >>> > *:last-child {
+  margin-bottom: 0;
+}
+
+.modal__title {
+  margin-bottom: var(--gap-section);
+  text-align: center;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity var(--time-animation);
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
