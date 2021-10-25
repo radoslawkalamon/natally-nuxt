@@ -11,7 +11,7 @@
       type="checkbox"
       :name="name"
       v-bind="$attrs"
-      @click.prevent="onClick"
+      v-on="$listeners"
     >
     <span
       class="checkbox__label"
