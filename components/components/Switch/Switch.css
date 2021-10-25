@@ -50,6 +50,7 @@
 }
 
 .switch__checkbox:checked::before {
+  background-color: var(--color-off-white-1);
   transform: translateX(var(--switch-checked-position));
 }
 
