@@ -3,6 +3,10 @@
 ## Build Setup
 
 ```bash
+# install submodules
+$ git submodule init
+$ git submodule update
+
 # install dependencies
 $ npm install
 
