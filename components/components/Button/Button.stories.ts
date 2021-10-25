@@ -11,10 +11,10 @@ export default meta
 const Template: Story = (_args, { argTypes }) => ({
   components: { Button },
   props: Object.keys(argTypes),
-  template: '<Button v-bind="$props" @click="onToggle" />',
+  template: '<Button v-bind="$props" @click="onClick" />',
   methods: {
-    onToggle () {
-      action('Click')()
+    onClick () {
+      action('click')()
     }
   }
 })

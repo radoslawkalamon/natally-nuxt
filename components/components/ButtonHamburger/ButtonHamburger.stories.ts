@@ -14,7 +14,7 @@ const Template: Story = (_args, { argTypes }) => ({
   template: '<ButtonHamburger v-bind="$props" @toggle="onToggle" />',
   methods: {
     onToggle () {
-      action('Toggle state')()
+      action('toggle')()
     }
   }
 })
