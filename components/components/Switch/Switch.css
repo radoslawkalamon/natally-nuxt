@@ -1,0 +1,89 @@
+.switch {
+  --switch-height: 24px;
+  --switch-width: 48px;
+  --switch-padding: 6px;
+  --switch-checked-position: 24px;
+  --switch-unchecked-position: 0;
+  --switch-knob-size: 12px;
+}
+
+.switch__label-wrapper {
+  align-items: center;
+  display: flex;
+  gap: var(--gap);
+  margin-bottom: var(--gap);
+}
+
+.switch__checkbox {
+  appearance: none;
+  border-radius: var(--switch-height);
+  box-shadow: inset 0 0 0 var(--border-size) var(--color-base);
+  box-sizing: border-box;
+  cursor: pointer;
+  height: var(--switch-height);
+  margin: 0;
+  min-width: var(--switch-width);
+  position: relative;
+  transition: box-shadow var(--time-animation) ease, background-color var(--time-animation) ease;
+  width: var(--switch-width);
+}
+
+.switch__checkbox::before {
+  background-color: var(--color-base);
+  border-radius: 50%;
+  box-sizing: border-box;
+  content: '';
+  display: block;
+  height: var(--switch-knob-size);
+  left: var(--switch-padding);
+  position: absolute;
+  top: var(--switch-padding);
+  transform: translateX(var(--switch-unchecked-position));
+  transition: background-color var(--time-animation) ease, transform var(--time-animation) ease;
+  width: var(--switch-knob-size);
+  z-index: 1;
+}
+
+.switch__checkbox:checked {
+  background-color: var(--color-accent);
+  box-shadow: inset 0 0 0 var(--border-size) var(--color-border);
+}
+
+.switch__checkbox:checked::before {
+  transform: translateX(var(--switch-checked-position));
+}
+
+.switch__checkbox:disabled {
+  box-shadow: inset 0 0 0 var(--border-size) var(--color-betwixt);
+  cursor: not-allowed;
+}
+
+.switch__checkbox:disabled::before {
+  background-color: var(--color-betwixt);
+}
+
+.switch__checkbox:disabled:checked {
+  background-color: var(--color-betwixt);
+  box-shadow: inset 0 0 0 var(--border-size) var(--color-border);
+}
+
+.switch__checkbox:disabled:checked::before {
+  background-color: var(--color-base);
+}
+
+.switch__label {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-header-3);
+  font-weight: bold;
+  line-height: var(--line-height-header);
+  margin: 0;
+}
+
+.switch__label::after {
+  color: var(--color-accent);
+  content: var(--content-after-header);
+}
+
+.switch__description {
+  width: 100%;
+}
