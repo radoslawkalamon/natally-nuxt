@@ -12,10 +12,5 @@ export default Vue.extend({
       type: String,
       required: true
     }
-  },
-  methods: {
-    onClick (): void {
-      this.$emit('toggle')
-    }
   }
 })

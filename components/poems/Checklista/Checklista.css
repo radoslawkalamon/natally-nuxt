@@ -1,0 +1,17 @@
+.checklista {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--gap);
+}
+
+.checklista__last-line {
+  margin: 0;
+  text-align: right;
+}
+
+.checklista__gradient {
+  background: linear-gradient(to left, transparent 0%, var(--color-base) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,5 +1,4 @@
 import { Meta, Story } from '@storybook/vue'
-import { action } from '@storybook/addon-actions'
 import Checkbox from './Checkbox.vue'
 
 const meta: Meta = {
@@ -11,17 +10,13 @@ export default meta
 const Template: Story = (_args, { argTypes }) => ({
   components: { Checkbox },
   props: Object.keys(argTypes),
-  template: '<Checkbox v-bind="$props" @toggle="onToggle" />',
-  methods: {
-    onToggle () {
-      action('toggle')()
-    }
-  }
+  template: '<Checkbox v-bind="$props" />'
 })
 
 export const Checked: Story = Template.bind({})
 Checked.args = {
   checked: true,
+  disabled: false,
   label: 'Checkbox label',
   name: 'checkbox-name'
 }
@@ -29,6 +24,7 @@ Checked.args = {
 export const Unchecked: Story = Template.bind({})
 Unchecked.args = {
   checked: false,
+  disabled: false,
   label: 'Checkbox label',
   name: 'checkbox-name'
 }
