@@ -1,7 +1,7 @@
 import { merge } from 'lodash'
 import { mount } from '@vue/test-utils'
 import Switch from './Switch.vue'
-import { shallHaveStringProp, shallRender } from '@/utils/commonTestSpecs'
+import { shallHaveStringProp, shallHaveSlot, shallRender } from '@/utils/commonTestSpecs'
 
 describe('Components / Switch', () => {
   const defaultOptions = {
@@ -9,6 +9,9 @@ describe('Components / Switch', () => {
       checked: false,
       label: 'Test label',
       name: 'test-name'
+    },
+    slots: {
+      default: '<span>Tag child</span>Text child'
     },
     stubs: {
       WrappersText: {
@@ -19,6 +22,7 @@ describe('Components / Switch', () => {
 
   shallRender(Switch, defaultOptions)
   shallHaveStringProp(Switch, 'label', defaultOptions)
+  shallHaveSlot(Switch, 'default', defaultOptions)
 
   test('shall input click trigger toggle event', (): void => {
     const wrapper = mount(Switch, defaultOptions)
