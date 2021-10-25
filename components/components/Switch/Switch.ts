@@ -2,15 +2,8 @@ import Vue from 'vue'
 
 export default Vue.extend({
   name: 'ComponentsSwitch',
+  inheritAttrs: false,
   props: {
-    checked: {
-      type: Boolean,
-      required: true
-    },
-    disabled: {
-      type: Boolean,
-      default: false
-    },
     label: {
       type: String,
       required: true
@@ -18,11 +11,6 @@ export default Vue.extend({
     name: {
       type: String,
       required: true
-    }
-  },
-  methods: {
-    onClick (): void {
-      this.$emit('toggle')
     }
   }
 })
