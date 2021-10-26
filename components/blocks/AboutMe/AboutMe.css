@@ -1,0 +1,27 @@
+.about-me {
+  display: grid;
+  gap: var(--gap);
+  grid-template-areas:
+    'image'
+    'text';
+  justify-items: center;
+}
+
+@media screen and (min-width: 480px) {
+  .about-me {
+    align-items: center;
+    grid-template-areas: 'image text';
+    justify-items: stretch;
+  }
+}
+
+.about-me__image {
+  border-radius: var(--border-radius);
+  grid-area: image;
+  height: 120px;
+  width: 120px;
+}
+
+.about-me__text {
+  grid-area: text;
+}
