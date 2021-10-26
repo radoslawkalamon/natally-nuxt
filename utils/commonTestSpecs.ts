@@ -23,6 +23,15 @@ export function shallHaveSlot (component: typeof Vue, slot: string, defaultOptio
   })
 }
 
+export function shallHideSlotWhenNoChildren (component: typeof Vue, slot: string, dataTestSelector: string, defaultOptions?: object): void {
+  test(`shall hide slot '${slot}' when no children passed`, (): void => {
+    const wrapperOptions = merge(defaultOptions)
+    const wrapper = mount(component, wrapperOptions)
+    const slot = wrapper.find(`[data-test="${dataTestSelector}"]`)
+    expect(slot.exists()).toBeFalsy()
+  })
+}
+
 export function shallHaveStringProp (component: typeof Vue, propName: string, defaultOptions?: object): void {
   test(`shall have string prop '${propName}'`, (): void => {
     const text = `This is prop ${propName} test.`

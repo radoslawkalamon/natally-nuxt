@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 import Switch from './Switch.vue'
-import { shallHaveStringProp, shallHaveSlot, shallRender } from '@/utils/commonTestSpecs'
+import { shallHaveStringProp, shallHaveSlot, shallHideSlotWhenNoChildren, shallRender } from '@/utils/commonTestSpecs'
 
 describe('Components / Switch', () => {
   const defaultOptions = {
@@ -18,13 +18,7 @@ describe('Components / Switch', () => {
 
   shallRender(Switch, defaultOptions)
   shallHaveStringProp(Switch, 'label', defaultOptions)
-
-  test('shall description be hidden when no default slot passed', () => {
-    const wrapper = mount(Switch, defaultOptions)
-    const description = wrapper.find('[data-test="components-switch-description"]')
-    expect(description.exists()).toBeFalsy()
-  })
-
+  shallHideSlotWhenNoChildren(Switch, 'default', 'components-switch-description', defaultOptions)
   shallHaveSlot(Switch, 'default', defaultOptions)
 
   test('shall have for="test-name" and name="test-name" elements', () => {
