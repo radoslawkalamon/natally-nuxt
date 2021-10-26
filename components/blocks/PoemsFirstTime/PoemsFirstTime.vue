@@ -12,7 +12,9 @@
       />
     </template>
     <WrappersText>
-      Chcesz dowiedzieć się więcej o Poezji 3.14?
+      <p>
+        Chcesz dowiedzieć&nbsp;się więcej o&nbsp;Poezji&nbsp;3.14?
+      </p>
     </WrappersText>
     <template #footer>
       <ComponentsButtonLink
