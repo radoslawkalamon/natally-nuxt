@@ -2,6 +2,7 @@
   <NuxtLink
     class="navigation-item-link"
     data-test="components-navigation-item-link"
+    v-bind="$attrs"
     v-text="label"
   />
 </template>
