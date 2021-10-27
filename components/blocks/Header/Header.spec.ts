@@ -9,6 +9,9 @@ describe('Blocks / Header', () => {
       ComponentsButtonHamburger: {
         template: '<button data-stub="components-button-hamburger">=</button>'
       },
+      NuxtLink: {
+        template: '<a data-stub="nuxt-link" href="#"><slot /></a>'
+      },
       ComponentsLogo: {
         template: '<img src="./blog-logo.svg" data-stub="components-logo" />'
       }
