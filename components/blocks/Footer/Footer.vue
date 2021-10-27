@@ -14,7 +14,7 @@
     </a>
     <WrappersText>
       <p>
-        {{ getWebsiteName }} &copy; {{ getFullYear }}
+        {{ websiteName }} &copy; {{ fullYear }}
       </p>
     </WrappersText>
   </footer>
