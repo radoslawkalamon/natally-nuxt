@@ -43,4 +43,9 @@ body {
 
   /* Miscellaneous */
   --time-animation: 0.25s;
+
+  /* Header */
+  --blocks-header-logo-height: 32px;
+  --blocks-header-height: calc(var(--blocks-header-logo-height) + 2 * var(--blocks-header-padding));
+  --blocks-header-padding: var(--gap-section);
 }
