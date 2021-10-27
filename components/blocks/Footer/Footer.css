@@ -1,0 +1,6 @@
+.footer {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--gap);
+}
