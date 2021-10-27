@@ -3,7 +3,8 @@
     class="navigation-item"
     data-test="components-navigation-item"
     type="button"
-    @click="onClick"
+    v-bind="$attrs"
+    v-on="$listeners"
     v-text="label"
   />
 </template>
