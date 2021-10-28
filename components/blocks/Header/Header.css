@@ -3,6 +3,7 @@
   background-color: var(--color-background-2);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow-flyout);
+  box-sizing: border-box;
   display: flex;
   gap: var(--gap);
   left: var(--padding-flyout);
@@ -10,7 +11,7 @@
   padding: var(--padding-flyout);
   position: fixed;
   top: var(--padding-flyout);
-  transition: top var(--time-animation) ease;
+  transition: background-color var(--time-animation) ease, top var(--time-animation) ease;
   width: 100%;
   z-index: 9;
 }
@@ -30,7 +31,6 @@
     background-color: transparent;
     border-radius: 0;
     box-shadow: none;
-    width: auto;
   }
 
   .header__button {

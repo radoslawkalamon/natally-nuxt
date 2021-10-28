@@ -35,13 +35,13 @@ export default Vue.extend({
     onToggle (): void {
       // @TODO: Issue 152
     },
-    onScroll () {
+    onScroll (): void {
       const showHeaderCondition = [
+        this.isDrawerOpen,
         window.scrollY < 96,
         this.previousScrollPosition > window.scrollY,
         this.mediaQueryBreakpoint.matches
       ]
-
       this.shallShowHeader = showHeaderCondition.some(e => e)
       this.previousScrollPosition = window.scrollY
     }
