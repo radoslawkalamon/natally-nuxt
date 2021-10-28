@@ -10,6 +10,15 @@ export function shallRender (component: typeof Vue, defaultOptions?: object): vo
   })
 }
 
+export function shallDestroy (component: typeof Vue, defaultOptions?: object): void {
+  test('shall destroy', (): void => {
+    expect(() => {
+      const wrapper = mount(component, defaultOptions)
+      wrapper.destroy()
+    }).not.toThrowError()
+  })
+}
+
 export function shallHaveSlot (component: typeof Vue, slot: string, defaultOptions?: object): void {
   test(`shall have slot '${slot}'`, (): void => {
     const text = `This is slot '${slot}' test.`

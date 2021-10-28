@@ -9,5 +9,8 @@ export default meta
 
 export const Default: Story = () => ({
   components: { BlockHeader },
-  template: '<div style="height: 2000px"><BlockHeader /></div>'
+  template:
+  `<div style="background-color: var(--color-background-1); height: 2000px">
+    <BlockHeader />
+  </div>`
 })

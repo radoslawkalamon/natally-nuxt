@@ -1,10 +1,11 @@
 import { mount } from '@vue/test-utils'
-import lodash from 'lodash'
 import Header from './Header.vue'
-import { shallRender } from '@/utils/commonTestSpecs'
+import { shallDestroy, shallRender } from '@/utils/commonTestSpecs'
+import jestMatchMediaPolyfill from '@/utils/jest.matchMedia.polyfill'
 
 describe('Blocks / Header', () => {
   const defaultOptions = {
+    attachTo: document.body,
     stubs: {
       ComponentsButtonHamburger: {
         template: '<button data-stub="components-button-hamburger">=</button>'
@@ -18,29 +19,19 @@ describe('Blocks / Header', () => {
     }
   }
 
+  beforeAll(() => {
+    jestMatchMediaPolyfill()
+    jest.useFakeTimers()
+  })
+
   shallRender(Header, defaultOptions)
+  shallDestroy(Header, defaultOptions)
 
-  describe('Lifecycle methods', () => {
-    test('shall call addEventListener on mounted', () => {
-      const addEventListenerSpy = jest.spyOn(window, 'addEventListener')
+  test('shall onScroll be called on a scroll event', () => {
+    expect(() => {
       mount(Header, defaultOptions)
-      expect(addEventListenerSpy).toHaveBeenCalled()
-      addEventListenerSpy.mockReset()
-    })
-
-    test('shall call throttle on mounted', () => {
-      const throttleSpy = jest.spyOn(lodash, 'throttle')
-      mount(Header, defaultOptions)
-      expect(throttleSpy).toHaveBeenCalled()
-      throttleSpy.mockReset()
-    })
-
-    test('shall call removeEventListener on beforeDestroy', () => {
-      const removeEventListenerSpy = jest.spyOn(window, 'removeEventListener')
-      const wrapper = mount(Header, defaultOptions)
-      wrapper.destroy()
-      expect(removeEventListenerSpy).toHaveBeenCalled()
-      removeEventListenerSpy.mockReset()
-    })
+      window.dispatchEvent(new CustomEvent('scroll'))
+      jest.runAllTimers()
+    }).not.toThrowError()
   })
 })

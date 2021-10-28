@@ -14,11 +14,11 @@
 .modal__frame {
   background-color: var(--color-background-1);
   border-radius: var(--border-radius);
-  box-shadow: 0 0 32px var(--color-shadow);
+  box-shadow: var(--box-shadow-modal);
   box-sizing: border-box;
   margin: 0 auto;
   max-width: var(--max-width-body);
-  padding: var(--gap-section);
+  padding: var(--padding-modal);
   width: 100%;
 }
 
