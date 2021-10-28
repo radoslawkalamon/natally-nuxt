@@ -1,0 +1,19 @@
+.layout-default {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--gap-section);
+}
+
+.layout-default .main {
+  padding-top: calc(var(--blocks-header-height) + var(--gap));
+}
+
+@media screen and (min-width: 960px) {
+  .layout-default {
+    margin-left: calc(var(--max-width-drawer) + var(--gap-section));
+  }
+
+  .layout-default .main {
+    padding-top: var(--gap-section);
+  }
+}
