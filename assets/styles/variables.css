@@ -54,6 +54,6 @@ body {
   --time-animation: 0.25s;
 
   /* Blocks / Header */
-  --blocks-header-height: calc(var(--blocks-header-logo-height) + 4 * var(--padding-flyout));
+  --blocks-header-height: calc(var(--blocks-header-height-logo) + 4 * var(--padding-flyout));
   --blocks-header-height-logo: 32px;
 }

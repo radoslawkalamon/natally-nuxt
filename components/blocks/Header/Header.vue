@@ -1,17 +1,20 @@
 <template>
-  <header
-    :class="headerClasses"
-    data-test="blocks-header"
-  >
-    <ComponentsButtonHamburger
-      class="header__button"
-      :is-open="shallOpenDrawer"
-      @click="onHamburgerToggle"
-    />
-    <NuxtLink :to="homepageURL">
-      <ComponentsLogo class="header__logo" />
-    </NuxtLink>
-  </header>
+  <transition name="header">
+    <header
+      v-show="shallShowHeader"
+      class="header"
+      data-test="blocks-header"
+    >
+      <ComponentsButtonHamburger
+        class="header__button"
+        :is-open="isDrawerOpen"
+        @toggle="onToggle"
+      />
+      <NuxtLink :to="homepageURL">
+        <ComponentsLogo class="header__logo" />
+      </NuxtLink>
+    </header>
+  </transition>
 </template>
 
 <script src="./Header.ts" lang="ts"></script>
