@@ -28,12 +28,21 @@ body {
   --border-radius: 8px;
   --border-size: 1px;
 
+  /* Box-shadows */
+  --box-shadow-flyout: 0 0 16px var(--color-shadow);
+  --box-shadow-modal: 0 0 32px var(--color-shadow);
+
+  /* Paddings */
+  --padding-flyout: 16px;
+  --padding-modal: 32px;
+
   /* Gaps */
   --gap: 16px;
   --gap-section: 32px;
 
   /* Max widths */
   --max-width-body: 600px;
+  --max-width-drawer: 256px;
   --max-width-poems: 400px;
 
   /* Contents */
@@ -44,8 +53,7 @@ body {
   /* Miscellaneous */
   --time-animation: 0.25s;
 
-  /* Header */
-  --blocks-header-logo-height: 32px;
-  --blocks-header-height: calc(var(--blocks-header-logo-height) + 2 * var(--blocks-header-padding));
-  --blocks-header-padding: var(--gap-section);
+  /* Blocks / Header */
+  --blocks-header-height: calc(var(--blocks-header-logo-height) + 4 * var(--padding-flyout));
+  --blocks-header-height-logo: 32px;
 }
