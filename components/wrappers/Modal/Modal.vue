@@ -7,8 +7,8 @@
       <div class="modal__frame">
         <ComponentsTitle
           class="modal__title"
-          type="1"
-          design="2"
+          :type="1"
+          :design="2"
           :title="title"
         />
         <div class="modal__canvas">
