@@ -42,7 +42,7 @@
 
 .card-poem__content {
   align-items: center;
-  background-color: var(--color-off-black-transparent);
+  background-color: var(--color-off-black-transparent-1);
   box-sizing: border-box;
   display: flex;
   gap: var(--gap);
