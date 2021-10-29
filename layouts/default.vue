@@ -1,7 +1,7 @@
 <template>
   <div class="layout-default">
     <BlocksHeader />
-    <!-- <BlocksDrawer /> -->
+    <BlocksDrawer />
     <WrappersMain class="layout-default__main">
       <Nuxt />
     </WrappersMain>
