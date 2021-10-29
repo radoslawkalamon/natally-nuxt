@@ -23,14 +23,8 @@
   left: calc(-1 * var(--max-width-drawer));
 }
 
-.drawer__logo-placeholder {
-  display: none;
-}
-
-@media screen and (min-height: 400px) {
-  .drawer__logo-placeholder {
-    display: block;
-  }
+.drawer__navigation {
+  margin: auto 0;
 }
 
 @media screen and (min-width: 960px) {

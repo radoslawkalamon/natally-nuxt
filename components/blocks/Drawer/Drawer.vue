@@ -5,8 +5,7 @@
       class="drawer"
       data-test="blocks-drawer"
     >
-      <div class="drawer__logo-placeholder" />
-      <BlocksNavigationDrawer />
+      <BlocksNavigationDrawer class="drawer__navigation" />
       <BlocksSocialMedia />
     </div>
   </transition>
