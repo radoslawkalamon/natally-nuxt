@@ -7,8 +7,8 @@
     >
       <ComponentsButtonHamburger
         class="header__button"
-        :is-open="isDrawerOpen"
-        @toggle="onToggle"
+        :is-open="shallOpenDrawer"
+        @toggle="toggleDrawer"
       />
       <NuxtLink :to="homepageURL">
         <ComponentsLogo class="header__logo" />

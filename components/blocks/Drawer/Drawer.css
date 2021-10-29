@@ -32,7 +32,6 @@
     background-color: transparent;
     border-radius: 0;
     box-shadow: none;
-    display: flex !important;
     height: calc(100% - var(--blocks-header-height));
   }
 }
