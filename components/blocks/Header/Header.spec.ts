@@ -8,12 +8,12 @@ localVue.use(Vuex)
 
 const storeConfig = {
   getters: {
-    'drawer/shallOpenDrawer': jest.fn(() => false),
-    'header/shallShowHeader': jest.fn(() => true)
+    'blocks/drawer/shallOpenDrawer': jest.fn(() => false),
+    'blocks/header/shallShowHeader': jest.fn(() => true)
   },
   actions: {
-    'drawer/toggleDrawer': jest.fn(),
-    'header/updateScrollYPosition': jest.fn()
+    'blocks/drawer/toggleDrawer': jest.fn(),
+    'blocks/header/updateScrollYPosition': jest.fn()
   }
 }
 const store = new Store(storeConfig)
@@ -39,10 +39,10 @@ describe('Blocks / Header', () => {
   shallRender(Header, defaultOptions)
   shallDestroy(Header, defaultOptions)
 
-  test('shall trigger header/updateScrollYPosition on common/windowScroll', () => {
+  test('shall trigger blocks/header/updateScrollYPosition on common/windowScroll', () => {
     const wrapper = mount(Header, defaultOptions)
-    storeConfig.actions['header/updateScrollYPosition'].mockReset()
+    storeConfig.actions['blocks/header/updateScrollYPosition'].mockReset()
     wrapper.vm.$root.$emit('common/windowScroll')
-    expect(storeConfig.actions['header/updateScrollYPosition']).toBeCalled()
+    expect(storeConfig.actions['blocks/header/updateScrollYPosition']).toBeCalled()
   })
 })

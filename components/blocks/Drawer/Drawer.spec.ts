@@ -8,7 +8,7 @@ localVue.use(Vuex)
 
 const store = new Store({
   getters: {
-    'drawer/shallOpenDrawer': jest.fn(() => true)
+    'blocks/drawer/shallOpenDrawer': jest.fn(() => true)
   }
 })
 

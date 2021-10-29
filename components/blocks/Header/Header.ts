@@ -5,8 +5,8 @@ export default Vue.extend({
   name: 'BlocksHeader',
   computed: {
     ...mapGetters({
-      shallOpenDrawer: 'drawer/shallOpenDrawer',
-      shallShowHeader: 'header/shallShowHeader'
+      shallOpenDrawer: 'blocks/drawer/shallOpenDrawer',
+      shallShowHeader: 'blocks/header/shallShowHeader'
     }),
     homepageURL (): string {
       return '/'
@@ -21,8 +21,8 @@ export default Vue.extend({
   },
   methods: {
     ...mapActions({
-      toggleDrawer: 'drawer/toggleDrawer',
-      updateScrollYPosition: 'header/updateScrollYPosition'
+      toggleDrawer: 'blocks/drawer/toggleDrawer',
+      updateScrollYPosition: 'blocks/header/updateScrollYPosition'
     })
   }
 })

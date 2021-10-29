@@ -11,7 +11,7 @@ export type RootState = ReturnType<typeof state>
 export const getters: GetterTree<RootState, RootState> = {
   shallShowHeader: (state, _getters, _rootState, rootGetters) => {
     return [
-      rootGetters['drawer/shallOpenDrawer'],
+      rootGetters['blocks/drawer/shallOpenDrawer'],
       state.isScrollBeyondThreshold,
       state.isScrollUp,
       rootGetters['matchMedia/isDesktop']

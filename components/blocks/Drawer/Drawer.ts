@@ -5,7 +5,7 @@ export default Vue.extend({
   name: 'BlocksDrawer',
   computed: {
     ...mapGetters({
-      shallOpenDrawer: 'drawer/shallOpenDrawer'
+      shallOpenDrawer: 'blocks/drawer/shallOpenDrawer'
     })
   }
 })
