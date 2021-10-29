@@ -12,7 +12,7 @@
       <ComponentsNavigationItem
         data-test="blocks-navigation-footer-privacy-modal"
         label="Ustawienia prywatności"
-        @click="openPrivacyModal"
+        @click="toggleModalPrivacy"
       />
     </WrappersNavigation>
   </nav>

@@ -6,6 +6,7 @@
       <Nuxt />
     </WrappersMain>
     <BlocksFooter />
+    <BlocksModalPrivacy />
   </div>
 </template>
 

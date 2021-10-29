@@ -1,10 +1,11 @@
 import Vue from 'vue'
+import { mapActions } from 'vuex'
 
 export default Vue.extend({
   name: 'BlocksNavigationFooter',
   methods: {
-    openPrivacyModal (): void {
-      // @TODO: Issue #153
-    }
+    ...mapActions({
+      toggleModalPrivacy: 'blocks/ModalPrivacy/toggleModalPrivacy'
+    })
   }
 })
