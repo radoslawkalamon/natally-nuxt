@@ -2,7 +2,7 @@
   <div class="layout-default">
     <BlocksHeader />
     <!-- <BlocksDrawer /> -->
-    <WrappersMain>
+    <WrappersMain class="layout-default__main">
       <Nuxt />
     </WrappersMain>
     <BlocksFooter />
