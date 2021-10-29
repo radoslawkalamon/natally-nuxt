@@ -1,10 +1,11 @@
 import Vue from 'vue'
+import { mapGetters } from 'vuex'
 
 export default Vue.extend({
   name: 'BlocksDrawer',
   computed: {
-    shallShowDrawer (): boolean {
-      return true
-    }
+    ...mapGetters({
+      shallOpenDrawer: 'drawer/shallOpenDrawer'
+    })
   }
 })
