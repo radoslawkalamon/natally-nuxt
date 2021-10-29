@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
 import Header from './Header.vue'
 import { shallDestroy, shallRender } from '@/utils/commonTestSpecs'
-import jestMatchMediaPolyfill from '@/utils/jest.matchMedia.polyfill'
+import jestMatchMediaPolyfill from '@/devtools/jest.matchMedia.polyfill'
 
 describe('Blocks / Header', () => {
   const defaultOptions = {
