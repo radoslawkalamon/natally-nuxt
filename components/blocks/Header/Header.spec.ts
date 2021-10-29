@@ -1,11 +1,28 @@
-import { mount } from '@vue/test-utils'
+import { createLocalVue, mount } from '@vue/test-utils'
+import Vuex, { Store } from 'vuex'
 import Header from './Header.vue'
 import { shallDestroy, shallRender } from '@/utils/commonTestSpecs'
-import jestMatchMediaPolyfill from '@/devtools/jest.matchMedia.polyfill'
+
+const localVue = createLocalVue()
+localVue.use(Vuex)
+
+const storeConfig = {
+  getters: {
+    'drawer/shallOpenDrawer': jest.fn(() => false),
+    'header/shallShowHeader': jest.fn(() => true)
+  },
+  actions: {
+    'drawer/toggleDrawer': jest.fn(),
+    'header/updateScrollYPosition': jest.fn()
+  }
+}
+const store = new Store(storeConfig)
 
 describe('Blocks / Header', () => {
   const defaultOptions = {
     attachTo: document.body,
+    localVue,
+    store,
     stubs: {
       ComponentsButtonHamburger: {
         template: '<button data-stub="components-button-hamburger">=</button>'
@@ -19,19 +36,13 @@ describe('Blocks / Header', () => {
     }
   }
 
-  beforeAll(() => {
-    jestMatchMediaPolyfill()
-    jest.useFakeTimers()
-  })
-
   shallRender(Header, defaultOptions)
   shallDestroy(Header, defaultOptions)
 
-  test('shall onScroll be called on a scroll event', () => {
-    expect(() => {
-      mount(Header, defaultOptions)
-      window.dispatchEvent(new CustomEvent('scroll'))
-      jest.runAllTimers()
-    }).not.toThrowError()
+  test('shall trigger header/updateScrollYPosition on common/windowScroll', () => {
+    const wrapper = mount(Header, defaultOptions)
+    storeConfig.actions['header/updateScrollYPosition'].mockReset()
+    wrapper.vm.$root.$emit('common/windowScroll')
+    expect(storeConfig.actions['header/updateScrollYPosition']).toBeCalled()
   })
 })
