@@ -1,21 +1,22 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: '169cm.pl',
     htmlAttrs: {
       lang: 'pl'
     },
+    link: [
+      { rel: 'shortcut icon', type: 'image/png', href: '/images/icon-192x192.png' },
+      { rel: 'shortcut icon', sizes: '192x192', href: '/images/icon-192x192.png' },
+      { rel: 'apple-touch-icon', href: '/images/icon-192x192-white.png' }
+    ],
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    title: '169cm.pl'
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
