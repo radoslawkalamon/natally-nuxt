@@ -1,5 +1,5 @@
 import ListAudiobookServices from './ListAudiobookServices.vue'
-import { shallRender } from '@/utils/commonTestSpecs'
+import { shallRender } from '@/devtools/jest.shared.spec'
 
 describe('Blocks / List Audiobook Services', () => {
   const defaultOptions = {

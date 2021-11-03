@@ -1,5 +1,5 @@
 import Checklista from './Checklista.vue'
-import { shallRender } from '@/utils/commonTestSpecs'
+import { shallRender } from '@/devtools/jest.shared.spec'
 
 describe('Poems / Checklista', () => {
   const defaultOptions = {

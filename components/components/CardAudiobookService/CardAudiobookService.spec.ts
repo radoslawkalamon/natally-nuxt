@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 import CardAudiobookService from './CardAudiobookService.vue'
-import { shallRender } from '@/utils/commonTestSpecs'
+import { shallRender } from '@/devtools/jest.shared.spec'
 
 describe('Components / Card Audiobook Service', () => {
   const defaultOptions = {

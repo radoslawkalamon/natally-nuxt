@@ -1,5 +1,5 @@
 import CardPoem from './CardPoem.vue'
-import { shallRender } from '@/utils/commonTestSpecs'
+import { shallRender } from '@/devtools/jest.shared.spec'
 
 jest.mock('@/utils/DTO/PoemPostExcerpt', () => Object)
 

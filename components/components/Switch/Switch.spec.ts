@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 import Switch from './Switch.vue'
-import { shallHaveStringProp, shallHaveSlot, shallHideSlotWhenNoChildren, shallRender } from '@/utils/commonTestSpecs'
+import { shallHaveStringProp, shallHaveSlot, shallHideSlotWhenNoChildren, shallRender } from '@/devtools/jest.shared.spec'
 
 describe('Components / Switch', () => {
   const defaultOptions = {

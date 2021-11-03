@@ -1,5 +1,5 @@
 import Section from './Section.vue'
-import { shallHaveSlot, shallHideSlotWhenNoChildren, shallRender } from '@/utils/commonTestSpecs'
+import { shallHaveSlot, shallHideSlotWhenNoChildren, shallRender } from '@/devtools/jest.shared.spec'
 
 describe('Wrappers / Section', () => {
   shallRender(Section)

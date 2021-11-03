@@ -1,7 +1,7 @@
 import { merge } from 'lodash'
 import { mount } from '@vue/test-utils'
 import CardStory from './CardStory.vue'
-import { shallRender } from '@/utils/commonTestSpecs'
+import { shallRender } from '@/devtools/jest.shared.spec'
 
 jest.mock('@/utils/DTO/StoryPostExcerpt', () => Object)
 

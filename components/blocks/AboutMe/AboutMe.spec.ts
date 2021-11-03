@@ -1,5 +1,5 @@
 import AboutMe from './AboutMe.vue'
-import { shallRender } from '@/utils/commonTestSpecs'
+import { shallRender } from '@/devtools/jest.shared.spec'
 
 describe('Blocks / About Me', () => {
   const defaultOptions = {

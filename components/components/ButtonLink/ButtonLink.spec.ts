@@ -1,5 +1,5 @@
 import ButtonLink from './ButtonLink.vue'
-import { shallRender, shallHaveStringProp } from '@/utils/commonTestSpecs'
+import { shallRender, shallHaveStringProp } from '@/devtools/jest.shared.spec'
 
 describe('Components / Button Link', () => {
   const defaultOptions = {

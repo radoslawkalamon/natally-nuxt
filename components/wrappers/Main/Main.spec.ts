@@ -1,5 +1,5 @@
 import Main from './Main.vue'
-import { shallHaveSlot, shallRender } from '@/utils/commonTestSpecs'
+import { shallHaveSlot, shallRender } from '@/devtools/jest.shared.spec'
 
 describe('Wrappers / Main', () => {
   shallRender(Main)

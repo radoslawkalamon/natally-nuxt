@@ -1,7 +1,7 @@
 import { createLocalVue, mount } from '@vue/test-utils'
 import Vuex, { Store } from 'vuex'
 import Header from './Header.vue'
-import { shallDestroy, shallRender } from '@/utils/commonTestSpecs'
+import { shallDestroy, shallRender } from '@/devtools/jest.shared.spec'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)

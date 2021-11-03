@@ -1,5 +1,5 @@
 import CoverStory from './CoverStory.vue'
-import { shallRender } from '@/utils/commonTestSpecs'
+import { shallRender } from '@/devtools/jest.shared.spec'
 
 describe('Components / Cover Story', () => {
   const defaultOptions = {

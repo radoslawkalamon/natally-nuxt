@@ -1,5 +1,5 @@
 import TextPoems from './TextPoems.vue'
-import { shallHaveSlot, shallRender } from '@/utils/commonTestSpecs'
+import { shallHaveSlot, shallRender } from '@/devtools/jest.shared.spec'
 
 describe('Wrappers / Text Poems', () => {
   const defaultOptions = {

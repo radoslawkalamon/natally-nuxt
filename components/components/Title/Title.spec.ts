@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 import Title from './Title.vue'
-import { shallRender, shallHaveStringProp, shallHavePropInfluenceOverClassNames } from '@/utils/commonTestSpecs'
+import { shallRender, shallHaveStringProp, shallHavePropInfluenceOverClassNames } from '@/devtools/jest.shared.spec'
 
 describe('Components/Logo', () => {
   const defaultOptions = {
