@@ -1,11 +1,11 @@
 import PostExcerpt from '@/utils/DTO/PostExcerpt'
-import formatReadingTime from '@/utils/formatters/readingTime'
+import { formatterTimeReading } from '@/utils/formatter.time.reading'
 
 type StoryPostExcerptConstructor = {
   id: string;
   coverImage: string;
   coverImage2x: string;
-  datePublished: number;
+  datePublished: string;
   isAudiobook: boolean;
   readingTime: number;
   title: string;
@@ -23,6 +23,6 @@ export default class StoryPostExcerpt extends PostExcerpt {
     this.coverImage = coverImage
     this.coverImage2x = coverImage2x
     this.isAudiobook = isAudiobook
-    this.readingTime = formatReadingTime(readingTime)
+    this.readingTime = formatterTimeReading(readingTime)
   }
 }

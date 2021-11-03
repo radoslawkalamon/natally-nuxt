@@ -1,10 +1,10 @@
 /* eslint-disable no-console */
 import { Client, FileInfo, FTPResponse } from 'basic-ftp'
 import { ProgressInfo } from 'basic-ftp/dist/ProgressTracker'
-import capitalize from '../utils/formatters/capitalize'
-import spacelize from '../utils/formatters/spacelize'
+import { formatterCapitalize } from '../utils/formatter.capitalize'
+import { formatterSpacelize } from '../utils/formatter.spacelize'
 
-type DeployServiceConfig = {
+type ServiceDeployConfig = {
   host: string;
   port: number;
   username: string;
@@ -23,7 +23,7 @@ function decoratorLogCall () {
     const targetMethod = descriptor.value
 
     descriptor.value = function (...args: any[]) {
-      const formattedName = spacelize(capitalize(propertyKey))
+      const formattedName = formatterSpacelize(formatterCapitalize(propertyKey))
       console.log(`::: ${formattedName} :::`)
       return targetMethod.apply(this, args)
     }
@@ -32,7 +32,7 @@ function decoratorLogCall () {
   }
 }
 
-class DeployService {
+export class ServiceDeploy {
   readonly host: string;
   readonly port: number;
   readonly username: string;
@@ -42,7 +42,7 @@ class DeployService {
   readonly localCatalog: string;
   FTPClient = new Client()
 
-  constructor (config: DeployServiceConfig) {
+  constructor (config: ServiceDeployConfig) {
     this.host = config.host
     this.port = Number(config.port)
     this.username = config.username
@@ -125,5 +125,3 @@ class DeployService {
     this.FTPClient.close()
   }
 }
-
-export default DeployService

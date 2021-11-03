@@ -1,8 +1,8 @@
-import capitalize from '../../utils/formatters/capitalize'
-import spacelize from '../../utils/formatters/spacelize'
+import { formatterCapitalize } from '../utils/formatter.capitalize'
+import { formatterSpacelize } from '../utils/formatter.spacelize'
 
-export default (type: string, name: string): string => {
-  const title = `${capitalize(type)} / ${spacelize(name)}`
+export const componentBootstrapTemplateStories = (type: string, name: string): string => {
+  const title = `${formatterCapitalize(type)} / ${formatterSpacelize(name)}`
 
   return `import { Meta, Story } from '@storybook/vue'
 import ${name} from './${name}.vue'

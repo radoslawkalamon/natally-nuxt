@@ -1,6 +1,6 @@
 import PostExcerpt from '@/utils/DTO/PostExcerpt'
 
-jest.mock('@/utils/formatters/datePublished', () => () => 'Mocked date formatter')
+jest.mock('@/utils/formatter.date.published', () => () => 'Mocked date formatter')
 
 describe('Utils / DTO / Post Excerpt', () => {
   let postExcerpt: PostExcerpt

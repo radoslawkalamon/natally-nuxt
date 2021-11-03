@@ -1,8 +1,8 @@
-import formatDatePublished from '@/utils/formatters/datePublished'
+import { formatterDatePublished } from '@/utils/formatter.date.published'
 
 type PostExcerptConstructor = {
   id: string;
-  datePublished: number;
+  datePublished: string;
   title: string;
   url: string;
 }
@@ -15,7 +15,7 @@ export default class PostExcerpt {
 
   constructor ({ id, datePublished, title, url }: PostExcerptConstructor) {
     this.id = id
-    this.datePublished = formatDatePublished(datePublished)
+    this.datePublished = formatterDatePublished(datePublished)
     this.title = title
     this.url = url
   }

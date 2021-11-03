@@ -3,7 +3,7 @@ import PostExcerpt from '@/utils/DTO/PostExcerpt'
 type PoemPostExcerptConstructor = {
   id: string;
   coverImage: string;
-  datePublished: number;
+  datePublished: string;
   title: string;
   url: string;
 }

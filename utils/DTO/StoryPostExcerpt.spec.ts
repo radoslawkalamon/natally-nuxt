@@ -1,7 +1,7 @@
 import StoryPostExcerpt from '@/utils/DTO/StoryPostExcerpt'
 
-jest.mock('@/utils/formatters/datePublished', () => () => 'Mocked date formatter')
-jest.mock('@/utils/formatters/readingTime', () => () => 'Mocked time formatter')
+jest.mock('@/utils/formatter.date.published', () => () => 'Mocked date formatter')
+jest.mock('@/utils/formatter.time.reading', () => () => 'Mocked time formatter')
 
 describe('Utils / DTO / Poem Post Excerpt', () => {
   let storyPostExcerpt: StoryPostExcerpt
