@@ -1,3 +1,6 @@
 [submodule "content"]
 	path = content
 	url = https://github.com/radoslawkalamon/natally-nuxt-content
+[submodule "static/images"]
+	path = static/images
+	url = https://github.com/radoslawkalamon/natally-nuxt-images
