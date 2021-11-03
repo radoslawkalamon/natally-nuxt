@@ -9,7 +9,7 @@
     "deploy:stage": "npm run generate && ts-node ./deploy.stage.ts",
     "deploy:prod": "npm run generate && ts-node ./deploy.prod.ts",
     "dev": "nuxt",
-    "generate": "nuxt generate",
+    "generate": "nuxt generate --modern",
     "lint": "npm run lint:script && npm run lint:style",
     "lint:script": "eslint --ext \".ts,.js,.vue\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
