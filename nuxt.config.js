@@ -45,7 +45,9 @@ export default {
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    extractCSS: true
+  },
   storybook: {
     parameters: {
       controls: {
