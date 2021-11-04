@@ -1,3 +1,5 @@
+import { nuxtHooksContentFileBeforeParseTextAlignment } from './utils/nuxt.hooks.content.file.beforeParse.textAlignment'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -48,6 +50,9 @@ export default {
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
   // Build Configuration: https://go.nuxtjs.dev/config-build
+  hooks: {
+    'content:file:beforeParse': nuxtHooksContentFileBeforeParseTextAlignment
+  },
   build: {
     extractCSS: true
   },
