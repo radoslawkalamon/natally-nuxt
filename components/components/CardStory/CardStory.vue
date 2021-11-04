@@ -5,12 +5,12 @@
   >
     <NuxtLink
       class="card-story__link"
-      :to="url"
+      :to="path"
     >
       <ComponentsCoverStory
         class="card-story__cover"
-        :image="coverImage"
-        :image2x="coverImage2x"
+        :image="imageCover"
+        :image2x="imageCover2x"
       />
       <div class="card-story__content">
         <footer class="card-story__footer">

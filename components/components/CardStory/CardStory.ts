@@ -1,29 +1,40 @@
 import Vue from 'vue'
-import StoryPostExcerpt from '@/utils/DTO/StoryPostExcerpt'
+import { DTOMetaPostStory } from '@/utils/dto.meta.post.story'
+import { formatterDateMeta } from '@/utils/formatter.date.meta'
+import { formatterTimeReading } from '@/utils/formatter.time.reading'
 
 export default Vue.extend({
   name: 'ComponentsCardStory',
   props: {
-    storyPostExcerpt: {
-      type: StoryPostExcerpt,
+    metaPostStory: {
+      type: DTOMetaPostStory,
       required: true
     }
   },
   computed: {
-    coverImage (): string {
-      return this.storyPostExcerpt.coverImage
+    path (): string {
+      return this.metaPostStory.path
     },
-    coverImage2x (): string {
-      return this.storyPostExcerpt.coverImage2x
+    imageCover (): string {
+      return this.metaPostStory.imageCover
+    },
+    imageCover2x (): string {
+      return this.metaPostStory.imageCover2x
     },
     datePublished (): string {
-      return this.storyPostExcerpt.datePublished
+      return formatterDateMeta(this.metaPostStory.createdAt)
     },
     datePublishedLabel (): string {
       return `Opublikowano ${this.datePublished}`
     },
+    readingTime (): string {
+      return formatterTimeReading(this.metaPostStory.timeReading)
+    },
+    readingTimeLabel (): string {
+      return `Tekst przeczytasz w ${this.readingTime}`
+    },
     isAudiobook (): boolean {
-      return this.storyPostExcerpt.isAudiobook
+      return this.metaPostStory.audiobookId !== '0'
     },
     isAudiobookClasses (): string[] {
       return [
@@ -36,17 +47,8 @@ export default Vue.extend({
         ? 'Post posiada wersję dźwiękową'
         : 'Post nie posiada wersji dźwiękowej'
     },
-    readingTime (): string {
-      return this.storyPostExcerpt.readingTime
-    },
-    readingTimeLabel (): string {
-      return `Tekst przeczytasz w ${this.readingTime}`
-    },
     title (): string {
-      return this.storyPostExcerpt.title
-    },
-    url (): string {
-      return this.storyPostExcerpt.url
+      return this.metaPostStory.title
     }
   }
 })
