@@ -23,7 +23,7 @@ Audiobook.args = {
     imageCover: 'https://www.fillmurray.com/600/350',
     imageCover2x: 'https://www.fillmurray.com/1200/600',
     imageOpenGraph: 'https://www.fillmurray.com/1200/630',
-    path: '/poezja-314/hello-world',
+    path: '/opowiadania/hello-world',
     timeReading: 5,
     title: 'Hello world',
     updatedAt: '2021-11-01T00:00:00+00:00'
@@ -38,7 +38,7 @@ NoAudiobook.args = {
     imageCover: 'https://www.fillmurray.com/600/350',
     imageCover2x: 'https://www.fillmurray.com/1200/600',
     imageOpenGraph: 'https://www.fillmurray.com/1200/630',
-    path: '/poezja-314/hello-world',
+    path: '/opowiadania/hello-world',
     timeReading: 5,
     title: 'Hello world',
     updatedAt: '2021-11-01T00:00:00+00:00'
