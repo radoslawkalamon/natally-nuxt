@@ -7,7 +7,7 @@
     <WrappersNavigation>
       <ComponentsNavigationItemLink
         label="Polityka prywatności"
-        to="/polityka-prywatnosci"
+        to="/polityka-prywatnosci/"
       />
       <ComponentsNavigationItem
         data-test="blocks-navigation-footer-privacy-modal"

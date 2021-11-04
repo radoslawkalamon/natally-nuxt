@@ -19,21 +19,21 @@ export default Vue.extend({
         {
           label: 'O mnie',
           target: '_blank',
-          to: '/o-mnie',
+          to: '/o-mnie/',
           rel: 'noopener noreferrer'
         },
         {
           label: 'Poezja 3.14',
-          to: '/poezja-314'
+          to: '/poezja-314/'
         },
         {
           label: 'Audiobooki',
-          to: '/audiobooki'
+          to: '/audiobooki/'
         },
         {
           label: 'Kontakt',
           target: '_blank',
-          to: '/kontakt',
+          to: '/kontakt/',
           rel: 'noopener noreferrer'
         }
       ]

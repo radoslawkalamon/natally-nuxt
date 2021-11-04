@@ -24,6 +24,9 @@ export default {
     '@/assets/styles/schemas.css',
     '@/assets/styles/body.css'
   ],
+  router: {
+    trailingSlash: true
+  },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
   // Auto import components: https://go.nuxtjs.dev/config-components
