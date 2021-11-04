@@ -1,5 +1,5 @@
 import Footer from './Footer.vue'
-import { shallRender } from '@/utils/commonTestSpecs'
+import { shallRender } from '@/devtools/jest.shared.spec'
 
 describe('Blocks / Footer', () => {
   const defaultOptions = {

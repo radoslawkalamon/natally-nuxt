@@ -1,12 +1,12 @@
 /* eslint-disable no-console */
 import path from 'path'
 import dotenv from 'dotenv'
-import DeployService from './devtools/deploy.service'
+import { ServiceDeploy } from './devtools/service.deploy'
 
 dotenv.config();
 
 (async () => {
-  const deployService = new DeployService({
+  const serviceDeploy = new ServiceDeploy({
     host: process.env.DEPLOY_PROD_HOST || '',
     port: Number(process.env.DEPLOY_PROD_PORT),
     username: process.env.DEPLOY_PROD_USERNAME || '',
@@ -15,5 +15,5 @@ dotenv.config();
     remoteIgnoreFile: (process.env.DEPLOY_PROD_REMOTE_IGNORE_FILE || '').split(','),
     localCatalog: path.resolve(__dirname, process.env.DEPLOY_PROD_LOCAL_CATALOG || './dist')
   })
-  await deployService.start()
+  await serviceDeploy.start()
 })()

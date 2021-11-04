@@ -1,7 +1,7 @@
 import { createLocalVue } from '@vue/test-utils'
 import Vuex, { Store } from 'vuex'
 import ModalPrivacy from './ModalPrivacy.vue'
-import { shallRender } from '@/utils/commonTestSpecs'
+import { shallRender } from '@/devtools/jest.shared.spec'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)

@@ -1,4 +1,4 @@
-export default () => {
+export const jestPolyfillMatchMedia = () => {
   Object.defineProperty(window, 'matchMedia', {
     writable: true,
     value: jest.fn().mockImplementation(query => ({

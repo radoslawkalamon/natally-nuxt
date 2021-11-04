@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 import ButtonHamburger from './ButtonHamburger.vue'
-import { shallRender, shallClickTriggerEvent } from '@/utils/commonTestSpecs'
+import { shallRender, shallClickTriggerEvent } from '@/devtools/jest.shared.spec'
 
 describe('Components / Button Hamburger', () => {
   const defaultOptions = {

@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 import CoverPoem from './CoverPoem.vue'
-import { shallRender } from '@/utils/commonTestSpecs'
+import { shallRender } from '@/devtools/jest.shared.spec'
 
 describe('Components / Cover Poem', () => {
   const defaultOptions = {

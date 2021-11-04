@@ -1,7 +1,7 @@
 import { createLocalVue, createWrapper, mount } from '@vue/test-utils'
 import Vuex, { Store } from 'vuex'
 import LayoutDefault from './default.vue'
-import { shallDestroy, shallRender } from '@/utils/commonTestSpecs'
+import { shallDestroy, shallRender } from '@/devtools/jest.shared.spec'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
@@ -17,23 +17,14 @@ describe('Layouts / Default', () => {
     attachTo: document.body,
     localVue,
     store,
-    stubs: {
-      BlocksHeader: {
-        template: '<header data-stub="blocks-header" />'
-      },
-      BlocksDrawer: {
-        template: '<div data-stub="blocks-drawer"><slot /></div>'
-      },
-      WrappersMain: {
-        template: '<div data-stub="wrappers-main"><slot /></div>'
-      },
-      Nuxt: {
-        template: '<div data-stub="nuxt" />'
-      },
-      BlocksFooter: {
-        template: '<footer data-stub="blocks-footer" />'
-      }
-    }
+    stubs: [
+      'BlocksHeader',
+      'BlocksDrawer',
+      'WrappersMain',
+      'Nuxt',
+      'BlocksFooter',
+      'BlocksModalPrivacy'
+    ]
   }
 
   beforeAll(() => {

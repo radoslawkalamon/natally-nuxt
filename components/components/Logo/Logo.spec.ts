@@ -1,5 +1,5 @@
 import Logo from './Logo.vue'
-import { shallRender } from '@/utils/commonTestSpecs'
+import { shallRender } from '@/devtools/jest.shared.spec'
 
 describe('Components / Logo', () => {
   shallRender(Logo)

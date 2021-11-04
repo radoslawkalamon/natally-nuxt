@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 import Navigation from './Navigation.vue'
-import { shallRender } from '@/utils/commonTestSpecs'
+import { shallRender } from '@/devtools/jest.shared.spec'
 
 describe('Wrappers / Navigation', () => {
   shallRender(Navigation)

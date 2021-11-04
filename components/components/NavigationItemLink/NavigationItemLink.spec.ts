@@ -1,5 +1,5 @@
 import NavigationItemLink from './NavigationItemLink.vue'
-import { shallHaveStringProp, shallRender } from '@/utils/commonTestSpecs'
+import { shallHaveStringProp, shallRender } from '@/devtools/jest.shared.spec'
 
 describe('Components / Navigation Item Link', () => {
   const defaultOptions = {

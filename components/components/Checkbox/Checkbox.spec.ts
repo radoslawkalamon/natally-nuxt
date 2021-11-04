@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 import Checkbox from './Checkbox.vue'
-import { shallHaveStringProp, shallRender } from '@/utils/commonTestSpecs'
+import { shallHaveStringProp, shallRender } from '@/devtools/jest.shared.spec'
 
 describe('Components / Checkbox', () => {
   const defaultOptions = {

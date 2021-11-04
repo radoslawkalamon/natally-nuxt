@@ -1,5 +1,5 @@
 import Button from './Button.vue'
-import { shallRender, shallHaveStringProp, shallClickTriggerEvent } from '@/utils/commonTestSpecs'
+import { shallRender, shallHaveStringProp, shallClickTriggerEvent } from '@/devtools/jest.shared.spec'
 
 describe('Components / Button', () => {
   const defaultOptions = {

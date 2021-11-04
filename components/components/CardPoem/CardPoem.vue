@@ -5,11 +5,11 @@
   >
     <NuxtLink
       class="card-poem__link"
-      :to="url"
+      :to="path"
     >
       <ComponentsCoverPoem
         class="card-poem__cover"
-        :image="coverImage"
+        :image="imageCover"
       />
       <div class="card-poem__content">
         <header class="card-poem__header">

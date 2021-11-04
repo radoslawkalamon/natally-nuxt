@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
 import { merge } from 'lodash'
 import PageMeta from './PageMeta.vue'
-import { shallRender } from '@/utils/commonTestSpecs'
+import { shallRender } from '@/devtools/jest.shared.spec'
 
 describe('Components / Page Meta', () => {
   const defaultOptions = {

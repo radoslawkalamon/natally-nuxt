@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Utils / DTO / Meta / Post / Poem shall match snapshot 1`] = `
+Object {
+  "createdAt": Object {},
+  "description": "Test Description",
+  "imageCover": "/images/poezja-314/image-cover.webp",
+  "imageOpenGraph": "/images/poezja-314/image-open-graph.png",
+  "path": "/test-url",
+  "title": "Test title",
+  "updatedAt": Object {},
+}
+`;

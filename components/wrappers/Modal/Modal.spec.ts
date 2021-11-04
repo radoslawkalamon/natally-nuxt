@@ -1,5 +1,5 @@
 import Modal from './Modal.vue'
-import { shallRender, shallHaveSlot } from '@/utils/commonTestSpecs'
+import { shallRender, shallHaveSlot } from '@/devtools/jest.shared.spec'
 
 describe('Wrappers / Modal', () => {
   const defaultOptions = {

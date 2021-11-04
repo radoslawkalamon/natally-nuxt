@@ -1,5 +1,5 @@
 import PoemsFirstTime from './PoemsFirstTime.vue'
-import { shallRender } from '@/utils/commonTestSpecs'
+import { shallRender } from '@/devtools/jest.shared.spec'
 
 describe('Blocks / Poems First Time', () => {
   const defaultOptions = {

@@ -1,5 +1,5 @@
 import TextMeta from './TextMeta.vue'
-import { shallHaveStringProp, shallRender } from '@/utils/commonTestSpecs'
+import { shallHaveStringProp, shallRender } from '@/devtools/jest.shared.spec'
 
 describe('Wrappers / Text Meta', () => {
   const defaultOptions = {

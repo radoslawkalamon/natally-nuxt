@@ -1,5 +1,5 @@
 import LogoCrustyBread from './LogoCrustyBread.vue'
-import { shallRender } from '@/utils/commonTestSpecs'
+import { shallRender } from '@/devtools/jest.shared.spec'
 
 describe('Components / Logo Crusty Bread', () => {
   shallRender(LogoCrustyBread)

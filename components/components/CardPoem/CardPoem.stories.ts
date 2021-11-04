@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/vue'
 import CardPoem from './CardPoem.vue'
-import PoemPostExcerpt from '@/utils/DTO/PoemPostExcerpt'
+import { DTOMetaPostPoem } from '@/utils/dto.meta.post.poem'
 
 const meta: Meta = {
   title: 'Components / Card Poem',
@@ -16,11 +16,13 @@ const Template: Story = (_args, { argTypes }) => ({
 
 export const Default: Story = Template.bind({})
 Default.args = {
-  poemPostExcerpt: new PoemPostExcerpt({
-    id: '1234',
-    coverImage: 'https://www.fillmurray.com/100/150',
-    datePublished: 1634302144717,
-    title: 'Hello world',
-    url: '/poezja-314/hello-world'
+  metaPostPoem: new DTOMetaPostPoem({
+    createdAt: '2021-11-04T00:00:00+00:00',
+    description: 'Test description',
+    imageCover: 'poezja-314.test-story.webp',
+    imageOpenGraph: 'poezja-314.test-story.opengraph.png',
+    path: '/test-url',
+    title: 'Test story',
+    updatedAt: '2021-11-04T00:00:00+00:00'
   })
 }

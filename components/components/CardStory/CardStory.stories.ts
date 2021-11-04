@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/vue'
 import CardStory from './CardStory.vue'
-import StoryPostExcerpt from '@/utils/DTO/StoryPostExcerpt'
+import { DTOMetaPostStory } from '@/utils/dto.meta.post.story'
 
 const meta: Meta = {
   title: 'Components / Card Story',
@@ -16,28 +16,31 @@ const Template: Story = (_args, { argTypes }) => ({
 
 export const Audiobook: Story = Template.bind({})
 Audiobook.args = {
-  storyPostExcerpt: new StoryPostExcerpt({
-    id: '1234',
-    coverImage: 'https://www.fillmurray.com/600/350',
-    coverImage2x: 'https://www.fillmurray.com/1200/600',
-    datePublished: 1634302144717,
-    isAudiobook: true,
-    readingTime: 5,
-    title: 'Hello world',
-    url: '/poezja-314/hello-world'
+  metaPostStory: new DTOMetaPostStory({
+    audiobookId: '123456',
+    createdAt: '2021-11-04T00:00:00+00:00',
+    description: 'Story description',
+    imageCover: 'opowiadania.test-story.1x.webp',
+    imageCover2x: 'opowiadania.test-story.2x.webp',
+    imageOpenGraph: 'opowiadania.test-story.opengraph.png',
+    path: '/opowiadania/hello-world',
+    timeReading: 5,
+    title: 'Test story',
+    updatedAt: '2021-11-04T00:00:00+00:00'
   })
 }
 
 export const NoAudiobook: Story = Template.bind({})
 NoAudiobook.args = {
-  storyPostExcerpt: new StoryPostExcerpt({
-    id: '1234',
-    coverImage: 'https://www.fillmurray.com/600/350',
-    coverImage2x: 'https://www.fillmurray.com/1200/600',
-    datePublished: 1634302144717,
-    isAudiobook: false,
-    readingTime: 5,
-    title: 'Hello world',
-    url: '/poezja-314/hello-world'
+  metaPostStory: new DTOMetaPostStory({
+    createdAt: '2021-11-04T00:00:00+00:00',
+    description: 'Story description',
+    imageCover: 'opowiadania.test-story.1x.webp',
+    imageCover2x: 'opowiadania.test-story.2x.webp',
+    imageOpenGraph: 'opowiadania.test-story.opengraph.png',
+    path: '/opowiadania/hello-world',
+    timeReading: 5,
+    title: 'Test story',
+    updatedAt: '2021-11-04T00:00:00+00:00'
   })
 }
