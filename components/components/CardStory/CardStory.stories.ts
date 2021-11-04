@@ -18,29 +18,29 @@ export const Audiobook: Story = Template.bind({})
 Audiobook.args = {
   metaPostStory: new DTOMetaPostStory({
     audiobookId: '123456',
-    createdAt: '2021-11-01T00:00:00+00:00',
+    createdAt: '2021-11-04T00:00:00+00:00',
     description: 'Story description',
-    imageCover: 'https://www.fillmurray.com/600/350',
-    imageCover2x: 'https://www.fillmurray.com/1200/600',
-    imageOpenGraph: 'https://www.fillmurray.com/1200/630',
+    imageCover: 'opowiadania.test-story.1x.webp',
+    imageCover2x: 'opowiadania.test-story.2x.webp',
+    imageOpenGraph: 'opowiadania.test-story.opengraph.png',
     path: '/opowiadania/hello-world',
     timeReading: 5,
-    title: 'Hello world',
-    updatedAt: '2021-11-01T00:00:00+00:00'
+    title: 'Test story',
+    updatedAt: '2021-11-04T00:00:00+00:00'
   })
 }
 
 export const NoAudiobook: Story = Template.bind({})
 NoAudiobook.args = {
   metaPostStory: new DTOMetaPostStory({
-    createdAt: '2021-11-01T00:00:00+00:00',
+    createdAt: '2021-11-04T00:00:00+00:00',
     description: 'Story description',
-    imageCover: 'https://www.fillmurray.com/600/350',
-    imageCover2x: 'https://www.fillmurray.com/1200/600',
-    imageOpenGraph: 'https://www.fillmurray.com/1200/630',
+    imageCover: 'opowiadania.test-story.1x.webp',
+    imageCover2x: 'opowiadania.test-story.2x.webp',
+    imageOpenGraph: 'opowiadania.test-story.opengraph.png',
     path: '/opowiadania/hello-world',
     timeReading: 5,
-    title: 'Hello world',
-    updatedAt: '2021-11-01T00:00:00+00:00'
+    title: 'Test story',
+    updatedAt: '2021-11-04T00:00:00+00:00'
   })
 }
