@@ -1,29 +1,30 @@
 import Vue from 'vue'
-import PoemPostExcerpt from '@/utils/DTO/PoemPostExcerpt'
+import { DTOMetaPostPoem } from '@/utils/dto.meta.post.poem'
+import { formatterDateMeta } from '@/utils/formatter.date.meta'
 
 export default Vue.extend({
   name: 'ComponentsCardPoem',
   props: {
-    poemPostExcerpt: {
-      type: PoemPostExcerpt,
+    metaPostPoem: {
+      type: DTOMetaPostPoem,
       required: true
     }
   },
   computed: {
-    coverImage (): string {
-      return this.poemPostExcerpt.coverImage
+    path (): string {
+      return this.metaPostPoem.path
+    },
+    imageCover (): string {
+      return this.metaPostPoem.imageCover
+    },
+    title (): string {
+      return this.metaPostPoem.title
     },
     datePublished (): string {
-      return this.poemPostExcerpt.datePublished
+      return formatterDateMeta(this.metaPostPoem.createdAt)
     },
     datePublishedLabel (): string {
       return `Opublikowano ${this.datePublished}`
-    },
-    title (): string {
-      return this.poemPostExcerpt.title
-    },
-    url (): string {
-      return this.poemPostExcerpt.url
     }
   }
 })

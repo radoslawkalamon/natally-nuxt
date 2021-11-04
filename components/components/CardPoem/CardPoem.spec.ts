@@ -1,33 +1,30 @@
 import CardPoem from './CardPoem.vue'
 import { shallRender } from '@/devtools/jest.shared.spec'
+import { DTOMetaPostPoem } from '@/utils/dto.meta.post.poem'
 
-jest.mock('@/utils/DTO/PoemPostExcerpt', () => Object)
+jest.mock('@/utils/formatter.date.meta', () => ({ formatterDateMeta: () => 'Mocked date formatter' }))
+
+const defaultOptionsFactory = (metaPostPoemOptions = {}) => ({
+  propsData: {
+    metaPostPoem: new DTOMetaPostPoem({
+      createdAt: '2021-11-01T00:00:00+00:00',
+      description: 'Test description',
+      imageCover: 'image-cover.webp',
+      imageOpenGraph: 'image-open-graph.webp',
+      path: '/test-url',
+      title: 'Test title',
+      updatedAt: '2021-11-01T00:00:00+00:00',
+      ...metaPostPoemOptions
+    })
+  },
+  stubs: [
+    'NuxtLink',
+    'ComponentsCoverPoem',
+    'ComponentsTitle',
+    'ComponentsTextMeta'
+  ]
+})
 
 describe('Components / Card Poem', () => {
-  const defaultOptions = {
-    propsData: {
-      poemPostExcerpt: {
-        coverImage: '/poem-cover-image.webp',
-        datePublished: '21.10.2021',
-        title: 'My test title',
-        url: '/poem-test-url'
-      }
-    },
-    stubs: {
-      ComponentsCoverPoem: {
-        template: '<div data-stub="components-cover-poem" />'
-      },
-      ComponentsTextMeta: {
-        template: '<p data-stub="components-text-meta" />'
-      },
-      ComponentsTitle: {
-        template: '<h1 data-stub="components-title" />'
-      },
-      NuxtLink: {
-        template: '<a data-stub="nuxt-link" href="#"><slot /></a>'
-      }
-    }
-  }
-
-  shallRender(CardPoem, defaultOptions)
+  shallRender(CardPoem, defaultOptionsFactory())
 })
