@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Utils / DTO / Meta / Page shall match snapshot 1`] = `
+Object {
+  "createdAt": Object {},
+  "createdAtFormatted": "Mocked date formatter",
+  "description": "Test Description",
+  "path": "/test-url",
+  "title": "Test title",
+  "updatedAt": Object {},
+  "updatedAtFormatted": "Mocked date formatter",
+}
+`;
