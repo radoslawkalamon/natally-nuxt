@@ -17,12 +17,12 @@ const Template: Story = (_args, { argTypes }) => ({
 export const Default: Story = Template.bind({})
 Default.args = {
   metaPostPoem: new DTOMetaPostPoem({
-    createdAt: '2021-11-01T00:00:00+00:00',
-    description: 'Story description',
-    imageCover: 'https://www.fillmurray.com/600/350',
-    imageOpenGraph: 'https://www.fillmurray.com/1200/630',
-    path: '/poezja-314/hello-world',
-    title: 'Hello world',
-    updatedAt: '2021-11-01T00:00:00+00:00'
+    createdAt: '2021-11-04T00:00:00+00:00',
+    description: 'Test description',
+    imageCover: 'poezja-314.test-story.webp',
+    imageOpenGraph: 'poezja-314.test-story.opengraph.png',
+    path: '/test-url',
+    title: 'Test story',
+    updatedAt: '2021-11-04T00:00:00+00:00'
   })
 }
