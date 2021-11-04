@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Utils / DTO / Meta / Post / Poem audiobook shall match snapshot 1`] = `
+Object {
+  "audiobookId": "123456",
+  "createdAt": Object {},
+  "description": "Test Description",
+  "imageCover": "/images/opowiadania/image-cover.webp",
+  "imageCover2x": "/images/opowiadania/image-cover.2x.webp",
+  "imageOpenGraph": "/images/opowiadania/image-open-graph.png",
+  "path": "/test-url",
+  "timeReading": 2,
+  "title": "Test title",
+  "updatedAt": Object {},
+}
+`;
+
+exports[`Utils / DTO / Meta / Post / Poem no audiobook shall match snapshot 1`] = `
+Object {
+  "audiobookId": "0",
+  "createdAt": Object {},
+  "description": "Test Description",
+  "imageCover": "/images/opowiadania/image-cover.webp",
+  "imageCover2x": "/images/opowiadania/image-cover.2x.webp",
+  "imageOpenGraph": "/images/opowiadania/image-open-graph.png",
+  "path": "/test-url",
+  "timeReading": 2,
+  "title": "Test title",
+  "updatedAt": Object {},
+}
+`;
