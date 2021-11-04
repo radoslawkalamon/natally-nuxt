@@ -17,23 +17,14 @@ describe('Layouts / Default', () => {
     attachTo: document.body,
     localVue,
     store,
-    stubs: {
-      BlocksHeader: {
-        template: '<header data-stub="blocks-header" />'
-      },
-      BlocksDrawer: {
-        template: '<div data-stub="blocks-drawer"><slot /></div>'
-      },
-      WrappersMain: {
-        template: '<div data-stub="wrappers-main"><slot /></div>'
-      },
-      Nuxt: {
-        template: '<div data-stub="nuxt" />'
-      },
-      BlocksFooter: {
-        template: '<footer data-stub="blocks-footer" />'
-      }
-    }
+    stubs: [
+      'BlocksHeader',
+      'BlocksDrawer',
+      'WrappersMain',
+      'Nuxt',
+      'BlocksFooter',
+      'BlocksModalPrivacy'
+    ]
   }
 
   beforeAll(() => {
