@@ -1,6 +1,6 @@
 import { formatterTimeReading } from '@/utils/formatter.time.reading'
 
-describe('Utils / Formatters / Reading Time', () => {
+describe('Utils / Formatter / Reading Time', () => {
   const readingTime: Record<number, string> = {
     0: '0 minut',
     1: '1 minuta',
