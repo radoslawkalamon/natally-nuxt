@@ -1,4 +1,4 @@
-import { formatterCapitalize } from '@/utils/formatter.capitalize'
+import { formatterCapitalize } from './formatter.capitalize'
 
 export const formatterKebabize = (s: string): string => {
   return s
