@@ -9,7 +9,7 @@
   padding-top: calc(var(--blocks-header-height) + var(--gap));
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1024px) {
   .layout-default {
     margin-left: calc(var(--max-width-drawer) + var(--gap-section));
   }

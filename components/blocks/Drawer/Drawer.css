@@ -27,7 +27,7 @@
   margin: auto 0;
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1024px) {
   .drawer {
     background-color: transparent;
     border-radius: 0;
