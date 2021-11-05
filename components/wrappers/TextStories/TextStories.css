@@ -1,5 +1,10 @@
 @import url("../Text/Text.css");
 
-.text-stories p {
+.text-stories >>> p {
   text-indent: calc(2 * var(--gap));
+}
+
+.text-stories >>> .text-alignment-center,
+.text-stories >>> .text-alignment-right {
+  text-indent: 0;
 }
