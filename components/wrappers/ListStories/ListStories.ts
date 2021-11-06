@@ -1,5 +1,4 @@
 import Vue from 'vue'
-import { FetchReturn } from '@nuxt/content/types/query-builder'
 import { DTOMetaPostStoryConstructor, DTOMetaPostStory } from '@/utils/dto.meta.post.story'
 
 export default Vue.extend({
@@ -14,7 +13,7 @@ export default Vue.extend({
       default: false
     }
   },
-  data (): Record<string, FetchReturn | FetchReturn[]> {
+  data (): Record<string, DTOMetaPostStoryConstructor[]> {
     return {
       stories: []
     }
@@ -36,19 +35,27 @@ export default Vue.extend({
     }
   },
   methods: {
-    async fetchMetaPostStory (): Promise<FetchReturn[] | FetchReturn> {
-      return await this.$content(this.fetchContentDirectory)
+    async fetchMetaPostStory (): Promise<DTOMetaPostStoryConstructor[]> {
+      const stories = await this.$content(this.fetchContentDirectory)
         .only(this.metaPostStoryConstructorKeys)
         .sortBy('createdAt', 'desc')
         .limit(this.limit)
-        .fetch()
+        .fetch<DTOMetaPostStoryConstructor>()
+
+      return !Array.isArray(stories)
+        ? [stories]
+        : stories
     },
-    async fetchMetaPostStoryRandom (): Promise<FetchReturn[] | FetchReturn> {
-      return (await this.$content(this.fetchContentDirectory)
+    async fetchMetaPostStoryRandom (): Promise<DTOMetaPostStoryConstructor[]> {
+      const stories = await this.$content(this.fetchContentDirectory)
         .only(this.metaPostStoryConstructorKeys)
-        .fetch())
-        .sort(() => 0.5 - Math.random())
-        .slice(0, this.limit || undefined)
+        .fetch<DTOMetaPostStoryConstructor>()
+
+      return !Array.isArray(stories)
+        ? [stories]
+        : stories
+          .sort(() => 0.5 - Math.random())
+          .slice(0, this.limit || undefined)
     }
   }
 })
