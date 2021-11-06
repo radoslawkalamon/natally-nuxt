@@ -6,7 +6,7 @@
     <ComponentsLoading v-if="$fetchState.pending" />
     <slot
       v-else
-      v-bind="{ stories }"
+      v-bind="{ metaPostStories }"
     />
   </div>
 </template>

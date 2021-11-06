@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Wrappers / List Stories shall have slot default 1`] = `"<div data-test=\\"wrappers-list-stories\\" class=\\"list-stories\\">This is slot \\"default\\" test.</div>"`;
+
+exports[`Wrappers / List Stories shall render 1`] = `"<div data-test=\\"wrappers-list-stories\\" class=\\"list-stories\\"></div>"`;
+
+exports[`Wrappers / List Stories shall show ComponentsLoading when $fetchState.pending = true 1`] = `
+"<div data-test=\\"wrappers-list-stories\\" class=\\"list-stories\\">
+  <componentsloading-stub></componentsloading-stub>
+</div>"
+`;
