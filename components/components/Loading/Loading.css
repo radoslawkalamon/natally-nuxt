@@ -10,17 +10,17 @@
   fill: none;
   opacity: 0.5;
   stroke: var(--color-betwixt);
-  stroke-width: 4;
+  stroke-width: 2;
 }
 
 .loading__circle-2 {
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-name: animation-loading;
   animation-timing-function: linear;
   fill: none;
   stroke: var(--color-accent);
-  stroke-dasharray: 66;
+  stroke-dasharray: 0, 300;
   stroke-linecap: round;
   stroke-width: 4;
   transform-origin: center;
@@ -28,10 +28,16 @@
 
 @keyframes animation-loading {
   0% {
+    stroke-dasharray: 48, 128;
     transform: rotate(0deg);
   }
 
+  50% {
+    stroke-dasharray: 0, 192;
+  }
+
   100% {
-    transform: rotate(720deg);
+    stroke-dasharray: 48, 128;
+    transform: rotate(1080deg);
   }
 }
