@@ -1,0 +1,14 @@
+.list-poems-suggestions {
+  align-items: center;
+}
+
+.list-poems-suggestions__title {
+  text-align: center;
+}
+
+.list-poems-suggestions__poems {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--gap);
+}
