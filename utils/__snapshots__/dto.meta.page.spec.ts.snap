@@ -4,7 +4,7 @@ exports[`Utils / DTO / Meta / Page shall match snapshot 1`] = `
 Object {
   "createdAt": Object {},
   "description": "Test Description",
-  "path": "/test-url",
+  "path": "/test-url/",
   "title": "Test title",
   "updatedAt": Object {},
 }

@@ -6,7 +6,7 @@ Object {
   "description": "Test Description",
   "imageCover": "/images/poezja-314/image-cover.webp",
   "imageOpenGraph": "/images/poezja-314/image-open-graph.png",
-  "path": "/test-url",
+  "path": "/test-url/",
   "title": "Test title",
   "updatedAt": Object {},
 }
