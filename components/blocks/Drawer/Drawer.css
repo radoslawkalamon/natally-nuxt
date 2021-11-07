@@ -16,6 +16,7 @@
   position: fixed;
   transition: background-color var(--time-animation) ease, height var(--time-animation) ease, left var(--time-animation) ease;
   width: 100%;
+  z-index: 9;
 }
 
 .drawer-enter,
