@@ -3,3 +3,7 @@
   flex-flow: column nowrap;
   gap: var(--gap);
 }
+
+.section__inner {
+  width: 100%;
+}
