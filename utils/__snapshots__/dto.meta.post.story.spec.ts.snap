@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Utils / DTO / Meta / Post / Poem audiobook shall match snapshot 1`] = `
-Object {
+DTOMetaPostStory {
   "audiobookId": "123456",
-  "createdAt": Object {},
+  "createdAt": 2021-11-01T00:00:00.000Z,
   "description": "Test Description",
   "imageCover": "/images/opowiadania/image-cover.webp",
   "imageCover2x": "/images/opowiadania/image-cover.2x.webp",
@@ -11,14 +11,14 @@ Object {
   "path": "/test-url/",
   "timeReading": 2,
   "title": "Test title",
-  "updatedAt": Object {},
+  "updatedAt": 2021-11-01T00:00:00.000Z,
 }
 `;
 
 exports[`Utils / DTO / Meta / Post / Poem no audiobook shall match snapshot 1`] = `
-Object {
+DTOMetaPostStory {
   "audiobookId": "0",
-  "createdAt": Object {},
+  "createdAt": 2021-11-01T00:00:00.000Z,
   "description": "Test Description",
   "imageCover": "/images/opowiadania/image-cover.webp",
   "imageCover2x": "/images/opowiadania/image-cover.2x.webp",
@@ -26,6 +26,6 @@ Object {
   "path": "/test-url/",
   "timeReading": 2,
   "title": "Test title",
-  "updatedAt": Object {},
+  "updatedAt": 2021-11-01T00:00:00.000Z,
 }
 `;

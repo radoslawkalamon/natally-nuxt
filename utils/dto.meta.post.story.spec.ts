@@ -19,18 +19,7 @@ describe('Utils / DTO / Meta / Post / Poem', () => {
     })
 
     test('shall match snapshot', () => {
-      expect(dtoMetaPostStory).toMatchSnapshot({
-        audiobookId: '0',
-        createdAt: new Date('2021-11-01T00:00:00+00:00'),
-        description: 'Test Description',
-        imageCover: '/images/opowiadania/image-cover.webp',
-        imageCover2x: '/images/opowiadania/image-cover.2x.webp',
-        imageOpenGraph: '/images/opowiadania/image-open-graph.png',
-        path: '/test-url',
-        title: 'Test title',
-        timeReading: 2,
-        updatedAt: new Date('2021-11-01T00:00:00+00:00')
-      })
+      expect(dtoMetaPostStory).toMatchSnapshot()
     })
   })
 
@@ -53,18 +42,7 @@ describe('Utils / DTO / Meta / Post / Poem', () => {
     })
 
     test('shall match snapshot', () => {
-      expect(dtoMetaPostStory).toMatchSnapshot({
-        audiobookId: '123456',
-        createdAt: new Date('2021-11-01T00:00:00+00:00'),
-        description: 'Test Description',
-        imageCover: '/images/opowiadania/image-cover.webp',
-        imageCover2x: '/images/opowiadania/image-cover.2x.webp',
-        imageOpenGraph: '/images/opowiadania/image-open-graph.png',
-        path: '/test-url',
-        title: 'Test title',
-        timeReading: 2,
-        updatedAt: new Date('2021-11-01T00:00:00+00:00')
-      })
+      expect(dtoMetaPostStory).toMatchSnapshot()
     })
   })
 })

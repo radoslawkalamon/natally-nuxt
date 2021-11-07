@@ -1,11 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Utils / DTO / Meta / Page shall match snapshot 1`] = `
-Object {
-  "createdAt": Object {},
+exports[`Utils / DTO / Meta / Page Page path with slash shall match snapshot 1`] = `
+DTOMetaPage {
+  "createdAt": 2021-11-01T00:00:00.000Z,
   "description": "Test Description",
   "path": "/test-url/",
   "title": "Test title",
-  "updatedAt": Object {},
+  "updatedAt": 2021-11-01T00:00:00.000Z,
+}
+`;
+
+exports[`Utils / DTO / Meta / Page Page path without slash shall match snapshot 1`] = `
+DTOMetaPage {
+  "createdAt": 2021-11-01T00:00:00.000Z,
+  "description": "Test Description",
+  "path": "/test-url/",
+  "title": "Test title",
+  "updatedAt": 2021-11-01T00:00:00.000Z,
 }
 `;

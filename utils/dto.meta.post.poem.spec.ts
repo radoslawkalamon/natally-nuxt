@@ -16,14 +16,6 @@ describe('Utils / DTO / Meta / Post / Poem', () => {
   })
 
   test('shall match snapshot', () => {
-    expect(dtoMetaPostPoem).toMatchSnapshot({
-      createdAt: new Date('2021-11-01T00:00:00+00:00'),
-      description: 'Test Description',
-      imageCover: '/images/poezja-314/image-cover.webp',
-      imageOpenGraph: '/images/poezja-314/image-open-graph.png',
-      path: '/test-url',
-      title: 'Test title',
-      updatedAt: new Date('2021-11-01T00:00:00+00:00')
-    })
+    expect(dtoMetaPostPoem).toMatchSnapshot()
   })
 })
