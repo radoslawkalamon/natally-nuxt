@@ -1,0 +1,14 @@
+.list-stories-suggestions {
+  align-items: center;
+}
+
+.list-stories-suggestions__title {
+  text-align: center;
+}
+
+.list-stories-suggestions__stories {
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(292px, 1fr));
+  justify-items: center;
+}
