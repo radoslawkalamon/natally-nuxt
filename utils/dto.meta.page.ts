@@ -22,7 +22,7 @@ export class DTOMetaPage {
   }: DTOMetaPageConstructor) {
     this.createdAt = new Date(createdAt)
     this.description = description
-    this.path = path
+    this.path = `${path}${path.at(-1) !== '/' ? '/' : ''}`
     this.title = title
     this.updatedAt = new Date(updatedAt)
   }
