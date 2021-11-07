@@ -12,4 +12,3 @@
 </template>
 
 <script src="./ListPoems.ts" lang="ts"></script>
-<style src="./ListPoems.css" scoped></style>
