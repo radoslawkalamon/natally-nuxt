@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Utils / Factory / Head / Schema / Person shall match snapshot | { path } 1`] = `
+Object {
+  "@id": "https://169cm.pl/test/path/#primaryimage",
+  "@type": "ImageObject",
+  "contentUrl": "https://169cm.pl/images/common.opengraph.png",
+  "height": 630,
+  "hid": "schema:ImageObject",
+  "inLanguage": "pl-PL",
+  "url": "https://169cm.pl/images/common.opengraph.png",
+  "width": 1200,
+}
+`;
+
+exports[`Utils / Factory / Head / Schema / Person shall match snapshot | { path, imageOpenGraph } 1`] = `
+Object {
+  "@id": "https://169cm.pl/test/path/#primaryimage",
+  "@type": "ImageObject",
+  "contentUrl": "https://169cm.pl/images/test.path.opengraph.png",
+  "height": 630,
+  "hid": "schema:ImageObject",
+  "inLanguage": "pl-PL",
+  "url": "https://169cm.pl/images/test.path.opengraph.png",
+  "width": 1200,
+}
+`;
