@@ -1,18 +1,18 @@
-import { getTitle, getURL } from './factory.head.utils'
+import { headDefault, getTitle, getURL } from './factory.head.utils'
 
 type factoryHeadSchemaArticleArgs = {
-  category: string,
-  createdAt: string,
-  imageOpenGraph?: string,
-  path: string,
+  category: string
+  createdAt: string
+  imageOpenGraph?: string
+  path: string
   title: string
-  updatedAt: string,
+  updatedAt: string
 }
 
 export const factoryHeadSchemaArticle = ({
   category,
   createdAt,
-  imageOpenGraph = '/images/common.opengraph.png',
+  imageOpenGraph = headDefault.imageOpenGraph,
   path,
   title,
   updatedAt

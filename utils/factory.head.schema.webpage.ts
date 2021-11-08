@@ -6,11 +6,11 @@ export enum FactoryHeadSchemaWebpageType {
 }
 
 type factoryHeadSchemaWebpageArgs = {
-  category?: string,
-  createdAt?: string,
-  path: string,
+  category?: string
+  createdAt?: string
+  path: string
   title: string
-  updatedAt?: string,
+  updatedAt?: string
   webpageType: FactoryHeadSchemaWebpageType
 }
 

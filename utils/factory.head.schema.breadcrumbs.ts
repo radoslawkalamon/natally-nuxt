@@ -1,4 +1,4 @@
-import { headDefault, getURL } from './factory.head.utils'
+import { getTitle, getURL } from './factory.head.utils'
 
 type factoryHeadSchemaBreadcrumbsArgs = {
   breadcrumbs: Array<{
@@ -25,7 +25,7 @@ export const factoryHeadSchemaBreadcrumbs = ({
     {
       '@type': 'ListItem',
       position: 1,
-      name: headDefault.title,
+      name: getTitle(),
       item: getURL()
     },
     ...breadcrumbs.map(mapBreadcrumb)

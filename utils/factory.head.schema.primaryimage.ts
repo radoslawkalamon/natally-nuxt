@@ -1,13 +1,13 @@
-import { getURL } from './factory.head.utils'
+import { headDefault, getURL } from './factory.head.utils'
 
 type FactoryHeadSchemaPrimaryimageArgs = {
-  path: string,
+  path: string
   imageOpenGraph?: string
 }
 
 export const factoryHeadSchemaPrimaryimage = ({
   path,
-  imageOpenGraph = '/images/common.opengraph.png'
+  imageOpenGraph = headDefault.imageOpenGraph
 }: FactoryHeadSchemaPrimaryimageArgs) => ({
   hid: 'schema:ImageObject',
   '@type': 'ImageObject',
