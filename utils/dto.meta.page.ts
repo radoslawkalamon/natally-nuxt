@@ -6,6 +6,11 @@ export type DTOMetaPageConstructor = {
   updatedAt: string;
 }
 
+const getPath = (path: string) => {
+  const pathWithoutIndex = path.split('/').filter(i => i !== 'index').join('/')
+  return `${pathWithoutIndex}${pathWithoutIndex.at(-1) !== '/' ? '/' : ''}`
+}
+
 export class DTOMetaPage {
   readonly createdAt: Date;
   readonly description: string;
@@ -22,7 +27,7 @@ export class DTOMetaPage {
   }: DTOMetaPageConstructor) {
     this.createdAt = new Date(createdAt)
     this.description = description
-    this.path = `${path}${path.at(-1) !== '/' ? '/' : ''}`
+    this.path = getPath(path)
     this.title = title
     this.updatedAt = new Date(updatedAt)
   }

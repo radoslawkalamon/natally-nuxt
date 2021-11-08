@@ -8,6 +8,10 @@ type factoryHeadSchemaBreadcrumbsArgs = {
   path: string
 }
 
+const filterBreadcrumbs = ({ path }: factoryHeadSchemaBreadcrumbsArgs['breadcrumbs'][0]) => {
+  return getURL({ path }) !== getURL()
+}
+
 const mapBreadcrumb = ({ name, path }: factoryHeadSchemaBreadcrumbsArgs['breadcrumbs'][0], index: number) => ({
   '@type': 'ListItem',
   position: index + 2,
@@ -28,6 +32,8 @@ export const factoryHeadSchemaBreadcrumbs = ({
       name: getTitle(),
       item: getURL()
     },
-    ...breadcrumbs.map(mapBreadcrumb)
+    ...breadcrumbs
+      .filter(filterBreadcrumbs)
+      .map(mapBreadcrumb)
   ]
 })
