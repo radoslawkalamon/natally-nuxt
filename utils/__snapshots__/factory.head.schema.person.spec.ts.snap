@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Utils / Factory / Head / Schema / Person shall match snapshot 1`] = `
+Object {
+  "@id": "https://169cm.pl/#person/radoslaw-kalamon",
+  "@type": "Person",
+  "name": "Radosław Kalamon",
+  "sameAs": Array [
+    "https://radoslawkalamon.pl",
+    "https://instagram.com/radoslawkalamon/",
+    "https://twitter.com/radoslawkalamon",
+  ],
+}
+`;
