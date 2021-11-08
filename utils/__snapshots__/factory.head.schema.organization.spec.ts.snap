@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Utils / Factory / Head / Schema / Organization shall match snapshot 1`] = `
+Object {
+  "@id": "https://169cm.pl/#organization",
+  "@type": "Organization",
+  "image": Object {
+    "@id": "https://169cm.pl/#logo",
+  },
+  "logo": Object {
+    "@id": "https://169cm.pl/#logo",
+    "@type": "ImageObject",
+    "caption": "169cm.pl",
+    "contentUrl": "https://169cm.pl/images/common.logo.png",
+    "height": 224,
+    "inLanguage": "pl-PL",
+    "url": "https://169cm.pl/images/common.logo.png",
+    "width": 448,
+  },
+  "name": "169cm.pl",
+  "sameAs": Array [
+    "https://facebook.com/169cmpl",
+    "https://soundcloud.com/169cmpl",
+  ],
+  "url": "https://169cm.pl/",
+}
+`;
