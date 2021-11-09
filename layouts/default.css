@@ -9,6 +9,14 @@
   padding-top: calc(var(--blocks-header-height) + var(--gap));
 }
 
+.layout-default__article {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--gap-section);
+  margin: 0 auto;
+  max-width: var(--max-width-body);
+}
+
 @media screen and (min-width: 1024px) {
   .layout-default {
     margin-left: calc(var(--max-width-drawer) + var(--gap-section));

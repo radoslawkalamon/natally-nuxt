@@ -1,11 +1,9 @@
 <template>
-  <div>
-    Hello world!
-  </div>
+  <article class="page-homepage">
+    <BlocksAboutMe />
+    <BlocksListStoriesMain />
+    <BlocksListPoemsHomepage />
+  </article>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({})
-</script>
+<script src="./index.ts" lang="ts"></script>
