@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Utils / Factory / Head shall match snapshot 1`] = `
+Object {
+  "htmlAttrs": Object {
+    "lang": "pl",
+  },
+  "link": Array [
+    Object {
+      "href": "/images/common.icon.192x192.png",
+      "rel": "shortcut icon",
+      "type": "image/png",
+    },
+    Object {
+      "href": "/images/common.icon.192x192.png",
+      "rel": "shortcut icon",
+      "sizes": "192x192",
+    },
+    Object {
+      "href": "/images/common.icon.192x192.white.png",
+      "rel": "apple-touch-icon",
+    },
+    Object {
+      "href": "http://feeds.soundcloud.com/users/soundcloud:users:618891150/sounds.rss",
+      "rel": "alternate",
+      "title": "Audiobooki • 169cm.pl",
+      "type": "application/rss+xml",
+    },
+  ],
+  "meta": Array [
+    Object {
+      "charset": "utf-8",
+    },
+    Object {
+      "content": "width=device-width, initial-scale=1",
+      "name": "viewport",
+    },
+    Object {
+      "content": "telephone=no",
+      "name": "format-detection",
+    },
+    Object {
+      "content": "black-translucent",
+      "name": "apple-mobile-web-app-status-bar-style",
+    },
+    Object {
+      "content": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "hid": "meta:robots",
+      "name": "robots",
+    },
+    Object {
+      "content": "Liczy się każda historia!",
+      "hid": "meta:description",
+      "name": "description",
+    },
+    Object {
+      "content": "pl_PL",
+      "property": "og:locale",
+    },
+    Object {
+      "content": "website",
+      "hid": "meta:og:type",
+      "property": "og:type",
+    },
+    Object {
+      "content": "169cm.pl",
+      "hid": "meta:og:title",
+      "property": "og:title",
+    },
+    Object {
+      "content": "Liczy się każda historia!",
+      "hid": "meta:og:description",
+      "property": "og:description",
+    },
+    Object {
+      "content": "169cm.pl",
+      "property": "og:site_name",
+    },
+    Object {
+      "content": "https://169cm.pl/images/common.opengraph.png",
+      "hid": "meta:og:image",
+      "property": "og:image",
+    },
+    Object {
+      "content": "1200",
+      "property": "og:image:width",
+    },
+    Object {
+      "content": "630",
+      "property": "og:image:height",
+    },
+    Object {
+      "content": "summary_large_image",
+      "name": "twitter:card",
+    },
+    Object {
+      "content": "https://169cm.pl/images/common.opengraph.png",
+      "hid": "meta:twitter:image",
+      "name": "twitter:image",
+    },
+  ],
+  "title": "169cm.pl",
+}
+`;

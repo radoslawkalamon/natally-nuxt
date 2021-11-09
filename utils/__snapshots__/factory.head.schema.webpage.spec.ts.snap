@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Utils / Factory / Head / Schema / Webpage shall match snapshot | { category, createdAt, path, title, updatedAt, webpageType = WebPage } 1`] = `
+Object {
+  "@id": "https://169cm.pl/path/test/#webpage",
+  "@type": "WebPage",
+  "about": Object {
+    "@id": "https://169cm.pl/#organization",
+  },
+  "breadcrumb": Object {
+    "@id": "https://169cm.pl/path/test/#breadcrumb",
+  },
+  "dateModified": "2021-11-06T00:00:00+00:00",
+  "datePublished": "2021-11-05T00:00:00+00:00",
+  "inLanguage": "pl-PL",
+  "isPartOf": Object {
+    "@id": "https://169cm.pl/#website",
+  },
+  "name": "Title test • 169cm.pl",
+  "potentialAction": Array [
+    Object {
+      "@type": "ReadAction",
+      "target": Array [
+        "https://169cm.pl/path/test/",
+      ],
+    },
+  ],
+  "primaryImageOfPage": Object {
+    "@id": "https://169cm.pl/path/test/#primaryimage",
+  },
+  "url": "https://169cm.pl/",
+}
+`;
+
+exports[`Utils / Factory / Head / Schema / Webpage shall match snapshot | { category, createdAt, path, title, webpageType = WebPage } 1`] = `
+Object {
+  "@id": "https://169cm.pl/path/test/#webpage",
+  "@type": "WebPage",
+  "about": Object {
+    "@id": "https://169cm.pl/#organization",
+  },
+  "breadcrumb": Object {
+    "@id": "https://169cm.pl/path/test/#breadcrumb",
+  },
+  "datePublished": "2021-11-01T00:00:00+00:00",
+  "inLanguage": "pl-PL",
+  "isPartOf": Object {
+    "@id": "https://169cm.pl/#website",
+  },
+  "name": "Title test • Test category • 169cm.pl",
+  "potentialAction": Array [
+    Object {
+      "@type": "ReadAction",
+      "target": Array [
+        "https://169cm.pl/path/test/",
+      ],
+    },
+  ],
+  "primaryImageOfPage": Object {
+    "@id": "https://169cm.pl/path/test/#primaryimage",
+  },
+  "url": "https://169cm.pl/",
+}
+`;
+
+exports[`Utils / Factory / Head / Schema / Webpage shall match snapshot | { category, path, title, updatedAt, webpageType = CollectionPage } 1`] = `
+Object {
+  "@id": "https://169cm.pl/path/test/#webpage",
+  "@type": "CollectionPage",
+  "about": Object {
+    "@id": "https://169cm.pl/#organization",
+  },
+  "breadcrumb": Object {
+    "@id": "https://169cm.pl/path/test/#breadcrumb",
+  },
+  "dateModified": "2021-11-03T00:00:00+00:00",
+  "inLanguage": "pl-PL",
+  "isPartOf": Object {
+    "@id": "https://169cm.pl/#website",
+  },
+  "name": "Title test • Test category • 169cm.pl",
+  "potentialAction": Array [
+    Object {
+      "@type": "ReadAction",
+      "target": Array [
+        "https://169cm.pl/path/test/",
+      ],
+    },
+  ],
+  "primaryImageOfPage": Object {
+    "@id": "https://169cm.pl/path/test/#primaryimage",
+  },
+  "url": "https://169cm.pl/",
+}
+`;
+
+exports[`Utils / Factory / Head / Schema / Webpage shall match snapshot | { category, path, title, webpageType = CollectionPage } 1`] = `
+Object {
+  "@id": "https://169cm.pl/path/test/#webpage",
+  "@type": "CollectionPage",
+  "about": Object {
+    "@id": "https://169cm.pl/#organization",
+  },
+  "breadcrumb": Object {
+    "@id": "https://169cm.pl/path/test/#breadcrumb",
+  },
+  "inLanguage": "pl-PL",
+  "isPartOf": Object {
+    "@id": "https://169cm.pl/#website",
+  },
+  "name": "Title test • Test category • 169cm.pl",
+  "potentialAction": Array [
+    Object {
+      "@type": "ReadAction",
+      "target": Array [
+        "https://169cm.pl/path/test/",
+      ],
+    },
+  ],
+  "primaryImageOfPage": Object {
+    "@id": "https://169cm.pl/path/test/#primaryimage",
+  },
+  "url": "https://169cm.pl/",
+}
+`;
+
+exports[`Utils / Factory / Head / Schema / Webpage shall match snapshot | { path, title, webpageType = WebPage } 1`] = `
+Object {
+  "@id": "https://169cm.pl/test/path/#webpage",
+  "@type": "WebPage",
+  "about": Object {
+    "@id": "https://169cm.pl/#organization",
+  },
+  "breadcrumb": Object {
+    "@id": "https://169cm.pl/test/path/#breadcrumb",
+  },
+  "inLanguage": "pl-PL",
+  "isPartOf": Object {
+    "@id": "https://169cm.pl/#website",
+  },
+  "name": "Test title • 169cm.pl",
+  "potentialAction": Array [
+    Object {
+      "@type": "ReadAction",
+      "target": Array [
+        "https://169cm.pl/test/path/",
+      ],
+    },
+  ],
+  "primaryImageOfPage": Object {
+    "@id": "https://169cm.pl/test/path/#primaryimage",
+  },
+  "url": "https://169cm.pl/",
+}
+`;

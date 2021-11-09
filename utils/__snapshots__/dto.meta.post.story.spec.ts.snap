@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Utils / DTO / Meta / Post / Poem audiobook shall match snapshot 1`] = `
+exports[`Utils / DTO / Meta / Post / Story audiobook shall match snapshot 1`] = `
 DTOMetaPostStory {
   "audiobookId": "123456",
   "createdAt": 2021-11-01T00:00:00.000Z,
@@ -15,7 +15,7 @@ DTOMetaPostStory {
 }
 `;
 
-exports[`Utils / DTO / Meta / Post / Poem no audiobook shall match snapshot 1`] = `
+exports[`Utils / DTO / Meta / Post / Story no audiobook shall match snapshot 1`] = `
 DTOMetaPostStory {
   "audiobookId": "0",
   "createdAt": 2021-11-01T00:00:00.000Z,

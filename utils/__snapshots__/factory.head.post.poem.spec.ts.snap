@@ -1,0 +1,225 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Utils / Factory / Head / Post / Poem shall match snapshot 1`] = `
+Object {
+  "link": Array [
+    Object {
+      "hid": "link:canonical",
+      "href": "https://169cm.pl/poezja-314/milosc/",
+      "rel": "canonical",
+    },
+  ],
+  "meta": Array [
+    Object {
+      "content": "Miłość. Po prostu!",
+      "hid": "meta:description",
+      "name": "description",
+    },
+    Object {
+      "content": "article",
+      "hid": "meta:og:type",
+      "property": "og:type",
+    },
+    Object {
+      "content": "Miłość • Poezja 3.14 • 169cm.pl",
+      "hid": "meta:og:title",
+      "property": "og:title",
+    },
+    Object {
+      "content": "Miłość. Po prostu!",
+      "hid": "meta:og:description",
+      "property": "og:description",
+    },
+    Object {
+      "content": "https://169cm.pl/poezja-314/milosc/",
+      "hid": "meta:og:url",
+      "property": "og:url",
+    },
+    Object {
+      "content": "https://169cm.pl/images/poezja-314/poezja-314.milosc.opengraph.png",
+      "hid": "meta:og:image",
+      "property": "og:image",
+    },
+    Object {
+      "content": "https://facebook.com/169cmpl",
+      "property": "article:publisher",
+    },
+    Object {
+      "content": "2021-02-14T12:31:27.000Z",
+      "hid": "meta:article:modified_time",
+      "property": "article:modified_time",
+    },
+    Object {
+      "content": "2021-02-14T12:30:55.000Z",
+      "hid": "meta:article:published_time",
+      "property": "article:published_time",
+    },
+    Object {
+      "content": "https://facebook.com/169cmpl",
+      "property": "article:author",
+    },
+    Object {
+      "content": "https://169cm.pl/images/poezja-314/poezja-314.milosc.opengraph.png",
+      "hid": "meta:twitter:image",
+      "name": "twitter:image",
+    },
+    Object {
+      "content": "@radoslawkalamon",
+      "name": "twitter:creator",
+    },
+    Object {
+      "content": "Napisane przez",
+      "name": "twitter:label1",
+    },
+    Object {
+      "content": "Radosław Kalamon",
+      "name": "twitter:data1",
+    },
+  ],
+  "script": Array [
+    Object {
+      "json": Object {
+        "@context": "http://schema.org",
+        "@graph": Array [
+          Object {
+            "@id": "https://169cm.pl/#organization",
+            "@type": "Organization",
+            "image": Object {
+              "@id": "https://169cm.pl/#logo",
+            },
+            "logo": Object {
+              "@id": "https://169cm.pl/#logo",
+              "@type": "ImageObject",
+              "caption": "169cm.pl",
+              "contentUrl": "https://169cm.pl/images/common.logo.png",
+              "height": 224,
+              "inLanguage": "pl-PL",
+              "url": "https://169cm.pl/images/common.logo.png",
+              "width": 448,
+            },
+            "name": "169cm.pl",
+            "sameAs": Array [
+              "https://facebook.com/169cmpl",
+              "https://soundcloud.com/169cmpl",
+            ],
+            "url": "https://169cm.pl/",
+          },
+          Object {
+            "@id": "https://169cm.pl/#website",
+            "@type": "WebSite",
+            "description": "Liczy się każda historia!",
+            "inLanguage": "pl-PL",
+            "name": "169cm.pl",
+            "publisher": Object {
+              "@id": "https://169cm.pl/#organization",
+            },
+            "url": "https://169cm.pl/",
+          },
+          Object {
+            "@id": "https://169cm.pl/poezja-314/milosc/#primaryimage",
+            "@type": "ImageObject",
+            "contentUrl": "https://169cm.pl/images/poezja-314/poezja-314.milosc.opengraph.png",
+            "height": 630,
+            "hid": "schema:ImageObject",
+            "inLanguage": "pl-PL",
+            "url": "https://169cm.pl/images/poezja-314/poezja-314.milosc.opengraph.png",
+            "width": 1200,
+          },
+          Object {
+            "@id": "https://169cm.pl/poezja-314/milosc/#webpage",
+            "@type": "WebPage",
+            "about": Object {
+              "@id": "https://169cm.pl/#organization",
+            },
+            "breadcrumb": Object {
+              "@id": "https://169cm.pl/poezja-314/milosc/#breadcrumb",
+            },
+            "dateModified": "2021-02-14T12:31:27.000Z",
+            "datePublished": "2021-02-14T12:30:55.000Z",
+            "inLanguage": "pl-PL",
+            "isPartOf": Object {
+              "@id": "https://169cm.pl/#website",
+            },
+            "name": "Miłość • Poezja 3.14 • 169cm.pl",
+            "potentialAction": Array [
+              Object {
+                "@type": "ReadAction",
+                "target": Array [
+                  "https://169cm.pl/poezja-314/milosc/",
+                ],
+              },
+            ],
+            "primaryImageOfPage": Object {
+              "@id": "https://169cm.pl/poezja-314/milosc/#primaryimage",
+            },
+            "url": "https://169cm.pl/",
+          },
+          Object {
+            "@id": "https://169cm.pl/poezja-314/milosc/#breadcrumb",
+            "@type": "BreadcrumbList",
+            "itemListElement": Array [
+              Object {
+                "@type": "ListItem",
+                "item": "https://169cm.pl/",
+                "name": "169cm.pl",
+                "position": 1,
+              },
+              Object {
+                "@type": "ListItem",
+                "item": "https://169cm.pl/poezja-314/",
+                "name": "Poezja 3.14",
+                "position": 2,
+              },
+              Object {
+                "@type": "ListItem",
+                "item": "https://169cm.pl/poezja-314/milosc/",
+                "name": "Miłość",
+                "position": 3,
+              },
+            ],
+          },
+          Object {
+            "@id": "https://169cm.pl/poezja-314/milosc/#article",
+            "@type": "Article",
+            "articleSection": Array [
+              "Poezja 3.14",
+            ],
+            "author": Object {
+              "@id": "https://169cm.pl/#person/radoslaw-kalamon",
+            },
+            "dateModified": "2021-02-14T12:31:27.000Z",
+            "datePublished": "2021-02-14T12:30:55.000Z",
+            "headline": "Miłość • Poezja 3.14 • 169cm.pl",
+            "image": Object {
+              "@id": "https://169cm.pl/poezja-314/milosc/#primaryimage",
+            },
+            "inLanguage": "pl-PL",
+            "isPartOf": Object {
+              "@id": "https://169cm.pl/poezja-314/milosc/#webpage",
+            },
+            "mainEntityOfPage": Object {
+              "@id": "https://169cm.pl/poezja-314/milosc/#webpage",
+            },
+            "publisher": Object {
+              "@id": "https://169cm.pl/#organization",
+            },
+            "thumbnailUrl": "https://169cm.pl/images/poezja-314/poezja-314.milosc.opengraph.png",
+          },
+          Object {
+            "@id": "https://169cm.pl/#person/radoslaw-kalamon",
+            "@type": "Person",
+            "name": "Radosław Kalamon",
+            "sameAs": Array [
+              "https://radoslawkalamon.pl",
+              "https://instagram.com/radoslawkalamon/",
+              "https://twitter.com/radoslawkalamon",
+            ],
+          },
+        ],
+      },
+      "type": "application/ld+json",
+    },
+  ],
+  "title": "Miłość • Poezja 3.14 • 169cm.pl",
+}
+`;

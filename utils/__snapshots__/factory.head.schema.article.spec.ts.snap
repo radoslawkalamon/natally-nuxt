@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Utils / Factory / Head / Schema / Article shall match snapshot | { category, createdAt, imageOpenGraph, path, title, updatedAt } 1`] = `
+Object {
+  "@id": "https://169cm.pl/path/test/#article",
+  "@type": "Article",
+  "articleSection": Array [
+    "Test category",
+  ],
+  "author": Object {
+    "@id": "https://169cm.pl/#person/radoslaw-kalamon",
+  },
+  "dateModified": "2021-11-02T00:00:00+00:00",
+  "datePublished": "2021-11-06T00:00:00+00:00",
+  "headline": "Title test • Test category • 169cm.pl",
+  "image": Object {
+    "@id": "https://169cm.pl/path/test/#primaryimage",
+  },
+  "inLanguage": "pl-PL",
+  "isPartOf": Object {
+    "@id": "https://169cm.pl/path/test/#webpage",
+  },
+  "mainEntityOfPage": Object {
+    "@id": "https://169cm.pl/path/test/#webpage",
+  },
+  "publisher": Object {
+    "@id": "https://169cm.pl/#organization",
+  },
+  "thumbnailUrl": "https://169cm.pl/images/test.path.opengraph.png",
+}
+`;
+
+exports[`Utils / Factory / Head / Schema / Article shall match snapshot | { category, createdAt, path, title, updatedAt } 1`] = `
+Object {
+  "@id": "https://169cm.pl/path/test/#article",
+  "@type": "Article",
+  "articleSection": Array [
+    "Test category",
+  ],
+  "author": Object {
+    "@id": "https://169cm.pl/#person/radoslaw-kalamon",
+  },
+  "dateModified": "2021-11-04T00:00:00+00:00",
+  "datePublished": "2021-11-01T00:00:00+00:00",
+  "headline": "Title test • Test category • 169cm.pl",
+  "image": Object {
+    "@id": "https://169cm.pl/path/test/#primaryimage",
+  },
+  "inLanguage": "pl-PL",
+  "isPartOf": Object {
+    "@id": "https://169cm.pl/path/test/#webpage",
+  },
+  "mainEntityOfPage": Object {
+    "@id": "https://169cm.pl/path/test/#webpage",
+  },
+  "publisher": Object {
+    "@id": "https://169cm.pl/#organization",
+  },
+  "thumbnailUrl": "https://169cm.pl/images/common.opengraph.png",
+}
+`;
