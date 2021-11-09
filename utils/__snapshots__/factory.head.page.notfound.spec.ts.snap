@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Utils / Factory / Head / Schema / Website shall match snapshot 1`] = `
+Object {
+  "meta": Array [
+    Object {
+      "content": "noindex, follow",
+      "hid": "meta:robots",
+      "name": "robots",
+    },
+    Object {
+      "content": "Porobiło się! Niestety strona, której szukasz nie istnieje!",
+      "hid": "meta:description",
+      "name": "description",
+    },
+    Object {
+      "content": "Strony nie znaleziono • 169cm.pl",
+      "hid": "meta:og:title",
+      "property": "og:title",
+    },
+    Object {
+      "content": "Porobiło się! Niestety strona, której szukasz nie istnieje!",
+      "hid": "meta:og:description",
+      "property": "og:description",
+    },
+  ],
+  "script": Array [
+    Object {
+      "json": Object {
+        "@context": "http://schema.org",
+        "@graph": Array [
+          Object {
+            "@id": "https://169cm.pl/#organization",
+            "@type": "Organization",
+            "image": Object {
+              "@id": "https://169cm.pl/#logo",
+            },
+            "logo": Object {
+              "@id": "https://169cm.pl/#logo",
+              "@type": "ImageObject",
+              "caption": "169cm.pl",
+              "contentUrl": "https://169cm.pl/images/common.logo.png",
+              "height": 224,
+              "inLanguage": "pl-PL",
+              "url": "https://169cm.pl/images/common.logo.png",
+              "width": 448,
+            },
+            "name": "169cm.pl",
+            "sameAs": Array [
+              "https://facebook.com/169cmpl",
+              "https://soundcloud.com/169cmpl",
+            ],
+            "url": "https://169cm.pl/",
+          },
+          Object {
+            "@id": "https://169cm.pl/#website",
+            "@type": "WebSite",
+            "description": "Liczy się każda historia!",
+            "inLanguage": "pl-PL",
+            "name": "169cm.pl",
+            "publisher": Object {
+              "@id": "https://169cm.pl/#organization",
+            },
+            "url": "https://169cm.pl/",
+          },
+        ],
+      },
+      "type": "application/ld+json",
+    },
+  ],
+  "title": "Strony nie znaleziono • 169cm.pl",
+}
+`;
