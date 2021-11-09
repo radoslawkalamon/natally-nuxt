@@ -14,9 +14,7 @@ export const factoryHead = (): MetaInfo => ({
     // Posts Feed
     // @feed-module
     // Audiobook Feed
-    { rel: 'alternate', type: 'application/rss+xml', title: getTitle({ title: 'Audiobooki' }), href: 'http://feeds.soundcloud.com/users/soundcloud:users:618891150/sounds.rss' },
-    // Canonical URL
-    { rel: 'canonical', href: getURL(), hid: 'link:canonical' }
+    { rel: 'alternate', type: 'application/rss+xml', title: getTitle({ title: 'Audiobooki' }), href: 'http://feeds.soundcloud.com/users/soundcloud:users:618891150/sounds.rss' }
   ],
   meta: [
     // General
@@ -33,7 +31,6 @@ export const factoryHead = (): MetaInfo => ({
     { property: 'og:type', content: 'website', hid: 'meta:og:type' },
     { property: 'og:title', content: getTitle(), hid: 'meta:og:title' },
     { property: 'og:description', content: headDefault.description, hid: 'meta:og:description' },
-    { property: 'og:url', content: getURL(), hid: 'meta:og:url' },
     { property: 'og:site_name', content: getTitle() },
     { property: 'og:image', content: getURL({ path: headDefault.imageOpenGraph }), hid: 'meta:og:image' },
     { property: 'og:image:width', content: '1200' },
