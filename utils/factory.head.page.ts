@@ -1,3 +1,4 @@
+import type { MetaInfo } from 'vue-meta'
 import { DTOMetaPage } from './dto.meta.page'
 import { factoryHeadSchemaBreadcrumbs } from './factory.head.schema.breadcrumbs'
 import { factoryHeadSchemaOrganization } from './factory.head.schema.organization'
@@ -6,7 +7,7 @@ import { factoryHeadSchemaWebpage, FactoryHeadSchemaWebpageType } from './factor
 import { factoryHeadSchemaWebsite } from './factory.head.schema.website'
 import { getURL, getTitle } from './factory.head.utils'
 
-export const factoryHeadPage = ({ createdAt, description, title, path, updatedAt }: DTOMetaPage, webpageType: FactoryHeadSchemaWebpageType) => ({
+export const factoryHeadPage = ({ createdAt, description, title, path, updatedAt }: DTOMetaPage, webpageType: FactoryHeadSchemaWebpageType): MetaInfo => ({
   title: getTitle({ title }),
   link: [
     { rel: 'canonical', href: getURL({ path }), hid: 'link:canonical' }

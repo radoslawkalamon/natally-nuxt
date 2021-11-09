@@ -1,6 +1,7 @@
+import type { MetaInfo } from 'vue-meta'
 import { headDefault, getURL, getTitle } from './factory.head.utils'
 
-export const factoryHead = () => ({
+export const factoryHead = (): MetaInfo => ({
   htmlAttrs: {
     lang: 'pl'
   },
@@ -25,7 +26,7 @@ export const factoryHead = () => ({
     // Style
     { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
     // Robots
-    { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
+    { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1', hid: 'meta:robots' },
     { name: 'description', content: headDefault.description, hid: 'meta:description' },
     // OpenGraph
     { property: 'og:locale', content: 'pl_PL' },
@@ -39,6 +40,6 @@ export const factoryHead = () => ({
     { property: 'og:image:height', content: '630' },
     // Twitter
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:image', template: getURL({ path: headDefault.imageOpenGraph }), hid: 'meta:twitter:image' }
+    { name: 'twitter:image', content: getURL({ path: headDefault.imageOpenGraph }), hid: 'meta:twitter:image' }
   ]
 })
