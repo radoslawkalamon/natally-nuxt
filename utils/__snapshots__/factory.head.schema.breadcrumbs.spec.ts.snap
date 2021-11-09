@@ -19,6 +19,7 @@ Object {
     },
     Object {
       "@type": "ListItem",
+      "item": "https://169cm.pl/test/path/",
       "name": "Path",
       "position": 3,
     },

@@ -26,11 +26,6 @@ Object {
       "title": "Audiobooki • 169cm.pl",
       "type": "application/rss+xml",
     },
-    Object {
-      "hid": "link:canonical",
-      "href": "https://169cm.pl/",
-      "rel": "canonical",
-    },
   ],
   "meta": Array [
     Object {
@@ -50,6 +45,7 @@ Object {
     },
     Object {
       "content": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "hid": "meta:robots",
       "name": "robots",
     },
     Object {
@@ -77,11 +73,6 @@ Object {
       "property": "og:description",
     },
     Object {
-      "content": "https://169cm.pl/",
-      "hid": "meta:og:url",
-      "property": "og:url",
-    },
-    Object {
       "content": "169cm.pl",
       "property": "og:site_name",
     },
@@ -103,9 +94,9 @@ Object {
       "name": "twitter:card",
     },
     Object {
+      "content": "https://169cm.pl/images/common.opengraph.png",
       "hid": "meta:twitter:image",
       "name": "twitter:image",
-      "template": "https://169cm.pl/images/common.opengraph.png",
     },
   ],
   "title": "169cm.pl",

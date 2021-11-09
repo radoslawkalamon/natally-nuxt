@@ -5,7 +5,7 @@ Object {
   "link": Array [
     Object {
       "hid": "link:canonical",
-      "href": "https://169cm.pl/poezja-314/milosc",
+      "href": "https://169cm.pl/poezja-314/milosc/",
       "rel": "canonical",
     },
   ],
@@ -31,7 +31,7 @@ Object {
       "property": "og:description",
     },
     Object {
-      "content": "https://169cm.pl/poezja-314/milosc",
+      "content": "https://169cm.pl/poezja-314/milosc/",
       "hid": "meta:og:url",
       "property": "og:url",
     },
@@ -116,7 +116,7 @@ Object {
             "url": "https://169cm.pl/",
           },
           Object {
-            "@id": "https://169cm.pl/poezja-314/milosc#primaryimage",
+            "@id": "https://169cm.pl/poezja-314/milosc/#primaryimage",
             "@type": "ImageObject",
             "contentUrl": "https://169cm.pl/images/poezja-314/poezja-314.milosc.opengraph.png",
             "height": 630,
@@ -126,13 +126,13 @@ Object {
             "width": 1200,
           },
           Object {
-            "@id": "https://169cm.pl/poezja-314/milosc#webpage",
+            "@id": "https://169cm.pl/poezja-314/milosc/#webpage",
             "@type": "WebPage",
             "about": Object {
               "@id": "https://169cm.pl/#organization",
             },
             "breadcrumb": Object {
-              "@id": "https://169cm.pl/poezja-314/milosc#breadcrumb",
+              "@id": "https://169cm.pl/poezja-314/milosc/#breadcrumb",
             },
             "dateModified": "2021-02-14T12:31:27.000Z",
             "datePublished": "2021-02-14T12:30:55.000Z",
@@ -145,17 +145,17 @@ Object {
               Object {
                 "@type": "ReadAction",
                 "target": Array [
-                  "https://169cm.pl/poezja-314/milosc",
+                  "https://169cm.pl/poezja-314/milosc/",
                 ],
               },
             ],
             "primaryImageOfPage": Object {
-              "@id": "https://169cm.pl/poezja-314/milosc#primaryimage",
+              "@id": "https://169cm.pl/poezja-314/milosc/#primaryimage",
             },
             "url": "https://169cm.pl/",
           },
           Object {
-            "@id": "https://169cm.pl/poezja-314/milosc#breadcrumb",
+            "@id": "https://169cm.pl/poezja-314/milosc/#breadcrumb",
             "@type": "BreadcrumbList",
             "itemListElement": Array [
               Object {
@@ -172,14 +172,14 @@ Object {
               },
               Object {
                 "@type": "ListItem",
-                "item": "https://169cm.pl/poezja-314/milosc",
+                "item": "https://169cm.pl/poezja-314/milosc/",
                 "name": "Miłość",
                 "position": 3,
               },
             ],
           },
           Object {
-            "@id": "https://169cm.pl/poezja-314/milosc#article",
+            "@id": "https://169cm.pl/poezja-314/milosc/#article",
             "@type": "Article",
             "articleSection": Array [
               "Poezja 3.14",
@@ -191,14 +191,14 @@ Object {
             "datePublished": "2021-02-14T12:30:55.000Z",
             "headline": "Miłość • Poezja 3.14 • 169cm.pl",
             "image": Object {
-              "@id": "https://169cm.pl/poezja-314/milosc#primaryimage",
+              "@id": "https://169cm.pl/poezja-314/milosc/#primaryimage",
             },
             "inLanguage": "pl-PL",
             "isPartOf": Object {
-              "@id": "https://169cm.pl/poezja-314/milosc#webpage",
+              "@id": "https://169cm.pl/poezja-314/milosc/#webpage",
             },
             "mainEntityOfPage": Object {
-              "@id": "https://169cm.pl/poezja-314/milosc#webpage",
+              "@id": "https://169cm.pl/poezja-314/milosc/#webpage",
             },
             "publisher": Object {
               "@id": "https://169cm.pl/#organization",

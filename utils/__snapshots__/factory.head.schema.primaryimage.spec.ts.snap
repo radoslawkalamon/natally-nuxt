@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Utils / Factory / Head / Schema / Person shall match snapshot | { path } 1`] = `
+exports[`Utils / Factory / Head / Schema / Primary image shall match snapshot | { path } 1`] = `
 Object {
   "@id": "https://169cm.pl/test/path/#primaryimage",
   "@type": "ImageObject",
@@ -13,7 +13,7 @@ Object {
 }
 `;
 
-exports[`Utils / Factory / Head / Schema / Person shall match snapshot | { path, imageOpenGraph } 1`] = `
+exports[`Utils / Factory / Head / Schema / Primary image shall match snapshot | { path, imageOpenGraph } 1`] = `
 Object {
   "@id": "https://169cm.pl/test/path/#primaryimage",
   "@type": "ImageObject",
