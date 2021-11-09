@@ -1,6 +1,6 @@
 import { DTOMetaPostStory } from '@/utils/dto.meta.post.story'
 
-describe('Utils / DTO / Meta / Post / Poem', () => {
+describe('Utils / DTO / Meta / Post / Story', () => {
   describe('no audiobook', () => {
     let dtoMetaPostStory: DTOMetaPostStory
 

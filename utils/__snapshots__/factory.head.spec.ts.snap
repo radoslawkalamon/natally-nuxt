@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Utils / Factory / Head / Schema / Website shall match snapshot 1`] = `
+exports[`Utils / Factory / Head shall match snapshot 1`] = `
 Object {
   "htmlAttrs": Object {
     "lang": "pl",

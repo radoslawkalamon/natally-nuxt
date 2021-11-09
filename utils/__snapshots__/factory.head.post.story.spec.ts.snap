@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Utils / Factory / Head / Post / Poem shall match snapshot 1`] = `
+exports[`Utils / Factory / Head / Post / Story shall match snapshot 1`] = `
 Object {
   "link": Array [
     Object {

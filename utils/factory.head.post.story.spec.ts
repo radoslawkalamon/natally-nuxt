@@ -1,6 +1,6 @@
 import { factoryHeadPostStory } from '@/utils/factory.head.post.story'
 
-describe('Utils / Factory / Head / Post / Poem', () => {
+describe('Utils / Factory / Head / Post / Story', () => {
   test('shall match snapshot', () => {
     const dto = {
       audiobookId: '0',
