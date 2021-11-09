@@ -3,7 +3,7 @@
     <BlocksHeader />
     <BlocksDrawer />
     <WrappersMain class="layout-default__main">
-      <Nuxt />
+      <Nuxt class="layout-default__article" />
     </WrappersMain>
     <BlocksFooter />
     <BlocksModalPrivacy />
