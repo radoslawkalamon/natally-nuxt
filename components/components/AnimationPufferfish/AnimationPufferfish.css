@@ -3,6 +3,7 @@
   border-radius: var(--border-radius);
   box-sizing: border-box;
   height: 240px;
+  margin: 0 auto;
   padding: var(--gap-section);
   position: relative;
   width: 270px;
