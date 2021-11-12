@@ -1,0 +1,16 @@
+.dysonans {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 3em;
+  text-align: center;
+}
+
+.dysonans__superscript {
+  position: relative;
+  top: -20px;
+}
+
+.dysonans__subscript {
+  position: relative;
+  top: 20px;
+}
