@@ -1,5 +1,10 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'BlocksListStoriesSuggestions'
+  name: 'BlocksListStoriesSuggestions',
+  computed: {
+    storiesQuantity (): number {
+      return 2
+    }
+  }
 })

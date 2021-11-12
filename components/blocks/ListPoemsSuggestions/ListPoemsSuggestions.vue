@@ -14,11 +14,11 @@
 
     <WrappersListPoems
       class="list-poems-suggestions__poems"
-      :limit="6"
+      :limit="poemsQuantity"
       :randomize="true"
     >
       <template #loader>
-        <template v-for="i in 6">
+        <template v-for="i in poemsQuantity">
           <ComponentsCardPoemPlaceholder :key="i" />
         </template>
       </template>

@@ -14,10 +14,10 @@
 
     <WrappersListPoems
       class="list-poems-homepage__poems"
-      :limit="6"
+      :limit="poemsQuantity"
     >
       <template #loader>
-        <template v-for="i in 6">
+        <template v-for="i in poemsQuantity">
           <ComponentsCardPoemPlaceholder :key="i" />
         </template>
       </template>

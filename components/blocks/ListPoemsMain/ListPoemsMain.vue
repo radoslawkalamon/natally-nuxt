@@ -4,7 +4,7 @@
     data-test="blocks-list-poems-main"
   >
     <template #loader>
-      <template v-for="i in 6">
+      <template v-for="i in 24">
         <ComponentsCardPoemPlaceholder :key="i" />
       </template>
     </template>
