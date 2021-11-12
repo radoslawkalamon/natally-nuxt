@@ -17,6 +17,11 @@
       :limit="6"
       :randomize="true"
     >
+      <template #loader>
+        <template v-for="i in 6">
+          <ComponentsCardPoemPlaceholder :key="i" />
+        </template>
+      </template>
       <template #default="{ metaPostPoems }">
         <template v-for="metaPostPoem in metaPostPoems">
           <ComponentsCardPoem
