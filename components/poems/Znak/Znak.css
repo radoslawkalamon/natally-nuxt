@@ -1,0 +1,10 @@
+.znak {
+  text-align: center;
+}
+
+.znak__image {
+  display: block;
+  margin: 0 auto;
+  max-width: 280px;
+  width: 100%;
+}
