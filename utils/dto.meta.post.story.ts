@@ -43,6 +43,6 @@ export class DTOMetaPostStory extends DTOMetaPage {
   }
 
   get imagePath (): string {
-    return '/images/opowiadania/'
+    return '/images/'
   }
 }

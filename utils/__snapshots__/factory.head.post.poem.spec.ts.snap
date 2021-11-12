@@ -36,7 +36,7 @@ Object {
       "property": "og:url",
     },
     Object {
-      "content": "https://169cm.pl/images/poezja-314/poezja-314.milosc.opengraph.png",
+      "content": "https://169cm.pl/images/poezja-314.milosc.opengraph.png",
       "hid": "meta:og:image",
       "property": "og:image",
     },
@@ -59,7 +59,7 @@ Object {
       "property": "article:author",
     },
     Object {
-      "content": "https://169cm.pl/images/poezja-314/poezja-314.milosc.opengraph.png",
+      "content": "https://169cm.pl/images/poezja-314.milosc.opengraph.png",
       "hid": "meta:twitter:image",
       "name": "twitter:image",
     },
@@ -118,11 +118,11 @@ Object {
           Object {
             "@id": "https://169cm.pl/poezja-314/milosc/#primaryimage",
             "@type": "ImageObject",
-            "contentUrl": "https://169cm.pl/images/poezja-314/poezja-314.milosc.opengraph.png",
+            "contentUrl": "https://169cm.pl/images/poezja-314.milosc.opengraph.png",
             "height": 630,
             "hid": "schema:ImageObject",
             "inLanguage": "pl-PL",
-            "url": "https://169cm.pl/images/poezja-314/poezja-314.milosc.opengraph.png",
+            "url": "https://169cm.pl/images/poezja-314.milosc.opengraph.png",
             "width": 1200,
           },
           Object {
@@ -203,7 +203,7 @@ Object {
             "publisher": Object {
               "@id": "https://169cm.pl/#organization",
             },
-            "thumbnailUrl": "https://169cm.pl/images/poezja-314/poezja-314.milosc.opengraph.png",
+            "thumbnailUrl": "https://169cm.pl/images/poezja-314.milosc.opengraph.png",
           },
           Object {
             "@id": "https://169cm.pl/#person/radoslaw-kalamon",
