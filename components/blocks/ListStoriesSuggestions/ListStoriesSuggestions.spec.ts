@@ -8,7 +8,8 @@ const defaultOptionsFactory = (options?: object) => merge({
     'ComponentsTitle',
     'WrappersListStories',
     'ComponentsCardStory',
-    'ComponentsButtonLink'
+    'ComponentsButtonLink',
+    'ComponentsCardStoryPlaceholder'
   ]
 }, options)
 
