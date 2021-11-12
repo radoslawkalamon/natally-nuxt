@@ -39,7 +39,20 @@ export default {
     'content:file:beforeParse': nuxtHooksContentFileBeforeParseTextAlignment
   },
   build: {
-    extractCSS: true
+    extractCSS: true,
+    extend (config) {
+      config.module.rules.push({
+        test: /\.(png|jpe?g|gif|svg|webp|avif)$/i,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            esModule: false,
+            limit: -1,
+            name: 'images/[name].[contenthash:7].[ext]'
+          }
+        }]
+      })
+    }
   },
   storybook: {
     parameters: {
