@@ -1,0 +1,28 @@
+.wsparcie {
+  text-align: center;
+}
+
+.wsparcie__image {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  transform: rotate(135deg);
+  width: 80px;
+}
+
+.wsparcie__mts {
+  background-color: var(--color-base);
+  color: var(--color-background-1);
+  padding: 0.25em;
+}
+
+.wsparcie__sl {
+  color: var(--color-background-1) !important;
+  cursor: default;
+  padding: 0.25em;
+}
+
+.wsparcie__sl::selection {
+  background-color: var(--color-base);
+  color: var(--color-background-1) !important;
+}
