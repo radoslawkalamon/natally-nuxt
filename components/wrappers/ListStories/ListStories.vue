@@ -3,7 +3,10 @@
     class="list-stories"
     data-test="wrappers-list-stories"
   >
-    <ComponentsLoading v-if="$fetchState.pending" />
+    <slot
+      v-if="$fetchState.pending || $fetchState.error"
+      name="loader"
+    />
     <slot
       v-else
       v-bind="{ metaPostStories }"

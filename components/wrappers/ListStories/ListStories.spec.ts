@@ -36,12 +36,15 @@ describe('Wrappers / List Stories', (): void => {
     expect(wrapper.html()).toMatchSnapshot()
   })
 
-  test('shall show ComponentsLoading when $fetchState.pending = true', async () => {
+  test('shall show slot loader when $fetchState.pending = true', async () => {
     const wrapper = mount(ListStories, defaultOptionsFactory({
       mocks: {
         $fetchState: {
           pending: true
         }
+      },
+      slots: {
+        loader: 'This is slot "loader" test.'
       }
     }))
     await (ListStories as any).options.fetch.call(wrapper.vm)
