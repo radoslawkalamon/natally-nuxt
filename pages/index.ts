@@ -5,7 +5,7 @@ import { factoryHeadPage } from '@/utils/factory.head.page'
 import { FactoryHeadSchemaWebpageType } from '@/utils/factory.head.schema.webpage'
 
 export default Vue.extend({
-  name: 'PageHomepage',
+  name: 'PageIndex',
   async asyncData ({ $content }) {
     const page = await $content('/index')
       .fetch<DTOMetaPageConstructor>()

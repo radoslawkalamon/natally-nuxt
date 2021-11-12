@@ -3,7 +3,7 @@ import PageHomepage from '@/pages/index.vue'
 import { DTOMetaPageConstructor } from '@/utils/dto.meta.page'
 
 export default Vue.extend({
-  name: 'PageAudiobooki',
+  name: 'PagePoezja314',
   extends: PageHomepage,
   async asyncData ({ $content }) {
     const page = await $content()
