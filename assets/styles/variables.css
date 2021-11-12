@@ -48,6 +48,7 @@ body {
   --max-width-card-poem: 400px;
   --max-width-card-story: 400px;
   --max-width-card-audiobook-service: 400px;
+  --max-width-adjacent-post-link: 240px;
 
   /* Heights */
   --height-card-poem: 72px;
