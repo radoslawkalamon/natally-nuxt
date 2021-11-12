@@ -36,7 +36,7 @@ Object {
       "property": "og:url",
     },
     Object {
-      "content": "https://169cm.pl/images/opowiadania/opowiadania.proste-rzeczy.opengraph.jpg",
+      "content": "https://169cm.pl/images/opowiadania.proste-rzeczy.opengraph.jpg",
       "hid": "meta:og:image",
       "property": "og:image",
     },
@@ -59,7 +59,7 @@ Object {
       "property": "article:author",
     },
     Object {
-      "content": "https://169cm.pl/images/opowiadania/opowiadania.proste-rzeczy.opengraph.jpg",
+      "content": "https://169cm.pl/images/opowiadania.proste-rzeczy.opengraph.jpg",
       "hid": "meta:twitter:image",
       "name": "twitter:image",
     },
@@ -127,11 +127,11 @@ Object {
           Object {
             "@id": "https://169cm.pl/opowiadania/proste-rzeczy/#primaryimage",
             "@type": "ImageObject",
-            "contentUrl": "https://169cm.pl/images/opowiadania/opowiadania.proste-rzeczy.opengraph.jpg",
+            "contentUrl": "https://169cm.pl/images/opowiadania.proste-rzeczy.opengraph.jpg",
             "height": 630,
             "hid": "schema:ImageObject",
             "inLanguage": "pl-PL",
-            "url": "https://169cm.pl/images/opowiadania/opowiadania.proste-rzeczy.opengraph.jpg",
+            "url": "https://169cm.pl/images/opowiadania.proste-rzeczy.opengraph.jpg",
             "width": 1200,
           },
           Object {
@@ -212,7 +212,7 @@ Object {
             "publisher": Object {
               "@id": "https://169cm.pl/#organization",
             },
-            "thumbnailUrl": "https://169cm.pl/images/opowiadania/opowiadania.proste-rzeczy.opengraph.jpg",
+            "thumbnailUrl": "https://169cm.pl/images/opowiadania.proste-rzeczy.opengraph.jpg",
           },
           Object {
             "@id": "https://169cm.pl/#person/radoslaw-kalamon",

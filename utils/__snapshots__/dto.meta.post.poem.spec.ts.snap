@@ -4,8 +4,8 @@ exports[`Utils / DTO / Meta / Post / Poem shall match snapshot 1`] = `
 DTOMetaPostPoem {
   "createdAt": 2021-11-01T00:00:00.000Z,
   "description": "Test Description",
-  "imageCover": "/images/poezja-314/image-cover.webp",
-  "imageOpenGraph": "/images/poezja-314/image-open-graph.png",
+  "imageCover": "/images/image-cover.webp",
+  "imageOpenGraph": "/images/image-open-graph.png",
   "path": "/test-url/",
   "title": "Test title",
   "updatedAt": 2021-11-01T00:00:00.000Z,

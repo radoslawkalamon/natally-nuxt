@@ -31,6 +31,6 @@ export class DTOMetaPostPoem extends DTOMetaPage {
   }
 
   get imagePath (): string {
-    return '/images/poezja-314/'
+    return '/images/'
   }
 }
