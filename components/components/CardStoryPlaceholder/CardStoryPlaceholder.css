@@ -1,0 +1,27 @@
+@keyframes card-story-placeholder-loading {
+  0% {
+    opacity: 0.75;
+  }
+
+  50% {
+    opacity: 0.25;
+  }
+
+  100% {
+    opacity: 0.75;
+  }
+}
+
+.card-story-placeholder {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: card-story-placeholder-loading;
+  animation-timing-function: ease-in-out;
+  background-color: var(--color-betwixt);
+  border-radius: var(--border-radius);
+  display: block;
+  height: var(--height-card-story);
+  max-width: var(--max-width-card-story);
+  position: relative;
+  width: 100%;
+}
