@@ -1,11 +1,7 @@
-.uprzejmie-prosze-uciekac-predziutko {
+.uprzejmie-prosze-uciekac-predziutko__image {
   display: block;
   height: auto;
   margin: 0 auto;
   transform: rotate(135deg);
   width: 80px;
-}
-
-.uprzejmie-prosze-uciekac-predziutko__lightning {
-  fill: #e2000e;
 }
