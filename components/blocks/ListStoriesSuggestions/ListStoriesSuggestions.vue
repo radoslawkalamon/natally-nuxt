@@ -17,6 +17,11 @@
       :limit="2"
       :randomize="true"
     >
+      <template #loader>
+        <template v-for="i in 2">
+          <ComponentsCardStoryPlaceholder :key="i" />
+        </template>
+      </template>
       <template #default="{ metaPostStories }">
         <template v-for="metaPostStory in metaPostStories">
           <ComponentsCardStory
