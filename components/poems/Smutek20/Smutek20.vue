@@ -14,11 +14,6 @@
         :(
       </p>&mdash; Radosław Kalamon (@radoslawkalamon) <a href="https://twitter.com/radoslawkalamon/status/833004185696206852?ref_src=twsrc%5Etfw">18 lutego 2017</a>
     </blockquote>
-    <script
-      async
-      src="https://platform.twitter.com/widgets.js"
-      charset="utf-8"
-    />
   </div>
 </template>
 
