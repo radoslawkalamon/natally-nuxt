@@ -1,0 +1,40 @@
+.grzeszki {
+  text-align: center;
+}
+
+.grzeszki__breadcrumbs-area {
+  height: 200px;
+  position: relative;
+}
+
+.grzeszki__text {
+  position: absolute;
+  z-index: 3;
+}
+
+.grzeszki__text--1 {
+  left: 15%;
+  top: 10%;
+}
+
+.grzeszki__text--2 {
+  right: 28%;
+  top: 33%;
+}
+
+.grzeszki__text--3 {
+  left: 20%;
+  top: 64%;
+}
+
+.grzeszki__text--4 {
+  right: 18%;
+  top: 78%;
+}
+
+.grzeszki__breadcrumb {
+  font-size: 1.25em;
+  line-height: 0;
+  position: absolute;
+  z-index: 2;
+}
