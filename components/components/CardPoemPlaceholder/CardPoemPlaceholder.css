@@ -20,7 +20,7 @@
   background-color: var(--color-betwixt);
   border-radius: var(--border-radius);
   display: block;
-  height: 72px;
+  height: var(--height-card-poem);
   max-width: var(--max-width-card-poem);
   opacity: 0.5;
   position: relative;
