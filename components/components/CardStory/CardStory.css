@@ -4,8 +4,8 @@
   box-sizing: border-box;
   color: var(--color-off-white-1);
   display: block;
-  height: 200px;
-  max-width: 400px;
+  height: var(--height-card-story);
+  max-width: var(--max-width-card-story);
   overflow: hidden;
   position: relative;
   text-decoration: none;

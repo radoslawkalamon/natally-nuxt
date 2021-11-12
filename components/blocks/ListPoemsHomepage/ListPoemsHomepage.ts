@@ -1,5 +1,10 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'BlocksListPoemsHomepage'
+  name: 'BlocksListPoemsHomepage',
+  computed: {
+    poemsQuantity (): number {
+      return 6
+    }
+  }
 })

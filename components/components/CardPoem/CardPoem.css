@@ -4,8 +4,8 @@
   box-sizing: border-box;
   color: var(--color-off-white-1);
   display: block;
-  height: 72px;
-  max-width: 400px;
+  height: var(--height-card-poem);
+  max-width: var(--max-width-card-poem);
   overflow: hidden;
   position: relative;
   text-decoration: none;

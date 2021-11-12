@@ -45,7 +45,14 @@ body {
   /* Max widths */
   --max-width-body: 640px;
   --max-width-drawer: 288px;
-  --max-width-poems: 400px;
+  --max-width-card-poem: 400px;
+  --max-width-card-story: 400px;
+  --max-width-card-audiobook-service: 400px;
+
+  /* Heights */
+  --height-card-poem: 72px;
+  --height-card-story: 200px;
+  --height-card-audiobook-service: 80px;
 
   /* Contents */
   --content-arrows-left: '«';

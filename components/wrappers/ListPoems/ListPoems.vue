@@ -3,7 +3,10 @@
     class="list-poems"
     data-test="wrappers-list-poems"
   >
-    <ComponentsLoading v-if="$fetchState.pending" />
+    <slot
+      v-if="$fetchState.pending || $fetchState.error"
+      name="loader"
+    />
     <slot
       v-else
       v-bind="{ metaPostPoems }"
