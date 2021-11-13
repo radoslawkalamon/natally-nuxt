@@ -13,7 +13,9 @@
         v-bind="articleProps"
       />
     </WrappersTextPoems>
-    <!-- AdjacentPostsButtons -->
+    <BlocksAdjacentPostLinksPoem
+      :slug="article.slug"
+    />
     <BlocksPoemsFirstTime />
     <BlocksListPoemsSuggestions />
     <BlocksListStoriesSuggestions />
