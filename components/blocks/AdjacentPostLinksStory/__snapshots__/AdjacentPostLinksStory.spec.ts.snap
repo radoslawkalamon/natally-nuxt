@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blocks / Adjacent Post Links Story shall render 1`] = `
+"<div data-test=\\"blocks-adjacent-post-links-story\\" class=\\"adjacent-post-links-story\\">
+  <componentsadjacentpostlinkprevious-stub label=\\"Poprzednie\\" path=\\"/opowiadania/test-story\\" title=\\"Test story\\" class=\\"adjacent-post-links-story__previous\\"></componentsadjacentpostlinkprevious-stub>
+  <componentsadjacentpostlinknext-stub label=\\"Następne\\" path=\\"/opowiadania/test-story\\" title=\\"Test story\\" class=\\"adjacent-post-links-story__next\\"></componentsadjacentpostlinknext-stub>
+</div>"
+`;
+
+exports[`Blocks / Adjacent Post Links Story shall show placeholders when loading 1`] = `
+"<div data-test=\\"blocks-adjacent-post-links-story\\" class=\\"adjacent-post-links-story\\">
+  <componentsadjacentpostlinkplaceholder-stub></componentsadjacentpostlinkplaceholder-stub>
+  <componentsadjacentpostlinkplaceholder-stub></componentsadjacentpostlinkplaceholder-stub>
+</div>"
+`;

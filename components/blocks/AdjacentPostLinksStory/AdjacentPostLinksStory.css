@@ -1,0 +1,13 @@
+.adjacent-post-links-story {
+  display: flex;
+  gap: var(--gap);
+  justify-content: space-between;
+}
+
+.adjacent-post-links-story__previous {
+  margin-right: auto;
+}
+
+.adjacent-post-links-story__next {
+  margin-left: auto;
+}
