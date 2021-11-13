@@ -1,0 +1,22 @@
+.progress-bar {
+  box-sizing: border-box;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+.progress-bar__inner {
+  background-color: var(--color-accent);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  height: var(--border-radius);
+  transition: width var(--time-animation) linear;
+  width: 0%;
+}
+
+@media screen and (min-width: 1024px) {
+  .progress-bar {
+    padding-left: calc(var(--max-width-drawer) + var(--gap-section));
+  }
+}
