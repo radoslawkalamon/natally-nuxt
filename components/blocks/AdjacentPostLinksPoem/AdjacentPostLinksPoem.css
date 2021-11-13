@@ -1,0 +1,13 @@
+.adjacent-post-links-poem {
+  display: flex;
+  gap: var(--gap);
+  justify-content: space-between;
+}
+
+.adjacent-post-links-poem__previous {
+  margin-right: auto;
+}
+
+.adjacent-post-links-poem__next {
+  margin-left: auto;
+}
