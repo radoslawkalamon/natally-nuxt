@@ -4,7 +4,15 @@ import AdjacentPostLinksPoem from './AdjacentPostLinksPoem.vue'
 import { MockNuxtContent } from '@/devtools/jest.mock.nuxt.content'
 
 jest.mock('@/utils/dto.meta.post.poem', () => ({
-  DTOMetaPostPoem: class MockEmptyClass {}
+  DTOMetaPostPoem: class MockEmptyClass {
+    path: string;
+    title: string;
+
+    constructor () {
+      this.path = '/poezja-314/test-poem'
+      this.title = 'Test poem'
+    }
+  }
 }))
 
 const defaultOptionsFactory = (options?: object) => merge({

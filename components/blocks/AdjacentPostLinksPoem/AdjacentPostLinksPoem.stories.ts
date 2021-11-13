@@ -15,5 +15,5 @@ const Template: Story = (_args, { argTypes }) => ({
 
 export const Default: Story = Template.bind({})
 Default.args = {
-  path: '/post/test-post/'
+  slug: 'test-post'
 }

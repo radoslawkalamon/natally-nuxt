@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { DTOMetaPostPoem, DTOMetaPostPoemConstructor } from '~/utils/dto.meta.post.poem'
+import { DTOMetaPostPoem, DTOMetaPostPoemConstructor } from '@/utils/dto.meta.post.poem'
 
 export default Vue.extend({
   name: 'BlocksAdjacentPostLinksPoem',
