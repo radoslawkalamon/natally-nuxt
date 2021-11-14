@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import { mapGetters } from 'vuex'
-import { getPrivacyStorageValue, PrivacyStorageItems, setPrivacyStorageValue } from '@/utils/privacy.storage.utils'
+import { getPrivacyStorageValue, PrivacyStorageItems, setPrivacyStorageValue } from '@/utils/privacy.storage'
 
 export default Vue.extend({
   name: 'BlocksModalPrivacy',
