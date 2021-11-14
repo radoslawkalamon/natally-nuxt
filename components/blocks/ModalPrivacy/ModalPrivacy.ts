@@ -1,19 +1,26 @@
 import Vue from 'vue'
-import { mapActions, mapGetters } from 'vuex'
+import { mapGetters } from 'vuex'
+import { getPrivacyStorageValue, PrivacyStorageItems, setPrivacyStorageValue } from '@/utils/privacy.storage.utils'
 
 export default Vue.extend({
   name: 'BlocksModalPrivacy',
   computed: {
     ...mapGetters({
-      cookieCore: 'blocks/ModalPrivacy/getCookieCore',
-      cookieSoundcloud: 'blocks/ModalPrivacy/getCookieSoundcloud',
       shallOpenModalPrivacy: 'blocks/ModalPrivacy/shallOpenModalPrivacy'
-    })
+    }),
+    privacyStorageCore (): boolean {
+      return getPrivacyStorageValue(PrivacyStorageItems.Core)
+    },
+    privacyStorageSoundcloud (): boolean {
+      return getPrivacyStorageValue(PrivacyStorageItems.Soundcloud)
+    }
   },
   methods: {
-    ...mapActions({
-      applyCookieSettings: 'blocks/ModalPrivacy/applyCookieSettings',
-      updateCookieSoundcloud: 'blocks/ModalPrivacy/updateCookieSoundcloud'
-    })
+    applyCookieSettings () {
+      window.location.reload()
+    },
+    updateCookieSoundcloud (v: boolean) {
+      setPrivacyStorageValue(PrivacyStorageItems.Soundcloud, v)
+    }
   }
 })
