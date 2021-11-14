@@ -35,7 +35,7 @@ export class DTOMetaPostStory extends DTOMetaPage {
       updatedAt
     })
 
-    this.audiobookId = audiobookId
+    this.audiobookId = audiobookId.toString()
     this.imageCover = `${this.imagePath}${imageCover}`
     this.imageCover2x = `${this.imagePath}${imageCover2x}`
     this.imageOpenGraph = `${this.imagePath}${imageOpenGraph}`

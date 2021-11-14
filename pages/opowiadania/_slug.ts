@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import type { MetaInfo } from 'vue-meta'
-import { DTOMetaPostStory } from '@/utils/dto.meta.post.story'
+import { DTOMetaPostStory, DTOMetaPostStoryConstructor } from '@/utils/dto.meta.post.story'
 import { factoryHeadPostStory } from '@/utils/factory.head.post.story'
 import { formatterDateMeta } from '@/utils/formatter.date.meta'
 
 export default Vue.extend({
   async asyncData ({ $content, params, error }) {
     const article = await $content('opowiadania', params.slug)
-      .fetch()
+      .fetch<DTOMetaPostStoryConstructor>()
 
     if (!article) {
       return error({ statusCode: 404, message: 'Article not found' })

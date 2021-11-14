@@ -6,7 +6,7 @@
     title="Ustawienia prywatności"
   >
     <ComponentsSwitch
-      :checked="cookieCore"
+      :checked="privacyStorageCore"
       disabled
       label="Cookies funkcyjne"
       name="cookies-core"
@@ -16,7 +16,7 @@
       </p>
     </ComponentsSwitch>
     <ComponentsSwitch
-      :checked="cookieSoundcloud"
+      :checked="privacyStorageSoundcloud"
       data-test="blocks-modal-privacy-soundcloud"
       label="Odtwarzacz Soundcloud"
       name="cookies-soundcloud"
