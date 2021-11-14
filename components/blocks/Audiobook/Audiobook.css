@@ -1,0 +1,24 @@
+.audiobook {
+  align-items: center;
+  background-color: var(--color-accent);
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: center;
+  line-height: 0;
+  min-height: var(--height-audiobook-player);
+  padding: var(--border-radius);
+  text-align: center;
+}
+
+.audiobook__button {
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+  color: inherit;
+  cursor: pointer;
+  font-family: var(--font-family-serif);
+  font-size: inherit;
+  padding: 0;
+  text-decoration: underline;
+}

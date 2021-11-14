@@ -54,6 +54,7 @@ body {
   --height-card-poem: 72px;
   --height-card-story: 200px;
   --height-card-audiobook-service: 80px;
+  --height-audiobook-player: 128px;
 
   /* Contents */
   --content-arrows-left: '«';

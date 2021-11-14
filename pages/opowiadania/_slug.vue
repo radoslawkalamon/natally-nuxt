@@ -8,16 +8,14 @@
       :date-published="storyDatePublished"
       :title="dtoMetaPostStory.title"
     />
-    <!-- <BlocksAudiobook :id="dtoMetaPostStory.audiobookId" /> -->
+    <BlocksAudiobook :id="dtoMetaPostStory.audiobookId" />
     <WrappersTextStories>
       <NuxtContent
         data-progress-bar-hook
         :document="article"
       />
     </WrappersTextStories>
-    <BlocksAdjacentPostLinksStory
-      :slug="article.slug"
-    />
+    <BlocksAdjacentPostLinksStory :slug="article.slug" />
     <BlocksListStoriesSuggestions />
     <BlocksListPoemsSuggestions />
     <BlocksProgressBar />
