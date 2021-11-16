@@ -5,7 +5,7 @@
       :image2x="dtoMetaPostStory.imageCover2x"
     />
     <ComponentsPageMeta
-      :date-published="storyDatePublished"
+      :created-at="dtoMetaPostStory.createdAt"
       :title="dtoMetaPostStory.title"
     />
     <BlocksAudiobook :id="dtoMetaPostStory.audiobookId" />

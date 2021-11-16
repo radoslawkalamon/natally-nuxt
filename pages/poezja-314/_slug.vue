@@ -4,7 +4,7 @@
       :image="dtoMetaPostPoem.imageCover"
     />
     <ComponentsPageMeta
-      :date-published="poemDatePublished"
+      :created-at="dtoMetaPostPoem.createdAt"
       :title="dtoMetaPostPoem.title"
     />
     <WrappersTextPoems>

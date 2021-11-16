@@ -2,7 +2,6 @@ import Vue from 'vue'
 import type { MetaInfo } from 'vue-meta'
 import { DTOMetaPostPoem } from '@/utils/dto.meta.post.poem'
 import { factoryHeadPostPoem } from '@/utils/factory.head.post.poem'
-import { formatterDateMeta } from '@/utils/formatter.date.meta'
 
 export default Vue.extend({
   name: 'PagePoezja314Slug',
@@ -33,9 +32,6 @@ export default Vue.extend({
     dtoMetaPostPoem (): DTOMetaPostPoem {
       // @ts-ignore: Remove ts-ignore for Nuxt 2.16.0
       return new DTOMetaPostPoem(this.article)
-    },
-    poemDatePublished (): string {
-      return formatterDateMeta(this.dtoMetaPostPoem.createdAt)
     }
   }
 })
