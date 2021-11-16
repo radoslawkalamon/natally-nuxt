@@ -1,4 +1,4 @@
-import { merge } from 'lodash'
+import merge from 'lodash/merge'
 import ListPoemsSuggestions from './ListPoemsSuggestions.vue'
 import { shallRender } from '@/devtools/jest.shared.spec'
 

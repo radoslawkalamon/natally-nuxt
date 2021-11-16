@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import { mount } from '@vue/test-utils'
-import { merge } from 'lodash'
+import merge from 'lodash/merge'
 
 export function shallRender (component: typeof Vue, defaultOptions?: object): void {
   test('shall render', (): void => {

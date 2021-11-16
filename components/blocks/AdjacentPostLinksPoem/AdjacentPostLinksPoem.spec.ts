@@ -1,4 +1,4 @@
-import { merge } from 'lodash'
+import merge from 'lodash/merge'
 import { mount } from '@vue/test-utils'
 import AdjacentPostLinksPoem from './AdjacentPostLinksPoem.vue'
 import { MockNuxtContent } from '@/devtools/jest.mock.nuxt.content'

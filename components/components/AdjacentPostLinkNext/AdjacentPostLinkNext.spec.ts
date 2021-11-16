@@ -1,4 +1,4 @@
-import { merge } from 'lodash'
+import merge from 'lodash/merge'
 import AdjacentPostLinkNext from './AdjacentPostLinkNext.vue'
 import { shallRender } from '@/devtools/jest.shared.spec'
 

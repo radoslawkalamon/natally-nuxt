@@ -1,4 +1,4 @@
-import { merge } from 'lodash'
+import merge from 'lodash/merge'
 import { createLocalVue, createWrapper, mount } from '@vue/test-utils'
 import Vuex, { Store } from 'vuex'
 import LayoutDefault from './default.vue'

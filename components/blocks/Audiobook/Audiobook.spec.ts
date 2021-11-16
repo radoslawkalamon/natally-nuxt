@@ -1,6 +1,6 @@
 import { createLocalVue, mount } from '@vue/test-utils'
 import Vuex, { Store } from 'vuex'
-import { merge } from 'lodash'
+import merge from 'lodash/merge'
 import Audiobook from './Audiobook.vue'
 import { getPrivacyStorageValue } from '@/utils/privacy.storage'
 
