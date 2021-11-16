@@ -4,7 +4,7 @@
       :image="dtoMetaPostStory.imageCover"
       :image2x="dtoMetaPostStory.imageCover2x"
     />
-    <ComponentsPageMeta
+    <BlocksPageMeta
       :created-at="dtoMetaPostStory.createdAt"
       :title="dtoMetaPostStory.title"
     />

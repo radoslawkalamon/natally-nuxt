@@ -2,7 +2,7 @@ import Vue from 'vue'
 import { formatterDateMeta } from '@/utils/formatter.date.meta'
 
 export default Vue.extend({
-  name: 'ComponentsPageMeta',
+  name: 'BlocksPageMeta',
   props: {
     createdAt: {
       type: Date,

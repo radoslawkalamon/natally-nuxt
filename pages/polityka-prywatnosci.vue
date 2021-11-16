@@ -1,6 +1,6 @@
 <template>
   <article class="page-polityka-prywatnosci">
-    <ComponentsPageMeta
+    <BlocksPageMeta
       :title="dtoMetaPage.title"
     />
     <WrappersText>
