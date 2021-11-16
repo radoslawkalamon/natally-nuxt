@@ -1,50 +1,9 @@
 <template>
-  <svg
-    class="logo-crusty-bread"
-    data-test="components-logo-crusty-bread"
-    width="56"
-    height="128"
-    viewBox="0 0 56 128"
-    xmlns="http://www.w3.org/2000/svg"
+  <img
+    alt="Logo firmy Pieczywo Twarde"
+    src="./images/crusty-bread.svg"
+    title="Logo firmy Pieczywo Twarde"
   >
-    <defs>
-      <linearGradient
-        id="logo-gradient"
-        gradientTransform="rotate(45)"
-      >
-        <stop
-          offset="0%"
-          stop-color="#ee7752"
-        >
-          <animate
-            attributeName="stop-color"
-            values="#ee7752; #e73c7e; #23a6d5; #23d5ab; #ee7752"
-            dur="20s"
-            repeatCount="indefinite"
-          />
-        </stop>
-        <stop
-          offset="100%"
-          stop-color="#ee7752"
-        >
-          <animate
-            attributeName="stop-color"
-            begin="-4s"
-            values="#ee7752; #e73c7e; #23a6d5; #23d5ab; #ee7752"
-            dur="20s"
-            repeatCount="indefinite"
-          />
-        </stop>
-      </linearGradient>
-    </defs>
-    <title>Logo firmy Pieczywo Twarde</title>
-    <path
-      fill="url('#logo-gradient')"
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      d="M28 128C25.7909 128 24 126.209 24 124V108.944C24 105.914 22.288 103.144 19.5777 101.789L4.42229 94.2111C1.71202 92.856 0 90.0859 0 87.0557V20C0 17.7909 1.79086 16 4 16C6.20914 16 8 17.7909 8 20V30.5279C8 32.043 8.85601 33.428 10.2111 34.1056C12.8708 35.4354 16 33.5014 16 30.5279V4C16 1.79086 17.7909 0 20 0C22.2091 0 24 1.79086 24 4V38.5C24 40.7091 25.7909 42.5 28 42.5C30.2091 42.5 32 40.7091 32 38.5V12C32 9.79086 33.7909 8 36 8C38.2091 8 40 9.79086 40 12V30.5279C40 33.5014 43.1292 35.4354 45.7889 34.1056C47.144 33.428 48 32.043 48 30.5279V20C48 17.7909 49.7909 16 52 16C54.2091 16 56 17.7909 56 20V87.0557C56 90.0859 54.288 92.856 51.5777 94.2111L36.4223 101.789C33.712 103.144 32 105.914 32 108.944V124C32 126.209 30.2091 128 28 128ZM8 46.0557C8 49.0859 9.71202 51.856 12.4223 53.2111L24 59V54.9443C24 51.9141 22.288 49.144 19.5777 47.7889L8 42V46.0557ZM8 64.0557C8 67.0859 9.71202 69.856 12.4223 71.2111L24 77V72.9443C24 69.9141 22.288 67.144 19.5777 65.7889L8 60V64.0557ZM24 95L12.4223 89.2111C9.71202 87.856 8 85.0859 8 82.0557V78L19.5777 83.7889C22.288 85.144 24 87.9141 24 90.9443V95ZM36.4223 83.7889C33.712 85.144 32 87.9141 32 90.9443V95L43.5777 89.2111C46.288 87.856 48 85.0859 48 82.0557V78L36.4223 83.7889ZM32 77V72.9443C32 69.9141 33.712 67.144 36.4223 65.7889L48 60V64.0557C48 67.0859 46.288 69.856 43.5777 71.2111L32 77ZM32 59V54.9443C32 51.9141 33.712 49.144 36.4223 47.7889L48 42V46.0557C48 49.0859 46.288 51.856 43.5777 53.2111L32 59Z"
-    />
-  </svg>
 </template>
 
 <script src="./LogoCrustyBread.ts" lang="ts"></script>
