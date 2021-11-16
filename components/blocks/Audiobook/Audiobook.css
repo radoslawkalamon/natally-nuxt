@@ -2,6 +2,7 @@
   align-items: center;
   background-color: var(--color-accent);
   border-radius: var(--border-radius);
+  color: var(--color-off-white-1);
   display: flex;
   justify-content: center;
   line-height: 0;
