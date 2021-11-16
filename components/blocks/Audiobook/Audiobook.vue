@@ -1,5 +1,6 @@
 <template>
   <div
+    v-if="shallShowAudiobookBlock"
     class="audiobook"
     data-test="blocks-audiobook"
   >
