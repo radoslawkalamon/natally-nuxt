@@ -9,8 +9,7 @@ describe('Blocks / List Poems Main', () => {
 const defaultOptionsFactory = (options?: object) => merge({
   stubs: [
     'WrappersListPoems',
-    'ComponentsCardPoem',
-    'ComponentsCardPoemPlaceholder'
+    'ComponentsCardPoem'
   ]
 }, options)
 

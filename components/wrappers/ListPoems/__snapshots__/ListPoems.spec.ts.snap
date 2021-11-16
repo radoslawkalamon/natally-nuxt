@@ -3,5 +3,3 @@
 exports[`Wrappers / List Poems shall have slot default 1`] = `"<div data-test=\\"wrappers-list-poems\\" class=\\"list-poems\\">This is slot \\"default\\" test.</div>"`;
 
 exports[`Wrappers / List Poems shall render 1`] = `"<div data-test=\\"wrappers-list-poems\\" class=\\"list-poems\\"></div>"`;
-
-exports[`Wrappers / List Poems shall show slot loader when $fetchState.pending = true 1`] = `"<div data-test=\\"wrappers-list-poems\\" class=\\"list-poems\\">This is slot \\"loader\\" test.</div>"`;

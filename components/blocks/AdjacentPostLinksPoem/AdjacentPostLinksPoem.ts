@@ -5,8 +5,7 @@ export default Vue.extend({
   name: 'BlocksAdjacentPostLinksPoem',
   components: {
     ComponentsAdjacentPostLinkNext: () => import(/* webpackChunkName: "components-adjacent-post-link-next" */'@/components/components/AdjacentPostLinkNext/AdjacentPostLinkNext.vue'),
-    ComponentsAdjacentPostLinkPrevious: () => import(/* webpackChunkName: "components-adjacent-post-link-previous" */'@/components/components/AdjacentPostLinkPrevious/AdjacentPostLinkPrevious.vue'),
-    ComponentsAdjacentPostLinkPlaceholder: () => import(/* webpackChunkName: "components-adjacent-post-link-placeholder" */'@/components/components/AdjacentPostLinkPlaceholder/AdjacentPostLinkPlaceholder.vue')
+    ComponentsAdjacentPostLinkPrevious: () => import(/* webpackChunkName: "components-adjacent-post-link-previous" */'@/components/components/AdjacentPostLinkPrevious/AdjacentPostLinkPrevious.vue')
   },
   props: {
     slug: {

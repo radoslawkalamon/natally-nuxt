@@ -3,11 +3,6 @@
     class="list-poems-main"
     data-test="blocks-list-poems-main"
   >
-    <template #loader>
-      <template v-for="i in 24">
-        <ComponentsCardPoemPlaceholder :key="i" />
-      </template>
-    </template>
     <template #default="{ metaPostPoems }">
       <template v-for="metaPostPoem in metaPostPoems">
         <ComponentsCardPoem
