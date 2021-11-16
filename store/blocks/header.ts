@@ -1,7 +1,7 @@
 import type { GetterTree, ActionTree, MutationTree } from 'vuex'
 
 export const state = () => ({
-  isScrollBeyondThreshold: false,
+  isScrollBeyondThreshold: true,
   isScrollUp: false,
   previousScrollPosition: 0
 })
