@@ -5,7 +5,10 @@
       class="drawer"
       data-test="blocks-drawer"
     >
-      <BlocksNavigationDrawer class="drawer__navigation" />
+      <BlocksNavigationDrawer
+        class="drawer__navigation"
+        @navigationItemClick="onNavigationItemClick"
+      />
       <BlocksSocialMedia />
     </div>
   </transition>

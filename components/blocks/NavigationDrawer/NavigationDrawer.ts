@@ -38,5 +38,10 @@ export default Vue.extend({
         }
       ]
     }
+  },
+  methods: {
+    onNavigationItemClick (): void {
+      this.$emit('navigationItemClick')
+    }
   }
 })

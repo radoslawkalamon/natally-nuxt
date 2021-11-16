@@ -1,17 +1,14 @@
+import merge from 'lodash/merge'
 import NavigationDrawer from './NavigationDrawer.vue'
 import { shallRender } from '@/devtools/jest.shared.spec'
 
-describe('Blocks / Navigation Drawer', () => {
-  const defaultOptions = {
-    stubs: {
-      WrappersNavigation: {
-        template: '<nav data-stub="wrappers-navigation"><slot /></nav>'
-      },
-      ComponentsNavigationItemLink: {
-        template: '<a href="#" data-stub="components-navigation-item-link" />'
-      }
-    }
-  }
+const defaultOptionsFactory = (options?: object) => merge({
+  stubs: [
+    'WrappersNavigation',
+    'ComponentsNavigationItemLink'
+  ]
+}, options)
 
-  shallRender(NavigationDrawer, defaultOptions)
+describe('Blocks / Navigation Drawer', () => {
+  shallRender(NavigationDrawer, defaultOptionsFactory())
 })
