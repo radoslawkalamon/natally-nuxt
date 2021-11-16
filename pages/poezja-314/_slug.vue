@@ -3,7 +3,7 @@
     <ComponentsCoverPoem
       :image="dtoMetaPostPoem.imageCover"
     />
-    <ComponentsPageMeta
+    <BlocksPageMeta
       :created-at="dtoMetaPostPoem.createdAt"
       :title="dtoMetaPostPoem.title"
     />

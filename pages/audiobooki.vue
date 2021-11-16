@@ -1,6 +1,6 @@
 <template>
   <article class="page-audiobooki">
-    <ComponentsPageMeta
+    <BlocksPageMeta
       :title="dtoMetaPage.title"
     />
     <WrappersText>

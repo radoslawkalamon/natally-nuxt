@@ -1,14 +1,14 @@
 <template>
   <div
     class="page-meta"
-    data-test="components-page-meta"
+    data-test="blocks-page-meta"
   >
     <header>
       <ComponentsTitle :title="title" />
     </header>
     <footer
       v-if="shallShowDate"
-      data-test="components-page-meta-footer"
+      data-test="blocks-page-meta-footer"
     >
       <ComponentsTextMeta
         :aria-label="dateMetaLabel"

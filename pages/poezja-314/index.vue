@@ -1,6 +1,6 @@
 <template>
   <article class="page-poezja-314">
-    <ComponentsPageMeta
+    <BlocksPageMeta
       :title="dtoMetaPage.title"
     />
     <WrappersText>

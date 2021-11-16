@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/vue'
 import PageMeta from './PageMeta.vue'
 
 const meta: Meta = {
-  title: 'Components / Page Meta',
+  title: 'Blocks / Page Meta',
   component: PageMeta
 }
 export default meta
