@@ -14,6 +14,9 @@ export default Vue.extend({
     }
   },
   computed: {
+    shallShowAudiobookBlock (): boolean {
+      return this.id !== '0'
+    },
     shallShowPlayer (): boolean {
       return getPrivacyStorageValue(PrivacyStorageItems.Soundcloud)
     },
