@@ -3,6 +3,7 @@
     class="navigation-item-link"
     data-test="components-navigation-item-link"
     v-bind="$attrs"
+    v-on="$listeners"
     v-text="label"
   />
 </template>

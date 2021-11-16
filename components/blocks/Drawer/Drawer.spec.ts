@@ -1,3 +1,4 @@
+import merge from 'lodash/merge'
 import { createLocalVue } from '@vue/test-utils'
 import Vuex, { Store } from 'vuex'
 import Drawer from './Drawer.vue'
@@ -9,22 +10,21 @@ localVue.use(Vuex)
 const store = new Store({
   getters: {
     'blocks/drawer/shallOpenDrawer': jest.fn(() => true)
+  },
+  actions: {
+    'blocks/drawer/closeDrawer': jest.fn(() => true)
   }
 })
 
-describe('Blocks / Drawer', () => {
-  const defaultOptions = {
-    localVue,
-    store,
-    stubs: {
-      BlocksNavigationDrawer: {
-        template: '<div data-stub="blocks-navigation-drawer" />'
-      },
-      BlocksSocialMedia: {
-        template: '<div data-stub="blocks-social-media" />'
-      }
-    }
-  }
+const defaultOptionsFactory = (options?: object) => merge({
+  localVue,
+  store,
+  stubs: [
+    'BlocksNavigationDrawer',
+    'BlocksSocialMedia'
+  ]
+}, options)
 
-  shallRender(Drawer, defaultOptions)
+describe('Blocks / Drawer', () => {
+  shallRender(Drawer, defaultOptionsFactory())
 })

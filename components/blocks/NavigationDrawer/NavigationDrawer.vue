@@ -8,6 +8,7 @@
         <ComponentsNavigationItemLink
           :key="item.to"
           v-bind="item"
+          @click.native="onNavigationItemClick"
         />
       </template>
     </WrappersNavigation>

@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { mapGetters } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 
 export default Vue.extend({
   name: 'BlocksDrawer',
@@ -7,5 +7,13 @@ export default Vue.extend({
     ...mapGetters({
       shallOpenDrawer: 'blocks/drawer/shallOpenDrawer'
     })
+  },
+  methods: {
+    ...mapActions({
+      closeDrawer: 'blocks/drawer/closeDrawer'
+    }),
+    onNavigationItemClick (): void {
+      this.closeDrawer()
+    }
   }
 })

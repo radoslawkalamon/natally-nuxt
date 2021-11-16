@@ -16,12 +16,18 @@ export const getters: GetterTree<RootState, RootState> = {
 }
 
 export const mutations: MutationTree<RootState> = {
+  CLOSE_DRAWER: (state) => {
+    state.shallOpenDrawer = false
+  },
   TOGGLE_DRAWER: (state) => {
     state.shallOpenDrawer = !state.shallOpenDrawer
   }
 }
 
 export const actions: ActionTree<RootState, RootState> = {
+  closeDrawer ({ commit }) {
+    commit('CLOSE_DRAWER')
+  },
   toggleDrawer ({ commit }) {
     commit('TOGGLE_DRAWER')
   }
