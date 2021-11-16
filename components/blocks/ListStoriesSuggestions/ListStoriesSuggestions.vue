@@ -14,14 +14,9 @@
 
     <WrappersListStories
       class="list-stories-suggestions__stories"
-      :limit="storiesQuantity"
+      :limit="2"
       :randomize="true"
     >
-      <template #loader>
-        <template v-for="i in storiesQuantity">
-          <ComponentsCardStoryPlaceholder :key="i" />
-        </template>
-      </template>
       <template #default="{ metaPostStories }">
         <template v-for="metaPostStory in metaPostStories">
           <ComponentsCardStory

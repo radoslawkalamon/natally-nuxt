@@ -9,14 +9,8 @@ jest.mock('@/utils/dto.meta.post.poem', () => ({
 
 const defaultOptionsFactory = (options?: object) => merge({
   mocks: {
-    $fetchState: {
-      pending: false
-    },
     $content: MockNuxtContent(Array(10).fill({}))
-  },
-  stubs: [
-    'ComponentsLoading'
-  ]
+  }
 }, options)
 
 describe('Wrappers / List Poems', () => {
@@ -30,21 +24,6 @@ describe('Wrappers / List Poems', () => {
     const wrapper = mount(ListPoems, defaultOptionsFactory({
       slots: {
         default: 'This is slot "default" test.'
-      }
-    }))
-    await (ListPoems as any).options.fetch.call(wrapper.vm)
-    expect(wrapper.html()).toMatchSnapshot()
-  })
-
-  test('shall show slot loader when $fetchState.pending = true', async () => {
-    const wrapper = mount(ListPoems, defaultOptionsFactory({
-      mocks: {
-        $fetchState: {
-          pending: true
-        }
-      },
-      slots: {
-        loader: 'This is slot "loader" test.'
       }
     }))
     await (ListPoems as any).options.fetch.call(wrapper.vm)

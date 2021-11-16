@@ -14,13 +14,8 @@
 
     <WrappersListPoems
       class="list-poems-homepage__poems"
-      :limit="poemsQuantity"
+      :limit="6"
     >
-      <template #loader>
-        <template v-for="i in poemsQuantity">
-          <ComponentsCardPoemPlaceholder :key="i" />
-        </template>
-      </template>
       <template #default="{ metaPostPoems }">
         <template v-for="metaPostPoem in metaPostPoems">
           <ComponentsCardPoem

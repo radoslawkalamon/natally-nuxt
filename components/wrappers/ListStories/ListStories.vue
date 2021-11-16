@@ -3,14 +3,7 @@
     class="list-stories"
     data-test="wrappers-list-stories"
   >
-    <slot
-      v-if="$fetchState.pending || $fetchState.error"
-      name="loader"
-    />
-    <slot
-      v-else
-      v-bind="{ metaPostStories }"
-    />
+    <slot v-bind="{ metaPostStories }" />
   </div>
 </template>
 

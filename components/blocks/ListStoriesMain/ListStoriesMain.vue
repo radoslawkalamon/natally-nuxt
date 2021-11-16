@@ -13,11 +13,6 @@
     </template>
 
     <WrappersListStories class="list-stories-main__stories">
-      <template #loader>
-        <template v-for="i in 10">
-          <ComponentsCardStoryPlaceholder :key="i" />
-        </template>
-      </template>
       <template #default="{ metaPostStories }">
         <template v-for="metaPostStory in metaPostStories">
           <ComponentsCardStory
