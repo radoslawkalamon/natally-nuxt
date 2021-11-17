@@ -4,8 +4,8 @@ import { mount, createWrapper } from '@vue/test-utils'
 import mixinWindowScrollEmitter from '@/utils/mixin.windowScroll.emitter'
 
 const Component = (Vue as VueConstructor<
-  Vue &
-  InstanceType<typeof mixinWindowScrollEmitter>
+  Vue
+  & InstanceType<typeof mixinWindowScrollEmitter>
 >).extend({
   mixins: [mixinWindowScrollEmitter],
   template: '<div />'

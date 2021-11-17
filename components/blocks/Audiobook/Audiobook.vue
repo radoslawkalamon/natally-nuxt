@@ -18,7 +18,7 @@
         Aby odsłuchać audiobooka,<br>
         <button
           class="audiobook__button"
-          @click="toggleModalPrivacy"
+          @click="togglePrivacyModal"
         >
           zmień ustawienia prywatności
         </button>

@@ -4,8 +4,8 @@ import { mapActions, mapGetters } from 'vuex'
 import mixinWindowScrollValues from '@/utils/mixin.windowScroll.values'
 
 export default (Vue as VueConstructor<
-  Vue &
-  InstanceType<typeof mixinWindowScrollValues>
+  Vue
+  & InstanceType<typeof mixinWindowScrollValues>
 >).extend({
   name: 'BlocksHeader',
   components: {

@@ -8,8 +8,8 @@ type BlocksProgressBarData = {
 }
 
 export default (Vue as VueConstructor<
-  Vue &
-  InstanceType<typeof mixinWindowScrollValues>
+  Vue
+  & InstanceType<typeof mixinWindowScrollValues>
 >).extend({
   name: 'BlocksProgressBar',
   mixins: [mixinWindowScrollValues],

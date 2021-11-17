@@ -4,8 +4,8 @@ import { mount } from '@vue/test-utils'
 import mixinWindowScrollValues from '@/utils/mixin.windowScroll.values'
 
 const Component = (Vue as VueConstructor<
-  Vue &
-  InstanceType<typeof mixinWindowScrollValues>
+  Vue
+  & InstanceType<typeof mixinWindowScrollValues>
 >).extend({
   mixins: [mixinWindowScrollValues],
   template: '<div />'
