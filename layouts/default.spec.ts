@@ -13,6 +13,8 @@ const store = new Store({
   }
 })
 
+jest.mock('lodash/throttle', () => (cb: Function) => cb)
+
 const defaultOptionsFactory = (options?: object) => merge({
   attachTo: document.body,
   localVue,
@@ -28,32 +30,14 @@ const defaultOptionsFactory = (options?: object) => merge({
 }, options)
 
 describe('Layouts / Default', () => {
-  beforeAll(() => {
-    jest.useFakeTimers()
-  })
-
   shallRender(LayoutDefault, defaultOptionsFactory())
   shallDestroy(LayoutDefault, defaultOptionsFactory())
 
   test('shall emit common/windowScroll on window scroll event', () => {
     const wrapper = mount(LayoutDefault, defaultOptionsFactory())
-
     window.dispatchEvent(new CustomEvent('scroll'))
-    jest.runAllTimers()
-
     const rootWrapper = createWrapper(wrapper.vm.$root)
     const windowScrollCalls = rootWrapper.emitted('common/windowScroll')
     expect(windowScrollCalls).toBeTruthy()
-  })
-
-  test('shall emit common/windowResize on window resize event', () => {
-    const wrapper = mount(LayoutDefault, defaultOptionsFactory())
-
-    window.dispatchEvent(new CustomEvent('resize'))
-    jest.runAllTimers()
-
-    const rootWrapper = createWrapper(wrapper.vm.$root)
-    const windowResizeCalls = rootWrapper.emitted('common/windowResize')
-    expect(windowResizeCalls).toBeTruthy()
   })
 })

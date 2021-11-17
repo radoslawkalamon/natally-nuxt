@@ -1,28 +1,37 @@
 import Vue from 'vue'
+import type { VueConstructor } from 'vue'
 import { mapActions, mapGetters } from 'vuex'
+import mixinWindowScrollValues from '@/utils/mixin.windowScroll.values'
 
-export default Vue.extend({
+export default (Vue as VueConstructor<
+  Vue &
+  InstanceType<typeof mixinWindowScrollValues>
+>).extend({
   name: 'BlocksHeader',
+  components: {
+    ComponentsButtonHamburger: () => import('@/components/components/ButtonHamburger/ButtonHamburger.vue'),
+    ComponentsLogo: () => import('@/components/components/Logo/Logo.vue')
+  },
+  mixins: [mixinWindowScrollValues],
   computed: {
     ...mapGetters({
-      shallOpenDrawer: 'blocks/drawer/shallOpenDrawer',
-      shallShowHeader: 'blocks/header/shallShowHeader'
+      matchMediaIsDesktop: 'matchMedia/isDesktop',
+      isDrawerOpen: 'blocks/drawer/shallOpenDrawer'
     }),
-    homepageURL (): string {
-      return '/'
+    shallShowHeader (): boolean {
+      const isScrollBeyondThreshold = this['common/windowScroll/scrollPosition'] < 80
+      const isScrollUp = this['common/windowScroll/scrollDelta'] < 0
+      return [
+        this.isDrawerOpen,
+        isScrollBeyondThreshold,
+        isScrollUp,
+        this.matchMediaIsDesktop
+      ].some(e => e)
     }
-  },
-  mounted (): void {
-    this.updateScrollYPosition()
-    this.$root.$on('common/windowScroll', this.updateScrollYPosition)
-  },
-  destroyed (): void {
-    this.$root.$off('common/windowScroll', this.updateScrollYPosition)
   },
   methods: {
     ...mapActions({
-      toggleDrawer: 'blocks/drawer/toggleDrawer',
-      updateScrollYPosition: 'blocks/header/updateScrollYPosition'
+      toggleDrawer: 'blocks/drawer/toggleDrawer'
     })
   }
 })
