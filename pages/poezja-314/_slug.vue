@@ -16,7 +16,9 @@
     <BlocksAdjacentPostLinksPoem
       :slug="article.slug"
     />
-    <BlocksPoemsFirstTime />
+    <client-only>
+      <BlocksPoemsFirstTime />
+    </client-only>
     <BlocksListPoemsSuggestions />
     <BlocksListStoriesSuggestions />
   </article>
