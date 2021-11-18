@@ -15,6 +15,7 @@ export default Vue.extend({
   mounted (): void {
     this['common/matchMedia/desktop/mediaQueryList'] = window.matchMedia('screen and (min-width: 1024px)')
     this['common/matchMedia/desktop/mediaQueryList'].addEventListener('change', this['common/matchMedia/desktop/onChange'])
+    this['common/matchMedia/desktop/matches'] = this['common/matchMedia/desktop/mediaQueryList'].matches
   },
   destroyed (): void {
     if (this['common/matchMedia/desktop/mediaQueryList']) {
