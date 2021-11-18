@@ -1,18 +1,16 @@
-import NavigationItemLink from './NavigationItemLink.vue'
+import LinkText from './LinkText.vue'
 import { shallHaveStringProp, shallRender } from '@/devtools/jest.shared.spec'
 
-describe('Components / Navigation Item Link', () => {
+describe('Components / Link Text', () => {
   const defaultOptions = {
     propsData: {
       label: 'Item label'
     },
-    stubs: {
-      NuxtLink: {
-        template: '<a href="#"><slot /></a>'
-      }
-    }
+    stubs: [
+      'NuxtLink'
+    ]
   }
 
-  shallRender(NavigationItemLink, defaultOptions)
-  shallHaveStringProp(NavigationItemLink, 'label', defaultOptions)
+  shallRender(LinkText, defaultOptions)
+  shallHaveStringProp(LinkText, 'label', defaultOptions)
 })
