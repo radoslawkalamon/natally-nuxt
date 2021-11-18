@@ -46,6 +46,9 @@ export default {
       }
     }
   },
+  generate: {
+    fallback: '404.html'
+  },
   storybook: {
     parameters: {
       controls: {
