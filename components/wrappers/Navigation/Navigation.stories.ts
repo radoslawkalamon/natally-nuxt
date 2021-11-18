@@ -6,7 +6,7 @@ const meta: Meta = {
   component: Navigation,
   argTypes: {
     default: {
-      description: 'Should be used with `<NavigationItem>` and `<NavigationItemLink>`',
+      description: 'Should be used with `<ButtonText>` and `<LinkText>`',
       table: {
         type: null,
         defaultValue: null

@@ -5,7 +5,7 @@ import { shallRender } from '@/devtools/jest.shared.spec'
 const defaultOptionsFactory = (options?: object) => merge({
   stubs: [
     'WrappersNavigation',
-    'ComponentsNavigationItemLink'
+    'ComponentsLinkText'
   ]
 }, options)
 
