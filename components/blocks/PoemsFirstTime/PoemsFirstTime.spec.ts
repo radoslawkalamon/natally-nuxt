@@ -1,23 +1,20 @@
-import PoemsFirstTime from './PoemsFirstTime.vue'
+import merge from 'lodash/merge'
+import PoemsFirstTime from '@/components/blocks/PoemsFirstTime/PoemsFirstTime.vue'
 import { shallRender } from '@/devtools/jest.shared.spec'
 
-describe('Blocks / Poems First Time', () => {
-  const defaultOptions = {
-    stubs: {
-      WrappersSection: {
-        template: '<section data-stub="wrappers-section"><slot /></section>'
-      },
-      ComponentsTitle: {
-        template: '<h1 data-stub="components-title" />'
-      },
-      WrappersText: {
-        template: '<div data-stub="wrappers-text"><slot /></div>'
-      },
-      ComponentsButtonLink: {
-        template: '<a href="#" data-stub="components-button-link" />'
-      }
-    }
-  }
+const defaultOptionsFactory = (options?: object) => merge({
+  stubs: [
+    'ClientOnly',
+    'WrappersSection',
+    'WrappersText',
+    'ComponentsButtonLink'
+  ]
+}, options)
 
-  shallRender(PoemsFirstTime, defaultOptions)
+describe('Blocks / Poems First Time', () => {
+  beforeAll(() => {
+    process.client = true
+  })
+
+  shallRender(PoemsFirstTime, defaultOptionsFactory())
 })

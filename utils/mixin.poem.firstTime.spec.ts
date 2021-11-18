@@ -28,6 +28,10 @@ describe('Mixins / Poem / First Time', () => {
       process.client = true
     })
 
+    beforeEach(() => {
+      jest.resetAllMocks()
+    })
+
     test('shall poem/firstTime/shallShow return true for no visits', () => {
       Storage.prototype.getItem = jest.fn(() => null)
       const wrapper = mount(Component)
@@ -65,7 +69,7 @@ describe('Mixins / Poem / First Time', () => {
       Storage.prototype.getItem = jest.fn(() => null)
 
       const wrapper = mount(Component)
-      wrapper.vm['poem/firstTime/countVisit']()
+      wrapper.vm['poem/firstTime/hideSection']()
 
       expect(spy).toBeCalledWith('poem-first-time-visits', '3')
     })
