@@ -8,7 +8,7 @@ type NavigationListItem = {
 }
 
 export default Vue.extend({
-  name: 'BlocksNavigationDrawer',
+  name: 'ComponentsNavigationDrawer',
   computed: {
     list (): NavigationListItem[] {
       return [

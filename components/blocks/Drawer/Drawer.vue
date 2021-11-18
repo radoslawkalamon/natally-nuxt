@@ -5,7 +5,7 @@
       class="drawer"
       data-test="blocks-drawer"
     >
-      <BlocksNavigationDrawer
+      <ComponentsNavigationDrawer
         class="drawer__navigation"
         @navigationItemClick="onNavigationItemClick"
       />

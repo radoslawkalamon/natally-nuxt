@@ -1,7 +1,7 @@
 <template>
   <nav
     v-once
-    data-test="blocks-navigation-drawer"
+    data-test="components-navigation-drawer"
   >
     <WrappersNavigation>
       <template v-for="item in list">
