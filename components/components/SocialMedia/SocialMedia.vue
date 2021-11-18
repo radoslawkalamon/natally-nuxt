@@ -2,7 +2,7 @@
   <ul
     v-once
     class="social-media"
-    data-test="blocks-social-media"
+    data-test="components-social-media"
   >
     <li class="social-media__item">
       <a v-bind="linkAttrs('facebook')">

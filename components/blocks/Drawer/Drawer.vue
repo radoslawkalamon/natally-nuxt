@@ -9,7 +9,7 @@
         class="drawer__navigation"
         @navigationItemClick="onNavigationItemClick"
       />
-      <BlocksSocialMedia />
+      <ComponentsSocialMedia />
     </div>
   </transition>
 </template>
