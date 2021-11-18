@@ -1,7 +1,7 @@
 <template>
   <transition name="drawer">
     <div
-      v-show="shallOpenDrawer"
+      v-show="shouldOpenDrawer"
       class="drawer"
       data-test="blocks-drawer"
     >

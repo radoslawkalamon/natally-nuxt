@@ -1,6 +1,5 @@
-import flushPromises from 'flush-promises'
 import merge from 'lodash/merge'
-import { createLocalVue, mount } from '@vue/test-utils'
+import { createLocalVue } from '@vue/test-utils'
 import Vuex, { Store } from 'vuex'
 
 import Header from './Header.vue'
@@ -11,17 +10,12 @@ localVue.use(Vuex)
 
 const storeConfig = {
   getters: {
-    'matchMedia/isDesktop': jest.fn(() => false),
-    'blocks/drawer/shallOpenDrawer': jest.fn(() => false)
-  },
-  actions: {
-    'blocks/drawer/toggleDrawer': jest.fn()
+    'matchMedia/isDesktop': jest.fn(() => false)
   }
 }
 const store = new Store(storeConfig)
 
 const defaultOptionsFactory = (options?: object) => merge({
-  attachTo: document.body,
   localVue,
   store,
   stubs: [
@@ -34,13 +28,4 @@ const defaultOptionsFactory = (options?: object) => merge({
 describe('Blocks / Header', () => {
   shallRender(Header, defaultOptionsFactory())
   shallDestroy(Header, defaultOptionsFactory())
-
-  test('shall trigger toggleDrawer when ComponentsButtonHamburger clicked', async () => {
-    const wrapper = mount(Header, defaultOptionsFactory({
-      stubs: ['NuxtLink']
-    }))
-    await flushPromises()
-    wrapper.get('[data-test="blocks-header-button"]').trigger('click')
-    expect(storeConfig.actions['blocks/drawer/toggleDrawer']).toHaveBeenCalled()
-  })
 })

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import type { VueConstructor } from 'vue'
-import { mapActions, mapGetters } from 'vuex'
+import { mapGetters } from 'vuex'
 import mixinWindowScrollValues from '@/utils/mixin.windowScroll.values'
 
 export default (Vue as VueConstructor<
@@ -13,10 +13,14 @@ export default (Vue as VueConstructor<
     ComponentsLogo: () => import('@/components/components/Logo/Logo.vue')
   },
   mixins: [mixinWindowScrollValues],
+  data () {
+    return {
+      isDrawerOpen: false
+    }
+  },
   computed: {
     ...mapGetters({
-      matchMediaIsDesktop: 'matchMedia/isDesktop',
-      isDrawerOpen: 'blocks/drawer/shallOpenDrawer'
+      matchMediaIsDesktop: 'matchMedia/isDesktop'
     }),
     shallShowHeader (): boolean {
       const isScrollBeyondThreshold = this['common/windowScroll/scrollPosition'] < 80
@@ -29,9 +33,18 @@ export default (Vue as VueConstructor<
       ].some(e => e)
     }
   },
+  mounted (): void {
+    this.$root.$on('blocks/drawer/syncDrawerState', this.syncDrawerState)
+  },
+  destroyed (): void {
+    this.$root.$off('blocks/drawer/syncDrawerState', this.syncDrawerState)
+  },
   methods: {
-    ...mapActions({
-      toggleDrawer: 'blocks/drawer/toggleDrawer'
-    })
+    toggleDrawer (): void {
+      this.$root.$emit('blocks/drawer/toggleDrawer')
+    },
+    syncDrawerState (v: boolean) {
+      this.isDrawerOpen = v
+    }
   }
 })
