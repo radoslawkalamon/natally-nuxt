@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/vue'
 import NavigationFooter from './NavigationFooter.vue'
 
 const meta: Meta = {
-  title: 'Blocks / Navigation Footer',
+  title: 'Components / Navigation Footer',
   component: NavigationFooter
 }
 export default meta
