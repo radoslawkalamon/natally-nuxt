@@ -5,7 +5,7 @@ import { jestPolyfillMatchMedia } from '@/devtools/jest.mock.matchMedia'
 
 const defaultOptionsFactory = (options?: object) => merge({
   stubs: [
-    'BlocksNavigationDrawer',
+    'ComponentsNavigationDrawer',
     'BlocksSocialMedia'
   ]
 }, options)

@@ -9,6 +9,6 @@ const defaultOptionsFactory = (options?: object) => merge({
   ]
 }, options)
 
-describe('Blocks / Navigation Drawer', () => {
+describe('Components / Navigation Drawer', () => {
   shallRender(NavigationDrawer, defaultOptionsFactory())
 })
