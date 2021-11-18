@@ -1,7 +1,7 @@
 import NavigationFooter from './NavigationFooter.vue'
 import { shallRender } from '@/devtools/jest.shared.spec'
 
-describe('Blocks / Navigation Footer', () => {
+describe('Components / Navigation Footer', () => {
   const defaultOptions = {
     stubs: [
       'WrappersNavigation',

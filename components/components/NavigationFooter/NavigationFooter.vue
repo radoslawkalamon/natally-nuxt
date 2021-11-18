@@ -2,7 +2,7 @@
   <nav
     v-once
     class="navigation-footer"
-    data-test="blocks-navigation-footer"
+    data-test="components-navigation-footer"
   >
     <WrappersNavigation>
       <ComponentsLinkText
@@ -10,7 +10,7 @@
         to="/polityka-prywatnosci/"
       />
       <ComponentsButtonText
-        data-test="blocks-navigation-footer-privacy-modal"
+        data-test="components-navigation-footer-privacy-modal"
         label="Ustawienia prywatności"
         @click="togglePrivacyModal"
       />

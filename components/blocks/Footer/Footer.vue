@@ -4,7 +4,7 @@
     class="footer"
     data-test="blocks-footer"
   >
-    <BlocksNavigationFooter />
+    <ComponentsNavigationFooter />
     <a
       :href="crustyBreadTechWebsite"
       target="_blank"
