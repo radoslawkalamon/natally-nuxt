@@ -13,10 +13,9 @@ export default Vue.extend({
       required: true
     }
   },
-  data (): Record<string, DTOMetaPostPoem | null> {
+  data (): Record<string, DTOMetaPostPoemConstructor[]> {
     return {
-      previousPoem: null,
-      nextPoem: null
+      articles: []
     }
   },
   async fetch () {
@@ -25,9 +24,14 @@ export default Vue.extend({
       .surround(this.slug)
       .fetch<DTOMetaPostPoemConstructor>()
 
-    if (Array.isArray(articles)) {
-      this.previousPoem = articles[0] ? new DTOMetaPostPoem(articles[0]) : null
-      this.nextPoem = articles[1] ? new DTOMetaPostPoem(articles[1]) : null
+    this.articles = !Array.isArray(articles) ? [articles] : articles
+  },
+  computed: {
+    previousPoem (): DTOMetaPostPoem | null {
+      return this.articles[0] ? new DTOMetaPostPoem(this.articles[0]) : null
+    },
+    nextPoem (): DTOMetaPostPoem | null {
+      return this.articles[1] ? new DTOMetaPostPoem(this.articles[1]) : null
     }
   }
 })
