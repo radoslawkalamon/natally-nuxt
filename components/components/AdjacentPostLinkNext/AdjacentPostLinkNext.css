@@ -26,3 +26,7 @@
   line-height: var(--line-height-header);
   text-decoration: underline;
 }
+
+.adjacent-post-link-next:hover .adjacent-post-link-next__title {
+  text-decoration: none;
+}
