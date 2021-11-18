@@ -10,9 +10,9 @@ exports[`Blocks / Audiobook shall render prompt 1`] = `
 "<div data-test=\\"blocks-audiobook\\" class=\\"audiobook\\">
   <clientonly-stub>
     <div data-test=\\"wrappers-text\\" class=\\"text\\">
-      Aby odsłuchać audiobooka,<br> <button class=\\"audiobook__button\\">
-        zmień ustawienia prywatności
-      </button></div>
+      Aby odsłuchać audiobooka,<br>
+      <componentsbuttontext-stub label=\\"zmień ustawienia prywatności\\"></componentsbuttontext-stub>
+    </div>
   </clientonly-stub>
 </div>"
 `;

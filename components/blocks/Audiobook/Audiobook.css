@@ -10,16 +10,3 @@
   padding: var(--border-radius);
   text-align: center;
 }
-
-.audiobook__button {
-  appearance: none;
-  background-color: transparent;
-  border: 0;
-  box-shadow: none;
-  color: inherit;
-  cursor: pointer;
-  font-family: var(--font-family-serif);
-  font-size: inherit;
-  padding: 0;
-  text-decoration: underline;
-}

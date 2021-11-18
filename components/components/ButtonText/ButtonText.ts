@@ -1,7 +1,7 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'ComponentsNavigationItem',
+  name: 'ComponentsButtonText',
   inheritAttrs: false,
   props: {
     label: {

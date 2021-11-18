@@ -8,7 +8,8 @@ const defaultOptionsFactory = (options?: object) => merge({
     id: '1234567890'
   },
   stubs: [
-    'ClientOnly'
+    'ClientOnly',
+    'ComponentsButtonText'
   ]
 }, options)
 

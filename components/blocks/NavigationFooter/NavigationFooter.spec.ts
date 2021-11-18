@@ -5,7 +5,7 @@ describe('Blocks / Navigation Footer', () => {
   const defaultOptions = {
     stubs: [
       'WrappersNavigation',
-      'ComponentsNavigationItem',
+      'ComponentsButtonText',
       'ComponentsLinkText'
     ]
   }

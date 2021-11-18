@@ -1,17 +1,17 @@
 import { Meta, Story } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
-import NavigationItem from './NavigationItem.vue'
+import ButtonText from '@/components/components/ButtonText/ButtonText.vue'
 
 const meta: Meta = {
-  title: 'Components / Navigation Item',
-  component: NavigationItem
+  title: 'Components / Button Text',
+  component: ButtonText
 }
 export default meta
 
 const Template: Story = (_args, { argTypes }) => ({
-  components: { NavigationItem },
+  components: { ButtonText },
   props: Object.keys(argTypes),
-  template: '<NavigationItem v-bind="$props" @click="onClick" />',
+  template: '<ButtonText v-bind="$props" @click="onClick" />',
   methods: {
     onClick () {
       action('Click')()
