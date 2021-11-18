@@ -1,27 +1,28 @@
 import Vue from 'vue'
 import type { VueConstructor } from 'vue'
-import { mapGetters } from 'vuex'
 import mixinWindowScrollValues from '@/utils/mixin.windowScroll.values'
+import mixinMatchMediaDesktop from '@/utils/mixin.matchMedia.desktop'
 
 export default (Vue as VueConstructor<
   Vue
   & InstanceType<typeof mixinWindowScrollValues>
+  & InstanceType<typeof mixinMatchMediaDesktop>
 >).extend({
   name: 'BlocksHeader',
   components: {
-    ComponentsButtonHamburger: () => import('@/components/components/ButtonHamburger/ButtonHamburger.vue'),
-    ComponentsLogo: () => import('@/components/components/Logo/Logo.vue')
+    ComponentsButtonHamburger: () => import(/* webpackChunkName: "components-button-hamburger" */'@/components/components/ButtonHamburger/ButtonHamburger.vue'),
+    ComponentsLogo: () => import(/* webpackChunkName: "components-logo" */'@/components/components/Logo/Logo.vue')
   },
-  mixins: [mixinWindowScrollValues],
+  mixins: [
+    mixinWindowScrollValues,
+    mixinMatchMediaDesktop
+  ],
   data () {
     return {
       isDrawerOpen: false
     }
   },
   computed: {
-    ...mapGetters({
-      matchMediaIsDesktop: 'matchMedia/isDesktop'
-    }),
     shallShowHeader (): boolean {
       const isScrollBeyondThreshold = this['common/windowScroll/scrollPosition'] < 80
       const isScrollUp = this['common/windowScroll/scrollDelta'] < 0
@@ -29,7 +30,7 @@ export default (Vue as VueConstructor<
         this.isDrawerOpen,
         isScrollBeyondThreshold,
         isScrollUp,
-        this.matchMediaIsDesktop
+        this['common/matchMedia/desktop/matches']
       ].some(e => e)
     }
   },

@@ -1,23 +1,9 @@
 import merge from 'lodash/merge'
-import { createLocalVue } from '@vue/test-utils'
-import Vuex, { Store } from 'vuex'
-
 import Header from './Header.vue'
 import { shallDestroy, shallRender } from '@/devtools/jest.shared.spec'
-
-const localVue = createLocalVue()
-localVue.use(Vuex)
-
-const storeConfig = {
-  getters: {
-    'matchMedia/isDesktop': jest.fn(() => false)
-  }
-}
-const store = new Store(storeConfig)
+import { jestPolyfillMatchMedia } from '@/devtools/jest.mock.matchMedia'
 
 const defaultOptionsFactory = (options?: object) => merge({
-  localVue,
-  store,
   stubs: [
     'ComponentsButtonHamburger',
     'NuxtLink',
@@ -26,6 +12,10 @@ const defaultOptionsFactory = (options?: object) => merge({
 }, options)
 
 describe('Blocks / Header', () => {
+  beforeAll(() => {
+    jestPolyfillMatchMedia()
+  })
+
   shallRender(Header, defaultOptionsFactory())
   shallDestroy(Header, defaultOptionsFactory())
 })

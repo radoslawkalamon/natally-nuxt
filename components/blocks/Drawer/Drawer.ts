@@ -1,21 +1,23 @@
 import Vue from 'vue'
-import { mapGetters } from 'vuex'
+import type { VueConstructor } from 'vue'
+import mixinMatchMediaDesktop from '@/utils/mixin.matchMedia.desktop'
 
-export default Vue.extend({
+export default (Vue as VueConstructor<
+  Vue
+  & InstanceType<typeof mixinMatchMediaDesktop>
+>).extend({
   name: 'BlocksDrawer',
+  mixins: [mixinMatchMediaDesktop],
   data () {
     return {
       shallOpenDrawer: false
     }
   },
   computed: {
-    ...mapGetters({
-      isDesktop: 'matchMedia/isDesktop'
-    }),
     shouldOpenDrawer (): boolean {
       return [
         this.shallOpenDrawer,
-        this.isDesktop
+        this['common/matchMedia/desktop/matches']
       ].some(e => e)
     }
   },
