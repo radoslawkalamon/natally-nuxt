@@ -21,14 +21,6 @@
   transition: opacity var(--time-animation) ease;
 }
 
-.social-media__link:hover {
-  opacity: 0.9;
-}
-
-.social-media__link:active {
-  opacity: 0.75;
-}
-
 .social-media__icon {
   fill: var(--color-base);
 }
