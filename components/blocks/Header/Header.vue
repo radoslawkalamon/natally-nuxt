@@ -7,10 +7,11 @@
     >
       <ComponentsButtonHamburger
         class="header__button"
-        :is-open="shallOpenDrawer"
+        data-test="blocks-header-button"
+        :is-open="isDrawerOpen"
         @toggle="toggleDrawer"
       />
-      <NuxtLink :to="homepageURL">
+      <NuxtLink to="/">
         <ComponentsLogo class="header__logo" />
       </NuxtLink>
     </header>

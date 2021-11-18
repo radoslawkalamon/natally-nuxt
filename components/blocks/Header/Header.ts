@@ -1,28 +1,51 @@
 import Vue from 'vue'
-import { mapActions, mapGetters } from 'vuex'
+import type { VueConstructor } from 'vue'
+import mixinWindowScrollValues from '@/utils/mixin.windowScroll.values'
+import mixinMatchMediaDesktop from '@/utils/mixin.matchMedia.desktop'
 
-export default Vue.extend({
+export default (Vue as VueConstructor<
+  Vue
+  & InstanceType<typeof mixinWindowScrollValues>
+  & InstanceType<typeof mixinMatchMediaDesktop>
+>).extend({
   name: 'BlocksHeader',
+  components: {
+    ComponentsButtonHamburger: () => import(/* webpackChunkName: "components-button-hamburger" */'@/components/components/ButtonHamburger/ButtonHamburger.vue'),
+    ComponentsLogo: () => import(/* webpackChunkName: "components-logo" */'@/components/components/Logo/Logo.vue')
+  },
+  mixins: [
+    mixinWindowScrollValues,
+    mixinMatchMediaDesktop
+  ],
+  data () {
+    return {
+      isDrawerOpen: false
+    }
+  },
   computed: {
-    ...mapGetters({
-      shallOpenDrawer: 'blocks/drawer/shallOpenDrawer',
-      shallShowHeader: 'blocks/header/shallShowHeader'
-    }),
-    homepageURL (): string {
-      return '/'
+    shallShowHeader (): boolean {
+      const isScrollBeyondThreshold = this['common/windowScroll/scrollPosition'] < 80
+      const isScrollUp = this['common/windowScroll/scrollDelta'] < 0
+      return [
+        this.isDrawerOpen,
+        isScrollBeyondThreshold,
+        isScrollUp,
+        this['common/matchMedia/desktop/matches']
+      ].some(e => e)
     }
   },
   mounted (): void {
-    this.updateScrollYPosition()
-    this.$root.$on('common/windowScroll', this.updateScrollYPosition)
+    this.$root.$on('blocks/drawer/syncDrawerState', this.syncDrawerState)
   },
   destroyed (): void {
-    this.$root.$off('common/windowScroll', this.updateScrollYPosition)
+    this.$root.$off('blocks/drawer/syncDrawerState', this.syncDrawerState)
   },
   methods: {
-    ...mapActions({
-      toggleDrawer: 'blocks/drawer/toggleDrawer',
-      updateScrollYPosition: 'blocks/header/updateScrollYPosition'
-    })
+    toggleDrawer (): void {
+      this.$root.$emit('blocks/drawer/toggleDrawer')
+    },
+    syncDrawerState (v: boolean) {
+      this.isDrawerOpen = v
+    }
   }
 })

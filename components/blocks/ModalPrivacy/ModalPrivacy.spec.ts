@@ -1,22 +1,8 @@
-import { createLocalVue } from '@vue/test-utils'
-import Vuex, { Store } from 'vuex'
+import { mount } from '@vue/test-utils'
 import ModalPrivacy from './ModalPrivacy.vue'
-import { shallRender } from '@/devtools/jest.shared.spec'
-
-const localVue = createLocalVue()
-localVue.use(Vuex)
-
-const storeConfig = {
-  getters: {
-    'blocks/ModalPrivacy/shallOpenModalPrivacy': jest.fn(() => true)
-  }
-}
-const store = new Store(storeConfig)
 
 describe('Blocks / Modal Privacy', () => {
   const defaultOptions = {
-    localVue,
-    store,
     stubs: [
       'WrappersModal',
       'ComponentsSwitch',
@@ -24,5 +10,16 @@ describe('Blocks / Modal Privacy', () => {
     ]
   }
 
-  shallRender(ModalPrivacy, defaultOptions)
+  test('shall not render', () => {
+    const wrapper = mount(ModalPrivacy, defaultOptions)
+    const isWrapperVisible = wrapper.isVisible()
+    expect(isWrapperVisible).toBeFalsy()
+  })
+
+  test('shall render', async () => {
+    const wrapper = mount(ModalPrivacy, defaultOptions)
+    await wrapper.vm.$root.$emit('privacy/modal/toggle')
+    const isWrapperVisible = wrapper.isVisible()
+    expect(isWrapperVisible).toBeTruthy()
+  })
 })

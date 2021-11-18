@@ -1,6 +1,6 @@
 <template>
   <WrappersModal
-    v-if="shallOpenModalPrivacy"
+    v-if="shallShowPrivacyModal"
     class="modal-privacy"
     data-test="blocks-modal-privacy"
     title="Ustawienia prywatności"
@@ -20,7 +20,7 @@
       data-test="blocks-modal-privacy-soundcloud"
       label="Odtwarzacz Soundcloud"
       name="cookies-soundcloud"
-      @change="updateCookieSoundcloud($event.target.checked)"
+      @change="setPrivacyStorageSoundcloud($event.target.checked)"
     >
       <p>
         Na&nbsp;blogu osadzany jest odtwarzacz audiobooków. W&nbsp;związku z&nbsp;tym, wykorzystywane są&nbsp;pliki cookies SoundCloud. Jeżeli włączysz te&nbsp;pliki cookies, audiobooki będą dla Ciebie dostępne.

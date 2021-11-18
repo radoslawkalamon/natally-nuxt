@@ -1,24 +1,9 @@
 import merge from 'lodash/merge'
-import { createLocalVue } from '@vue/test-utils'
-import Vuex, { Store } from 'vuex'
 import Drawer from './Drawer.vue'
 import { shallRender } from '@/devtools/jest.shared.spec'
-
-const localVue = createLocalVue()
-localVue.use(Vuex)
-
-const store = new Store({
-  getters: {
-    'blocks/drawer/shallOpenDrawer': jest.fn(() => true)
-  },
-  actions: {
-    'blocks/drawer/closeDrawer': jest.fn(() => true)
-  }
-})
+import { jestPolyfillMatchMedia } from '@/devtools/jest.mock.matchMedia'
 
 const defaultOptionsFactory = (options?: object) => merge({
-  localVue,
-  store,
   stubs: [
     'BlocksNavigationDrawer',
     'BlocksSocialMedia'
@@ -26,5 +11,9 @@ const defaultOptionsFactory = (options?: object) => merge({
 }, options)
 
 describe('Blocks / Drawer', () => {
+  beforeAll(() => {
+    jestPolyfillMatchMedia()
+  })
+
   shallRender(Drawer, defaultOptionsFactory())
 })

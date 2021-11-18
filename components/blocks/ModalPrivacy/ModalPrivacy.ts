@@ -1,26 +1,41 @@
 import Vue from 'vue'
-import { mapGetters } from 'vuex'
-import { getPrivacyStorageValue, PrivacyStorageItems, setPrivacyStorageValue } from '@/utils/privacy.storage'
+import type { VueConstructor } from 'vue'
+import mixinPrivacyStorage from '@/utils/mixin.privacy.storage'
 
-export default Vue.extend({
+export default (Vue as VueConstructor<
+  Vue
+  & InstanceType<typeof mixinPrivacyStorage>
+>).extend({
   name: 'BlocksModalPrivacy',
+  mixins: [mixinPrivacyStorage],
+  data () {
+    return {
+      shallShowPrivacyModal: false
+    }
+  },
   computed: {
-    ...mapGetters({
-      shallOpenModalPrivacy: 'blocks/ModalPrivacy/shallOpenModalPrivacy'
-    }),
     privacyStorageCore (): boolean {
-      return getPrivacyStorageValue(PrivacyStorageItems.Core)
+      return this['privacy/storage/getCore']
     },
     privacyStorageSoundcloud (): boolean {
-      return getPrivacyStorageValue(PrivacyStorageItems.Soundcloud)
+      return this['privacy/storage/getSoundcloud']
     }
+  },
+  mounted (): void {
+    this.$root.$on('privacy/modal/toggle', this.toggleModal)
+  },
+  destroyed (): void {
+    this.$root.$off('privacy/modal/toggle', this.toggleModal)
   },
   methods: {
     applyCookieSettings () {
       window.location.reload()
     },
-    updateCookieSoundcloud (v: boolean) {
-      setPrivacyStorageValue(PrivacyStorageItems.Soundcloud, v)
+    setPrivacyStorageSoundcloud (value: boolean) {
+      this['privacy/storage/setSoundcloud'](value)
+    },
+    toggleModal (): void {
+      this.shallShowPrivacyModal = !this.shallShowPrivacyModal
     }
   }
 })

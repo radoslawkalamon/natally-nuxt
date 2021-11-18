@@ -10,10 +10,7 @@
     />
     <BlocksAudiobook :id="dtoMetaPostStory.audiobookId" />
     <WrappersTextStories>
-      <NuxtContent
-        data-progress-bar-hook
-        :document="article"
-      />
+      <NuxtContent :document="article" />
     </WrappersTextStories>
     <BlocksAdjacentPostLinksStory :slug="article.slug" />
     <BlocksListStoriesSuggestions />

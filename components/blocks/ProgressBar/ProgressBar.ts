@@ -1,55 +1,49 @@
 import Vue from 'vue'
+import type { VueConstructor } from 'vue'
+import mixinWindowScrollValues from '@/utils/mixin.windowScroll.values'
 
 type BlocksProgressBarData = {
-  progressBarWidth: number;
   textWrapper: Element | null;
-  textWrapperBottom: number;
+  progress: number;
 }
 
-export default Vue.extend({
+export default (Vue as VueConstructor<
+  Vue
+  & InstanceType<typeof mixinWindowScrollValues>
+>).extend({
   name: 'BlocksProgressBar',
+  mixins: [mixinWindowScrollValues],
   data (): BlocksProgressBarData {
     return {
-      progressBarWidth: 0,
       textWrapper: null,
-      textWrapperBottom: 0
+      progress: 0
     }
   },
   computed: {
     style (): Record<string, string> {
       return {
-        width: `${this.progressBarWidth}%`
+        width: `${this.progress * 100}%`
       }
     }
   },
   mounted () {
     this.updateTextWrapper()
+    this.updateProgress()
     this.$root.$on('common/windowScroll', this.updateProgress)
-    this.$root.$on('common/windowResize', this.updateTextHeight)
   },
   destroyed (): void {
     this.$root.$off('common/windowScroll', this.updateProgress)
-    this.$root.$off('common/windowResize', this.updateTextHeight)
   },
   methods: {
     updateProgress (): void {
-      const orderOfMagnitude = this.textWrapperBottom - Math.min(window.innerHeight, this.textWrapperBottom)
-      const progressBarWidth = (window.scrollY / orderOfMagnitude) * 100
-      this.progressBarWidth = progressBarWidth <= 100 ? progressBarWidth : 100
-    },
-    updateTextHeight (): void {
-      if (this.textWrapper !== null) {
-        const textBoundingRect = this.textWrapper.getBoundingClientRect()
-        const textTop = textBoundingRect.top
-        const textHeight = textBoundingRect.height
-
-        this.textWrapperBottom = textTop + window.scrollY + textHeight
-        this.updateProgress()
+      if (this.textWrapper) {
+        const { top, height } = this.textWrapper.getBoundingClientRect()
+        const progress = (top - (window.innerHeight / 2)) * -1 / height
+        this.progress = progress < 1 ? Math.max(progress, 0) : Math.min(progress, 1)
       }
     },
     updateTextWrapper (): void {
       this.textWrapper = document.querySelector('.text-stories')
-      this.updateTextHeight()
     }
   }
 })
