@@ -14,16 +14,6 @@
   z-index: 0;
 }
 
-.card-story:hover {
-  opacity: 0.9;
-  text-decoration: underline;
-}
-
-.card-story:active {
-  box-shadow: 0 0 0 var(--color-shadow);
-  opacity: 0.75;
-}
-
 .card-story__link {
   color: inherit;
   display: block;

@@ -16,11 +16,5 @@
 }
 
 .button:hover {
-  opacity: 0.9;
   text-decoration: underline;
-}
-
-.button:active {
-  box-shadow: inset 0 0 0 var(--border-size) var(--color-border), 0 0 0 var(--color-shadow);
-  opacity: 0.75;
 }

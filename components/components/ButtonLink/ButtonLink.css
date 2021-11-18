@@ -14,11 +14,5 @@
 }
 
 .button-link:hover {
-  opacity: 0.9;
   text-decoration: underline;
-}
-
-.button-link:active {
-  box-shadow: inset 0 0 0 var(--border-size) var(--color-border), 0 0 0 var(--color-shadow);
-  opacity: 0.75;
 }
