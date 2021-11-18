@@ -1,4 +1,4 @@
-<template v-once>
+<template>
   <a
     class="card-audiobook-service"
     data-test="components-card-audiobook-service"

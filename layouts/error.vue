@@ -1,8 +1,5 @@
 <template>
-  <article
-    v-once
-    class="page-error"
-  >
+  <article class="page-error">
     <BlocksAnimationPufferfish />
     <WrappersSection>
       <template #header>

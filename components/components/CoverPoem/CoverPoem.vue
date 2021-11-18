@@ -1,4 +1,4 @@
-<template v-once>
+<template>
   <div
     aria-hidden="true"
     class="cover-poem"

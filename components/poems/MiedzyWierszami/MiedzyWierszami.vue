@@ -1,4 +1,4 @@
-<template v-once>
+<template>
   <table
     class="miedzy-wierszami"
     data-test="poems-miedzy-wierszami"

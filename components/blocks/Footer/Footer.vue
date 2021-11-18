@@ -1,6 +1,5 @@
 <template>
   <footer
-    v-once
     class="footer"
     data-test="blocks-footer"
   >

@@ -1,4 +1,4 @@
-<template v-once>
+<template>
   <svg
     class="logo"
     data-test="components-logo"
