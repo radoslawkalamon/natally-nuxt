@@ -1,16 +1,16 @@
 import { Meta, Story } from '@storybook/vue'
-import NavigationItemLink from './NavigationItemLink.vue'
+import LinkText from '@/components/components/LinkText/LinkText.vue'
 
 const meta: Meta = {
-  title: 'Components / Navigation Item Link',
-  component: NavigationItemLink
+  title: 'Components / Link Text',
+  component: LinkText
 }
 export default meta
 
 const Template: Story = (_args, { argTypes }) => ({
-  components: { NavigationItemLink },
+  components: { LinkText },
   props: Object.keys(argTypes),
-  template: '<NavigationItemLink v-bind="$props" />'
+  template: '<LinkText v-bind="$props" />'
 })
 
 export const Default: Story = Template.bind({})

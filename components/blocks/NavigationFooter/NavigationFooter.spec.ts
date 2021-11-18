@@ -6,7 +6,7 @@ describe('Blocks / Navigation Footer', () => {
     stubs: [
       'WrappersNavigation',
       'ComponentsNavigationItem',
-      'ComponentsNavigationItemLink'
+      'ComponentsLinkText'
     ]
   }
 

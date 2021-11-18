@@ -5,7 +5,7 @@
     data-test="blocks-navigation-footer"
   >
     <WrappersNavigation>
-      <ComponentsNavigationItemLink
+      <ComponentsLinkText
         label="Polityka prywatności"
         to="/polityka-prywatnosci/"
       />

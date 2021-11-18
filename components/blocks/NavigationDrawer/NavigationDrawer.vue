@@ -5,7 +5,7 @@
   >
     <WrappersNavigation>
       <template v-for="item in list">
-        <ComponentsNavigationItemLink
+        <ComponentsLinkText
           :key="item.to"
           v-bind="item"
           @click.native="onNavigationItemClick"
