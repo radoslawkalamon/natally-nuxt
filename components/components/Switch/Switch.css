@@ -69,7 +69,7 @@
 }
 
 .switch__checkbox:disabled:checked::before {
-  background-color: var(--color-base);
+  background-color: var(--color-off-white-1);
 }
 
 .switch__label {
