@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/vue'
 import SocialMedia from './SocialMedia.vue'
 
 const meta: Meta = {
-  title: 'Blocks / Social Media',
+  title: 'Components / Social Media',
   component: SocialMedia
 }
 export default meta

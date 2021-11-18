@@ -1,7 +1,7 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'BlocksSocialMedia',
+  name: 'ComponentsSocialMedia',
   computed: {
     profiles (): Record<string, string> {
       return {
