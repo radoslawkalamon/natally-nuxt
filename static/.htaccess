@@ -1,12 +1,15 @@
+ErrorDocument 404 /404.html
+
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*[^/])$ /$1/ [L,R=301]
+RewriteCond %{REQUEST_URI} /+[^\.]+$ 
+RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
 
 # Common
 Redirect 301 /o-mnie/ https://radoslawkalamon.pl/
 Redirect 301 /kontakt/ https://m.me/169cmpl
 
 # Stories
-Redirect 301 /opowiadania/ /
+# Redirect 301 /opowiadania/ /
 Redirect 301 /2014/12/o-pani-wracajacej-z-pracy/ /opowiadania/o-pani-wracajacej-z-pracy/
 Redirect 301 /2014/o-pani-wracajacej-pracy/ /opowiadania/o-pani-wracajacej-z-pracy/
 Redirect 301 /2014/upal-tego-lata-byl-zniesienia/ /opowiadania/upal-tego-lata-byl-nie-do-zniesienia/

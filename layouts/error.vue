@@ -49,7 +49,6 @@ export default Vue.extend({
 <style>
 .page-error {
   justify-content: center;
-  min-height: 70vh;
   text-align: center;
 }
 </style>
