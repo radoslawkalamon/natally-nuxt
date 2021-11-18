@@ -13,10 +13,9 @@ export default Vue.extend({
       required: true
     }
   },
-  data (): Record<string, DTOMetaPostStory | null> {
+  data (): Record<string, DTOMetaPostStoryConstructor[]> {
     return {
-      previousStory: null,
-      nextStory: null
+      articles: []
     }
   },
   async fetch () {
@@ -25,9 +24,14 @@ export default Vue.extend({
       .surround(this.slug)
       .fetch<DTOMetaPostStoryConstructor>()
 
-    if (Array.isArray(articles)) {
-      this.previousStory = articles[0] ? new DTOMetaPostStory(articles[0]) : null
-      this.nextStory = articles[1] ? new DTOMetaPostStory(articles[1]) : null
+    this.articles = !Array.isArray(articles) ? [articles] : articles
+  },
+  computed: {
+    previousStory (): DTOMetaPostStory | null {
+      return this.articles[0] ? new DTOMetaPostStory(this.articles[0]) : null
+    },
+    nextStory (): DTOMetaPostStory | null {
+      return this.articles[1] ? new DTOMetaPostStory(this.articles[1]) : null
     }
   }
 })
