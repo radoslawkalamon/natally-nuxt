@@ -1,6 +1,5 @@
 <template>
   <div
-    v-once
     class="about-me"
     data-test="blocks-about-me"
   >

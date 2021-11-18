@@ -1,6 +1,5 @@
 <template>
   <div
-    v-once
     aria-label="Animacja przedstawia rozdymkę unoszącą się na wodzie"
     class="animation-pufferfish"
     data-test="blocks-animation-pufferfish"

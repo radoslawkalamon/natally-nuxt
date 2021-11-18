@@ -2,7 +2,6 @@
   <client-only>
     <WrappersSection
       v-if="shallShowSection"
-      v-once
       class="poems-first-time"
       data-test="blocks-poems-first-time"
     >

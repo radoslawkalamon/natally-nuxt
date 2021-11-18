@@ -1,6 +1,5 @@
 <template>
   <nav
-    v-once
     class="navigation-footer"
     data-test="components-navigation-footer"
   >

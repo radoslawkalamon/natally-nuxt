@@ -1,6 +1,5 @@
 <template>
   <ul
-    v-once
     class="social-media"
     data-test="components-social-media"
   >
