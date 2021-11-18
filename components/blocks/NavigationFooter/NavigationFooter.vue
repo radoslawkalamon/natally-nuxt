@@ -9,7 +9,7 @@
         label="Polityka prywatności"
         to="/polityka-prywatnosci/"
       />
-      <ComponentsNavigationItem
+      <ComponentsButtonText
         data-test="blocks-navigation-footer-privacy-modal"
         label="Ustawienia prywatności"
         @click="togglePrivacyModal"
