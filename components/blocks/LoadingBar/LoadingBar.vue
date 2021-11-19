@@ -1,7 +1,7 @@
 <template>
   <transition name="fade">
     <div
-      v-if="loading"
+      v-if="shallShow"
       aria-hidden="true"
       class="loading-bar"
       data-test="blocks-loading-bar"
