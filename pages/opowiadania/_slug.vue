@@ -1,9 +1,6 @@
 <template>
   <article class="post-stories">
-    <ComponentsCoverStory
-      :image="dtoMetaPostStory.imageCover"
-      :image2x="dtoMetaPostStory.imageCover2x"
-    />
+    <BlocksCoverStory :images="[dtoMetaPostStory.imageCover, dtoMetaPostStory.imageCover2x]" />
     <BlocksPageMeta
       :created-at="dtoMetaPostStory.createdAt"
       :title="dtoMetaPostStory.title"

@@ -19,7 +19,7 @@ const defaultOptionsFactory = (metaPostPoemOptions = {}) => ({
   },
   stubs: [
     'NuxtLink',
-    'ComponentsCoverPoem',
+    'ComponentsCover',
     'ComponentsTitle',
     'ComponentsTextMeta'
   ]

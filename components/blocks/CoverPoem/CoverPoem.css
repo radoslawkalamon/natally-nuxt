@@ -1,6 +1,4 @@
 .cover-poem {
-  background-color: var(--color-betwixt);
-  background-position: center;
   background-repeat: repeat;
   border-radius: var(--border-radius);
   height: 72px;

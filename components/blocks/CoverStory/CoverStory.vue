@@ -1,9 +1,8 @@
 <template>
-  <div
-    aria-hidden="true"
+  <ComponentsCover
     class="cover-story"
-    data-test="components-cover-story"
-    :style="style"
+    data-test="blocks-cover-story"
+    :images="images"
   />
 </template>
 

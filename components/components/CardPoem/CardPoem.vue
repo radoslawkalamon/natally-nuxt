@@ -7,9 +7,9 @@
       class="card-poem__link"
       :to="path"
     >
-      <ComponentsCoverPoem
+      <ComponentsCover
         class="card-poem__cover"
-        :image="imageCover"
+        :images="[imageCover]"
       />
       <div class="card-poem__content">
         <header class="card-poem__header">

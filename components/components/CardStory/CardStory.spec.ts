@@ -22,7 +22,7 @@ const defaultOptionsFactory = (metaPostStoryOptions = {}) => ({
     })
   },
   stubs: [
-    'ComponentsCoverStory',
+    'ComponentsCover',
     'ComponentsTextMeta',
     'ComponentsTitle',
     'NuxtLink'
