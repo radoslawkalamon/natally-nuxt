@@ -35,5 +35,6 @@
     box-shadow: none;
     display: flex !important;
     height: calc(100% - var(--blocks-header-height));
+    left: var(--padding-flyout) !important;
   }
 }
