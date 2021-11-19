@@ -1,9 +1,8 @@
 <template>
-  <div
-    aria-hidden="true"
+  <ComponentsCover
     class="cover-poem"
-    data-test="components-cover-poem"
-    :style="style"
+    data-test="blocks-cover-poem"
+    :images="images"
   />
 </template>
 

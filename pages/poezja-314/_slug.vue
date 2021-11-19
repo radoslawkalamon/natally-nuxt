@@ -1,8 +1,6 @@
 <template>
   <article class="post-poezja-314">
-    <ComponentsCoverPoem
-      :image="dtoMetaPostPoem.imageCover"
-    />
+    <BlocksCoverPoem :images="[dtoMetaPostPoem.imageCover]" />
     <BlocksPageMeta
       :created-at="dtoMetaPostPoem.createdAt"
       :title="dtoMetaPostPoem.title"
@@ -13,9 +11,7 @@
         v-bind="articleProps"
       />
     </WrappersTextPoems>
-    <BlocksAdjacentPostLinksPoem
-      :slug="article.slug"
-    />
+    <BlocksAdjacentPostLinksPoem :slug="article.slug" />
     <client-only>
       <BlocksPoemsFirstTime />
     </client-only>

@@ -1,6 +1,4 @@
 .cover-story {
-  background-color: var(--color-betwixt);
-  background-position: center;
   background-size: cover;
   border-radius: var(--border-radius);
   max-width: var(--max-width-body);
