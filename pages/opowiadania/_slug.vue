@@ -12,7 +12,7 @@
     <BlocksAdjacentPostLinksStory :slug="article.slug" />
     <BlocksListStoriesSuggestions :without="[article.path]" />
     <BlocksListPoemsSuggestions :without="[article.path]" />
-    <BlocksProgressBar />
+    <BlocksReadingProgress />
   </article>
 </template>
 
