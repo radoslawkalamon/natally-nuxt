@@ -11,6 +11,10 @@ export default Vue.extend({
     randomize: {
       type: Boolean,
       default: false
+    },
+    without: {
+      type: Array as Vue.PropType<string[]>,
+      default: () => []
     }
   },
   data (): Record<string, DTOMetaPostStoryConstructor[]> {
@@ -37,6 +41,7 @@ export default Vue.extend({
   methods: {
     async fetchMetaPostStory (): Promise<DTOMetaPostStoryConstructor[]> {
       const stories = await this.$content(this.fetchContentDirectory)
+        .where({ path: { $nin: this.without } })
         .only(this.metaPostStoryConstructorKeys)
         .sortBy('createdAt', 'desc')
         .limit(this.limit)
@@ -48,6 +53,7 @@ export default Vue.extend({
     },
     async fetchMetaPostStoryRandom (): Promise<DTOMetaPostStoryConstructor[]> {
       const stories = await this.$content(this.fetchContentDirectory)
+        .where({ path: { $nin: this.without } })
         .only(this.metaPostStoryConstructorKeys)
         .fetch<DTOMetaPostStoryConstructor>()
 

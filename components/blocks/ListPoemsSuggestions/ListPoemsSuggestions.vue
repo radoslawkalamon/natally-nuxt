@@ -16,6 +16,7 @@
       class="list-poems-suggestions__poems"
       :limit="6"
       :randomize="true"
+      :without="without"
     >
       <template #default="{ metaPostPoems }">
         <template v-for="metaPostPoem in metaPostPoems">

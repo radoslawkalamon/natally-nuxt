@@ -15,8 +15,8 @@
     <client-only>
       <BlocksPoemsFirstTime />
     </client-only>
-    <BlocksListPoemsSuggestions />
-    <BlocksListStoriesSuggestions />
+    <BlocksListPoemsSuggestions :without="[article.path]" />
+    <BlocksListStoriesSuggestions :without="[article.path]" />
   </article>
 </template>
 

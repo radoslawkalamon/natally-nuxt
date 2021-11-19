@@ -10,8 +10,8 @@
       <NuxtContent :document="article" />
     </WrappersTextStories>
     <BlocksAdjacentPostLinksStory :slug="article.slug" />
-    <BlocksListStoriesSuggestions />
-    <BlocksListPoemsSuggestions />
+    <BlocksListStoriesSuggestions :without="[article.path]" />
+    <BlocksListPoemsSuggestions :without="[article.path]" />
     <BlocksProgressBar />
   </article>
 </template>
