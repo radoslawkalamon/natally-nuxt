@@ -1,111 +1,119 @@
-ErrorDocument 404 /404.html
+<IfModule mod_rewrite.c>
+  # HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301]
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_URI} /+[^\.]+$ 
-RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
+  # Trailing Slash
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} /+[^\.]+$ 
+  RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301]
+</IfModule>
 
-# Common
-Redirect 301 /o-mnie/ https://radoslawkalamon.pl/
-Redirect 301 /kontakt/ https://m.me/169cmpl
+<IfModule mod_rewrite.c>
+  # Common
+  RewriteRule ^o-mnie/$ https://radoslawkalamon.pl/ [R=301,L,NC]
+  RewriteRule ^kontakt/$ https://m.me/169cmpl [R=301,L,NC]
 
-# Stories
-# Redirect 301 /opowiadania/ /
-Redirect 301 /2014/12/o-pani-wracajacej-z-pracy/ /opowiadania/o-pani-wracajacej-z-pracy/
-Redirect 301 /2014/o-pani-wracajacej-pracy/ /opowiadania/o-pani-wracajacej-z-pracy/
-Redirect 301 /2014/upal-tego-lata-byl-zniesienia/ /opowiadania/upal-tego-lata-byl-nie-do-zniesienia/
-Redirect 301 /2019/idealny-moment-istnieje/ /opowiadania/idealny-moment-nie-istnieje/
-Redirect 301 /2015/idealny-moment-istnieje/ /opowiadania/idealny-moment-nie-istnieje/
-Redirect 301 /2017/ostatni-papieros/ /opowiadania/ostatni-papieros/
-Redirect 301 /2019/ostatni-papieros/ /opowiadania/ostatni-papieros/
-Redirect 301 /2019/proste-rzeczy/ /opowiadania/proste-rzeczy/
-Redirect 301 /2016/burza/ /opowiadania/burza/
+  # Stories
+  RewriteRule ^opowiadania/$ / [R=301,L,NC]
+  RewriteRule ^2014/12/o-pani-wracajacej-z-pracy/$ /opowiadania/o-pani-wracajacej-z-pracy/ [R=301,L,NC]
+  RewriteRule ^2014/o-pani-wracajacej-pracy/$ /opowiadania/o-pani-wracajacej-z-pracy/ [R=301,L,NC]
+  RewriteRule ^2014/upal-tego-lata-byl-zniesienia/$ /opowiadania/upal-tego-lata-byl-nie-do-zniesienia/ [R=301,L,NC]
+  RewriteRule ^2019/idealny-moment-istnieje/$ /opowiadania/idealny-moment-nie-istnieje/ [R=301,L,NC]
+  RewriteRule ^2015/idealny-moment-istnieje/$ /opowiadania/idealny-moment-nie-istnieje/ [R=301,L,NC]
+  RewriteRule ^2017/ostatni-papieros/$ /opowiadania/ostatni-papieros/ [R=301,L,NC]
+  RewriteRule ^2019/ostatni-papieros/$ /opowiadania/ostatni-papieros/ [R=301,L,NC]
+  RewriteRule ^2019/proste-rzeczy/$ /opowiadania/proste-rzeczy/ [R=301,L,NC]
+  RewriteRule ^2016/burza/$ /opowiadania/burza/ [R=301,L,NC]
 
-# Journals
-Redirect 301 /zapiski/rytual/ /opowiadania/rytual/
-Redirect 301 /zapiski/zepsuty-mechanizm/ /opowiadania/zepsuty-mechanizm/
-Redirect 301 /zapiski/bajka/ /opowiadania/bajka/
-Redirect 301 /zapiski/wiadomosc/ /opowiadania/wiadomosc/
+  # Journals
+  RewriteRule ^zapiski/rytual/$ /opowiadania/rytual/ [R=301,L,NC]
+  RewriteRule ^zapiski/zepsuty-mechanizm/$ /opowiadania/zepsuty-mechanizm/ [R=301,L,NC]
+  RewriteRule ^zapiski/bajka/$ /opowiadania/bajka/ [R=301,L,NC]
+  RewriteRule ^zapiski/wiadomosc/$ /opowiadania/wiadomosc/ [R=301,L,NC]
 
-# Poems
-Redirect 301 /2019/paradoks/ /poezja-314/paradoks/
-Redirect 301 /2019/koprozart/ /poezja-314/koprozart/
-Redirect 301 /2019/poezja-influencerska/ /poezja-314/poezja-influencerska/
-Redirect 301 /2019/poeci/ /poezja-314/poeci/
-Redirect 301 /2019/w-tym-domu/ /poezja-314/w-tym-domu/
-Redirect 301 /2019/horoskop/ /poezja-314/horoskop/
-Redirect 301 /2019/znak/ /poezja-314/znak/
-Redirect 301 /2019/checklista/ /poezja-314/checklista/
-Redirect 301 /2019/grzeszki/ /poezja-314/grzeszki/
-Redirect 301 /2019/masz-ci-los/ /poezja-314/masz-ci-los/
-Redirect 301 /2019/miedzy-wierszami/ /poezja-314/miedzy-wierszami/
-Redirect 301 /2019/perspektywy/ /poezja-314/perspektywy/
-Redirect 301 /2018/wiem/ /poezja-314/wiem/
-Redirect 301 /2018/pocalunki/ /poezja-314/pocalunki/
-Redirect 301 /2017/smutek-2-0/ /poezja-314/smutek-2-0/
-Redirect 301 /2017/watpliwosci/ /poezja-314/watpliwosci/
-Redirect 301 /2017/ty/ /poezja-314/ty/
-Redirect 301 /2019/zyczenia/ /poezja-314/zyczenia/
+  # Poems
+  RewriteRule ^2019/paradoks/$ /poezja-314/paradoks/ [R=301,L,NC]
+  RewriteRule ^2019/koprozart/$ /poezja-314/koprozart/ [R=301,L,NC]
+  RewriteRule ^2019/poezja-influencerska/$ /poezja-314/poezja-influencerska/ [R=301,L,NC]
+  RewriteRule ^2019/poeci/$ /poezja-314/poeci/ [R=301,L,NC]
+  RewriteRule ^2019/w-tym-domu/$ /poezja-314/w-tym-domu/ [R=301,L,NC]
+  RewriteRule ^2019/horoskop/$ /poezja-314/horoskop/ [R=301,L,NC]
+  RewriteRule ^2019/znak/$ /poezja-314/znak/ [R=301,L,NC]
+  RewriteRule ^2019/checklista/$ /poezja-314/checklista/ [R=301,L,NC]
+  RewriteRule ^2019/grzeszki/$ /poezja-314/grzeszki/ [R=301,L,NC]
+  RewriteRule ^2019/masz-ci-los/$ /poezja-314/masz-ci-los/ [R=301,L,NC]
+  RewriteRule ^2019/miedzy-wierszami/$ /poezja-314/miedzy-wierszami/ [R=301,L,NC]
+  RewriteRule ^2019/perspektywy/$ /poezja-314/perspektywy/ [R=301,L,NC]
+  RewriteRule ^2018/wiem/$ /poezja-314/wiem/ [R=301,L,NC]
+  RewriteRule ^2018/pocalunki/$ /poezja-314/pocalunki/ [R=301,L,NC]
+  RewriteRule ^2017/smutek-2-0/$ /poezja-314/smutek-2-0/ [R=301,L,NC]
+  RewriteRule ^2017/watpliwosci/$ /poezja-314/watpliwosci/ [R=301,L,NC]
+  RewriteRule ^2017/ty/$ /poezja-314/ty/ [R=301,L,NC]
+  RewriteRule ^2019/zyczenia/$ /poezja-314/zyczenia/ [R=301,L,NC]
 
-# Images
-Redirect 301 /wp-content/uploads/2017/01/city-buildings-church-scandinavia.jpg /images/opowiadania.upal-tego-lata-byl-nie-do-zniesienia.opengraph.jpg
-Redirect 301 /wp-content/uploads/2019/04/Proste_Rzeczy_Opowiadanie.jpg /images/opowiadania.proste-rzeczy.opengraph.jpg
-Redirect 301 /wp-content/uploads/2020/07/opowiadania-bajka.jpg /images/opowiadania.bajka.opengraph.jpg
-Redirect 301 /wp-content/uploads/2019/11/opowiadania-proste-rzeczy.jpg /images/opowiadania.proste-rzeczy.opengraph.jpg
-Redirect 301 /wp-content/uploads/2019/11/opowiadania-burza.jpeg /images/opowiadania.burza.opengraph.jpg
-Redirect 301 /wp-content/uploads/2019/11/opowiadania-o-pani-wracajacej-z-pracy.jpeg /images/opowiadania.o-pani-wracajacej-z-pracy.opengraph.jpg
-Redirect 301 /wp-content/uploads/2019/11/opowiadania-upal-tego-lata-byl-nie-do-zniesienia.jpg /images/opowiadania.upal-tego-lata-byl-nie-do-zniesienia.opengraph.jpg
-Redirect 301 /wp-content/uploads/2020/07/opowiadania-rytual.jpg /images/opowiadania.rytual.opengraph.jpg
-Redirect 301 /wp-content/uploads/2020/07/opowiadania-wiadomosc.jpg /images/opowiadania.wiadomosc.opengraph.jpg
-Redirect 301 /wp-content/uploads/2019/11/opowiadania-idealny-moment-nie-istnieje.jpg /images/opowiadania.idealny-moment-nie-istnieje.opengraph.jpg
-Redirect 301 /wp-content/uploads/2020/07/opowiadanie-zepsuty-mechanizm.jpg /images/opowiadania.zepsuty-mechanizm.opengraph.jpg
-Redirect 301 /wp-content/uploads/2019/11/opowiadania-ostatni-papieros.jpg /images/opowiadania.ostatni-papieros.opengraph.jpg
-Redirect 301 /wp-content/uploads/2021/01/poezja-314-biznes-social.png /images/poezja-314.biznes.opengraph.png
-Redirect 301 /wp-content/uploads/2021/01/poezja-314-dysonans-social.png /images/poezja-314.dysonans.opengraph.png
-Redirect 301 /wp-content/uploads/2019/11/poezja-314-checklista-social.png /images/poezja-314.checklista.opengraph.png
-Redirect 301 /wp-content/uploads/2020/07/poezja-314-imie-dla-psa-social.jpg /images/poezja-314.imie-dla-psa.opengraph.png
-Redirect 301 /wp-content/uploads/2021/04/poezja-314-promocja-lgbt-social.png /images/poezja-314.promocja-lgbt.opengraph.png
-Redirect 301 /wp-content/uploads/2021/03/poezja-314-pierwszy-dzien-tygodnia-social.png /images/poezja-314.pierwszy-dzien-tygodnia.opengraph.png
-Redirect 301 /wp-content/uploads/2020/04/poezja-314-ocena-social.png /images/poezja-314.ocena.opengraph.png
-Redirect 301 /wp-content/uploads/2021/01/poezja-314-zestaw-prezentowy-social.png /images/poezja-314.zestaw-prezentowy.opengraph.png
-Redirect 301 /wp-content/uploads/2019/11/poezja-314-perspektywy-social.png /images/poezja-314.perspektywy.opengraph.png
-Redirect 301 /wp-content/uploads/2019/11/poezja-314-miedzy-wierszami-social.png /images/poezja-314.miedzy-wierszami.opengraph.png
-Redirect 301 /wp-content/uploads/2019/11/poezja-314-masz-ci-los-social.png /images/poezja-314.masz-ci-los.opengraph.png
-Redirect 301 /wp-content/uploads/2019/11/poezja-314-grzeszki-social.png /images/poezja-314.grzeszki.opengraph.png
-Redirect 301 /wp-content/uploads/2019/11/poezja-314-ty-social.png /images/poezja-314.ty.opengraph.png
-Redirect 301 /wp-content/uploads/2020/12/poezja-314-_____-___-social.png /images/poezja-314.uprzejmie-prosze-uciekac-predziutko.opengraph.png
-Redirect 301 /wp-content/uploads/2021/11/poezja-314-kamuflaz-social.png /images/poezja-314.kamuflaz.opengraph.png
-Redirect 301 /wp-content/uploads/2020/03/poezja-314-biala-sciana-social.png /images/poezja-314.biala-sciana.opengraph.png
-Redirect 301 /wp-content/uploads/2019/11/poezja-314-watpliwosci-social.png /images/poezja-314.watpliwosci.opengraph.png
-Redirect 301 /wp-content/uploads/2021/06/poezja-314-mieta-social.png /images/poezja-314.mieta.opengraph.png
-Redirect 301 /wp-content/uploads/2021/03/poezja-314-bez-slow-social.png /images/poezja-314.bez-slow.opengraph.png
-Redirect 301 /wp-content/uploads/2019/11/poezja-314-smutek-2-0-social.png /images/poezja-314.smutek-2-0.opengraph.png
-Redirect 301 /wp-content/uploads/2019/11/poezja-314-wiem-social.png /images/poezja-314.wiem.opengraph.png
-Redirect 301 /wp-content/uploads/2020/12/poezja-314-nieporzadek-social.png /images/poezja-314.nieporzadek.opengraph.png
-Redirect 301 /wp-content/uploads/2019/11/poezja-314-poeci-social.png /images/poezja-314.poeci.opengraph.png
-Redirect 301 /wp-content/uploads/2019/11/poezja-314-paradoks-social.png /images/poezja-314.paradoks.opengraph.png
-Redirect 301 /wp-content/uploads/2021/03/poezja-314-memuar-social.png /images/poezja-314.memuar.opengraph.png
-Redirect 301 /wp-content/uploads/2019/11/poezja-314-horoskop-social.png /images/poezja-314.horoskop.opengraph.png
-Redirect 301 /wp-content/uploads/2019/11/poezja-314-znak-social.png /images/poezja-314.znak.opengraph.png
-Redirect 301 /wp-content/uploads/2019/11/poezja-314-poezja-influencerska-social.png /images/poezja-314.poezja-influencerska.opengraph.png
-Redirect 301 /wp-content/uploads/2019/11/poezja-314-koprozart-social.png /images/poezja-314.koprozart.opengraph.png
-Redirect 301 /wp-content/uploads/2021/01/poezja-314-wartosc-czlowieka-social.png /images/poezja-314.wartosc-czlowieka.opengraph.png
-Redirect 301 /wp-content/uploads/2019/12/poezja-314-zyczenia-social.png /images/poezja-314.zyczenia.opengraph.png
-Redirect 301 /wp-content/uploads/2021/02/poezja-314-wsparcie-social.png /images/poezja-314.wsparcie.opengraph.png
-Redirect 301 /wp-content/uploads/2021/02/poezja-314-milosc-social.png /images/poezja-314.milosc.opengraph.png
-Redirect 301 /wp-content/uploads/2021/07/poezja-314-wszechswiat-social.png /images/poezja-314.wszechswiat.opengraph.png
-Redirect 301 /wp-content/uploads/2021/07/poezja-314-obuwie-social.png /images/poezja-314.obuwie.opengraph.png
-Redirect 301 /wp-content/uploads/2019/11/poezja-314-pocalunki-social.png /images/poezja-314.pocalunki.opengraph.png
-Redirect 301 /wp-content/uploads/2019/11/poezja-314-w-tym-domu-social.png /images/poezja-314.w-tym-domu.opengraph.png
-Redirect 301 /wp-content/uploads/2021/02/poezja-314-werdykt-social.png /images/poezja-314.werdykt.opengraph.png
-Redirect 301 /wp-content/uploads/2019/11/facebook-open-graph-169cm.png /images/common.opengraph.png
-# Audiobooks
-Redirect 301 /audiobooki/spotify/ https://open.spotify.com/show/4Z2JSrBR9pWOL44RZGlx07
-Redirect 301 /audiobooki/youtube/ https://www.youtube.com/channel/UCjL27CLRVRR5WTqU1c3SMeg
-Redirect 301 /audiobooki/itunes/ https://podcasts.apple.com/pl/podcast/169cm-pl/id1462584176
-Redirect 301 /audiobooki/soundcloud/ https://soundcloud.com/169cmpl
-Redirect 301 /audiobooki/google-podcasts/ https://podcasts.google.com/feed/aHR0cDovL2ZlZWRzLnNvdW5kY2xvdWQuY29tL3VzZXJzL3NvdW5kY2xvdWQ6dXNlcnM6NjE4ODkxMTUwL3NvdW5kcy5yc3M=
-Redirect 301 /audiobooki/castbox/ https://castbox.fm/channel/169cm.pl%7D-id2113838
-Redirect 301 /audiobooki/pocket-casts/ https://pca.st/SN2m
+  # Images
+  RewriteRule ^wp-content/uploads/2017/01/city-buildings-church-scandinavia.jpg$ /images/opowiadania.upal-tego-lata-byl-nie-do-zniesienia.opengraph.jpg [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2019/04/Proste_Rzeczy_Opowiadanie.jpg$ /images/opowiadania.proste-rzeczy.opengraph.jpg [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2020/07/opowiadania-bajka.jpg$ /images/opowiadania.bajka.opengraph.jpg [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2019/11/opowiadania-proste-rzeczy.jpg$ /images/opowiadania.proste-rzeczy.opengraph.jpg [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2019/11/opowiadania-burza.jpeg$ /images/opowiadania.burza.opengraph.jpg [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2019/11/opowiadania-o-pani-wracajacej-z-pracy.jpeg$ /images/opowiadania.o-pani-wracajacej-z-pracy.opengraph.jpg [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2019/11/opowiadania-upal-tego-lata-byl-nie-do-zniesienia.jpg$ /images/opowiadania.upal-tego-lata-byl-nie-do-zniesienia.opengraph.jpg [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2020/07/opowiadania-rytual.jpg$ /images/opowiadania.rytual.opengraph.jpg [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2020/07/opowiadania-wiadomosc.jpg$ /images/opowiadania.wiadomosc.opengraph.jpg [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2019/11/opowiadania-idealny-moment-nie-istnieje.jpg$ /images/opowiadania.idealny-moment-nie-istnieje.opengraph.jpg [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2020/07/opowiadanie-zepsuty-mechanizm.jpg$ /images/opowiadania.zepsuty-mechanizm.opengraph.jpg [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2019/11/opowiadania-ostatni-papieros.jpg$ /images/opowiadania.ostatni-papieros.opengraph.jpg [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2021/01/poezja-314-biznes-social.png$ /images/poezja-314.biznes.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2021/01/poezja-314-dysonans-social.png$ /images/poezja-314.dysonans.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2019/11/poezja-314-checklista-social.png$ /images/poezja-314.checklista.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2020/07/poezja-314-imie-dla-psa-social.jpg$ /images/poezja-314.imie-dla-psa.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2021/04/poezja-314-promocja-lgbt-social.png$ /images/poezja-314.promocja-lgbt.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2021/03/poezja-314-pierwszy-dzien-tygodnia-social.png$ /images/poezja-314.pierwszy-dzien-tygodnia.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2020/04/poezja-314-ocena-social.png$ /images/poezja-314.ocena.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2021/01/poezja-314-zestaw-prezentowy-social.png$ /images/poezja-314.zestaw-prezentowy.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2019/11/poezja-314-perspektywy-social.png$ /images/poezja-314.perspektywy.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2019/11/poezja-314-miedzy-wierszami-social.png$ /images/poezja-314.miedzy-wierszami.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2019/11/poezja-314-masz-ci-los-social.png$ /images/poezja-314.masz-ci-los.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2019/11/poezja-314-grzeszki-social.png$ /images/poezja-314.grzeszki.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2019/11/poezja-314-ty-social.png$ /images/poezja-314.ty.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2020/12/poezja-314-_____-___-social.png$ /images/poezja-314.uprzejmie-prosze-uciekac-predziutko.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2021/11/poezja-314-kamuflaz-social.png$ /images/poezja-314.kamuflaz.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2020/03/poezja-314-biala-sciana-social.png$ /images/poezja-314.biala-sciana.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2019/11/poezja-314-watpliwosci-social.png$ /images/poezja-314.watpliwosci.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2021/06/poezja-314-mieta-social.png$ /images/poezja-314.mieta.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2021/03/poezja-314-bez-slow-social.png$ /images/poezja-314.bez-slow.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2019/11/poezja-314-smutek-2-0-social.png$ /images/poezja-314.smutek-2-0.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2019/11/poezja-314-wiem-social.png$ /images/poezja-314.wiem.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2020/12/poezja-314-nieporzadek-social.png$ /images/poezja-314.nieporzadek.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2019/11/poezja-314-poeci-social.png$ /images/poezja-314.poeci.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2019/11/poezja-314-paradoks-social.png$ /images/poezja-314.paradoks.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2021/03/poezja-314-memuar-social.png$ /images/poezja-314.memuar.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2019/11/poezja-314-horoskop-social.png$ /images/poezja-314.horoskop.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2019/11/poezja-314-znak-social.png$ /images/poezja-314.znak.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2019/11/poezja-314-poezja-influencerska-social.png$ /images/poezja-314.poezja-influencerska.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2019/11/poezja-314-koprozart-social.png$ /images/poezja-314.koprozart.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2021/01/poezja-314-wartosc-czlowieka-social.png$ /images/poezja-314.wartosc-czlowieka.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2019/12/poezja-314-zyczenia-social.png$ /images/poezja-314.zyczenia.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2021/02/poezja-314-wsparcie-social.png$ /images/poezja-314.wsparcie.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2021/02/poezja-314-milosc-social.png$ /images/poezja-314.milosc.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2021/07/poezja-314-wszechswiat-social.png$ /images/poezja-314.wszechswiat.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2021/07/poezja-314-obuwie-social.png$ /images/poezja-314.obuwie.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2019/11/poezja-314-pocalunki-social.png$ /images/poezja-314.pocalunki.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2019/11/poezja-314-w-tym-domu-social.png$ /images/poezja-314.w-tym-domu.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2021/02/poezja-314-werdykt-social.png$ /images/poezja-314.werdykt.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2019/11/facebook-open-graph-169cm.png$ /images/common.opengraph.png [R=301,L,NC]
+
+  # Audiobooks
+  RewriteRule ^audiobooki/spotify/$ https://open.spotify.com/show/4Z2JSrBR9pWOL44RZGlx07 [R=301,L,NC]
+  RewriteRule ^audiobooki/youtube/$ https://www.youtube.com/channel/UCjL27CLRVRR5WTqU1c3SMeg [R=301,L,NC]
+  RewriteRule ^audiobooki/itunes/$ https://podcasts.apple.com/pl/podcast/169cm-pl/id1462584176 [R=301,L,NC]
+  RewriteRule ^audiobooki/soundcloud/$ https://soundcloud.com/169cmpl [R=301,L,NC]
+  RewriteRule ^audiobooki/google-podcasts/$ https://podcasts.google.com/feed/aHR0cDovL2ZlZWRzLnNvdW5kY2xvdWQuY29tL3VzZXJzL3NvdW5kY2xvdWQ6dXNlcnM6NjE4ODkxMTUwL3NvdW5kcy5yc3M= [R=301,L,NC]
+  RewriteRule ^audiobooki/castbox/$ https://castbox.fm/channel/169cm.pl%7D-id2113838 [R=301,L,NC]
+  RewriteRule ^audiobooki/pocket-casts/$ https://pca.st/SN2m [R=301,L,NC]
+</IfModule>
 
 # Charset
 AddDefaultCharset utf-8
@@ -123,3 +131,6 @@ AddCharset utf-8 .css .html .js
  Header set Cache-Control "max-age=31536000, private, immutable"
  </FilesMatch>
 </IfModule>
+
+# Page 404
+ErrorDocument 404 /404.html
