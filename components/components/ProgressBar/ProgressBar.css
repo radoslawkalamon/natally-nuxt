@@ -1,0 +1,7 @@
+.progress-bar {
+  background-color: var(--color-accent);
+  border-radius: var(--border-radius);
+  height: var(--border-radius);
+  transition: width var(--time-animation) linear;
+  width: 0%;
+}
