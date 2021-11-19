@@ -11,6 +11,10 @@ export default Vue.extend({
     randomize: {
       type: Boolean,
       default: false
+    },
+    without: {
+      type: Array as Vue.PropType<string[]>,
+      default: () => []
     }
   },
   data (): Record<string, DTOMetaPostPoemConstructor[]> {
@@ -37,6 +41,7 @@ export default Vue.extend({
   methods: {
     async fetchMetaPostPoems (): Promise<DTOMetaPostPoemConstructor[]> {
       const poems = await this.$content(this.fetchContentDirectory)
+        .where({ path: { $nin: this.without } })
         .only(this.metaPostPoemsConstructorKeys)
         .sortBy('createdAt', 'desc')
         .limit(this.limit)
@@ -48,6 +53,7 @@ export default Vue.extend({
     },
     async fetchMetaPostPoemsRandom (): Promise<DTOMetaPostPoemConstructor[]> {
       const poems = await this.$content(this.fetchContentDirectory)
+        .where({ path: { $nin: this.without } })
         .only(this.metaPostPoemsConstructorKeys)
         .fetch<DTOMetaPostPoemConstructor>()
 

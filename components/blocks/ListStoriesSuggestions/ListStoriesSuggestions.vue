@@ -16,6 +16,7 @@
       class="list-stories-suggestions__stories"
       :limit="2"
       :randomize="true"
+      :without="without"
     >
       <template #default="{ metaPostStories }">
         <template v-for="metaPostStory in metaPostStories">

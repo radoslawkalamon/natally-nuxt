@@ -1,5 +1,11 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'BlocksListPoemsSuggestions'
+  name: 'BlocksListPoemsSuggestions',
+  props: {
+    without: {
+      type: Array as Vue.PropType<string[]>,
+      default: () => []
+    }
+  }
 })
