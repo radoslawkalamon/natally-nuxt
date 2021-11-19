@@ -7,10 +7,9 @@
       class="card-story__link"
       :to="path"
     >
-      <ComponentsCoverStory
+      <ComponentsCover
         class="card-story__cover"
-        :image="imageCover"
-        :image2x="imageCover2x"
+        :images="[imageCover, imageCover2x]"
       />
       <div class="card-story__content">
         <footer class="card-story__footer">
