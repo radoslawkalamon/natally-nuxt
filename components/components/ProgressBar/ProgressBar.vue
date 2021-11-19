@@ -1,14 +1,9 @@
 <template>
   <div
-    aria-hidden="true"
     class="progress-bar"
-    data-test="blocks-progress-bar"
-  >
-    <div
-      class="progress-bar__inner"
-      :style="style"
-    />
-  </div>
+    data-test="components-progress-bar"
+    :style="style"
+  />
 </template>
 
 <script src="./ProgressBar.ts" lang="ts"></script>
