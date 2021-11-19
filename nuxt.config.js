@@ -20,6 +20,7 @@ export default {
   components: [
     { path: '@/components', extensions: ['vue'] }
   ],
+  loading: '@/components/blocks/LoadingBar/LoadingBar.vue',
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/typescript

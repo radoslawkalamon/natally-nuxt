@@ -1,0 +1,22 @@
+.loading-bar {
+  bottom: 0;
+  box-sizing: border-box;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+}
+
+.loading-bar .loading-bar__inner {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity var(--time-animation);
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
