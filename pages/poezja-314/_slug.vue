@@ -12,9 +12,9 @@
       />
     </WrappersTextPoems>
     <BlocksAdjacentPostLinksPoem :slug="article.slug" />
-    <client-only>
+    <ClientOnly>
       <BlocksPoemsFirstTime />
-    </client-only>
+    </ClientOnly>
     <BlocksListPoemsSuggestions :without="[article.path]" />
     <BlocksListStoriesSuggestions :without="[article.path]" />
   </article>

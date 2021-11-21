@@ -8,6 +8,9 @@ type AudiobookService = {
 
 export default Vue.extend({
   name: 'BlocksListAudiobookServices',
+  components: {
+    ComponentsCardAudiobookService: () => import(/* webpackChunkName: "components-card-audiobook-service" */'@/components/components/CardAudiobookService/CardAudiobookService.vue')
+  },
   computed: {
     audiobookServices (): AudiobookService[] {
       return [

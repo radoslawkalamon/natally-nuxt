@@ -7,6 +7,11 @@ export default (Vue as VueConstructor<
   & InstanceType<typeof mixinPrivacyStorage>
 >).extend({
   name: 'BlocksModalPrivacy',
+  components: {
+    ComponentsButton: () => import(/* webpackChunkName: "components-button" */'@/components/components/Button/Button.vue'),
+    ComponentsSwitch: () => import(/* webpackChunkName: "components-switch" */'@/components/components/Switch/Switch.vue'),
+    WrappersModal: () => import(/* webpackChunkName: "wrappers-modal" */'@/components/wrappers/Modal/Modal.vue')
+  },
   mixins: [mixinPrivacyStorage],
   data () {
     return {

@@ -4,7 +4,7 @@
     class="audiobook"
     data-test="blocks-audiobook"
   >
-    <client-only>
+    <ClientOnly>
       <iframe
         v-if="shallShowPlayer"
         width="100%"
@@ -21,7 +21,7 @@
           @click="togglePrivacyModal"
         />
       </WrappersText>
-    </client-only>
+    </ClientOnly>
   </div>
 </template>
 

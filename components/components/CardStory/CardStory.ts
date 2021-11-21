@@ -5,6 +5,11 @@ import { formatterTimeReading } from '@/utils/formatter.time.reading'
 
 export default Vue.extend({
   name: 'ComponentsCardStory',
+  components: {
+    ComponentsCover: () => import(/* webpackChunkName: "components-cover" */'@/components/components/Cover/Cover.vue'),
+    ComponentsTextMeta: () => import(/* webpackChunkName: "components-text-meta" */'@/components/components/TextMeta/TextMeta.vue'),
+    ComponentsTitle: () => import(/* webpackChunkName: "components-title" */'@/components/components/Title/Title.vue')
+  },
   props: {
     metaPostStory: {
       type: DTOMetaPostStory,
