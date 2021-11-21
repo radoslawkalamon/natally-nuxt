@@ -41,6 +41,11 @@ export default (Vue as VueConstructor<
     this.$root.$off('blocks/drawer/syncDrawerState', this.syncDrawerState)
   },
   methods: {
+    closeDrawer (): void {
+      if (this.isDrawerOpen) {
+        this.toggleDrawer()
+      }
+    },
     toggleDrawer (): void {
       this.$root.$emit('blocks/drawer/toggleDrawer')
     },

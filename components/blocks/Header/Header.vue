@@ -11,7 +11,10 @@
         :is-open="isDrawerOpen"
         @toggle="toggleDrawer"
       />
-      <NuxtLink to="/">
+      <NuxtLink
+        to="/"
+        @click.native="closeDrawer"
+      >
         <ComponentsLogo class="header__logo" />
       </NuxtLink>
     </header>
