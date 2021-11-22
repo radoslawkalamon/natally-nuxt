@@ -4,6 +4,7 @@ exports[`Utils / DTO / Meta / Page Page path with slash shall match snapshot 1`]
 DTOMetaPage {
   "createdAt": 2021-11-01T00:00:00.000Z,
   "description": "Test Description",
+  "imageOpenGraph": "/images/common.opengraph.png",
   "path": "/test-url/",
   "title": "Test title",
   "updatedAt": 2021-11-01T00:00:00.000Z,
@@ -14,6 +15,7 @@ exports[`Utils / DTO / Meta / Page Page path without slash shall match snapshot 
 DTOMetaPage {
   "createdAt": 2021-11-01T00:00:00.000Z,
   "description": "Test Description",
+  "imageOpenGraph": "/images/common.opengraph.png",
   "path": "/test-url/",
   "title": "Test title",
   "updatedAt": 2021-11-01T00:00:00.000Z,

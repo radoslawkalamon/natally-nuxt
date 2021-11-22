@@ -7,7 +7,7 @@ import { factoryHeadSchemaWebpage, FactoryHeadSchemaWebpageType } from './factor
 import { factoryHeadSchemaWebsite } from './factory.head.schema.website'
 import { getURL, getTitle } from './factory.head.utils'
 
-export const factoryHeadPage = ({ createdAt, description, title, path, updatedAt }: DTOMetaPage, webpageType: FactoryHeadSchemaWebpageType): MetaInfo => ({
+export const factoryHeadPage = ({ createdAt, description, imageOpenGraph, title, path, updatedAt }: DTOMetaPage, webpageType: FactoryHeadSchemaWebpageType): MetaInfo => ({
   title: getTitle({ title }),
   link: [
     { rel: 'canonical', href: getURL({ path }), hid: 'link:canonical' }
@@ -26,7 +26,8 @@ export const factoryHeadPage = ({ createdAt, description, title, path, updatedAt
         factoryHeadSchemaOrganization(),
         factoryHeadSchemaWebsite(),
         factoryHeadSchemaPrimaryimage({
-          path
+          path,
+          imageOpenGraph
         }),
         factoryHeadSchemaWebpage({
           createdAt: createdAt.toISOString(),
