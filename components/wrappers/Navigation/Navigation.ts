@@ -6,8 +6,7 @@ export default Vue.extend({
   render (h, { children, data }) {
     const wrapperProps = {
       attrs: {
-        ...data.attrs,
-        'data-test': 'wrappers-navigation'
+        ...data.attrs
       },
       class: [
         data.staticClass,
