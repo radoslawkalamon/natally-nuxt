@@ -38,6 +38,16 @@ export default {
     'content:file:beforeParse': nuxtHooksContentFileBeforeParseTextAlignment
   },
   build: {
+    babel: {
+      presets ({ isClient }, preset) {
+        if (isClient) {
+          preset[1].targets = {
+            chrome: '95'
+          }
+        }
+        return [preset]
+      }
+    },
     extractCSS: true,
     loaders: {
       imgUrl: {
