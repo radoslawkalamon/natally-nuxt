@@ -1,0 +1,32 @@
+.mieta__text-align-center {
+  text-align: center;
+}
+
+.mieta__text-align-right {
+  text-align: right;
+}
+
+.mieta__text-clash {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin: var(--gap) 0;
+  width: 100%;
+}
+
+.mieta__text-clash > * {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+
+.mieta__text-clash > *:nth-child(1) {
+  order: 1;
+}
+
+.mieta__text-clash > *:nth-child(2) {
+  order: 3;
+}
+
+.mieta__text-clash > *:nth-child(3) {
+  order: 2;
+}
