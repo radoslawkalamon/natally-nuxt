@@ -52,6 +52,26 @@ export default {
     loaders: {
       imgUrl: {
         limit: -1
+      },
+      vue: {
+        compilerOptions: {
+          modules: [{
+            preTransformNode (astEl) {
+              if (process.env.NODE_ENV === 'production') {
+                const { attrsMap, attrsList } = astEl
+                const tagAttributesForTesting = ['data-test', ':data-test', 'v-bind:data-test']
+                tagAttributesForTesting.forEach((attribute) => {
+                  if (attrsMap[attribute]) {
+                    delete attrsMap[attribute]
+                    const index = attrsList.findIndex(x => x.name === attribute)
+                    attrsList.splice(index, 1)
+                  }
+                })
+              }
+              return astEl
+            }
+          }]
+        }
       }
     },
     optimization: {
