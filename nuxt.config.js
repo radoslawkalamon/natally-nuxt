@@ -46,10 +46,7 @@ export default {
     },
     optimization: {
       splitChunks: {
-        chunks: 'all',
-        layouts: true,
-        pages: true,
-        commons: true
+        chunks: 'all'
       }
     }
   },
