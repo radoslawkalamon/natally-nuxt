@@ -6,7 +6,7 @@ export default Vue.extend({
   extends: PagePoezja314Slug,
   computed: {
     articleComponent () {
-      return () => import(/* webpackChunkName: "poems-dysonans" */'@/components/poems/Dysonans/Dysonans.vue')
+      return () => import(/* webpackChunkName: "poems-dysonans", webpackPrefetch: true */'@/components/poems/Dysonans/Dysonans.vue')
     }
   }
 })

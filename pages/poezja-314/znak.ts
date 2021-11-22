@@ -6,7 +6,7 @@ export default Vue.extend({
   extends: PagePoezja314Slug,
   computed: {
     articleComponent () {
-      return () => import(/* webpackChunkName: "poems-znak" */'@/components/poems/Znak/Znak.vue')
+      return () => import(/* webpackChunkName: "poems-znak", webpackPrefetch: true */'@/components/poems/Znak/Znak.vue')
     }
   }
 })

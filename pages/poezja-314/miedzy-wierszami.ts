@@ -6,7 +6,7 @@ export default Vue.extend({
   extends: PagePoezja314Slug,
   computed: {
     articleComponent () {
-      return () => import(/* webpackChunkName: "poems-miedzy-wierszami" */'@/components/poems/MiedzyWierszami/MiedzyWierszami.vue')
+      return () => import(/* webpackChunkName: "poems-miedzy-wierszami", webpackPrefetch: true */'@/components/poems/MiedzyWierszami/MiedzyWierszami.vue')
     }
   }
 })

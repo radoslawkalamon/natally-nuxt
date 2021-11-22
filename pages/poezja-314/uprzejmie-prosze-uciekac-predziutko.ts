@@ -6,7 +6,7 @@ export default Vue.extend({
   extends: PagePoezja314Slug,
   computed: {
     articleComponent () {
-      return () => import(/* webpackChunkName: "poems-uprzejmie-prosze-uciekac-predziutko" */'@/components/poems/UprzejmieProszeUciekacPredziutko/UprzejmieProszeUciekacPredziutko.vue')
+      return () => import(/* webpackChunkName: "poems-uprzejmie-prosze-uciekac-predziutko", webpackPrefetch: true */'@/components/poems/UprzejmieProszeUciekacPredziutko/UprzejmieProszeUciekacPredziutko.vue')
     }
   }
 })

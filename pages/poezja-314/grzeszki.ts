@@ -6,7 +6,7 @@ export default Vue.extend({
   extends: PagePoezja314Slug,
   computed: {
     articleComponent () {
-      return () => import(/* webpackChunkName: "poems-grzeszki" */'@/components/poems/Grzeszki/Grzeszki.vue')
+      return () => import(/* webpackChunkName: "poems-grzeszki", webpackPrefetch: true */'@/components/poems/Grzeszki/Grzeszki.vue')
     }
   }
 })
