@@ -2,6 +2,9 @@ import Vue from 'vue'
 
 export default Vue.extend({
   name: 'BlocksCoverStory',
+  components: {
+    ComponentsCover: () => import(/* webpackChunkName: "components-cover" */'@/components/components/Cover/Cover.vue')
+  },
   props: {
     images: {
       type: Array as Vue.PropType<String[]>,

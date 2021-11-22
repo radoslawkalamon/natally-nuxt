@@ -8,7 +8,7 @@
       <span class="grzeszki__text grzeszki__text--2">Chipsy</span>
       <span class="grzeszki__text grzeszki__text--3">Paluszki</span>
       <span class="grzeszki__text grzeszki__text--4">Sucharki</span>
-      <client-only>
+      <ClientOnly>
         <template v-for="i in 100">
           <span
             :key="i"
@@ -17,7 +17,7 @@
             :style="breadcrumbsStyle()"
           >,</span>
         </template>
-      </client-only>
+      </ClientOnly>
     </p>
     <p>Wszystkie one</p>
     <p>w Twoim łożku</p>

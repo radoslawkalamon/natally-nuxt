@@ -4,6 +4,11 @@ import { formatterDateMeta } from '@/utils/formatter.date.meta'
 
 export default Vue.extend({
   name: 'ComponentsCardPoem',
+  components: {
+    ComponentsCover: () => import(/* webpackChunkName: "components-cover" */'@/components/components/Cover/Cover.vue'),
+    ComponentsTextMeta: () => import(/* webpackChunkName: "components-text-meta" */'@/components/components/TextMeta/TextMeta.vue'),
+    ComponentsTitle: () => import(/* webpackChunkName: "components-title" */'@/components/components/Title/Title.vue')
+  },
   props: {
     metaPostPoem: {
       type: DTOMetaPostPoem,

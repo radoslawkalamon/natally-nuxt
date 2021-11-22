@@ -17,9 +17,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: [
-    { path: '@/components', extensions: ['vue'] }
-  ],
+  // components: false,
   loading: '@/components/blocks/LoadingBar/LoadingBar.vue',
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -40,9 +38,15 @@ export default {
     'content:file:beforeParse': nuxtHooksContentFileBeforeParseTextAlignment
   },
   build: {
+    extractCSS: true,
     loaders: {
       imgUrl: {
         limit: -1
+      }
+    },
+    optimization: {
+      splitChunks: {
+        chunks: 'all'
       }
     }
   },

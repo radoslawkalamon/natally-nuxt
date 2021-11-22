@@ -1,8 +1,6 @@
 <template>
   <article class="page-polityka-prywatnosci">
-    <BlocksPageMeta
-      :title="dtoMetaPage.title"
-    />
+    <BlocksPageMeta :title="dtoMetaPage.title" />
     <WrappersText>
       <NuxtContent :document="page" />
     </WrappersText>

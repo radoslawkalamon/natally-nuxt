@@ -7,6 +7,10 @@ export default (Vue as VueConstructor<
   & InstanceType<typeof mixinMatchMediaDesktop>
 >).extend({
   name: 'BlocksDrawer',
+  components: {
+    ComponentsNavigationDrawer: () => import(/* webpackChunkName: "components-navigation-drawer" */'@/components/components/NavigationDrawer/NavigationDrawer.vue'),
+    ComponentsSocialMedia: () => import(/* webpackChunkName: "components-social-media" */'@/components/components/SocialMedia/SocialMedia.vue')
+  },
   mixins: [mixinMatchMediaDesktop],
   data () {
     return {

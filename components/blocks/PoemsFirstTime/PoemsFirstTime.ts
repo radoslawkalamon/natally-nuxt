@@ -7,6 +7,12 @@ export default (Vue as VueConstructor<
   & InstanceType<typeof mixinPoemFirstTime>
 >).extend({
   name: 'BlocksPoemsFirstTime',
+  components: {
+    ComponentsButtonLink: () => import('@/components/components/ButtonLink/ButtonLink.vue'),
+    ComponentsTitle: () => import('@/components/components/Title/Title.vue'),
+    WrappersSection: () => import('@/components/wrappers/Section/Section.vue'),
+    WrappersText: () => import('@/components/wrappers/Text/Text.vue')
+  },
   mixins: [mixinPoemFirstTime],
   computed: {
     shallShowSection (): boolean {

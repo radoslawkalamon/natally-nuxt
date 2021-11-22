@@ -9,6 +9,11 @@ export default (Vue as VueConstructor<
   & InstanceType<typeof mixinPoemFirstTime>
 >).extend({
   name: 'PagePoezja314',
+  components: {
+    BlocksListPoemsMain: () => import(/* webpackChunkName: "blocks-list-poems-main" */'@/components/blocks/ListPoemsMain/ListPoemsMain.vue'),
+    BlocksPageMeta: () => import(/* webpackChunkName: "blocks-page-meta" */'@/components/blocks/PageMeta/PageMeta.vue'),
+    WrappersText: () => import(/* webpackChunkName: "wrappers-text" */'@/components/wrappers/Text/Text.vue')
+  },
   extends: PageHomepage,
   mixins: [mixinPoemFirstTime],
   async asyncData ({ $content }) {

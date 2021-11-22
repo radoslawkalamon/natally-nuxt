@@ -12,6 +12,9 @@ export default (Vue as VueConstructor<
   & InstanceType<typeof mixinWindowScrollValues>
 >).extend({
   name: 'BlocksReadingProgress',
+  components: {
+    ComponentsProgressBar: () => import(/* webpackChunkName: "components-progress-bar" */'@/components/components/ProgressBar/ProgressBar.vue')
+  },
   mixins: [mixinWindowScrollValues],
   data (): BlocksReadingProgressData {
     return {
