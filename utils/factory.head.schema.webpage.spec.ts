@@ -42,13 +42,12 @@ describe('Utils / Factory / Head / Schema / Webpage', () => {
     expect(factoryHeadSchemaWebpage(args)).toMatchSnapshot()
   })
 
-  test('shall match snapshot | { category, createdAt, path, title, updatedAt, webpageType = WebPage }', () => {
+  test('shall match snapshot | { category, createdAt, path, title, updatedAt, webpageType = default }', () => {
     const args = {
       createdAt: '2021-11-05T00:00:00+00:00',
       path: '/path/test/',
       title: 'Title test',
-      updatedAt: '2021-11-06T00:00:00+00:00',
-      webpageType: FactoryHeadSchemaWebpageType.WebPage
+      updatedAt: '2021-11-06T00:00:00+00:00'
     }
     expect(factoryHeadSchemaWebpage(args)).toMatchSnapshot()
   })

@@ -4,7 +4,6 @@ export type DTOMetaPostStoryConstructor = DTOMetaPageConstructor & {
   audiobookId?: string;
   imageCover: string;
   imageCover2x: string;
-  imageOpenGraph: string
   timeReading: number;
 }
 
@@ -12,7 +11,6 @@ export class DTOMetaPostStory extends DTOMetaPage {
   readonly audiobookId: string;
   readonly imageCover: string;
   readonly imageCover2x: string;
-  readonly imageOpenGraph: string;
   readonly timeReading: number;
 
   constructor ({
@@ -30,19 +28,15 @@ export class DTOMetaPostStory extends DTOMetaPage {
     super({
       createdAt,
       description,
+      imageOpenGraph,
       path,
       title,
       updatedAt
     })
 
     this.audiobookId = audiobookId.toString()
-    this.imageCover = `${this.imagePath}${imageCover}`
-    this.imageCover2x = `${this.imagePath}${imageCover2x}`
-    this.imageOpenGraph = `${this.imagePath}${imageOpenGraph}`
+    this.imageCover = `/images/${imageCover}`
+    this.imageCover2x = `/images/${imageCover2x}`
     this.timeReading = timeReading
-  }
-
-  get imagePath (): string {
-    return '/images/'
   }
 }

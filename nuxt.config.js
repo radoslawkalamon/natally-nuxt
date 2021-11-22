@@ -1,4 +1,7 @@
+import { $content } from '@nuxt/content'
+import { DTOMetaPage } from './utils/dto.meta.page'
 import { factoryHead } from './utils/factory.head'
+import { getURL } from './utils/factory.head.utils'
 import { nuxtHooksContentFileBeforeParseTextAlignment } from './utils/nuxt.hooks.content.file.beforeParse.textAlignment'
 
 export default {
@@ -16,8 +19,6 @@ export default {
   },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
-  // Auto import components: https://go.nuxtjs.dev/config-components
-  // components: false,
   loading: '@/components/blocks/LoadingBar/LoadingBar.vue',
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -26,10 +27,9 @@ export default {
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module'
   ],
-  // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/sitemap'
   ],
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
@@ -81,7 +81,12 @@ export default {
     }
   },
   generate: {
-    fallback: '404.html'
+    crawler: false,
+    fallback: '404.html',
+    async routes () {
+      const pages = await $content('/', { deep: true }).fetch()
+      return pages.map(page => (new DTOMetaPage(page)).path.replace('index', ''))
+    }
   },
   storybook: {
     parameters: {
@@ -99,5 +104,22 @@ export default {
         }
       }
     }
+  },
+  sitemap: {
+    hostname: getURL(),
+    async routes () {
+      const pages = await $content('/', { deep: true }).fetch()
+      return pages.map((page) => {
+        const PageDTO = new DTOMetaPage(page)
+        return {
+          url: PageDTO.path.replace('index', ''),
+          img: [{
+            url: PageDTO.imageOpenGraph
+          }],
+          lastmod: PageDTO.updatedAt
+        }
+      })
+    },
+    trailingSlash: true
   }
 }

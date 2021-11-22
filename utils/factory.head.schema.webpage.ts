@@ -11,7 +11,7 @@ type factoryHeadSchemaWebpageArgs = {
   path: string
   title: string
   updatedAt?: string
-  webpageType: FactoryHeadSchemaWebpageType
+  webpageType?: FactoryHeadSchemaWebpageType
 }
 
 export const factoryHeadSchemaWebpage = ({
