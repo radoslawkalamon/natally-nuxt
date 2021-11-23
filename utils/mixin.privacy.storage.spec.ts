@@ -11,7 +11,7 @@ const Component = (Vue as VueConstructor<
   template: '<div />'
 })
 
-describe('Mixins / Privacy / Storage', () => {
+describe('Utils / Mixins / Privacy / Storage', () => {
   describe('Core', () => {
     test('get', () => {
       const wrapper = mount(Component)

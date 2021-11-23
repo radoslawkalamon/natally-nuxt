@@ -13,7 +13,7 @@ const Component = (Vue as VueConstructor<
 
 jest.mock('lodash/throttle', () => (cb: Function) => cb)
 
-describe('Mixins / windowScroll / Emitter', () => {
+describe('Utils / Mixins / windowScroll / Emitter', () => {
   test('shall mount & destroy', () => {
     expect(() => {
       const wrapper = mount(Component)

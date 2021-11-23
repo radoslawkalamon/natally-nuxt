@@ -11,7 +11,7 @@ const Component = (Vue as VueConstructor<
   template: '<div />'
 })
 
-describe('Mixins / Poem / First Time', () => {
+describe('Utils / Mixins / Poem / First Time', () => {
   describe('SSR', () => {
     beforeAll(() => {
       process.client = false

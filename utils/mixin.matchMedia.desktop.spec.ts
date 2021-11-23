@@ -12,7 +12,7 @@ const Component = (Vue as VueConstructor<
   template: '<div />'
 })
 
-describe('Mixins / MatchMedia / Desktop', () => {
+describe('Utils / Mixins / MatchMedia / Desktop', () => {
   beforeAll(() => {
     jestPolyfillMatchMedia()
   })
