@@ -8,6 +8,7 @@ import { getTitle, getURL, headDefault } from './factory.head.utils'
 
 const pagesToFilter: string[] = [
   '/',
+  '/404/',
   '/audiobooki/',
   '/poezja-314/',
   '/polityka-prywatnosci/'
