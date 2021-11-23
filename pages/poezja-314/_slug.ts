@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import LazyHydrate from 'vue-lazy-hydration'
 import type { MetaInfo } from 'vue-meta'
 import { DTOMetaPostPoem } from '@/utils/dto.meta.post.poem'
 import { factoryHeadPostPoem } from '@/utils/factory.head.post.poem'
@@ -6,6 +7,7 @@ import { factoryHeadPostPoem } from '@/utils/factory.head.post.poem'
 export default Vue.extend({
   name: 'PagePoezja314Slug',
   components: {
+    LazyHydrate,
     BlocksAdjacentPostLinksPoem: () => import(/* webpackChunkName: "blocks-adjacent-post-links-poem" */'@/components/blocks/AdjacentPostLinksPoem/AdjacentPostLinksPoem.vue'),
     BlocksCoverPoem: () => import(/* webpackChunkName: "blocks-cover-poem" */'@/components/blocks/CoverPoem/CoverPoem.vue'),
     BlocksListPoemsSuggestions: () => import(/* webpackChunkName: "blocks-list-poems-suggestions" */'@/components/blocks/ListPoemsSuggestions/ListPoemsSuggestions.vue'),
@@ -33,14 +35,17 @@ export default Vue.extend({
       return 'NuxtContent'
     },
     articleProps (): object {
-      return this.articleComponent === 'NuxtContent'
+      return this.isCustomComponent
+        ? {}
         // @ts-ignore: Remove ts-ignore for Nuxt 2.16.0
-        ? { document: this.article }
-        : {}
+        : { document: this.article }
     },
     dtoMetaPostPoem (): DTOMetaPostPoem {
       // @ts-ignore: Remove ts-ignore for Nuxt 2.16.0
       return new DTOMetaPostPoem(this.article)
+    },
+    isCustomComponent (): boolean {
+      return this.articleComponent !== 'NuxtContent'
     }
   }
 })

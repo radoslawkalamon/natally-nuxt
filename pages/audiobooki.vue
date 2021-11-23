@@ -1,12 +1,18 @@
 <template>
   <article class="page-audiobooki">
-    <BlocksPageMeta
-      :title="dtoMetaPage.title"
-    />
-    <WrappersText>
-      <NuxtContent :document="page" />
-    </WrappersText>
-    <BlocksListAudiobookServices />
+    <LazyHydrate never>
+      <BlocksPageMeta :title="dtoMetaPage.title" />
+    </LazyHydrate>
+
+    <LazyHydrate never>
+      <WrappersText>
+        <NuxtContent :document="page" />
+      </WrappersText>
+    </LazyHydrate>
+
+    <LazyHydrate never>
+      <BlocksListAudiobookServices />
+    </LazyHydrate>
   </article>
 </template>
 

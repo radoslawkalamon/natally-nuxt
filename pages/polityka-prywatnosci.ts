@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import LazyHydrate from 'vue-lazy-hydration'
 import PageHomepage from '@/pages/index.vue'
 import { DTOMetaPageConstructor } from '@/utils/dto.meta.page'
 import { FactoryHeadSchemaWebpageType } from '@/utils/factory.head.schema.webpage'
@@ -6,6 +7,7 @@ import { FactoryHeadSchemaWebpageType } from '@/utils/factory.head.schema.webpag
 export default Vue.extend({
   name: 'PagePolitykaPrywatnosci',
   components: {
+    LazyHydrate,
     BlocksPageMeta: () => import(/* webpackChunkName: "blocks-page-meta" */'@/components/blocks/PageMeta/PageMeta.vue'),
     WrappersText: () => import(/* webpackChunkName: "wrappers-text" */'@/components/wrappers/Text/Text.vue')
   },

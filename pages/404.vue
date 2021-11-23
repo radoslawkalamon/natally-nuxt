@@ -1,9 +1,20 @@
 <template>
   <article class="page-error">
-    <BlocksAnimationPufferfish />
-    <BlocksPageMeta404 />
-    <BlocksListStoriesSuggestions />
-    <BlocksListPoemsSuggestions />
+    <LazyHydrate never>
+      <BlocksAnimationPufferfish />
+    </LazyHydrate>
+
+    <LazyHydrate when-idle>
+      <BlocksPageMeta404 />
+    </LazyHydrate>
+
+    <LazyHydrate when-visible>
+      <BlocksListStoriesSuggestions />
+    </LazyHydrate>
+
+    <LazyHydrate when-visible>
+      <BlocksListPoemsSuggestions />
+    </LazyHydrate>
   </article>
 </template>
 

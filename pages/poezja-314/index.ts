@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import type { VueConstructor } from 'vue'
+import LazyHydrate from 'vue-lazy-hydration'
 import PageHomepage from '@/pages/index.vue'
 import { DTOMetaPageConstructor } from '@/utils/dto.meta.page'
 import mixinPoemFirstTime from '@/utils/mixin.poem.firstTime'
@@ -10,6 +11,7 @@ export default (Vue as VueConstructor<
 >).extend({
   name: 'PagePoezja314',
   components: {
+    LazyHydrate,
     BlocksListPoemsMain: () => import(/* webpackChunkName: "blocks-list-poems-main" */'@/components/blocks/ListPoemsMain/ListPoemsMain.vue'),
     BlocksPageMeta: () => import(/* webpackChunkName: "blocks-page-meta" */'@/components/blocks/PageMeta/PageMeta.vue'),
     WrappersText: () => import(/* webpackChunkName: "wrappers-text" */'@/components/wrappers/Text/Text.vue')

@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import { hydrateWhenVisible } from 'vue-lazy-hydration'
 import PagePoezja314Slug from '@/pages/poezja-314/_slug.vue'
 
 export default Vue.extend({
@@ -6,7 +7,7 @@ export default Vue.extend({
   extends: PagePoezja314Slug,
   computed: {
     articleComponent () {
-      return () => import(/* webpackChunkName: "poems-smutek-2-0", webpackPrefetch: true */'@/components/poems/Smutek20/Smutek20.vue')
+      return hydrateWhenVisible(() => import(/* webpackChunkName: "poems-smutek-2-0", webpackPrefetch: true */'@/components/poems/Smutek20/Smutek20.vue'))
     }
   }
 })

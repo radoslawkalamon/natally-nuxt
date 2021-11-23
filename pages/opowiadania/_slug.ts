@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import LazyHydrate from 'vue-lazy-hydration'
 import type { MetaInfo } from 'vue-meta'
 import { DTOMetaPostStory, DTOMetaPostStoryConstructor } from '@/utils/dto.meta.post.story'
 import { factoryHeadPostStory } from '@/utils/factory.head.post.story'
@@ -6,6 +7,7 @@ import { factoryHeadPostStory } from '@/utils/factory.head.post.story'
 export default Vue.extend({
   name: 'PageOpowiadaniaSlug',
   components: {
+    LazyHydrate,
     BlocksAdjacentPostLinksStory: () => import(/* webpackChunkName: "blocks-adjacent-post-links-story" */'@/components/blocks/AdjacentPostLinksStory/AdjacentPostLinksStory.vue'),
     BlocksAudiobook: () => import(/* webpackChunkName: "blocks-audiobook" */'@/components/blocks/Audiobook/Audiobook.vue'),
     BlocksCoverStory: () => import(/* webpackChunkName: "blocks-cover-story" */'@/components/blocks/CoverStory/CoverStory.vue'),
