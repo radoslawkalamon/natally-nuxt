@@ -12,9 +12,7 @@
       <ComponentsLogoCrustyBread />
     </a>
     <WrappersText>
-      <p>
-        {{ websiteName }} &copy; {{ fullYear }}
-      </p>
+      <p>{{ websiteName }} &copy; {{ fullYear }}</p>
     </WrappersText>
   </footer>
 </template>

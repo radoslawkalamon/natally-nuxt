@@ -3,7 +3,7 @@
   border: var(--border-size) solid var(--color-floating-border);
   border-radius: var(--border-radius);
   bottom: var(--padding-flyout);
-  box-shadow: 0 8px 8px var(--color-floating-shadow);
+  box-shadow: 0 8px 16px var(--color-floating-shadow);
   box-sizing: border-box;
   display: flex;
   flex-flow: column nowrap;
