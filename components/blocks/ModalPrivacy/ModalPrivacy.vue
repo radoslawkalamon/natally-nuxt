@@ -8,11 +8,11 @@
     <ComponentsSwitch
       :checked="privacyStorageCore"
       disabled
-      label="Cookies funkcyjne"
+      label="Funkcjonalności własne"
       name="cookies-core"
     >
       <p>
-        Nie&nbsp;możesz wyłączyć tych plików cookies, ponieważ są&nbsp;one niezbędne&nbsp;by strona działała prawidłowo.
+        Nie&nbsp;możesz wyłączyć tych funkcjonalności, ponieważ są&nbsp;one niezbędne&nbsp;by strona działała prawidłowo.
       </p>
     </ComponentsSwitch>
     <ComponentsSwitch
