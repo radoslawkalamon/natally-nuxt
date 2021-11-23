@@ -8,10 +8,7 @@ export default Vue.extend({
     BlocksAnimationPufferfish: () => import(/* webpackChunkName: "blocks-animation-pufferfish" */'@/components/blocks/AnimationPufferfish/AnimationPufferfish.vue'),
     BlocksListPoemsSuggestions: () => import(/* webpackChunkName: "blocks-list-poems-suggestions" */'@/components/blocks/ListPoemsSuggestions/ListPoemsSuggestions.vue'),
     BlocksListStoriesSuggestions: () => import(/* webpackChunkName: "blocks-list-stories-suggestions" */'@/components/blocks/ListStoriesSuggestions/ListStoriesSuggestions.vue'),
-    ComponentsButtonLink: () => import(/* webpackChunkName: "components-button-link" */'@/components/components/ButtonLink/ButtonLink.vue'),
-    ComponentsTitle: () => import(/* webpackChunkName: "components-title" */'@/components/components/Title/Title.vue'),
-    WrappersText: () => import(/* webpackChunkName: "wrappers-text" */'@/components/wrappers/Text/Text.vue'),
-    WrappersSection: () => import(/* webpackChunkName: "wrappers-section" */'@/components/wrappers/Section/Section.vue')
+    BlocksPageMeta404: () => import(/* webpackChunkName: "blocks-page-meta-404" */'@/components/blocks/PageMeta404/PageMeta404.vue')
   },
   head (): MetaInfo {
     return factoryHeadPageNotfound()
