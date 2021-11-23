@@ -7,7 +7,7 @@ export default Vue.extend({
   extends: PagePoezja314Slug,
   computed: {
     articleComponent () {
-      return hydrateNever(() => import(/* webpackChunkName: "poems-checklista", webpackPrefetch: true */'@/components/poems/Checklista/Checklista.vue'))
+      return hydrateNever(() => import(/* webpackChunkName: "poems-checklista" */'@/components/poems/Checklista/Checklista.vue'))
     }
   }
 })

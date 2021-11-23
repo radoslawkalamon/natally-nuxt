@@ -14,7 +14,7 @@ export default (Vue as VueConstructor<
     BlocksFooter: () => import(/* webpackChunkName: "blocks-footer" */'@/components/blocks/Footer/Footer.vue'),
     BlocksHeader: () => import(/* webpackChunkName: "blocks-header" */'@/components/blocks/Header/Header.vue'),
     BlocksModalPrivacy: () => import(/* webpackChunkName: "blocks-modal-privacy" */'@/components/blocks/ModalPrivacy/ModalPrivacy.vue'),
-    WrappersMain: () => import(/* webpackChunkName: "wrappers-main" */'@/components/wrappers/Main/Main.vue')
+    WrappersMain: () => import(/* webpackChunkName: "wrappers" */'@/components/wrappers/Main/Main.vue')
   },
   mixins: [mixinWindowScrollEmitter]
 })

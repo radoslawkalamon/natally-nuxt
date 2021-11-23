@@ -37,7 +37,7 @@
   margin-bottom: 0;
 }
 
-.modal__title {
+.modal .modal__title {
   margin-bottom: var(--gap-section);
   text-align: center;
 }

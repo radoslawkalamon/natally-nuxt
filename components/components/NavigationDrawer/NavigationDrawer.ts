@@ -10,8 +10,8 @@ type NavigationListItem = {
 export default Vue.extend({
   name: 'ComponentsNavigationDrawer',
   components: {
-    ComponentsLinkText: () => import(/* webpackChunkName: "components-link-text" */'@/components/components/LinkText/LinkText.vue'),
-    WrappersNavigation: () => import(/* webpackChunkName: "wrappers-navigation" */'@/components/wrappers/Navigation/Navigation.vue')
+    ComponentsLinkText: () => import(/* webpackChunkName: "components" */'@/components/components/LinkText/LinkText.vue'),
+    WrappersNavigation: () => import(/* webpackChunkName: "wrappers" */'@/components/wrappers/Navigation/Navigation.vue')
   },
   computed: {
     list (): NavigationListItem[] {

@@ -7,7 +7,7 @@ export default Vue.extend({
   extends: PagePoezja314Slug,
   computed: {
     articleComponent () {
-      return hydrateNever(() => import(/* webpackChunkName: "poems-mieta", webpackPrefetch: true */'@/components/poems/Mieta/Mieta.vue'))
+      return hydrateNever(() => import(/* webpackChunkName: "poems-mieta" */'@/components/poems/Mieta/Mieta.vue'))
     }
   }
 })

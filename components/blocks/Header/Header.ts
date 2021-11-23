@@ -10,8 +10,8 @@ export default (Vue as VueConstructor<
 >).extend({
   name: 'BlocksHeader',
   components: {
-    ComponentsButtonHamburger: () => import(/* webpackChunkName: "components-button-hamburger" */'@/components/components/ButtonHamburger/ButtonHamburger.vue'),
-    ComponentsLogo: () => import(/* webpackChunkName: "components-logo" */'@/components/components/Logo/Logo.vue')
+    ComponentsButtonHamburger: () => import(/* webpackChunkName: "components" */'@/components/components/ButtonHamburger/ButtonHamburger.vue'),
+    ComponentsLogo: () => import(/* webpackChunkName: "components" */'@/components/components/Logo/Logo.vue')
   },
   mixins: [
     mixinWindowScrollValues,

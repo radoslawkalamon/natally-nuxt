@@ -8,9 +8,9 @@ export default Vue.extend({
   name: 'PageAudiobooki',
   components: {
     LazyHydrate,
-    BlocksListAudiobookServices: () => import(/* webpackChunkName: "blocks-list-audiobook-services" */'@/components/blocks/ListAudiobookServices/ListAudiobookServices.vue'),
-    BlocksPageMeta: () => import(/* webpackChunkName: "blocks-page-meta" */'@/components/blocks/PageMeta/PageMeta.vue'),
-    WrappersText: () => import(/* webpackChunkName: "wrappers-text" */'@/components/wrappers/Text/Text.vue')
+    BlocksListAudiobookServices: () => import(/* webpackChunkName: "blocks" */'@/components/blocks/ListAudiobookServices/ListAudiobookServices.vue'),
+    BlocksPageMeta: () => import(/* webpackChunkName: "blocks" */'@/components/blocks/PageMeta/PageMeta.vue'),
+    WrappersText: () => import(/* webpackChunkName: "wrappers" */'@/components/wrappers/Text/Text.vue')
   },
   extends: PageHomepage,
   async asyncData ({ $content }) {

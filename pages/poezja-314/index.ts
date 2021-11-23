@@ -12,9 +12,9 @@ export default (Vue as VueConstructor<
   name: 'PagePoezja314',
   components: {
     LazyHydrate,
-    BlocksListPoemsMain: () => import(/* webpackChunkName: "blocks-list-poems-main" */'@/components/blocks/ListPoemsMain/ListPoemsMain.vue'),
-    BlocksPageMeta: () => import(/* webpackChunkName: "blocks-page-meta" */'@/components/blocks/PageMeta/PageMeta.vue'),
-    WrappersText: () => import(/* webpackChunkName: "wrappers-text" */'@/components/wrappers/Text/Text.vue')
+    BlocksListPoemsMain: () => import(/* webpackChunkName: "blocks" */'@/components/blocks/ListPoemsMain/ListPoemsMain.vue'),
+    BlocksPageMeta: () => import(/* webpackChunkName: "blocks" */'@/components/blocks/PageMeta/PageMeta.vue'),
+    WrappersText: () => import(/* webpackChunkName: "wrappers" */'@/components/wrappers/Text/Text.vue')
   },
   extends: PageHomepage,
   mixins: [mixinPoemFirstTime],

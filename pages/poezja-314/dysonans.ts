@@ -7,7 +7,7 @@ export default Vue.extend({
   extends: PagePoezja314Slug,
   computed: {
     articleComponent () {
-      return hydrateNever(() => import(/* webpackChunkName: "poems-dysonans", webpackPrefetch: true */'@/components/poems/Dysonans/Dysonans.vue'))
+      return hydrateNever(() => import(/* webpackChunkName: "poems-dysonans" */'@/components/poems/Dysonans/Dysonans.vue'))
     }
   }
 })

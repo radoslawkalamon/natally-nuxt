@@ -3,7 +3,7 @@ import Vue from 'vue'
 export default Vue.extend({
   name: 'ComponentsSwitch',
   components: {
-    WrappersText: () => import(/* webpackChunkName: "wrappers-text" */'@/components/wrappers/Text/Text.vue')
+    WrappersText: () => import(/* webpackChunkName: "wrappers" */'@/components/wrappers/Text/Text.vue')
   },
   inheritAttrs: false,
   props: {
