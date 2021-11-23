@@ -1,8 +1,9 @@
 .drawer {
   background-color: var(--color-background-2);
+  border: var(--border-size) solid var(--color-floating-border);
   border-radius: var(--border-radius);
   bottom: var(--padding-flyout);
-  box-shadow: var(--box-shadow-flyout);
+  box-shadow: 0 8px 8px var(--color-floating-shadow);
   box-sizing: border-box;
   display: flex;
   flex-flow: column nowrap;
@@ -31,6 +32,7 @@
 @media screen and (min-width: 1024px) {
   .drawer {
     background-color: transparent;
+    border: 0;
     border-radius: 0;
     box-shadow: none;
     display: flex !important;
