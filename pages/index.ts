@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import LazyHydrate from 'vue-lazy-hydration'
 import type { MetaInfo } from 'vue-meta'
 import { DTOMetaPage, DTOMetaPageConstructor } from '@/utils/dto.meta.page'
 import { factoryHeadPage } from '@/utils/factory.head.page'
@@ -7,9 +8,10 @@ import { FactoryHeadSchemaWebpageType } from '@/utils/factory.head.schema.webpag
 export default Vue.extend({
   name: 'PageIndex',
   components: {
-    BlocksAboutMe: () => import(/* webpackChunkName: "blocks-about-me" */'@/components/blocks/AboutMe/AboutMe.vue'),
-    BlocksListPoemsHomepage: () => import(/* webpackChunkName: "blocks-list-poems-homepage" */'@/components/blocks/ListPoemsHomepage/ListPoemsHomepage.vue'),
-    BlocksListStoriesMain: () => import(/* webpackChunkName: "blocks-list-stories-main" */'@/components/blocks/ListStoriesMain/ListStoriesMain.vue')
+    LazyHydrate,
+    BlocksAboutMe: () => import(/* webpackChunkName: "blocks" */'@/components/blocks/AboutMe/AboutMe.vue'),
+    BlocksListPoemsHomepage: () => import(/* webpackChunkName: "blocks" */'@/components/blocks/ListPoemsHomepage/ListPoemsHomepage.vue'),
+    BlocksListStoriesMain: () => import(/* webpackChunkName: "blocks" */'@/components/blocks/ListStoriesMain/ListStoriesMain.vue')
   },
   async asyncData ({ $content }) {
     const page = await $content('/index')

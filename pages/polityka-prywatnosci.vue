@@ -1,9 +1,14 @@
 <template>
   <article class="page-polityka-prywatnosci">
-    <BlocksPageMeta :title="dtoMetaPage.title" />
-    <WrappersText>
-      <NuxtContent :document="page" />
-    </WrappersText>
+    <LazyHydrate never>
+      <BlocksPageMeta :title="dtoMetaPage.title" />
+    </LazyHydrate>
+
+    <LazyHydrate never>
+      <WrappersText>
+        <NuxtContent :document="page" />
+      </WrappersText>
+    </LazyHydrate>
   </article>
 </template>
 

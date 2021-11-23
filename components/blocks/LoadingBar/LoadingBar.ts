@@ -9,7 +9,7 @@ type BlocksLoadingBarData = {
 export default Vue.extend({
   name: 'BlocksLoadingBar',
   components: {
-    ComponentsProgressBar: () => import(/* webpackChunkName: "components-progress-bar" */'@/components/components/ProgressBar/ProgressBar.vue')
+    ComponentsProgressBar: () => import(/* webpackChunkName: "components" */'@/components/components/ProgressBar/ProgressBar.vue')
   },
   data (): BlocksLoadingBarData {
     return {

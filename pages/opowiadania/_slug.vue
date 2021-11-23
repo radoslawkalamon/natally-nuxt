@@ -1,17 +1,38 @@
 <template>
   <article class="post-stories">
-    <BlocksCoverStory :images="[dtoMetaPostStory.imageCover, dtoMetaPostStory.imageCover2x]" />
-    <BlocksPageMeta
-      :created-at="dtoMetaPostStory.createdAt"
-      :title="dtoMetaPostStory.title"
-    />
-    <BlocksAudiobook :id="dtoMetaPostStory.audiobookId" />
-    <WrappersTextStories>
-      <NuxtContent :document="article" />
-    </WrappersTextStories>
-    <BlocksAdjacentPostLinksStory :slug="article.slug" />
-    <BlocksListStoriesSuggestions :without="[article.path]" />
-    <BlocksListPoemsSuggestions :without="[article.path]" />
+    <LazyHydrate never>
+      <BlocksCoverStory :images="[dtoMetaPostStory.imageCover, dtoMetaPostStory.imageCover2x]" />
+    </LazyHydrate>
+
+    <LazyHydrate never>
+      <BlocksPageMeta
+        :created-at="dtoMetaPostStory.createdAt"
+        :title="dtoMetaPostStory.title"
+      />
+    </LazyHydrate>
+
+    <LazyHydrate when-visible>
+      <BlocksAudiobook :id="dtoMetaPostStory.audiobookId" />
+    </LazyHydrate>
+
+    <LazyHydrate never>
+      <WrappersTextStories>
+        <NuxtContent :document="article" />
+      </WrappersTextStories>
+    </LazyHydrate>
+
+    <LazyHydrate when-visible>
+      <BlocksAdjacentPostLinksStory :slug="article.slug" />
+    </LazyHydrate>
+
+    <LazyHydrate when-visible>
+      <BlocksListStoriesSuggestions :without="[article.path]" />
+    </LazyHydrate>
+
+    <LazyHydrate when-visible>
+      <BlocksListPoemsSuggestions :without="[article.path]" />
+    </LazyHydrate>
+
     <BlocksReadingProgress />
   </article>
 </template>

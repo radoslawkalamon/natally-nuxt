@@ -1,22 +1,45 @@
 <template>
   <article class="post-poezja-314">
-    <BlocksCoverPoem :images="[dtoMetaPostPoem.imageCover]" />
-    <BlocksPageMeta
-      :created-at="dtoMetaPostPoem.createdAt"
-      :title="dtoMetaPostPoem.title"
-    />
-    <WrappersTextPoems>
-      <component
-        :is="articleComponent"
-        v-bind="articleProps"
+    <LazyHydrate never>
+      <BlocksCoverPoem :images="[dtoMetaPostPoem.imageCover]" />
+    </LazyHydrate>
+
+    <LazyHydrate never>
+      <BlocksPageMeta
+        :created-at="dtoMetaPostPoem.createdAt"
+        :title="dtoMetaPostPoem.title"
       />
-    </WrappersTextPoems>
-    <BlocksAdjacentPostLinksPoem :slug="article.slug" />
+    </LazyHydrate>
+
+    <LazyHydrate
+      never
+      :trigger-hydration="isCustomComponent"
+    >
+      <WrappersTextPoems>
+        <component
+          :is="articleComponent"
+          v-bind="articleProps"
+        />
+      </WrappersTextPoems>
+    </LazyHydrate>
+
+    <LazyHydrate when-visible>
+      <BlocksAdjacentPostLinksPoem :slug="article.slug" />
+    </LazyHydrate>
+
     <ClientOnly>
-      <BlocksPoemsFirstTime />
+      <LazyHydrate when-visible>
+        <BlocksPoemsFirstTime />
+      </LazyHydrate>
     </ClientOnly>
-    <BlocksListPoemsSuggestions :without="[article.path]" />
-    <BlocksListStoriesSuggestions :without="[article.path]" />
+
+    <LazyHydrate when-visible>
+      <BlocksListPoemsSuggestions :without="[article.path]" />
+    </LazyHydrate>
+
+    <LazyHydrate when-visible>
+      <BlocksListStoriesSuggestions :without="[article.path]" />
+    </LazyHydrate>
   </article>
 </template>
 

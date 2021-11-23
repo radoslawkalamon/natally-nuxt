@@ -1,12 +1,22 @@
 <template>
   <div class="layout-default">
     <BlocksHeader />
-    <BlocksDrawer />
+
+    <LazyHydrate when-idle>
+      <BlocksDrawer />
+    </LazyHydrate>
+
     <WrappersMain class="layout-default__main">
       <Nuxt class="layout-default__article" />
     </WrappersMain>
-    <BlocksFooter />
-    <BlocksModalPrivacy />
+
+    <LazyHydrate when-visible>
+      <BlocksFooter />
+    </LazyHydrate>
+
+    <LazyHydrate when-visible>
+      <BlocksModalPrivacy />
+    </LazyHydrate>
   </div>
 </template>
 

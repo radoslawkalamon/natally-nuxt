@@ -8,10 +8,10 @@ export default (Vue as VueConstructor<
 >).extend({
   name: 'BlocksPoemsFirstTime',
   components: {
-    ComponentsButtonLink: () => import('@/components/components/ButtonLink/ButtonLink.vue'),
-    ComponentsTitle: () => import('@/components/components/Title/Title.vue'),
-    WrappersSection: () => import('@/components/wrappers/Section/Section.vue'),
-    WrappersText: () => import('@/components/wrappers/Text/Text.vue')
+    ComponentsButtonLink: () => import(/* webpackChunkName: "components" */'@/components/components/ButtonLink/ButtonLink.vue'),
+    ComponentsTitle: () => import(/* webpackChunkName: "components" */'@/components/components/Title/Title.vue'),
+    WrappersSection: () => import(/* webpackChunkName: "wrappers" */'@/components/wrappers/Section/Section.vue'),
+    WrappersText: () => import(/* webpackChunkName: "wrappers" */'@/components/wrappers/Text/Text.vue')
   },
   mixins: [mixinPoemFirstTime],
   computed: {

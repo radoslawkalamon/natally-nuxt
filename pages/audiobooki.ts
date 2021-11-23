@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import LazyHydrate from 'vue-lazy-hydration'
 import PageHomepage from '@/pages/index.vue'
 import { DTOMetaPageConstructor } from '@/utils/dto.meta.page'
 import { FactoryHeadSchemaWebpageType } from '@/utils/factory.head.schema.webpage'
@@ -6,9 +7,10 @@ import { FactoryHeadSchemaWebpageType } from '@/utils/factory.head.schema.webpag
 export default Vue.extend({
   name: 'PageAudiobooki',
   components: {
-    BlocksListAudiobookServices: () => import(/* webpackChunkName: "blocks-list-audiobook-services" */'@/components/blocks/ListAudiobookServices/ListAudiobookServices.vue'),
-    BlocksPageMeta: () => import(/* webpackChunkName: "blocks-page-meta" */'@/components/blocks/PageMeta/PageMeta.vue'),
-    WrappersText: () => import(/* webpackChunkName: "wrappers-text" */'@/components/wrappers/Text/Text.vue')
+    LazyHydrate,
+    BlocksListAudiobookServices: () => import(/* webpackChunkName: "blocks" */'@/components/blocks/ListAudiobookServices/ListAudiobookServices.vue'),
+    BlocksPageMeta: () => import(/* webpackChunkName: "blocks" */'@/components/blocks/PageMeta/PageMeta.vue'),
+    WrappersText: () => import(/* webpackChunkName: "wrappers" */'@/components/wrappers/Text/Text.vue')
   },
   extends: PageHomepage,
   async asyncData ({ $content }) {

@@ -1,8 +1,16 @@
 <template>
   <article class="page-homepage">
-    <BlocksAboutMe />
-    <BlocksListStoriesMain />
-    <BlocksListPoemsHomepage />
+    <LazyHydrate never>
+      <BlocksAboutMe />
+    </LazyHydrate>
+
+    <LazyHydrate when-visible>
+      <BlocksListStoriesMain />
+    </LazyHydrate>
+
+    <LazyHydrate when-visible>
+      <BlocksListPoemsHomepage />
+    </LazyHydrate>
   </article>
 </template>
 

@@ -31,8 +31,8 @@
 
 .card-audiobook-service__logo {
   display: block;
-  max-height: 100%;
-  max-width: 100%;
+  height: 48px;
+  width: 48px;
 }
 
 .card-audiobook-service__cta {

@@ -8,9 +8,9 @@ export default (Vue as VueConstructor<
 >).extend({
   name: 'BlocksModalPrivacy',
   components: {
-    ComponentsButton: () => import(/* webpackChunkName: "components-button" */'@/components/components/Button/Button.vue'),
-    ComponentsSwitch: () => import(/* webpackChunkName: "components-switch" */'@/components/components/Switch/Switch.vue'),
-    WrappersModal: () => import(/* webpackChunkName: "wrappers-modal" */'@/components/wrappers/Modal/Modal.vue')
+    ComponentsButton: () => import(/* webpackChunkName: "components" */'@/components/components/Button/Button.vue'),
+    ComponentsSwitch: () => import(/* webpackChunkName: "components" */'@/components/components/Switch/Switch.vue'),
+    WrappersModal: () => import(/* webpackChunkName: "wrappers" */'@/components/wrappers/Modal/Modal.vue')
   },
   mixins: [mixinPrivacyStorage],
   data () {
