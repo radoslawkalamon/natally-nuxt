@@ -79,6 +79,10 @@ export default {
     trailingSlash: true
   },
   sitemap: {
+    filter ({ routes }) {
+      const pagesToFilter = ['/404/']
+      return routes.filter(route => !pagesToFilter.includes(route.path))
+    },
     hostname: getURL(),
     routes: nuxtSitemapRoutes,
     trailingSlash: true
