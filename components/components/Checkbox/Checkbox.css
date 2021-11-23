@@ -9,24 +9,26 @@
 
 .checkbox__input {
   appearance: none;
+  background-color: transparent;
+  border: var(--border-size) solid var(--color-base);
   border-radius: var(--border-radius);
-  box-shadow: inset 0 0 0 var(--border-size) var(--color-base);
   cursor: pointer;
   height: var(--checkbox-size);
   margin: 0;
   min-width: var(--checkbox-size);
   position: relative;
-  transition: box-shadow var(--time-animation) ease, background-color var(--time-animation) ease;
+  transition: background-color var(--time-animation) ease, border var(--time-animation) ease;
   width: var(--checkbox-size);
 }
 
 .checkbox__input::before {
+  background-color: transparent;
   border-radius: var(--border-size);
   content: '';
   display: block;
   height: var(--border-size);
   left: 50%;
-  opacity: 1;
+  opacity: 0;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
@@ -42,15 +44,14 @@
 
 .checkbox__input:checked {
   background-color: var(--color-accent);
-  box-shadow: inset 0 0 0 var(--border-size) var(--color-border);
+  border-color: var(--color-accent);
 }
 
 .checkbox__input:disabled {
-  box-shadow: inset 0 0 0 var(--border-size) var(--color-betwixt);
+  border-color: var(--color-betwixt);
   cursor: not-allowed;
 }
 
 .checkbox__input:checked:disabled {
   background-color: var(--color-betwixt);
-  box-shadow: inset 0 0 0 var(--border-size) var(--color-border);
 }

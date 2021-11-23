@@ -1,6 +1,7 @@
 .card-poem {
+  border: var(--border-size) solid var(--color-clickable-border);
   border-radius: var(--border-radius);
-  box-shadow: 0 var(--border-size) 0 var(--color-shadow);
+  box-shadow: 0 var(--border-size) 0 var(--color-clickable-shadow);
   box-sizing: border-box;
   color: var(--color-off-white-1);
   display: block;
@@ -20,7 +21,6 @@
 
 .card-poem__cover {
   background-repeat: repeat;
-  box-shadow: inset 0 0 0 var(--border-size) var(--color-border);
   box-sizing: border-box;
   height: 100%;
   left: 0;

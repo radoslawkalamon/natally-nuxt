@@ -1,8 +1,9 @@
 .header {
   align-items: center;
   background-color: var(--color-background-2);
+  border: var(--border-size) solid var(--color-floating-border);
   border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow-flyout);
+  box-shadow: 0 8px 8px var(--color-floating-shadow);
   box-sizing: border-box;
   display: flex;
   gap: var(--gap);
@@ -29,6 +30,7 @@
 @media screen and (min-width: 1024px) {
   .header {
     background-color: transparent;
+    border: 0;
     border-radius: 0;
     box-shadow: none;
   }

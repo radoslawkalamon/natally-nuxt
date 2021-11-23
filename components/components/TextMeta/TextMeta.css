@@ -1,6 +1,6 @@
 .text-meta {
   color: inherit;
-  font-family: 'Tahoma', 'Segoe UI', 'Geneva', 'Verdana', sans-serif;
+  font-family: var(--font-family-sans);
   font-size: var(--font-size-footnotes);
   line-height: var(--line-height-footnotes);
   margin: 0;
