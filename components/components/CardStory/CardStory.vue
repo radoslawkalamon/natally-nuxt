@@ -9,7 +9,7 @@
     >
       <ComponentsCover
         class="card-story__cover"
-        :images="[imageCover, imageCover2x]"
+        :images="imagesCover"
       />
       <div class="card-story__content">
         <footer class="card-story__footer">
