@@ -1,10 +1,12 @@
 import { mount } from '@vue/test-utils'
 import CardStory from './CardStory.vue'
+import { jestMockIntersectionObserver } from '@/devtools/jest.mock.IntersectionObserver'
 import { shallRender } from '@/devtools/jest.shared.spec'
 import { DTOMetaPostStory } from '@/utils/dto.meta.post.story'
 
 jest.mock('@/utils/formatter.date.meta', () => ({ formatterDateMeta: () => 'Mocked date formatter' }))
 jest.mock('@/utils/formatter.time.reading', () => ({ formatterTimeReading: () => 'Mocked time formatter' }))
+jestMockIntersectionObserver()
 
 const defaultOptionsFactory = (metaPostStoryOptions = {}) => ({
   propsData: {

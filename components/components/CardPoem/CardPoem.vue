@@ -9,7 +9,7 @@
     >
       <ComponentsCover
         class="card-poem__cover"
-        :images="[imageCover]"
+        :images="imagesCover"
       />
       <div class="card-poem__content">
         <header class="card-poem__header">

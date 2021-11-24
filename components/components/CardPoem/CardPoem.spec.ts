@@ -1,4 +1,5 @@
 import CardPoem from './CardPoem.vue'
+import { jestMockIntersectionObserver } from '@/devtools/jest.mock.IntersectionObserver'
 import { shallRender } from '@/devtools/jest.shared.spec'
 import { DTOMetaPostPoem } from '@/utils/dto.meta.post.poem'
 
@@ -26,5 +27,9 @@ const defaultOptionsFactory = (metaPostPoemOptions = {}) => ({
 })
 
 describe('Components / Card Poem', () => {
+  beforeAll(() => {
+    jestMockIntersectionObserver()
+  })
+
   shallRender(CardPoem, defaultOptionsFactory())
 })
