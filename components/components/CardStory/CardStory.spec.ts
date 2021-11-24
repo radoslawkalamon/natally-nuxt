@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 import CardStory from './CardStory.vue'
-import { jestMockIntersectionObserver } from '@/devtools/jest.mock.intersectionObserver'
+import { jestMockIntersectionObserver } from '@/devtools/jest.mock.IntersectionObserver'
 import { shallRender } from '@/devtools/jest.shared.spec'
 import { DTOMetaPostStory } from '@/utils/dto.meta.post.story'
 
