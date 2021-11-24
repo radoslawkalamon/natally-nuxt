@@ -1,17 +1,17 @@
 import Vue from 'vue'
 import type { VueConstructor } from 'vue'
-import mixinMatchMediaDesktop from '@/utils/mixin.matchMedia.desktop'
+import mixinCommonMatchMediaDesktop from '@/utils/mixin.common.matchMedia.desktop'
 
 export default (Vue as VueConstructor<
   Vue
-  & InstanceType<typeof mixinMatchMediaDesktop>
+  & InstanceType<typeof mixinCommonMatchMediaDesktop>
 >).extend({
   name: 'BlocksDrawer',
   components: {
     ComponentsNavigationDrawer: () => import(/* webpackChunkName: "components" */'@/components/components/NavigationDrawer/NavigationDrawer.vue'),
     ComponentsSocialMedia: () => import(/* webpackChunkName: "components" */'@/components/components/SocialMedia/SocialMedia.vue')
   },
-  mixins: [mixinMatchMediaDesktop],
+  mixins: [mixinCommonMatchMediaDesktop],
   data () {
     return {
       shallOpenDrawer: false

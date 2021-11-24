@@ -1,7 +1,7 @@
 import merge from 'lodash/merge'
 import Header from './Header.vue'
 import { shallDestroy, shallRender } from '@/devtools/jest.shared.spec'
-import { jestPolyfillMatchMedia } from '@/devtools/jest.mock.matchMedia'
+import { JestMockMatchMedia } from '@/devtools/jest.mock.matchMedia'
 
 const defaultOptionsFactory = (options?: object) => merge({
   stubs: [
@@ -13,7 +13,7 @@ const defaultOptionsFactory = (options?: object) => merge({
 
 describe('Blocks / Header', () => {
   beforeAll(() => {
-    jestPolyfillMatchMedia()
+    JestMockMatchMedia()
   })
 
   shallRender(Header, defaultOptionsFactory())

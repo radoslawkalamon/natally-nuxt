@@ -1,7 +1,7 @@
 import merge from 'lodash/merge'
 import { mount } from '@vue/test-utils'
 import AdjacentPostLinksPoem from './AdjacentPostLinksPoem.vue'
-import { MockNuxtContent } from '@/devtools/jest.mock.nuxt.content'
+import { JestMockNuxtContent } from '@/devtools/jest.mock.nuxt.content'
 
 jest.mock('@/utils/dto.meta.post.poem', () => ({
   DTOMetaPostPoem: class MockEmptyClass {
@@ -17,7 +17,7 @@ jest.mock('@/utils/dto.meta.post.poem', () => ({
 
 const defaultOptionsFactory = (options?: object) => merge({
   mocks: {
-    $content: MockNuxtContent(Array(2).fill({}))
+    $content: JestMockNuxtContent(Array(2).fill({}))
   },
   propsData: {
     slug: 'test-slug'

@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import type { VueConstructor } from 'vue'
 import { mount, createWrapper } from '@vue/test-utils'
-import mixinWindowScrollEmitter from '@/utils/mixin.windowScroll.emitter'
+import mixinCommonWindowScrollEmitter from '@/utils/mixin.common.windowScroll.emitter'
 
 const Component = (Vue as VueConstructor<
   Vue
-  & InstanceType<typeof mixinWindowScrollEmitter>
+  & InstanceType<typeof mixinCommonWindowScrollEmitter>
 >).extend({
-  mixins: [mixinWindowScrollEmitter],
+  mixins: [mixinCommonWindowScrollEmitter],
   template: '<div />'
 })
 

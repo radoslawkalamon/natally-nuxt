@@ -1,7 +1,7 @@
 import merge from 'lodash/merge'
 import { mount } from '@vue/test-utils'
 import ListPoems from './ListPoems.vue'
-import { MockNuxtContent } from '@/devtools/jest.mock.nuxt.content'
+import { JestMockNuxtContent } from '@/devtools/jest.mock.nuxt.content'
 
 jest.mock('@/utils/dto.meta.post.poem', () => ({
   DTOMetaPostPoem: class MockEmptyClass {}
@@ -9,7 +9,7 @@ jest.mock('@/utils/dto.meta.post.poem', () => ({
 
 const defaultOptionsFactory = (options?: object) => merge({
   mocks: {
-    $content: MockNuxtContent(Array(10).fill({}))
+    $content: JestMockNuxtContent(Array(10).fill({}))
   }
 }, options)
 
@@ -41,7 +41,7 @@ describe('Wrappers / List Poems', () => {
     test('shall { metaPostPoems } be Array fetch output Object', async (): Promise<void> => {
       const wrapper = mount(ListPoems, defaultOptionsFactory({
         mocks: {
-          $content: MockNuxtContent({})
+          $content: JestMockNuxtContent({})
         }
       }))
       await (ListPoems as any).options.fetch.call(wrapper.vm)
@@ -49,7 +49,7 @@ describe('Wrappers / List Poems', () => {
     })
 
     test('shall $content.limit() be called with 3 when limit = 3', async (): Promise<void> => {
-      const mockNuxtContent = MockNuxtContent(Array(10).fill({}))
+      const mockNuxtContent = JestMockNuxtContent(Array(10).fill({}))
       const wrapper = mount(ListPoems, defaultOptionsFactory({
         propsData: {
           limit: 3
@@ -67,7 +67,7 @@ describe('Wrappers / List Poems', () => {
     test('shall { metaPostPoems } be Array fetch output Object', async (): Promise<void> => {
       const wrapper = mount(ListPoems, defaultOptionsFactory({
         mocks: {
-          $content: MockNuxtContent({})
+          $content: JestMockNuxtContent({})
         },
         propsData: {
           randomize: true

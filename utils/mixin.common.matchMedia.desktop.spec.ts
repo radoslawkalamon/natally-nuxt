@@ -1,20 +1,20 @@
 import Vue from 'vue'
 import type { VueConstructor } from 'vue'
 import { mount } from '@vue/test-utils'
-import { jestPolyfillMatchMedia } from '@/devtools/jest.mock.matchMedia'
-import mixinMatchMediaDesktop from '@/utils/mixin.matchMedia.desktop'
+import { JestMockMatchMedia } from '@/devtools/jest.mock.matchMedia'
+import mixinCommonMatchMediaDesktop from '@/utils/mixin.common.matchMedia.desktop'
 
 const Component = (Vue as VueConstructor<
   Vue
-  & InstanceType<typeof mixinMatchMediaDesktop>
+  & InstanceType<typeof mixinCommonMatchMediaDesktop>
 >).extend({
-  mixins: [mixinMatchMediaDesktop],
+  mixins: [mixinCommonMatchMediaDesktop],
   template: '<div />'
 })
 
 describe('Utils / Mixins / MatchMedia / Desktop', () => {
   beforeAll(() => {
-    jestPolyfillMatchMedia()
+    JestMockMatchMedia()
   })
 
   test('shall mount & destroy', () => {

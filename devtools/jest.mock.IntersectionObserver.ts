@@ -1,4 +1,4 @@
-export const jestMockIntersectionObserver = () => {
+export const JestMockIntersectionObserver = () => {
   Object.defineProperty(window, 'IntersectionObserver', {
     writable: true,
     value: jest.fn().mockImplementation(() => ({

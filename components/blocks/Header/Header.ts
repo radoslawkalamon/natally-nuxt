@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import type { VueConstructor } from 'vue'
-import mixinWindowScrollValues from '@/utils/mixin.windowScroll.values'
-import mixinMatchMediaDesktop from '@/utils/mixin.matchMedia.desktop'
+import mixinCommonWindowScrollValues from '@/utils/mixin.common.windowScroll.values'
+import mixinCommonMatchMediaDesktop from '@/utils/mixin.common.matchMedia.desktop'
 
 export default (Vue as VueConstructor<
   Vue
-  & InstanceType<typeof mixinWindowScrollValues>
-  & InstanceType<typeof mixinMatchMediaDesktop>
+  & InstanceType<typeof mixinCommonWindowScrollValues>
+  & InstanceType<typeof mixinCommonMatchMediaDesktop>
 >).extend({
   name: 'BlocksHeader',
   components: {
@@ -14,8 +14,8 @@ export default (Vue as VueConstructor<
     ComponentsLogo: () => import(/* webpackChunkName: "components" */'@/components/components/Logo/Logo.vue')
   },
   mixins: [
-    mixinWindowScrollValues,
-    mixinMatchMediaDesktop
+    mixinCommonWindowScrollValues,
+    mixinCommonMatchMediaDesktop
   ],
   data () {
     return {

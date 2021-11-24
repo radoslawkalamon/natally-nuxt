@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import type { VueConstructor } from 'vue'
 import throttle from 'lodash/throttle'
-import mixinWindowScrollValues from '@/utils/mixin.windowScroll.values'
+import mixinCommonWindowScrollValues from '@/utils/mixin.common.windowScroll.values'
 
 type BlocksReadingProgressData = {
   textWrapper: Element | null;
@@ -10,13 +10,13 @@ type BlocksReadingProgressData = {
 
 export default (Vue as VueConstructor<
   Vue
-  & InstanceType<typeof mixinWindowScrollValues>
+  & InstanceType<typeof mixinCommonWindowScrollValues>
 >).extend({
   name: 'BlocksReadingProgress',
   components: {
     ComponentsProgressBar: () => import(/* webpackChunkName: "components" */'@/components/components/ProgressBar/ProgressBar.vue')
   },
-  mixins: [mixinWindowScrollValues],
+  mixins: [mixinCommonWindowScrollValues],
   data (): BlocksReadingProgressData {
     return {
       textWrapper: null,

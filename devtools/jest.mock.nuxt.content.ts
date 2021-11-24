@@ -1,4 +1,4 @@
-export const MockNuxtContent = (fetchOutput: unknown) => {
+export const JestMockNuxtContent = (fetchOutput: unknown) => {
   const QueryBuilder: Record<string, jest.Mock> = {
     only: jest.fn(() => QueryBuilder),
     without: jest.fn(() => QueryBuilder),

@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import type { VueConstructor } from 'vue'
 import LazyHydrate from 'vue-lazy-hydration'
-import mixinWindowScrollEmitter from '@/utils/mixin.windowScroll.emitter'
+import mixinCommonWindowScrollEmitter from '@/utils/mixin.common.windowScroll.emitter'
 
 export default (Vue as VueConstructor<
   Vue
-  & InstanceType<typeof mixinWindowScrollEmitter>
+  & InstanceType<typeof mixinCommonWindowScrollEmitter>
 >).extend({
   name: 'LayoutsDefault',
   components: {
@@ -16,5 +16,5 @@ export default (Vue as VueConstructor<
     BlocksModalPrivacy: () => import(/* webpackChunkName: "blocks-modal-privacy" */'@/components/blocks/ModalPrivacy/ModalPrivacy.vue'),
     WrappersMain: () => import(/* webpackChunkName: "wrappers" */'@/components/wrappers/Main/Main.vue')
   },
-  mixins: [mixinWindowScrollEmitter]
+  mixins: [mixinCommonWindowScrollEmitter]
 })
