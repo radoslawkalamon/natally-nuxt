@@ -5,10 +5,16 @@ export const componentBootstrapTemplateSpec = (type: string, name: string): stri
   const title = `${formatterCapitalize(type)} / ${formatterSpacelize(name)}`
 
   return `import ${name} from './${name}.vue'
-import { shallRender } from '@/devtools/jest.shared.spec'
-
+import { shallPassIntegrationSanityTest, shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
+  
 describe('${title}', () => {
-  shallRender(${name})
+  describe('Unit', () => {
+    shallPassUnitSanityTest({ component: ${name} })
+  })
+  
+  describe('Integration', () => {
+    shallPassIntegrationSanityTest({ component: ${name} })
+  })
 })
 `
 }
