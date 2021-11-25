@@ -31,6 +31,12 @@
   margin: var(--gap) 0;
 }
 
+.text >>> p {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
 .text >>> ul,
 .text >>> ol {
   padding-left: calc(2 * var(--gap));
