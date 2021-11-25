@@ -3,27 +3,24 @@
     class="checklista"
     data-test="poems-checklista"
   >
-    <ComponentsCheckbox
-      checked="checked"
+    <label
+      v-for="[label, name, checked] in checkboxes"
+      :key="name"
       class="checklista__checkbox"
-      label="Byle by być"
-      name="byle-by-byc"
-    />
-    <ComponentsCheckbox
-      class="checklista__checkbox"
-      label="Byle by zaliczyć"
-      name="byle-by-zaliczyc"
-    />
-    <ComponentsCheckbox
-      class="checklista__checkbox"
-      label="Punkt po punkcie"
-      name="punkt-po-punkcie"
-    />
-    <ComponentsCheckbox
-      class="checklista__checkbox"
-      label="Życie"
-      name="zycie"
-    />
+      :for="name"
+    >
+      <input
+        :id="name"
+        class="checklista__input"
+        type="checkbox"
+        :name="name"
+        :checked="checked"
+      >
+      <span
+        class="checklista__label"
+        v-text="label"
+      />
+    </label>
     <p class="checklista__last-line">
       <span class="checklista__gradient">Życie w niebycie</span>
     </p>

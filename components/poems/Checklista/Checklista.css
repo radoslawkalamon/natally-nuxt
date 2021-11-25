@@ -15,3 +15,15 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.checklista__checkbox {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+}
+
+.checklista__input {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
