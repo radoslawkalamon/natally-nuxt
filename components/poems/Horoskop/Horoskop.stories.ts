@@ -7,13 +7,7 @@ const meta: Meta = {
 }
 export default meta
 
-const Template: Story = (_args, { argTypes }) => ({
+export const Default: Story = () => ({
   components: { Horoskop },
-  props: Object.keys(argTypes),
-  template: '<Horoskop v-bind="$props" />'
+  template: '<Horoskop />'
 })
-
-export const Default: Story = Template.bind({})
-Default.args = {
-  prop: 'Story prop'
-}
