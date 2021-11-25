@@ -11,15 +11,10 @@ module.exports = {
   plugins: [],
   rules: {
     'vue/max-attributes-per-line': ['error', {
-      singleline: {
-        max: 1,
-        allowFirstLine: true
-      },
-      multiline: {
-        max: 1,
-        allowFirstLine: false
-      }
+      singleline: 1,
+      multiline: 1
     }],
-    'vue/order-in-components': 'error'
+    'vue/order-in-components': 'error',
+    'vue/multi-word-component-names': 'off'
   }
 }
