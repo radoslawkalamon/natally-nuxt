@@ -3,8 +3,8 @@ import Vue from 'vue'
 export default Vue.extend({
   name: 'BlocksFooter',
   components: {
-    ComponentsLogoCrustyBread: () => import(/* webpackChunkName: "components" */'@/components/components/LogoCrustyBread/LogoCrustyBread.vue'),
-    ComponentsNavigationFooter: () => import(/* webpackChunkName: "components" */'@/components/components/NavigationFooter/NavigationFooter.vue'),
+    ComponentsLogoCrustyBread: () => import(/* webpackChunkName: "components-logo-crusty-bread" */'@/components/components/LogoCrustyBread/LogoCrustyBread.vue'),
+    ComponentsNavigationFooter: () => import(/* webpackChunkName: "components-navigation-footer" */'@/components/components/NavigationFooter/NavigationFooter.vue'),
     WrappersText: () => import(/* webpackChunkName: "wrappers" */'@/components/wrappers/Text/Text.vue')
   },
   computed: {

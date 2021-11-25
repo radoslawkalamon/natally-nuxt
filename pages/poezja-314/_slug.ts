@@ -13,7 +13,7 @@ export default Vue.extend({
     BlocksListPoemsSuggestions: () => import(/* webpackChunkName: "blocks-list-poems-suggestions" */'@/components/blocks/ListPoemsSuggestions/ListPoemsSuggestions.vue'),
     BlocksListStoriesSuggestions: () => import(/* webpackChunkName: "blocks-list-stories-suggestions" */'@/components/blocks/ListStoriesSuggestions/ListStoriesSuggestions.vue'),
     BlocksPageMeta: () => import(/* webpackChunkName: "blocks" */'@/components/blocks/PageMeta/PageMeta.vue'),
-    BlocksPoemsFirstTime: () => import(/* webpackChunkName: "blocks" */'@/components/blocks/PoemsFirstTime/PoemsFirstTime.vue'),
+    BlocksPoemsFirstTime: () => import(/* webpackChunkName: "blocks-poems-first-time" */'@/components/blocks/PoemsFirstTime/PoemsFirstTime.vue'),
     WrappersTextPoems: () => import(/* webpackChunkName: "wrappers" */'@/components/wrappers/TextPoems/TextPoems.vue')
   },
   async asyncData ({ $content, params, error, route }) {

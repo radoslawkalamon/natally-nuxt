@@ -10,7 +10,7 @@ export default (Vue as VueConstructor<
 >).extend({
   name: 'ComponentsCardPoem',
   components: {
-    ComponentsCover: () => import(/* webpackChunkName: "components" */'@/components/components/Cover/Cover.vue'),
+    ComponentsCover: () => import(/* webpackChunkName: "components-cover" */'@/components/components/Cover/Cover.vue'),
     ComponentsTextMeta: () => import(/* webpackChunkName: "components" */'@/components/components/TextMeta/TextMeta.vue'),
     ComponentsTitle: () => import(/* webpackChunkName: "components" */'@/components/components/Title/Title.vue')
   },

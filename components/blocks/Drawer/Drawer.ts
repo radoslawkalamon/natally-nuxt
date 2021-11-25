@@ -8,8 +8,8 @@ export default (Vue as VueConstructor<
 >).extend({
   name: 'BlocksDrawer',
   components: {
-    ComponentsNavigationDrawer: () => import(/* webpackChunkName: "components" */'@/components/components/NavigationDrawer/NavigationDrawer.vue'),
-    ComponentsSocialMedia: () => import(/* webpackChunkName: "components" */'@/components/components/SocialMedia/SocialMedia.vue')
+    ComponentsNavigationDrawer: () => import(/* webpackChunkName: "components-navigation-drawer" */'@/components/components/NavigationDrawer/NavigationDrawer.vue'),
+    ComponentsSocialMedia: () => import(/* webpackChunkName: "components-social-media" */'@/components/components/SocialMedia/SocialMedia.vue')
   },
   mixins: [mixinCommonMatchMediaDesktop],
   data () {
