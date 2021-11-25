@@ -65,8 +65,6 @@
       </div>
     </transition>
   </div>
-  </transition>
-  </div>
 </template>
 
 <script src="./Horoskop.ts" lang="ts"></script>
