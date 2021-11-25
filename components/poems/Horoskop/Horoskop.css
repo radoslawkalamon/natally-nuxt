@@ -1,0 +1,92 @@
+.horoskop {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 280px;
+  min-height: 420px;
+}
+
+.horoskop h1::after,
+.horoskop h2::after,
+.horoskop h3::after {
+  display: none;
+}
+
+.horoskop__slide {
+  text-align: center;
+}
+
+.horoskop__zodiacs-list {
+  display: grid;
+  gap: 4px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.horoskop__button {
+  appearance: none;
+  background-color: var(--color-background-2);
+  border: var(--border-size) solid var(--color-clickable-border);
+  border-radius: var(--border-radius);
+  box-shadow: 0 var(--border-size) 0 var(--color-clickable-shadow);
+  color: var(--color-base);
+  cursor: pointer;
+  font-family: var(--font-family-sans);
+  font-size: 0.8em;
+  height: 64px;
+  margin: 0;
+  padding: 0;
+  transition: opacity 0.5s linear;
+}
+
+.horoskop__button--small {
+  height: auto;
+  padding: 0.5em 1em;
+}
+
+.horoskop__button:hover {
+  text-decoration: underline;
+}
+
+.horoskop__loading-bar-wrapper {
+  height: 32px;
+  line-height: 32px;
+  overflow: hidden;
+  position: relative;
+}
+
+.horoskop__loading-bar {
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-name: horoskop-loading-bar;
+  animation-timing-function: linear;
+  width: 100%;
+}
+
+.horoskop__loading-bar-item {
+  display: block;
+}
+
+.horoskop__horoscope {
+  transition: opacity 0.5s linear;
+}
+
+.poem-horoskop-enter-active,
+.poem-horoskop-leave-active {
+  transition: opacity 0.5s;
+}
+
+.poem-horoskop-enter,
+.poem-horoskop-leave-to {
+  opacity: 0;
+}
+
+@keyframes horoskop-loading-bar {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+}
