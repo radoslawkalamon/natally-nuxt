@@ -60,6 +60,13 @@ export default Vue.extend({
         opacity: this.getRandomNumberBetween(0.6, 1),
         animationDuration: `${this.getRandomNumberBetween(1, animationDuration / 1000)}s`
       }))
+    },
+    labels () {
+      return {
+        productTitle: 'Miłość',
+        productPrice: '0,00 zł',
+        productBuyButton: 'Sprawdź!'
+      }
     }
   },
   created (): void {

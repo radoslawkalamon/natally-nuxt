@@ -30,8 +30,14 @@
             title="Produkt w promocji!"
           >
         </div>
-        <h2 class="lgbt-product-card__title">Miłość</h2>
-        <span class="lgbt-product-card__price">0,00 zł</span>
+        <h2
+          class="lgbt-product-card__title"
+          v-text="labels.productTitle"
+        />
+        <span
+          class="lgbt-product-card__price"
+          v-text="labels.productPrice"
+        />
         <button
           aria-label="Dodaj do koszyka"
           class="lgbt-product-card__add-to-cart"
@@ -42,7 +48,7 @@
             class="lgbt-product-card__add-to-cart-icon"
             src="./images/magnifier.svg"
           >
-          Sprawdź!
+          <span v-text="labels.productBuyButton" />
         </button>
       </div>
       <div
