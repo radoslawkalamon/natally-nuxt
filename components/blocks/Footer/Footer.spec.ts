@@ -1,14 +1,21 @@
-import Footer from './Footer.vue'
-import { shallRender } from '@/devtools/jest.shared.spec'
+import Footer from '@/components/blocks/Footer/Footer.vue'
+import { shallPassIntegrationSanityTest, shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
 
 describe('Blocks / Footer', () => {
-  const defaultOptions = {
-    stubs: [
-      'ComponentsNavigationFooter',
-      'ComponentsLogoCrustyBread',
-      'WrappersText'
-    ]
-  }
+  describe('Unit', () => {
+    shallPassUnitSanityTest({
+      component: Footer,
+      options: {
+        stubs: [
+          'ComponentsLogoCrustyBread',
+          'ComponentsNavigationFooter',
+          'WrappersText'
+        ]
+      }
+    })
+  })
 
-  shallRender(Footer, defaultOptions)
+  describe('Integration', () => {
+    shallPassIntegrationSanityTest({ component: Footer })
+  })
 })
