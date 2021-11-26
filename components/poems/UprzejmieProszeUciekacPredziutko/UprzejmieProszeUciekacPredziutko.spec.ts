@@ -1,6 +1,8 @@
-import UprzejmieProszeUciekacPredziutko from './UprzejmieProszeUciekacPredziutko.vue'
-import { shallRender } from '@/devtools/jest.shared.spec'
+import UprzejmieProszeUciekacPredziutko from '@/components/poems/UprzejmieProszeUciekacPredziutko/UprzejmieProszeUciekacPredziutko.vue'
+import { shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
 
 describe('Poems / Uprzejmie Proszę Uciekać Prędziutko', () => {
-  shallRender(UprzejmieProszeUciekacPredziutko)
+  describe('Unit', () => {
+    shallPassUnitSanityTest({ component: UprzejmieProszeUciekacPredziutko })
+  })
 })
