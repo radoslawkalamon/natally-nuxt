@@ -71,4 +71,4 @@
 </template>
 
 <script src="./PromocjaLGBT.ts" lang="ts"></script>
-<style src="./PromocjaLGBT.css"></style>
+<style src="./PromocjaLGBT.css" scoped></style>

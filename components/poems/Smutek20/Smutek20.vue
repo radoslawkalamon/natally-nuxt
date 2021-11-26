@@ -18,4 +18,4 @@
 </template>
 
 <script src="./Smutek20.ts" lang="ts"></script>
-<style src="./Smutek20.css"></style>
+<style src="./Smutek20.css" scoped></style>

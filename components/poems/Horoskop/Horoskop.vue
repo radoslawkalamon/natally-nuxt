@@ -68,4 +68,4 @@
 </template>
 
 <script src="./Horoskop.ts" lang="ts"></script>
-<style src="./Horoskop.css"></style>
+<style src="./Horoskop.css" scoped></style>
