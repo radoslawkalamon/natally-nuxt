@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components / Progress Bar Integration shall pass integration sanity test 1`] = `
+exports[`Components / Navigation Footer Integration shall pass integration sanity test 1`] = `
 "<nav class=\\"navigation-footer\\">
   <ul class=\\"navigation\\">
     <li class=\\"navigation__item\\">
@@ -11,7 +11,7 @@ exports[`Components / Progress Bar Integration shall pass integration sanity tes
 </nav>"
 `;
 
-exports[`Components / Progress Bar Unit shall pass unit sanity test 1`] = `
+exports[`Components / Navigation Footer Unit shall pass unit sanity test 1`] = `
 "<nav class=\\"navigation-footer\\">
   <wrappersnavigation-stub>
     <componentslinktext-stub label=\\"Polityka prywatności\\" to=\\"/polityka-prywatnosci/\\"></componentslinktext-stub>
