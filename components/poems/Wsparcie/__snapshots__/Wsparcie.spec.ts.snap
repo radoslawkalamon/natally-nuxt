@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Poems / Wsparcie Unit shall pass unit sanity test 1`] = `
-"<div data-test=\\"poems-wsparcie\\" class=\\"wsparcie\\">
+"<div class=\\"wsparcie\\">
   <p><img alt=\\"Zielona błyskawica\\" src=\\"./images/zielona-blyskawica.svg\\" class=\\"wsparcie__image\\"></p>
   <p>
     Wsparcie to coś

@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="list-poems"
-    data-test="wrappers-list-poems"
-  >
+  <div class="list-poems">
     <slot v-bind="{ metaPostPoems }" />
   </div>
 </template>

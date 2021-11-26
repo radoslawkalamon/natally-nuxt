@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Poems / Między Wierszami Unit shall pass unit sanity test 1`] = `
-"<table data-test=\\"poems-miedzy-wierszami\\" class=\\"miedzy-wierszami\\">
+"<table class=\\"miedzy-wierszami\\">
   <tr>
     <th>Rozmiar</th>
     <th>Klatka</th>

@@ -1,44 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Blocks / List Audiobook Services Integration shall pass integration sanity test 1`] = `
-"<ul data-test=\\"blocks-list-audiobook-services\\" class=\\"list-audiobook-services\\">
-  <li class=\\"list-audiobook-services__item\\"><a data-test=\\"components-card-audiobook-service\\" href=\\"https://169cm.pl/audiobooki/itunes\\" rel=\\"noopener noreferrer\\" target=\\"_blank\\" class=\\"card-audiobook-service\\">
+"<ul class=\\"list-audiobook-services\\">
+  <li class=\\"list-audiobook-services__item\\"><a href=\\"https://169cm.pl/audiobooki/itunes\\" rel=\\"noopener noreferrer\\" target=\\"_blank\\" class=\\"card-audiobook-service\\">
       <div class=\\"card-audiobook-service__logo-wrapper\\"><img alt=\\"Ikona serwisu Apple Podcasts\\" data-test=\\"components-card-audiobook-service-logo\\" src=\\"apple-podcasts.svg\\" class=\\"card-audiobook-service__logo\\"></div>
       <div class=\\"card-audiobook-service__meta-wrapper\\"><span class=\\"card-audiobook-service__cta\\">
       Posłuchaj w
     </span> <span class=\\"card-audiobook-service__name\\">Apple Podcasts</span></div>
     </a></li>
-  <li class=\\"list-audiobook-services__item\\"><a data-test=\\"components-card-audiobook-service\\" href=\\"https://169cm.pl/audiobooki/castbox\\" rel=\\"noopener noreferrer\\" target=\\"_blank\\" class=\\"card-audiobook-service\\">
+  <li class=\\"list-audiobook-services__item\\"><a href=\\"https://169cm.pl/audiobooki/castbox\\" rel=\\"noopener noreferrer\\" target=\\"_blank\\" class=\\"card-audiobook-service\\">
       <div class=\\"card-audiobook-service__logo-wrapper\\"><img alt=\\"Ikona serwisu Castbox\\" data-test=\\"components-card-audiobook-service-logo\\" src=\\"castbox.svg\\" class=\\"card-audiobook-service__logo\\"></div>
       <div class=\\"card-audiobook-service__meta-wrapper\\"><span class=\\"card-audiobook-service__cta\\">
       Posłuchaj w
     </span> <span class=\\"card-audiobook-service__name\\">Castbox</span></div>
     </a></li>
-  <li class=\\"list-audiobook-services__item\\"><a data-test=\\"components-card-audiobook-service\\" href=\\"https://169cm.pl/audiobooki/google-podcasts\\" rel=\\"noopener noreferrer\\" target=\\"_blank\\" class=\\"card-audiobook-service\\">
+  <li class=\\"list-audiobook-services__item\\"><a href=\\"https://169cm.pl/audiobooki/google-podcasts\\" rel=\\"noopener noreferrer\\" target=\\"_blank\\" class=\\"card-audiobook-service\\">
       <div class=\\"card-audiobook-service__logo-wrapper\\"><img alt=\\"Ikona serwisu Google Podcasts\\" data-test=\\"components-card-audiobook-service-logo\\" src=\\"google-podcasts.svg\\" class=\\"card-audiobook-service__logo\\"></div>
       <div class=\\"card-audiobook-service__meta-wrapper\\"><span class=\\"card-audiobook-service__cta\\">
       Posłuchaj w
     </span> <span class=\\"card-audiobook-service__name\\">Google Podcasts</span></div>
     </a></li>
-  <li class=\\"list-audiobook-services__item\\"><a data-test=\\"components-card-audiobook-service\\" href=\\"https://169cm.pl/audiobooki/pocket-casts\\" rel=\\"noopener noreferrer\\" target=\\"_blank\\" class=\\"card-audiobook-service\\">
+  <li class=\\"list-audiobook-services__item\\"><a href=\\"https://169cm.pl/audiobooki/pocket-casts\\" rel=\\"noopener noreferrer\\" target=\\"_blank\\" class=\\"card-audiobook-service\\">
       <div class=\\"card-audiobook-service__logo-wrapper\\"><img alt=\\"Ikona serwisu Pocket Casts\\" data-test=\\"components-card-audiobook-service-logo\\" src=\\"pocket-casts.svg\\" class=\\"card-audiobook-service__logo\\"></div>
       <div class=\\"card-audiobook-service__meta-wrapper\\"><span class=\\"card-audiobook-service__cta\\">
       Posłuchaj w
     </span> <span class=\\"card-audiobook-service__name\\">Pocket Casts</span></div>
     </a></li>
-  <li class=\\"list-audiobook-services__item\\"><a data-test=\\"components-card-audiobook-service\\" href=\\"https://169cm.pl/audiobooki/soundcloud\\" rel=\\"noopener noreferrer\\" target=\\"_blank\\" class=\\"card-audiobook-service\\">
+  <li class=\\"list-audiobook-services__item\\"><a href=\\"https://169cm.pl/audiobooki/soundcloud\\" rel=\\"noopener noreferrer\\" target=\\"_blank\\" class=\\"card-audiobook-service\\">
       <div class=\\"card-audiobook-service__logo-wrapper\\"><img alt=\\"Ikona serwisu Soundcloud\\" data-test=\\"components-card-audiobook-service-logo\\" src=\\"soundcloud.svg\\" class=\\"card-audiobook-service__logo\\"></div>
       <div class=\\"card-audiobook-service__meta-wrapper\\"><span class=\\"card-audiobook-service__cta\\">
       Posłuchaj w
     </span> <span class=\\"card-audiobook-service__name\\">Soundcloud</span></div>
     </a></li>
-  <li class=\\"list-audiobook-services__item\\"><a data-test=\\"components-card-audiobook-service\\" href=\\"https://169cm.pl/audiobooki/spotify\\" rel=\\"noopener noreferrer\\" target=\\"_blank\\" class=\\"card-audiobook-service\\">
+  <li class=\\"list-audiobook-services__item\\"><a href=\\"https://169cm.pl/audiobooki/spotify\\" rel=\\"noopener noreferrer\\" target=\\"_blank\\" class=\\"card-audiobook-service\\">
       <div class=\\"card-audiobook-service__logo-wrapper\\"><img alt=\\"Ikona serwisu Spotify\\" data-test=\\"components-card-audiobook-service-logo\\" src=\\"spotify.svg\\" class=\\"card-audiobook-service__logo\\"></div>
       <div class=\\"card-audiobook-service__meta-wrapper\\"><span class=\\"card-audiobook-service__cta\\">
       Posłuchaj w
     </span> <span class=\\"card-audiobook-service__name\\">Spotify</span></div>
     </a></li>
-  <li class=\\"list-audiobook-services__item\\"><a data-test=\\"components-card-audiobook-service\\" href=\\"https://169cm.pl/audiobooki/youtube\\" rel=\\"noopener noreferrer\\" target=\\"_blank\\" class=\\"card-audiobook-service\\">
+  <li class=\\"list-audiobook-services__item\\"><a href=\\"https://169cm.pl/audiobooki/youtube\\" rel=\\"noopener noreferrer\\" target=\\"_blank\\" class=\\"card-audiobook-service\\">
       <div class=\\"card-audiobook-service__logo-wrapper\\"><img alt=\\"Ikona serwisu YouTube\\" data-test=\\"components-card-audiobook-service-logo\\" src=\\"youtube.svg\\" class=\\"card-audiobook-service__logo\\"></div>
       <div class=\\"card-audiobook-service__meta-wrapper\\"><span class=\\"card-audiobook-service__cta\\">
       Posłuchaj w
@@ -48,7 +48,7 @@ exports[`Blocks / List Audiobook Services Integration shall pass integration san
 `;
 
 exports[`Blocks / List Audiobook Services Unit shall pass unit sanity test 1`] = `
-"<ul data-test=\\"blocks-list-audiobook-services\\" class=\\"list-audiobook-services\\">
+"<ul class=\\"list-audiobook-services\\">
   <li class=\\"list-audiobook-services__item\\">
     <componentscardaudiobookservice-stub icon=\\"apple-podcasts.svg\\" name=\\"Apple Podcasts\\" url=\\"https://169cm.pl/audiobooki/itunes\\"></componentscardaudiobookservice-stub>
   </li>

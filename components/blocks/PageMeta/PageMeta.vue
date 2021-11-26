@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="page-meta"
-    data-test="blocks-page-meta"
-  >
+  <div class="page-meta">
     <header>
       <ComponentsTitle :title="title" />
     </header>

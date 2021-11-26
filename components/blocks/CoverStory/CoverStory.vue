@@ -1,7 +1,6 @@
 <template>
   <ComponentsCover
     class="cover-story"
-    data-test="blocks-cover-story"
     :images="images"
   />
 </template>

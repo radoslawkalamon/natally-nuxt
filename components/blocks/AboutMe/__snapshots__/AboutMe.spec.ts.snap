@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Blocks / About Me Integration shall pass integration sanity test 1`] = `
-"<div data-test=\\"blocks-about-me\\" class=\\"about-me\\"><img alt=\\"Zdjęcie przedstawia Radosława Kalamona\\" height=\\"120\\" src=\\"./images/radoslaw-kalamon.1x.webp\\" srcset=\\"./images/radoslaw-kalamon.1x.webp 1x, ./images/radoslaw-kalamon.2x.webp 2x\\" width=\\"120\\" class=\\"about-me__image\\">
-  <div data-test=\\"wrappers-text\\" class=\\"about-me__text text\\">
+"<div class=\\"about-me\\"><img alt=\\"Zdjęcie przedstawia Radosława Kalamona\\" height=\\"120\\" src=\\"./images/radoslaw-kalamon.1x.webp\\" srcset=\\"./images/radoslaw-kalamon.1x.webp 1x, ./images/radoslaw-kalamon.2x.webp 2x\\" width=\\"120\\" class=\\"about-me__image\\">
+  <div class=\\"about-me__text text\\">
     <p>Cześć! Jesteś na blogu 169cm.pl. Ja jestem Radosław Kalamon. Chodź ze mną. Usiądźmy przy ognisku i spójrzmy do góry w czarne niebo upstrzone tysiącem białych punktów. Ty zacznij wypatrywać spadających gwiazd, a ja opowiem Ci historię o jednej z nich.</p>
   </div>
 </div>"

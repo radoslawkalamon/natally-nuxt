@@ -15,7 +15,7 @@ Object {
 `;
 
 exports[`Poems / Smutek 2.0 Unit shall pass unit sanity test 1`] = `
-"<div data-test=\\"poems-smutek-2-0\\" class=\\"smutek-2-0\\">
+"<div class=\\"smutek-2-0\\">
   <blockquote data-lang=\\"pl\\" class=\\"twitter-tweet\\">
     <p lang=\\"und\\" dir=\\"ltr\\">
       :(

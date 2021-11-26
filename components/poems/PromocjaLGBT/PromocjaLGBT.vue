@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="promocja-lgbt"
-    data-test="poems-promocja-lgbt"
-  >
+  <div class="promocja-lgbt">
     <div
       class="lgbt-product-card"
       @click="buyClick"

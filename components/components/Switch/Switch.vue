@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="switch"
-    data-test="components-switch"
-  >
+  <div class="switch">
     <label
       class="switch__label-wrapper"
       :for="name"

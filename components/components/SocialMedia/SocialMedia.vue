@@ -1,8 +1,5 @@
 <template>
-  <ul
-    class="social-media"
-    data-test="components-social-media"
-  >
+  <ul class="social-media">
     <li class="social-media__item">
       <a v-bind="linkAttrs('facebook')">
         <svg

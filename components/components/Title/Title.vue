@@ -2,7 +2,6 @@
   <component
     :is="titleTag"
     :class="titleClasses"
-    data-test="components-title"
     v-text="title"
   />
 </template>

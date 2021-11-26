@@ -1,3 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Wrappers / Text Meta Unit shall pass unit sanity test 1`] = `"<p data-test=\\"components-text-meta\\" class=\\"text-meta\\">Default Prop Text</p>"`;
+exports[`Components / Text Meta Unit shall pass unit sanity test 1`] = `"<p class=\\"text-meta\\">Default Prop Text</p>"`;

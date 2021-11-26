@@ -1,9 +1,6 @@
 <template>
   <transition name="fade">
-    <article
-      class="modal"
-      data-test="wrappers-modal"
-    >
+    <article class="modal">
       <div class="modal__frame">
         <ComponentsTitle
           class="modal__title"

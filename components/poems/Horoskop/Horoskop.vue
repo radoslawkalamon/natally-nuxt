@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="horoskop"
-    data-test="poems-horoskop"
-  >
+  <div class="horoskop">
     <transition
       name="poem-horoskop"
       mode="out-in"

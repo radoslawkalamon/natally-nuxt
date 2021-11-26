@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Blocks / Adjacent Post Links Poem shall render 1`] = `
-"<div data-test=\\"blocks-adjacent-post-links-poem\\" class=\\"adjacent-post-links-poem\\">
+"<div class=\\"adjacent-post-links-poem\\">
   <componentsadjacentpostlinkprevious-stub label=\\"Poprzednia\\" path=\\"/poezja-314/test-poem\\" title=\\"Test poem\\" class=\\"adjacent-post-links-poem__previous\\"></componentsadjacentpostlinkprevious-stub>
   <componentsadjacentpostlinknext-stub label=\\"Następna\\" path=\\"/poezja-314/test-poem\\" title=\\"Test poem\\" class=\\"adjacent-post-links-poem__next\\"></componentsadjacentpostlinknext-stub>
 </div>"

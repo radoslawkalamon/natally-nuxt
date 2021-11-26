@@ -1,8 +1,5 @@
 <template>
-  <section
-    class="section"
-    data-test="wrappers-section"
-  >
+  <section class="section">
     <header
       v-if="$slots.header"
       class="section__header"

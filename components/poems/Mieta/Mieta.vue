@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="mieta"
-    data-test="poems-mieta"
-  >
+  <div class="mieta">
     <p class="mieta__text-align-center">
       Najpierw była
     </p>

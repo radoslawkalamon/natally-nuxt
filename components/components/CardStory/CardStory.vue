@@ -1,8 +1,5 @@
 <template>
-  <article
-    class="card-story"
-    data-test="components-card-story"
-  >
+  <article class="card-story">
     <NuxtLink
       class="card-story__link"
       :to="path"

@@ -3,7 +3,6 @@
     <header
       v-show="shallShowHeader"
       class="header"
-      data-test="blocks-header"
     >
       <ComponentsButtonHamburger
         class="header__button"

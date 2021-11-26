@@ -1,8 +1,5 @@
 <template>
-  <table
-    class="miedzy-wierszami"
-    data-test="poems-miedzy-wierszami"
-  >
+  <table class="miedzy-wierszami">
     <tr>
       <th>Rozmiar</th>
       <th>Klatka</th>

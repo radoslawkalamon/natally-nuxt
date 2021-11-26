@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="main"
-    data-test="wrappers-main"
-  >
+  <div class="main">
     <slot />
   </div>
 </template>

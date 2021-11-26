@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="about-me"
-    data-test="blocks-about-me"
-  >
+  <div class="about-me">
     <img
       alt="Zdjęcie przedstawia Radosława Kalamona"
       class="about-me__image"

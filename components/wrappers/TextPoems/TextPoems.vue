@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="text-poems-wrapper"
-    data-test="wrappers-text-poems"
-  >
+  <div class="text-poems-wrapper">
     <WrappersText>
       <slot />
     </WrappersText>

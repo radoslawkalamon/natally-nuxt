@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="wsparcie"
-    data-test="poems-wsparcie"
-  >
+  <div class="wsparcie">
     <p>
       <img
         alt="Zielona błyskawica"

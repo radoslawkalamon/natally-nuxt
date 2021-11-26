@@ -1,8 +1,5 @@
 <template>
-  <WrappersListPoems
-    class="list-poems-main"
-    data-test="blocks-list-poems-main"
-  >
+  <WrappersListPoems class="list-poems-main">
     <template #default="{ metaPostPoems }">
       <template v-for="metaPostPoem in metaPostPoems">
         <ComponentsCardPoem

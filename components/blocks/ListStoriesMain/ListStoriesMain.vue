@@ -1,8 +1,5 @@
 <template>
-  <WrappersSection
-    class="list-stories-main"
-    data-test="blocks-list-stories-main"
-  >
+  <WrappersSection class="list-stories-main">
     <template #header>
       <ComponentsTitle
         class="list-stories-main__title"

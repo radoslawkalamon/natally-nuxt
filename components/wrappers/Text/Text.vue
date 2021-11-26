@@ -1,8 +1,5 @@
 <template>
-  <div
-    :class="wrapperClasses"
-    :data-test="wrapperTestId"
-  >
+  <div :class="wrapperClasses">
     <slot />
   </div>
 </template>

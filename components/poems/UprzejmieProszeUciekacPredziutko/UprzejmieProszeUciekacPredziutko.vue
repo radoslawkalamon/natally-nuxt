@@ -1,8 +1,5 @@
 <template>
-  <p
-    class="uprzejmie-prosze-uciekac-predziutko"
-    data-test="poems-uprzejmie-prosze-uciekac-predziutko"
-  >
+  <p class="uprzejmie-prosze-uciekac-predziutko">
     <img
       alt="Czerwona błyskawica"
       class="uprzejmie-prosze-uciekac-predziutko__image"

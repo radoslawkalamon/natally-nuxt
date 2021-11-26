@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="grzeszki"
-    data-test="poems-grzeszki"
-  >
+  <div class="grzeszki">
     <p class="grzeszki__breadcrumbs-area">
       <span class="grzeszki__text grzeszki__text--1">Batoniki</span>
       <span class="grzeszki__text grzeszki__text--2">Chipsy</span>

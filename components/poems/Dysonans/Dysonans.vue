@@ -1,17 +1,8 @@
 <template>
-  <div
-    class="dysonans"
-    data-test="poems-dysonans"
-  >
-    <p>
-      Czasami <span class="dysonans__superscript">sztuka wysoka</span>
-    </p>
-    <p>
-      to
-    </p>
-    <p>
-      kompletne <span class="dysonans__subscript">dno.</span>
-    </p>
+  <div class="dysonans">
+    <p>Czasami <span class="dysonans__superscript">sztuka wysoka</span></p>
+    <p>to</p>
+    <p>kompletne <span class="dysonans__subscript">dno.</span></p>
   </div>
 </template>
 

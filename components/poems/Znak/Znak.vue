@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="znak"
-    data-test="poems-znak"
-  >
+  <div class="znak">
     <p>Czekasz na znak?</p>
     <p>Oto on!</p>
     <p>

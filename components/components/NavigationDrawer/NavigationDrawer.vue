@@ -1,5 +1,5 @@
 <template>
-  <nav data-test="components-navigation-drawer">
+  <nav>
     <WrappersNavigation>
       <template v-for="item in list">
         <ComponentsLinkText

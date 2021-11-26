@@ -5,9 +5,6 @@ export default Vue.extend({
   computed: {
     wrapperClasses (): string[] {
       return ['text']
-    },
-    wrapperTestId (): string {
-      return 'wrappers-text'
     }
   }
 })

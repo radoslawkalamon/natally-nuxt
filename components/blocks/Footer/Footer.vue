@@ -1,8 +1,5 @@
 <template>
-  <footer
-    class="footer"
-    data-test="blocks-footer"
-  >
+  <footer class="footer">
     <ComponentsNavigationFooter />
     <a
       :href="crustyBreadTechWebsite"

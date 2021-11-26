@@ -2,7 +2,6 @@
   <WrappersModal
     v-if="shallShowPrivacyModal"
     class="modal-privacy"
-    data-test="blocks-modal-privacy"
     title="Ustawienia prywatności"
   >
     <ComponentsSwitch
