@@ -4,11 +4,17 @@ import { formatterSpacelize } from '../utils/formatter.spacelize'
 export const componentBootstrapTemplateSpec = (type: string, name: string): string => {
   const title = `${formatterCapitalize(type)} / ${formatterSpacelize(name)}`
 
-  return `import ${name} from './${name}.vue'
-import { shallRender } from '@/devtools/jest.shared.spec'
-
+  return `import ${name} from '@/components/${type}/${name}/${name}.vue'
+import { shallPassIntegrationSanityTest, shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
+  
 describe('${title}', () => {
-  shallRender(${name})
+  describe('Unit', () => {
+    shallPassUnitSanityTest({ component: ${name} })
+  })
+  
+  describe('Integration', () => {
+    shallPassIntegrationSanityTest({ component: ${name} })
+  })
 })
 `
 }
