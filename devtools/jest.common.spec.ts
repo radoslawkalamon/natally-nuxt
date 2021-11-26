@@ -1,4 +1,5 @@
 import flushPromises from 'flush-promises'
+import { createWrapper } from '@vue/test-utils'
 import {
   createComponentFromMixin,
   createIntegrationTestWrapper,
@@ -14,6 +15,15 @@ export const expectHeadMatchSnapshot = ({ wrapper }: {
       : wrapper.vm.$options.head
     expect(head).toMatchSnapshot()
   }
+}
+
+export const expectRootEmit = ({ name, wrapper }: {
+  name: string,
+  wrapper: Awaited<ReturnType<typeof createUnitTestWrapper>> | Awaited<ReturnType<typeof createIntegrationTestWrapper>>
+}) => {
+  const rootWrapper = createWrapper(wrapper.vm.$root)
+  const isEventEmitted = rootWrapper.emitted(name)
+  expect(isEventEmitted).toBeTruthy()
 }
 
 export const shallPassIntegrationSanityTest = ({ component, options }: {} & Parameters<typeof createIntegrationTestWrapper>[0]) => {
