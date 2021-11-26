@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/vue'
-import Checklista from './Checklista.vue'
+import Checklista from '@/components/poems/Checklista.vue'
 
 const meta: Meta = {
   title: 'Poems / Checklista',

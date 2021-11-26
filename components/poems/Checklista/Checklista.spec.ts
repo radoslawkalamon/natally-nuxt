@@ -1,6 +1,8 @@
-import Checklista from './Checklista.vue'
-import { shallRender } from '@/devtools/jest.shared.spec'
+import Checklista from '@/components/poems/Checklista/Checklista.vue'
+import { shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
 
 describe('Poems / Checklista', () => {
-  shallRender(Checklista)
+  describe('Unit', () => {
+    shallPassUnitSanityTest({ component: Checklista })
+  })
 })
