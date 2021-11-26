@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Poems / Znak Unit shall pass unit sanity test 1`] = `
+"<div data-test=\\"poems-znak\\" class=\\"znak\\">
+  <p>Czekasz na znak?</p>
+  <p>Oto on!</p>
+  <p><img alt=\\"Stop!\\" src=\\"./images/znak.svg\\" class=\\"znak__image\\"></p>
+</div>"
+`;
