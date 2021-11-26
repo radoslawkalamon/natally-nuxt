@@ -5,7 +5,7 @@ export const componentBootstrapTemplateStories = (type: string, name: string): s
   const title = `${formatterCapitalize(type)} / ${formatterSpacelize(name)}`
 
   return `import { Meta, Story } from '@storybook/vue'
-import ${name} from './${name}.vue'
+import ${name} from '@/components/${type}/${name}/${name}.vue'
 
 const meta: Meta = {
   title: '${title}',
