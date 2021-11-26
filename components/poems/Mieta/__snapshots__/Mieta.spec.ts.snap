@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Poems / Mięta Unit shall pass unit sanity test 1`] = `
+"<div data-test=\\"poems-mieta\\" class=\\"mieta\\">
+  <p class=\\"mieta__text-align-center\\">
+    Najpierw była
+  </p>
+  <p>&nbsp;</p>
+  <div class=\\"mieta__text-clash\\">
+    <p>między</p>
+    <p>nami</p>
+    <p><i>mięta</i></p>
+  </div>
+  <p>&nbsp;</p>
+  <p class=\\"mieta__text-align-right\\">
+    A teraz jestem
+  </p>
+  <p class=\\"mieta__text-align-right\\"><i>pomięta.</i></p>
+</div>"
+`;
