@@ -1,6 +1,8 @@
-import AnimationPufferfish from './AnimationPufferfish.vue'
-import { shallRender } from '@/devtools/jest.shared.spec'
+import AnimationPufferfish from '@/components/blocks/AnimationPufferfish/AnimationPufferfish.vue'
+import { shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
 
 describe('Blocks / Animation Pufferfish', () => {
-  shallRender(AnimationPufferfish)
+  describe('Unit', () => {
+    shallPassUnitSanityTest({ component: AnimationPufferfish })
+  })
 })
