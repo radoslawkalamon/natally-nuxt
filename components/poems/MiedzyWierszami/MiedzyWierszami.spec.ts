@@ -1,6 +1,8 @@
-import MiedzyWierszami from './MiedzyWierszami.vue'
-import { shallRender } from '@/devtools/jest.shared.spec'
+import MiedzyWierszami from '@/components/poems/MiedzyWierszami/MiedzyWierszami.vue'
+import { shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
 
-describe('Poems / Miedzy Wierszami', () => {
-  shallRender(MiedzyWierszami)
+describe('Poems / Między Wierszami', () => {
+  describe('Unit', () => {
+    shallPassUnitSanityTest({ component: MiedzyWierszami })
+  })
 })
