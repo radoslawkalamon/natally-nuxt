@@ -1,14 +1,19 @@
-import ListAudiobookServices from './ListAudiobookServices.vue'
-import { shallRender } from '@/devtools/jest.shared.spec'
+import ListAudiobookServices from '@/components/blocks/ListAudiobookServices/ListAudiobookServices.vue'
+import { shallPassIntegrationSanityTest, shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
 
 describe('Blocks / List Audiobook Services', () => {
-  const defaultOptions = {
-    stubs: {
-      ComponentsCardAudiobookService: {
-        template: '<a data-stub="components-card-audiobook-service" href="#"><slot /></a>'
+  describe('Unit', () => {
+    shallPassUnitSanityTest({
+      component: ListAudiobookServices,
+      options: {
+        stubs: [
+          'ComponentsCardAudiobookService'
+        ]
       }
-    }
-  }
+    })
+  })
 
-  shallRender(ListAudiobookServices, defaultOptions)
+  describe('Integration', () => {
+    shallPassIntegrationSanityTest({ component: ListAudiobookServices })
+  })
 })
