@@ -1,3 +1,4 @@
+import flushPromises from 'flush-promises'
 import {
   createComponentFromMixin,
   createIntegrationTestWrapper,
@@ -18,6 +19,7 @@ export const expectHeadMatchSnapshot = ({ wrapper }: {
 export const shallPassIntegrationSanityTest = ({ component, options }: {} & Parameters<typeof createIntegrationTestWrapper>[0]) => {
   test('shall pass integration sanity test', async () => {
     const wrapper = await createIntegrationTestWrapper({ component, options })
+    await flushPromises()
     expect(wrapper.html()).toMatchSnapshot()
     wrapper.destroy()
   })
@@ -26,6 +28,7 @@ export const shallPassIntegrationSanityTest = ({ component, options }: {} & Para
 export const shallPassUnitSanityTest = ({ component, options }: {} & Parameters<typeof createUnitTestWrapper>[0]) => {
   test('shall pass unit sanity test', async () => {
     const wrapper = await createUnitTestWrapper({ component, options })
+    await flushPromises()
     expect(wrapper.html()).toMatchSnapshot()
     wrapper.destroy()
   })
@@ -35,6 +38,7 @@ export const shallPassMixinSanityTest = ({ mixin, options }: {} & Parameters<typ
   test('shall pass mixin sanity test', async () => {
     const component = createComponentFromMixin({ mixin, options })
     const wrapper = await createUnitTestWrapper({ component })
+    await flushPromises()
     wrapper.destroy()
   })
 }
