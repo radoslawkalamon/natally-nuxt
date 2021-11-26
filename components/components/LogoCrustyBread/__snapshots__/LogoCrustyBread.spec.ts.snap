@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components / Logo Crusty Bread Unit shall pass unit sanity test 1`] = `"<img alt=\\"Logo firmy Pieczywo Twarde\\" height=\\"128\\" src=\\"./images/crusty-bread.svg\\" title=\\"Logo firmy Pieczywo Twarde\\" width=\\"56\\">"`;

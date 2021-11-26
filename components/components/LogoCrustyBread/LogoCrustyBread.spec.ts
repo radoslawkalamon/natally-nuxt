@@ -1,6 +1,8 @@
-import LogoCrustyBread from './LogoCrustyBread.vue'
-import { shallRender } from '@/devtools/jest.shared.spec'
+import LogoCrustyBread from '@/components/components/LogoCrustyBread/LogoCrustyBread.vue'
+import { shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
 
 describe('Components / Logo Crusty Bread', () => {
-  shallRender(LogoCrustyBread)
+  describe('Unit', () => {
+    shallPassUnitSanityTest({ component: LogoCrustyBread })
+  })
 })
