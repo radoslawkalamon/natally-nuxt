@@ -38,8 +38,11 @@ export const expectWrapperEmitOn = ({ emit, trigger, wrapper }: {
   expect(emitted).toHaveLength(1)
 }
 
-export const shallPassIntegrationSanityTest = ({ component, options }: {} & Parameters<typeof createIntegrationTestWrapper>[0]) => {
-  test('shall pass integration sanity test', async () => {
+export const shallPassIntegrationSanityTest = ({ component, options, description }: {
+  description?: string
+} & Parameters<typeof createIntegrationTestWrapper>[0]) => {
+  const testName = ['shall pass integration sanity test', description].filter(e => e).join(' | ')
+  test(testName, async () => {
     const wrapper = await createIntegrationTestWrapper({ component, options })
     await flushPromises()
     expect(wrapper.html()).toMatchSnapshot()
@@ -47,8 +50,11 @@ export const shallPassIntegrationSanityTest = ({ component, options }: {} & Para
   })
 }
 
-export const shallPassUnitSanityTest = ({ component, options }: {} & Parameters<typeof createUnitTestWrapper>[0]) => {
-  test('shall pass unit sanity test', async () => {
+export const shallPassUnitSanityTest = ({ component, options, description }: {
+  description?: string
+} & Parameters<typeof createUnitTestWrapper>[0]) => {
+  const testName = ['shall pass unit sanity test', description].filter(e => e).join(' | ')
+  test(testName, async () => {
     const wrapper = await createUnitTestWrapper({ component, options })
     await flushPromises()
     expect(wrapper.html()).toMatchSnapshot()
@@ -56,8 +62,11 @@ export const shallPassUnitSanityTest = ({ component, options }: {} & Parameters<
   })
 }
 
-export const shallPassMixinSanityTest = ({ mixin, options }: {} & Parameters<typeof createComponentFromMixin>[0]) => {
-  test('shall pass mixin sanity test', async () => {
+export const shallPassMixinSanityTest = ({ mixin, options, description }: {
+  description?: string
+} & Parameters<typeof createComponentFromMixin>[0]) => {
+  const testName = ['shall pass mixin sanity test', description].filter(e => e).join(' | ')
+  test(testName, async () => {
     const component = createComponentFromMixin({ mixin, options })
     const wrapper = await createUnitTestWrapper({ component })
     await flushPromises()
