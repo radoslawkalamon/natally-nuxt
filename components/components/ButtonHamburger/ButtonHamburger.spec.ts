@@ -1,29 +1,40 @@
-import { mount } from '@vue/test-utils'
-import ButtonHamburger from './ButtonHamburger.vue'
-import { shallRender, shallClickTriggerEvent } from '@/devtools/jest.shared.spec'
+import ButtonHamburger from '@/components/components/ButtonHamburger/ButtonHamburger.vue'
+import { expectWrapperEmitOn, shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
+import { createDefaultOptionsFactory, createUnitTestWrapper } from '@/devtools/jest.common.spec.utils'
+
+const defaultOptionsFactory = createDefaultOptionsFactory({
+  propsData: {
+    isOpen: false
+  }
+})
 
 describe('Components / Button Hamburger', () => {
-  const defaultOptions = {
-    propsData: {
-      isOpen: false
-    }
-  }
+  describe('Unit', () => {
+    shallPassUnitSanityTest({
+      component: ButtonHamburger,
+      options: defaultOptionsFactory()
+    })
 
-  shallRender(ButtonHamburger, defaultOptions)
-  shallClickTriggerEvent(ButtonHamburger, 'toggle', defaultOptions)
+    shallPassUnitSanityTest({
+      component: ButtonHamburger,
+      options: defaultOptionsFactory({
+        propsData: {
+          isOpen: true
+        }
+      })
+    })
 
-  test('shall state change aria-label', async (): Promise<void> => {
-    const wrapper = mount(ButtonHamburger, defaultOptions)
-    const closedAriaLabel = wrapper.element.getAttribute('aria-label') || ''
-    await wrapper.setProps({ isOpen: true })
-    const openedAriaLabel = wrapper.element.getAttribute('aria-label') || ''
-    expect(closedAriaLabel).not.toMatch(openedAriaLabel)
-  })
+    test('shall emit "toggle" on @click', async () => {
+      const wrapper = await createUnitTestWrapper({
+        component: ButtonHamburger,
+        options: defaultOptionsFactory()
+      })
 
-  test('shall state change data-open', async (): Promise<void> => {
-    const wrapper = mount(ButtonHamburger, defaultOptions)
-    expect(wrapper.find('[data-open="false"]').isVisible()).toBeTruthy()
-    await wrapper.setProps({ isOpen: true })
-    expect(wrapper.find('[data-open="true"]').isVisible()).toBeTruthy()
+      expectWrapperEmitOn({
+        emit: 'toggle',
+        trigger: 'click',
+        wrapper
+      })
+    })
   })
 })
