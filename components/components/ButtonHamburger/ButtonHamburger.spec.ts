@@ -12,11 +12,13 @@ describe('Components / Button Hamburger', () => {
   describe('Unit', () => {
     shallPassUnitSanityTest({
       component: ButtonHamburger,
+      description: 'drawer closed',
       options: defaultOptionsFactory()
     })
 
     shallPassUnitSanityTest({
       component: ButtonHamburger,
+      description: 'drawer opened',
       options: defaultOptionsFactory({
         propsData: {
           isOpen: true

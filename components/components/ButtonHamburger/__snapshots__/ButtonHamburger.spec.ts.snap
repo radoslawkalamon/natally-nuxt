@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components / Button Hamburger Unit shall pass unit sanity test 1`] = `
+exports[`Components / Button Hamburger Unit shall pass unit sanity test | drawer closed 1`] = `
 "<button aria-label=\\"Otwórz menu nawigacyjne\\" type=\\"button\\" class=\\"button-hamburger\\">
   <div aria-hidden=\\"true\\" data-open=\\"false\\" class=\\"button-hamburger__line button-hamburger__line--1\\"></div>
   <div aria-hidden=\\"true\\" data-open=\\"false\\" class=\\"button-hamburger__line button-hamburger__line--2\\"></div>
@@ -8,7 +8,7 @@ exports[`Components / Button Hamburger Unit shall pass unit sanity test 1`] = `
 </button>"
 `;
 
-exports[`Components / Button Hamburger Unit shall pass unit sanity test 2`] = `
+exports[`Components / Button Hamburger Unit shall pass unit sanity test | drawer opened 1`] = `
 "<button aria-label=\\"Zamknij menu nawigacyjne\\" type=\\"button\\" class=\\"button-hamburger\\">
   <div aria-hidden=\\"true\\" data-open=\\"true\\" class=\\"button-hamburger__line button-hamburger__line--1\\"></div>
   <div aria-hidden=\\"true\\" data-open=\\"true\\" class=\\"button-hamburger__line button-hamburger__line--2\\"></div>
