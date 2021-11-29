@@ -13,6 +13,7 @@ describe('Components / Switch', () => {
   describe('Unit', () => {
     shallPassUnitSanityTest({
       component: Switch,
+      description: 'no slot',
       options: defaultOptionsFactory({
         stubs: ['WrappersText']
       })
@@ -20,6 +21,7 @@ describe('Components / Switch', () => {
 
     shallPassUnitSanityTest({
       component: Switch,
+      description: 'with slot',
       options: defaultOptionsFactory({
         stubs: ['WrappersText'],
         slots: {
@@ -32,11 +34,13 @@ describe('Components / Switch', () => {
   describe('Integration', () => {
     shallPassIntegrationSanityTest({
       component: Switch,
+      description: 'no slot',
       options: defaultOptionsFactory()
     })
 
     shallPassIntegrationSanityTest({
       component: Switch,
+      description: 'with slot',
       options: defaultOptionsFactory({
         slots: {
           default: 'Default slot test'
