@@ -6,8 +6,10 @@ import {
   createUnitTestWrapper
 } from '@/devtools/jest.common.spec.utils'
 
+type Wrapper = Awaited<ReturnType<typeof createUnitTestWrapper>> | Awaited<ReturnType<typeof createIntegrationTestWrapper>>
+
 export const expectHeadMatchSnapshot = ({ wrapper }: {
-  wrapper: Awaited<ReturnType<typeof createUnitTestWrapper>> | Awaited<ReturnType<typeof createIntegrationTestWrapper>>
+  wrapper: Wrapper
 }) => {
   if (wrapper.vm.$options.head) {
     const head = typeof wrapper.vm.$options.head === 'function'
@@ -19,11 +21,21 @@ export const expectHeadMatchSnapshot = ({ wrapper }: {
 
 export const expectRootEmit = ({ name, wrapper }: {
   name: string,
-  wrapper: Awaited<ReturnType<typeof createUnitTestWrapper>> | Awaited<ReturnType<typeof createIntegrationTestWrapper>>
+  wrapper: Wrapper
 }) => {
   const rootWrapper = createWrapper(wrapper.vm.$root)
   const isEventEmitted = rootWrapper.emitted(name)
   expect(isEventEmitted).toBeTruthy()
+}
+
+export const expectWrapperEmitOn = ({ emit, trigger, wrapper }: {
+  emit: string,
+  trigger: string,
+  wrapper: Wrapper
+}) => {
+  wrapper.trigger(trigger)
+  const toggleCalls = wrapper.emitted(emit)
+  expect(toggleCalls).toHaveLength(1)
 }
 
 export const shallPassIntegrationSanityTest = ({ component, options }: {} & Parameters<typeof createIntegrationTestWrapper>[0]) => {
