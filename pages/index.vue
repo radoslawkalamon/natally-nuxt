@@ -4,9 +4,7 @@
       <BlocksAboutMe />
     </LazyHydrate>
 
-    <LazyHydrate when-visible>
-      <BlocksListStoriesMain />
-    </LazyHydrate>
+    <BlocksListStoriesMain />
 
     <LazyHydrate when-visible>
       <BlocksListPoemsHomepage />
