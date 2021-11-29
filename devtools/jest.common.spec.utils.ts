@@ -1,10 +1,12 @@
 import Vue from 'vue'
 import type { VueConstructor } from 'vue'
 import { mount, shallowMount } from '@vue/test-utils'
+import cloneDeep from 'lodash/cloneDeep'
 import merge from 'lodash/merge'
 
 type mountArguments = Parameters<typeof mount>;
 type shallowMountArguments = Parameters<typeof shallowMount>;
+type mountOptions = shallowMountArguments[1] | mountArguments[1]
 
 export const createComponentFromMixin = ({ mixin, options = undefined }: {
   mixin: ReturnType<typeof Vue.extend>,
@@ -18,8 +20,8 @@ export const createComponentFromMixin = ({ mixin, options = undefined }: {
   )
 }
 
-export const createDefaultOptionsFactory = (defaultOptions: shallowMountArguments[1] | mountArguments[1]) => {
-  return (options?: shallowMountArguments[1] | mountArguments[1]) => merge(defaultOptions, options)
+export const createDefaultOptionsFactory = (defaultOptions: mountOptions) => {
+  return (options?: mountOptions): mountOptions => cloneDeep(merge(defaultOptions, options))
 }
 
 export const createIntegrationTestWrapper = async ({ component, options = {} }: {
