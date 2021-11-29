@@ -9,7 +9,6 @@
       <img
         :alt="iconAlt"
         class="card-audiobook-service__logo"
-        data-test="components-card-audiobook-service-logo"
         :src="icon"
       >
     </div>
