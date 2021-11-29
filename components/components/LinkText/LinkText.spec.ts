@@ -1,16 +1,15 @@
-import LinkText from './LinkText.vue'
-import { shallHaveStringProp, shallRender } from '@/devtools/jest.shared.spec'
+import LinkText from '@/components/components/LinkText/LinkText.vue'
+import { shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
 
 describe('Components / Link Text', () => {
-  const defaultOptions = {
-    propsData: {
-      label: 'Item label'
-    },
-    stubs: [
-      'NuxtLink'
-    ]
-  }
-
-  shallRender(LinkText, defaultOptions)
-  shallHaveStringProp(LinkText, 'label', defaultOptions)
+  describe('Unit', () => {
+    shallPassUnitSanityTest({
+      component: LinkText,
+      options: {
+        propsData: {
+          label: 'Item label'
+        }
+      }
+    })
+  })
 })
