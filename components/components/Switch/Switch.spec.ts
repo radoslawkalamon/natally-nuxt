@@ -1,31 +1,47 @@
-import { mount } from '@vue/test-utils'
-import Switch from './Switch.vue'
-import { shallHaveStringProp, shallHaveSlot, shallHideSlotWhenNoChildren, shallRender } from '@/devtools/jest.shared.spec'
+import Switch from '@/components/components/Switch/Switch.vue'
+import { createDefaultOptionsFactory } from '@/devtools/jest.common.spec.utils'
+import { shallPassIntegrationSanityTest, shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
+
+const defaultOptionsFactory = createDefaultOptionsFactory({
+  propsData: {
+    label: 'Test label',
+    name: 'test-name'
+  }
+})
 
 describe('Components / Switch', () => {
-  const defaultOptions = {
-    propsData: {
-      checked: false,
-      label: 'Test label',
-      name: 'test-name'
-    },
-    stubs: {
-      WrappersText: {
-        template: '<div><slot /></div>'
-      }
-    }
-  }
+  describe('Unit', () => {
+    shallPassUnitSanityTest({
+      component: Switch,
+      options: defaultOptionsFactory({
+        stubs: ['WrappersText']
+      })
+    })
 
-  shallRender(Switch, defaultOptions)
-  shallHaveStringProp(Switch, 'label', defaultOptions)
-  shallHideSlotWhenNoChildren(Switch, 'default', 'components-switch-description', defaultOptions)
-  shallHaveSlot(Switch, 'default', defaultOptions)
+    shallPassUnitSanityTest({
+      component: Switch,
+      options: defaultOptionsFactory({
+        stubs: ['WrappersText'],
+        slots: {
+          default: 'Default slot test'
+        }
+      })
+    })
+  })
 
-  test('shall have for="test-name" and name="test-name" elements', () => {
-    const wrapper = mount(Switch, defaultOptions)
-    const forElement = wrapper.find('[for="test-name"]')
-    const nameElement = wrapper.find('[name="test-name"]')
-    expect(forElement.exists()).toBeTruthy()
-    expect(nameElement.exists()).toBeTruthy()
+  describe('Integration', () => {
+    shallPassIntegrationSanityTest({
+      component: Switch,
+      options: defaultOptionsFactory()
+    })
+
+    shallPassIntegrationSanityTest({
+      component: Switch,
+      options: defaultOptionsFactory({
+        slots: {
+          default: 'Default slot test'
+        }
+      })
+    })
   })
 })
