@@ -21,7 +21,7 @@ export const createComponentFromMixin = ({ mixin, options = undefined }: {
 }
 
 export const createDefaultOptionsFactory = (defaultOptions: mountOptions) => {
-  return (options?: mountOptions): mountOptions => cloneDeep(merge(defaultOptions, options))
+  return (options?: mountOptions): mountOptions => merge(cloneDeep(defaultOptions), options)
 }
 
 export const createIntegrationTestWrapper = async ({ component, options = {} }: {
