@@ -19,7 +19,7 @@ export const createComponentFromMixin = ({ mixin, options = undefined }: {
 }
 
 export const createDefaultOptionsFactory = (defaultOptions: shallowMountArguments[1] | mountArguments[1]) => {
-  return (options: shallowMountArguments[1] | mountArguments[1]) => merge(defaultOptions, options)
+  return (options?: shallowMountArguments[1] | mountArguments[1]) => merge(defaultOptions, options)
 }
 
 export const createIntegrationTestWrapper = async ({ component, options = {} }: {
