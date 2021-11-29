@@ -34,8 +34,8 @@ export const expectWrapperEmitOn = ({ emit, trigger, wrapper }: {
   wrapper: Wrapper
 }) => {
   wrapper.trigger(trigger)
-  const toggleCalls = wrapper.emitted(emit)
-  expect(toggleCalls).toHaveLength(1)
+  const emitted = wrapper.emitted(emit)
+  expect(emitted).toHaveLength(1)
 }
 
 export const shallPassIntegrationSanityTest = ({ component, options }: {} & Parameters<typeof createIntegrationTestWrapper>[0]) => {
