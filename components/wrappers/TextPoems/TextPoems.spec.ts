@@ -1,15 +1,27 @@
-import TextPoems from './TextPoems.vue'
-import { shallHaveSlot, shallRender } from '@/devtools/jest.shared.spec'
+import TextPoems from '@/components/wrappers/TextPoems/TextPoems.vue'
+import { shallPassIntegrationSanityTest, shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
+import { createDefaultOptionsFactory } from '@/devtools/jest.common.spec.utils'
+
+const defaultOptionsFactory = createDefaultOptionsFactory({
+  slots: {
+    default: 'Slot default text'
+  }
+})
 
 describe('Wrappers / Text Poems', () => {
-  const defaultOptions = {
-    stubs: {
-      WrappersText: {
-        template: '<div><slot /></div>'
-      }
-    }
-  }
+  describe('Unit', () => {
+    shallPassUnitSanityTest({
+      component: TextPoems,
+      options: defaultOptionsFactory({
+        stubs: ['WrappersText']
+      })
+    })
+  })
 
-  shallRender(TextPoems, defaultOptions)
-  shallHaveSlot(TextPoems, 'default', defaultOptions)
+  describe('Integration', () => {
+    shallPassIntegrationSanityTest({
+      component: TextPoems,
+      options: defaultOptionsFactory()
+    })
+  })
 })
