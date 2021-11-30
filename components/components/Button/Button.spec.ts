@@ -8,7 +8,7 @@ const defaultOptionsFactory = createDefaultOptionsFactory({
   }
 })
 
-describe('Components / Button Link', () => {
+describe('Components / Button', () => {
   describe('Unit', () => {
     shallPassUnitSanityTest({
       component: Button,

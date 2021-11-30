@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components / Text Meta Unit shall pass unit sanity test 1`] = `
+exports[`Components / Social Media Unit shall pass unit sanity test 1`] = `
 "<ul class=\\"social-media\\">
   <li class=\\"social-media__item\\"><a aria-label=\\"Odwiedź mnie na Facebooku\\" href=\\"https://www.facebook.com/169cmpl\\" rel=\\"noopener noreferrer\\" target=\\"_blank\\" title=\\"Odwiedź mnie na Facebooku\\" class=\\"social-media__link\\"><svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 512 512\\" class=\\"social-media__icon\\">
         <title>Odwiedź mnie na Facebooku</title>
