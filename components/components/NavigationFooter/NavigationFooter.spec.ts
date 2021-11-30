@@ -26,6 +26,7 @@ describe('Components / Navigation Footer', () => {
         name: 'privacy/modal/toggle',
         wrapper
       })
+      wrapper.destroy()
     })
   })
 })

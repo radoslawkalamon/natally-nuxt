@@ -25,6 +25,7 @@ describe('Components / Button', () => {
         emit: 'click',
         wrapper
       })
+      wrapper.destroy()
     })
   })
 })

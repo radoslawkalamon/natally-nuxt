@@ -9,6 +9,7 @@ describe('Poems / Smutek 2.0', () => {
     test('shall head match snapshot', async () => {
       const wrapper = await createUnitTestWrapper({ component: Smutek20 })
       expectHeadMatchSnapshot({ wrapper })
+      wrapper.destroy()
     })
   })
 })

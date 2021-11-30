@@ -27,6 +27,7 @@ describe('Poems / Grzeszki', () => {
           expect(elementStyleTop).toBeGreaterThanOrEqual(0)
           expect(elementStyleTop).toBeLessThanOrEqual(100)
         })
+      wrapper.destroy()
     })
   })
 })

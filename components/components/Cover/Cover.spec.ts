@@ -22,6 +22,7 @@ describe('Components / Cover', () => {
       })
       // @ts-ignore
       expect(wrapper.vm.style).toMatchSnapshot()
+      wrapper.destroy()
     })
 
     test('shall vm.style output image-set with 2 image', async () => {
@@ -38,6 +39,7 @@ describe('Components / Cover', () => {
       })
       // @ts-ignore
       expect(wrapper.vm.style).toMatchSnapshot()
+      wrapper.destroy()
     })
   })
 })

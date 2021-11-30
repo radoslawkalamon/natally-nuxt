@@ -36,6 +36,7 @@ describe('Components / Button Hamburger', () => {
         emit: 'toggle',
         wrapper
       })
+      wrapper.destroy()
     })
   })
 })

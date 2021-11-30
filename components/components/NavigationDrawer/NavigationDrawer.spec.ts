@@ -23,6 +23,7 @@ describe('Components / Navigation Drawer', () => {
       wrapper.get('[data-test="navigation-item"]').trigger('click')
       const navigationItemEmit = wrapper.emitted('navigationItemClick')
       expect(navigationItemEmit).toBeTruthy()
+      wrapper.destroy()
     })
   })
 })
