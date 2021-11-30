@@ -1,5 +1,5 @@
 import ButtonHamburger from '@/components/components/ButtonHamburger/ButtonHamburger.vue'
-import { expectWrapperEmitOn, shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
+import { expectWrapperEmit, shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
 import { createDefaultOptionsFactory, createUnitTestWrapper } from '@/devtools/jest.common.spec.utils'
 
 const defaultOptionsFactory = createDefaultOptionsFactory({
@@ -31,10 +31,9 @@ describe('Components / Button Hamburger', () => {
         component: ButtonHamburger,
         options: defaultOptionsFactory()
       })
-
-      expectWrapperEmitOn({
+      wrapper.trigger('click')
+      expectWrapperEmit({
         emit: 'toggle',
-        trigger: 'click',
         wrapper
       })
     })

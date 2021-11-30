@@ -28,12 +28,10 @@ export const expectRootEmit = ({ name, wrapper }: {
   expect(isEventEmitted).toBeTruthy()
 }
 
-export const expectWrapperEmitOn = ({ emit, trigger, wrapper }: {
+export const expectWrapperEmit = ({ emit, wrapper }: {
   emit: string,
-  trigger: string,
   wrapper: Wrapper
 }) => {
-  wrapper.trigger(trigger)
   const emitted = wrapper.emitted(emit)
   expect(emitted).toHaveLength(1)
 }

@@ -1,5 +1,5 @@
 import Button from '@/components/components/Button/Button.vue'
-import { expectWrapperEmitOn, shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
+import { expectWrapperEmit, shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
 import { createDefaultOptionsFactory, createUnitTestWrapper } from '@/devtools/jest.common.spec.utils'
 
 const defaultOptionsFactory = createDefaultOptionsFactory({
@@ -20,9 +20,9 @@ describe('Components / Button Link', () => {
         component: Button,
         options: defaultOptionsFactory()
       })
-      expectWrapperEmitOn({
+      wrapper.trigger('click')
+      expectWrapperEmit({
         emit: 'click',
-        trigger: 'click',
         wrapper
       })
     })
