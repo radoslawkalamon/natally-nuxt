@@ -1,6 +1,6 @@
 import Switch from '@/components/components/Switch/Switch.vue'
-import { createDefaultOptionsFactory } from '@/devtools/jest.common.spec.utils'
 import { shallPassIntegrationSanityTest, shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
+import { createDefaultOptionsFactory } from '@/devtools/jest.common.spec.utils'
 
 const defaultOptionsFactory = createDefaultOptionsFactory({
   propsData: {

@@ -1,6 +1,6 @@
 import Title from '@/components/components/Title/Title.vue'
-import { createDefaultOptionsFactory } from '@/devtools/jest.common.spec.utils'
 import { shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
+import { createDefaultOptionsFactory } from '@/devtools/jest.common.spec.utils'
 
 const defaultOptionsFactory = createDefaultOptionsFactory({
   propsData: {
