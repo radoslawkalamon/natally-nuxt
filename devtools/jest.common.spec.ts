@@ -4,8 +4,11 @@ import {
   createUnitTestWrapper
 } from '@/devtools/jest.common.spec.utils'
 
+/** Awaited<ReturnType<typeof T>> Polyfill */
+type AsyncReturnType<T extends (...args: any) => any> = T extends (...args: any) => Promise<infer U> ? U : any
+
 export const expectHeadMatchSnapshot = ({ wrapper }: {
-  wrapper: Awaited<ReturnType<typeof createUnitTestWrapper>> | Awaited<ReturnType<typeof createIntegrationTestWrapper>>
+  wrapper: AsyncReturnType<typeof createUnitTestWrapper> | AsyncReturnType<typeof createIntegrationTestWrapper>
 }) => {
   if (wrapper.vm.$options.head) {
     const head = typeof wrapper.vm.$options.head === 'function'
