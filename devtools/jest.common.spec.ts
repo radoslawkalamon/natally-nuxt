@@ -1,4 +1,4 @@
-import flushPromises from 'flush-promises'
+
 import { createWrapper } from '@vue/test-utils'
 import {
   createComponentFromMixin,
@@ -42,7 +42,6 @@ export const shallPassIntegrationSanityTest = ({ component, options, description
   const testName = ['shall pass integration sanity test', description].filter(e => e).join(' | ')
   test(testName, async () => {
     const wrapper = await createIntegrationTestWrapper({ component, options })
-    await flushPromises()
     expect(wrapper.html()).toMatchSnapshot()
     wrapper.destroy()
   })
@@ -54,7 +53,6 @@ export const shallPassUnitSanityTest = ({ component, options, description }: {
   const testName = ['shall pass unit sanity test', description].filter(e => e).join(' | ')
   test(testName, async () => {
     const wrapper = await createUnitTestWrapper({ component, options })
-    await flushPromises()
     expect(wrapper.html()).toMatchSnapshot()
     wrapper.destroy()
   })
@@ -67,7 +65,6 @@ export const shallPassMixinSanityTest = ({ mixin, options, description }: {
   test(testName, async () => {
     const component = createComponentFromMixin({ mixin, options })
     const wrapper = await createUnitTestWrapper({ component })
-    await flushPromises()
     wrapper.destroy()
   })
 }

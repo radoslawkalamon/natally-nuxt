@@ -1,3 +1,4 @@
+import flushPromises from 'flush-promises'
 import Vue from 'vue'
 import type { VueConstructor } from 'vue'
 import { mount, shallowMount } from '@vue/test-utils'
@@ -48,6 +49,8 @@ export const createIntegrationTestWrapper = async ({ component, options = {} }: 
     await wrapper.vm.$options.fetch.call(wrapper.vm, context)
   }
 
+  await flushPromises()
+
   return wrapper
 }
 
@@ -74,6 +77,8 @@ export const createUnitTestWrapper = async ({ component, options = {} }: {
     // @ts-ignore: Mock Nuxt Context
     await wrapper.vm.$options.fetch.call(wrapper.vm, context)
   }
+
+  await flushPromises()
 
   return wrapper
 }
