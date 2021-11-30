@@ -26,7 +26,7 @@ const setPrivacyStorageValue = (name: PrivacyStorageItems, value: boolean): void
 
 export default Vue.extend({
   computed: {
-    'privacy/storage/getCore': () => getPrivacyStorageValue(PrivacyStorageItems.Core),
+    'privacy/storage/getCore': () => PrivacyStorageDefault[PrivacyStorageItems.Core],
     'privacy/storage/getSoundcloud': () => getPrivacyStorageValue(PrivacyStorageItems.Soundcloud)
   },
   methods: {
