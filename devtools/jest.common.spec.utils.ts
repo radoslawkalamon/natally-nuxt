@@ -38,6 +38,7 @@ export const createIntegrationTestWrapper = async ({ component, options = {} }: 
   const wrapper = mount(component, merge({
     stubs: [
       'ClientOnly',
+      'LazyHydrate',
       'Nuxt',
       'NuxtContent',
       'NuxtLink'
@@ -67,6 +68,7 @@ export const createUnitTestWrapper = async ({ component, options = {} }: {
   const wrapper = shallowMount(component, merge({
     stubs: [
       'ClientOnly',
+      'LazyHydrate',
       'Nuxt',
       'NuxtContent',
       'NuxtLink'
