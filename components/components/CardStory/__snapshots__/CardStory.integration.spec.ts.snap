@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components / Card Story Integration shall pass integration sanity test | audiobook / in the viewport 1`] = `
+"<article class=\\"card-story\\">
+  <nuxtlink-stub to=\\"/test-url/\\" class=\\"card-story__link\\">
+    <div aria-hidden=\\"true\\" class=\\"cover card-story__cover\\"></div>
+    <div class=\\"card-story__content\\">
+      <footer class=\\"card-story__footer\\">
+        <p class=\\"text-meta card-story__date-published\\" aria-label=\\"Opublikowano 01.11.2021\\" title=\\"Opublikowano 01.11.2021\\">01.11.2021</p>
+        <p class=\\"text-meta card-story__reading-time\\" aria-label=\\"Tekst przeczytasz w 2 minuty\\" title=\\"Tekst przeczytasz w 2 minuty\\">2 minuty</p>
+        <p class=\\"text-meta card-story__audiobook\\" aria-label=\\"Post posiada wersję dźwiękową\\" data-test=\\"components-card-story-audiobook\\" title=\\"Post posiada wersję dźwiękową\\">Audiobook</p>
+      </footer>
+      <header class=\\"card-story__header\\">
+        <h1 class=\\"card-story__title title title--design-3\\">Test title</h1>
+      </header>
+    </div>
+  </nuxtlink-stub>
+</article>"
+`;
+
+exports[`Components / Card Story Integration shall pass integration sanity test | no audiobook / not in the viewport 1`] = `
+"<article class=\\"card-story\\">
+  <nuxtlink-stub to=\\"/test-url/\\" class=\\"card-story__link\\">
+    <div aria-hidden=\\"true\\" class=\\"cover card-story__cover\\"></div>
+    <div class=\\"card-story__content\\">
+      <footer class=\\"card-story__footer\\">
+        <p class=\\"text-meta card-story__date-published\\" aria-label=\\"Opublikowano 01.11.2021\\" title=\\"Opublikowano 01.11.2021\\">01.11.2021</p>
+        <p class=\\"text-meta card-story__reading-time\\" aria-label=\\"Tekst przeczytasz w 2 minuty\\" title=\\"Tekst przeczytasz w 2 minuty\\">2 minuty</p>
+        <p class=\\"text-meta card-story__audiobook card-story__audiobook--disabled\\" aria-label=\\"Post nie posiada wersji dźwiękowej\\" data-test=\\"components-card-story-audiobook\\" title=\\"Post nie posiada wersji dźwiękowej\\">Audiobook</p>
+      </footer>
+      <header class=\\"card-story__header\\">
+        <h1 class=\\"card-story__title title title--design-3\\">Test title</h1>
+      </header>
+    </div>
+  </nuxtlink-stub>
+</article>"
+`;
