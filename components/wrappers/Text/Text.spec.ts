@@ -1,7 +1,15 @@
-import TextBase from './Text.vue'
-import { shallHaveSlot, shallRender } from '@/devtools/jest.shared.spec'
+import TextBase from '@/components/wrappers/Text/Text.vue'
+import { shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
 
 describe('Wrappers / Text', () => {
-  shallRender(TextBase)
-  shallHaveSlot(TextBase, 'default')
+  describe('Unit', () => {
+    shallPassUnitSanityTest({
+      component: TextBase,
+      options: {
+        slots: {
+          default: 'Slot default text'
+        }
+      }
+    })
+  })
 })
