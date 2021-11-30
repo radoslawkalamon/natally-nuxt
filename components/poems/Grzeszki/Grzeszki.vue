@@ -11,6 +11,7 @@
             :key="i"
             aria-hidden="true"
             class="grzeszki__breadcrumb"
+            data-test="poems-grzeszki-breadcrumb"
             :style="breadcrumbsStyle()"
           >,</span>
         </template>
