@@ -38,6 +38,7 @@
         <button
           aria-label="Dodaj do koszyka"
           class="lgbt-product-card__add-to-cart"
+          data-test="promocja-lgbt-buy-now-button"
           title="Dodaj do koszyka"
           type="button"
         >
@@ -57,6 +58,7 @@
             :key="i"
             alt="Serce"
             class="lgbt-reaction-wrapper__heart"
+            data-test="promocja-lgbt-heart"
             src="./images/heart.svg"
             :style="heartStyles[i]"
             title="Serce"

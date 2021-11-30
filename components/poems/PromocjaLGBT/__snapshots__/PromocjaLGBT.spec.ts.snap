@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Poems / Promocja LGBT Unit shall change slide after 3 seconds 1`] = `
+"<div class=\\"promocja-lgbt\\">
+  <div class=\\"lgbt-product-card\\">
+    <transition-group-stub tag=\\"div\\" name=\\"transition-lgbt-image-wrapper\\" class=\\"lgbt-product-card__image-wrapper\\">
+      <!----><img alt=\\"Dwoje przytulających się, śmiejących się mężczyzn.\\" srcset=\\"promocja-lgbt-2.1x.webp 1x, promocja-lgbt-2.2x.webp 2x\\" src=\\"promocja-lgbt-2.1x.webp\\" class=\\"lgbt-product-card__image\\">
+      <!---->
+      <!---->
+    </transition-group-stub>
+    <div class=\\"lgbt-product-card__content-wrapper\\">
+      <div class=\\"lgbt-product-card__ribbon\\"><img alt=\\"Produkt w promocji!\\" src=\\"./images/ribbon.svg\\" title=\\"Produkt w promocji!\\" class=\\"lgbt-product-card__ribbon-icon\\"></div>
+      <h2 class=\\"lgbt-product-card__title\\">Miłość</h2> <span class=\\"lgbt-product-card__price\\">0,00 zł</span> <button aria-label=\\"Dodaj do koszyka\\" data-test=\\"promocja-lgbt-buy-now-button\\" title=\\"Dodaj do koszyka\\" type=\\"button\\" class=\\"lgbt-product-card__add-to-cart\\"><img src=\\"./images/magnifier.svg\\" class=\\"lgbt-product-card__add-to-cart-icon\\"> <span>Sprawdź!</span></button>
+    </div>
+    <!---->
+  </div>
+</div>"
+`;
+
+exports[`Poems / Promocja LGBT Unit shall pass unit sanity test 1`] = `
+"<div class=\\"promocja-lgbt\\">
+  <div class=\\"lgbt-product-card\\">
+    <transition-group-stub tag=\\"div\\" name=\\"transition-lgbt-image-wrapper\\" class=\\"lgbt-product-card__image-wrapper\\"><img alt=\\"Dwie uśmiechnięte kobiety w łazience. Jedna z nich wyciera ręcznikiem drugą.\\" srcset=\\"promocja-lgbt-1.1x.webp 1x, promocja-lgbt-1.2x.webp 2x\\" src=\\"promocja-lgbt-1.1x.webp\\" class=\\"lgbt-product-card__image\\">
+      <!---->
+      <!---->
+      <!---->
+    </transition-group-stub>
+    <div class=\\"lgbt-product-card__content-wrapper\\">
+      <div class=\\"lgbt-product-card__ribbon\\"><img alt=\\"Produkt w promocji!\\" src=\\"./images/ribbon.svg\\" title=\\"Produkt w promocji!\\" class=\\"lgbt-product-card__ribbon-icon\\"></div>
+      <h2 class=\\"lgbt-product-card__title\\">Miłość</h2> <span class=\\"lgbt-product-card__price\\">0,00 zł</span> <button aria-label=\\"Dodaj do koszyka\\" data-test=\\"promocja-lgbt-buy-now-button\\" title=\\"Dodaj do koszyka\\" type=\\"button\\" class=\\"lgbt-product-card__add-to-cart\\"><img src=\\"./images/magnifier.svg\\" class=\\"lgbt-product-card__add-to-cart-icon\\"> <span>Sprawdź!</span></button>
+    </div>
+    <!---->
+  </div>
+</div>"
+`;
