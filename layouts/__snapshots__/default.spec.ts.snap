@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layouts / Default Integration shall pass integration sanity test 1`] = `
+"<div class=\\"layout-default\\">
+  <header class=\\"header\\"><button aria-label=\\"Otwórz menu nawigacyjne\\" type=\\"button\\" class=\\"button-hamburger header__button\\" data-test=\\"blocks-header-button\\">
+      <div aria-hidden=\\"true\\" data-open=\\"false\\" class=\\"button-hamburger__line button-hamburger__line--1\\"></div>
+      <div aria-hidden=\\"true\\" data-open=\\"false\\" class=\\"button-hamburger__line button-hamburger__line--2\\"></div>
+      <div aria-hidden=\\"true\\" data-open=\\"false\\" class=\\"button-hamburger__line button-hamburger__line--3\\"></div>
+    </button>
+    <nuxtlink to=\\"/\\"><svg width=\\"234\\" height=\\"70\\" viewBox=\\"0 0 234 70\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"logo header__logo\\">
+        <title>Logo 169cm.pl</title>
+        <path d=\\"m0 0h30v40c-12 10-15 30-15 30v-22c5 0 5-8 0-8v-25h-15z\\"></path>
+        <path d=\\"m0 15v25c12 10 15 30 15 30v-22c-5 0-5-8 0-8v-25h-15z\\" fill-opacity=\\"0.15\\"></path>
+        <path transform=\\"translate(34)\\" d=\\"m188.16 69.639v-17.595c0-3.762-2.069-6.007-5.417-6.007-3.834 0.06-6.208 3.094-6.208 7.402v16.2h-10.833v-17.595c0-3.762-2.069-6.007-5.417-6.007-3.834 0.06-6.269 3.094-6.269 7.402v16.2h-10.772v-32.825h10.772v5.4c2.252-3.822 5.965-5.824 10.712-5.824 5.356 0 9.312 2.73 10.955 7.341 2.13-4.854 6.147-7.341 11.503-7.341 7.121 0 11.808 4.854 11.808 12.559v20.69h-10.834zm-61.29-8.373c2.861 0 5.113-1.153 6.452-3.701l7.973 4.55c-2.617 5.036-7.973 7.888-14.972 7.888-10.164 0-16.92-6.613-16.92-16.625 0-10.193 6.816-16.928 17.041-16.928 6.634 0 11.868 2.852 14.729 7.767l-7.851 4.55c-1.461-2.123-3.652-3.398-6.452-3.398-3.895 0-6.573 3.216-6.573 7.949 0 4.793 2.678 7.948 6.573 7.948zm-49.875 8.041c-7.106 0-15.381-2.135-21.028-5.532l5.744-10.869c3.991 2.814 9.248 4.367 14.408 4.367 11.585 0 17.037-7.958 16.842-20.381-3.407 5.241-9.054 8.25-16.939 8.25-13.24 0-21.612-8.735-21.612-22.031 0-14.169 9.735-23.098 24.532-23.098 17.718 0 28.427 12.617 28.427 33.386 0 21.739-11.78 35.908-30.374 35.908zm2.629-56.872c-6.912 0-11.293 3.883-11.293 10.773 0 6.503 4.089 10.482 10.903 10.482 7.594 0 11.877-4.756 11.877-10.773 0-5.338-3.504-10.482-11.487-10.482zm-48.29 11.744c13.435 0 21.807 8.637 21.807 21.933 0 14.267-9.832 23.195-24.63 23.195-17.815 0-28.524-12.616-28.524-33.482 0-21.74 11.877-35.812 30.374-35.812 7.204 0 15.576 2.038 21.223 5.435l-5.842 10.87c-3.991-2.718-9.248-4.271-14.408-4.271-11.585 0-17.231 7.861-16.939 20.284 3.407-5.241 9.151-8.152 16.939-8.152zm-3.504 32.609c6.912 0 11.39-3.882 11.39-10.773 0-6.502-4.089-10.481-11.001-10.481-7.593 0-11.974 4.755-11.877 10.772-0.097 5.338 3.505 10.482 11.488 10.482z\\" fill-rule=\\"evenodd\\"></path>
+      </svg></nuxtlink>
+  </header>
+  <lazyhydrate-stub idletimeout=\\"2000\\" whenidle=\\"true\\">
+    <div class=\\"drawer\\" style=\\"display: none;\\">
+      <nav class=\\"drawer__navigation\\">
+        <ul class=\\"navigation\\">
+          <li class=\\"navigation__item\\">
+            <nuxtlink data-test=\\"navigation-item\\" to=\\"/\\" class=\\"link-text\\">Strona główna</nuxtlink>
+          </li>
+          <li class=\\"navigation__item\\">
+            <nuxtlink data-test=\\"navigation-item\\" target=\\"_blank\\" to=\\"/o-mnie/\\" rel=\\"noopener noreferrer\\" class=\\"link-text\\">O mnie</nuxtlink>
+          </li>
+          <li class=\\"navigation__item\\">
+            <nuxtlink data-test=\\"navigation-item\\" to=\\"/poezja-314/\\" class=\\"link-text\\">Poezja 3.14</nuxtlink>
+          </li>
+          <li class=\\"navigation__item\\">
+            <nuxtlink data-test=\\"navigation-item\\" to=\\"/audiobooki/\\" class=\\"link-text\\">Audiobooki</nuxtlink>
+          </li>
+          <li class=\\"navigation__item\\">
+            <nuxtlink data-test=\\"navigation-item\\" target=\\"_blank\\" to=\\"/kontakt/\\" rel=\\"noopener noreferrer\\" class=\\"link-text\\">Kontakt</nuxtlink>
+          </li>
+        </ul>
+      </nav>
+      <ul class=\\"social-media\\">
+        <li class=\\"social-media__item\\"><a aria-label=\\"Odwiedź mnie na Facebooku\\" href=\\"https://www.facebook.com/169cmpl\\" rel=\\"noopener noreferrer\\" target=\\"_blank\\" title=\\"Odwiedź mnie na Facebooku\\" class=\\"social-media__link\\"><svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 512 512\\" class=\\"social-media__icon\\">
+              <title>Odwiedź mnie na Facebooku</title>
+              <path d=\\"M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z\\"></path>
+            </svg></a></li>
+        <li class=\\"social-media__item\\"><a aria-label=\\"Odwiedź mnie na Instagramie\\" href=\\"https://instagram.com/radoslawkalamon\\" rel=\\"noopener noreferrer\\" target=\\"_blank\\" title=\\"Odwiedź mnie na Instagramie\\" class=\\"social-media__link\\"><svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 448 512\\" class=\\"social-media__icon\\">
+              <title>Odwiedź mnie na Instagramie</title>
+              <path d=\\"M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z\\"></path>
+            </svg></a></li>
+        <li class=\\"social-media__item\\"><a aria-label=\\"Odwiedź mnie na Twitterze\\" href=\\"https://twitter.com/radoslawkalamon\\" rel=\\"noopener noreferrer\\" target=\\"_blank\\" title=\\"Odwiedź mnie na Twitterze\\" class=\\"social-media__link\\"><svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 512 512\\" class=\\"social-media__icon\\">
+              <title>Odwiedź mnie na Twitterze</title>
+              <path d=\\"M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z\\"></path>
+            </svg></a></li>
+        <li class=\\"social-media__item\\"><a aria-label=\\"Odwiedź mnie na Soundcloudzie\\" href=\\"https://soundcloud.com/169cmpl\\" rel=\\"noopener noreferrer\\" target=\\"_blank\\" title=\\"Odwiedź mnie na Soundcloudzie\\" class=\\"social-media__link\\"><svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 640 512\\" class=\\"social-media__icon\\">
+              <title>Odwiedź mnie na Soundcloudzie</title>
+              <path d=\\"M111.4 256.3l5.8 65-5.8 68.3c-.3 2.5-2.2 4.4-4.4 4.4s-4.2-1.9-4.2-4.4l-5.6-68.3 5.6-65c0-2.2 1.9-4.2 4.2-4.2 2.2 0 4.1 2 4.4 4.2zm21.4-45.6c-2.8 0-4.7 2.2-5 5l-5 105.6 5 68.3c.3 2.8 2.2 5 5 5 2.5 0 4.7-2.2 4.7-5l5.8-68.3-5.8-105.6c0-2.8-2.2-5-4.7-5zm25.5-24.1c-3.1 0-5.3 2.2-5.6 5.3l-4.4 130 4.4 67.8c.3 3.1 2.5 5.3 5.6 5.3 2.8 0 5.3-2.2 5.3-5.3l5.3-67.8-5.3-130c0-3.1-2.5-5.3-5.3-5.3zM7.2 283.2c-1.4 0-2.2 1.1-2.5 2.5L0 321.3l4.7 35c.3 1.4 1.1 2.5 2.5 2.5s2.2-1.1 2.5-2.5l5.6-35-5.6-35.6c-.3-1.4-1.1-2.5-2.5-2.5zm23.6-21.9c-1.4 0-2.5 1.1-2.5 2.5l-6.4 57.5 6.4 56.1c0 1.7 1.1 2.8 2.5 2.8s2.5-1.1 2.8-2.5l7.2-56.4-7.2-57.5c-.3-1.4-1.4-2.5-2.8-2.5zm25.3-11.4c-1.7 0-3.1 1.4-3.3 3.3L47 321.3l5.8 65.8c.3 1.7 1.7 3.1 3.3 3.1 1.7 0 3.1-1.4 3.1-3.1l6.9-65.8-6.9-68.1c0-1.9-1.4-3.3-3.1-3.3zm25.3-2.2c-1.9 0-3.6 1.4-3.6 3.6l-5.8 70 5.8 67.8c0 2.2 1.7 3.6 3.6 3.6s3.6-1.4 3.9-3.6l6.4-67.8-6.4-70c-.3-2.2-2-3.6-3.9-3.6zm241.4-110.9c-1.1-.8-2.8-1.4-4.2-1.4-2.2 0-4.2.8-5.6 1.9-1.9 1.7-3.1 4.2-3.3 6.7v.8l-3.3 176.7 1.7 32.5 1.7 31.7c.3 4.7 4.2 8.6 8.9 8.6s8.6-3.9 8.6-8.6l3.9-64.2-3.9-177.5c-.4-3-2-5.8-4.5-7.2zm-26.7 15.3c-1.4-.8-2.8-1.4-4.4-1.4s-3.1.6-4.4 1.4c-2.2 1.4-3.6 3.9-3.6 6.7l-.3 1.7-2.8 160.8s0 .3 3.1 65.6v.3c0 1.7.6 3.3 1.7 4.7 1.7 1.9 3.9 3.1 6.4 3.1 2.2 0 4.2-1.1 5.6-2.5 1.7-1.4 2.5-3.3 2.5-5.6l.3-6.7 3.1-58.6-3.3-162.8c-.3-2.8-1.7-5.3-3.9-6.7zm-111.4 22.5c-3.1 0-5.8 2.8-5.8 6.1l-4.4 140.6 4.4 67.2c.3 3.3 2.8 5.8 5.8 5.8 3.3 0 5.8-2.5 6.1-5.8l5-67.2-5-140.6c-.2-3.3-2.7-6.1-6.1-6.1zm376.7 62.8c-10.8 0-21.1 2.2-30.6 6.1-6.4-70.8-65.8-126.4-138.3-126.4-17.8 0-35 3.3-50.3 9.4-6.1 2.2-7.8 4.4-7.8 9.2v249.7c0 5 3.9 8.6 8.6 9.2h218.3c43.3 0 78.6-35 78.6-78.3.1-43.6-35.2-78.9-78.5-78.9zm-296.7-60.3c-4.2 0-7.5 3.3-7.8 7.8l-3.3 136.7 3.3 65.6c.3 4.2 3.6 7.5 7.8 7.5 4.2 0 7.5-3.3 7.5-7.5l3.9-65.6-3.9-136.7c-.3-4.5-3.3-7.8-7.5-7.8zm-53.6-7.8c-3.3 0-6.4 3.1-6.4 6.7l-3.9 145.3 3.9 66.9c.3 3.6 3.1 6.4 6.4 6.4 3.6 0 6.4-2.8 6.7-6.4l4.4-66.9-4.4-145.3c-.3-3.6-3.1-6.7-6.7-6.7zm26.7 3.4c-3.9 0-6.9 3.1-6.9 6.9L227 321.3l3.9 66.4c.3 3.9 3.1 6.9 6.9 6.9s6.9-3.1 6.9-6.9l4.2-66.4-4.2-141.7c0-3.9-3-6.9-6.9-6.9z\\"></path>
+            </svg></a></li>
+      </ul>
+    </div>
+  </lazyhydrate-stub>
+  <div class=\\"main layout-default__main\\">
+    <nuxt-stub class=\\"layout-default__article\\"></nuxt-stub>
+  </div>
+  <lazyhydrate-stub idletimeout=\\"2000\\" whenvisible=\\"true\\">
+    <footer class=\\"footer\\">
+      <nav class=\\"navigation-footer\\">
+        <ul class=\\"navigation\\">
+          <li class=\\"navigation__item\\">
+            <nuxtlink to=\\"/polityka-prywatnosci/\\" class=\\"link-text\\">Polityka prywatności</nuxtlink>
+          </li>
+          <li class=\\"navigation__item\\"><button type=\\"button\\" data-test=\\"open-privacy-modal\\" class=\\"button-text\\">Ustawienia prywatności</button></li>
+        </ul>
+      </nav> <a href=\\"https://pieczywotwarde.pl\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\"><img alt=\\"Logo firmy Pieczywo Twarde\\" height=\\"128\\" src=\\"./images/crusty-bread.svg\\" title=\\"Logo firmy Pieczywo Twarde\\" width=\\"56\\"></a>
+      <div class=\\"text\\">
+        <p>169cm.pl © 2021</p>
+      </div>
+    </footer>
+  </lazyhydrate-stub>
+  <lazyhydrate-stub idletimeout=\\"2000\\" whenvisible=\\"true\\">
+    <!---->
+  </lazyhydrate-stub>
+</div>"
+`;
