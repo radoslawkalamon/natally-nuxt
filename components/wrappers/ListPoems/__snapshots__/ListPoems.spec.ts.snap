@@ -1,5 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Wrappers / List Poems shall have slot default 1`] = `"<div class=\\"list-poems\\">This is slot \\"default\\" test.</div>"`;
+exports[`Wrappers / List Poems Unit Randomize: false shall { metaPostPoems } match snapshot 1`] = `
+Array [
+  DTOMetaPostPoem {},
+  DTOMetaPostPoem {},
+  DTOMetaPostPoem {},
+  DTOMetaPostPoem {},
+  DTOMetaPostPoem {},
+  DTOMetaPostPoem {},
+  DTOMetaPostPoem {},
+  DTOMetaPostPoem {},
+  DTOMetaPostPoem {},
+  DTOMetaPostPoem {},
+]
+`;
 
-exports[`Wrappers / List Poems shall render 1`] = `"<div class=\\"list-poems\\"></div>"`;
+exports[`Wrappers / List Poems Unit Randomize: true shall { metaPostPoems } match snapshot 1`] = `
+Array [
+  DTOMetaPostPoem {},
+  DTOMetaPostPoem {},
+  DTOMetaPostPoem {},
+  DTOMetaPostPoem {},
+  DTOMetaPostPoem {},
+  DTOMetaPostPoem {},
+  DTOMetaPostPoem {},
+  DTOMetaPostPoem {},
+  DTOMetaPostPoem {},
+  DTOMetaPostPoem {},
+]
+`;
+
+exports[`Wrappers / List Poems Unit shall pass unit sanity test 1`] = `"<div class=\\"list-poems\\">This is slot \\"default\\" test.</div>"`;
