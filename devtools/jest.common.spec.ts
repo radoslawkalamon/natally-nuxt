@@ -8,7 +8,7 @@ import {
 
 /** Awaited<ReturnType<typeof T>> Polyfill */
 type AsyncReturnType<T extends (...args: any) => any> = T extends (...args: any) => Promise<infer U> ? U : any
-type Wrapper = AsyncReturnType<typeof createUnitTestWrapper> | AsyncReturnType<typeof createIntegrationTestWrapper>
+export type Wrapper = AsyncReturnType<typeof createUnitTestWrapper> | AsyncReturnType<typeof createIntegrationTestWrapper>
 
 export const expectHeadMatchSnapshot = ({ wrapper }: {
   wrapper: Wrapper
