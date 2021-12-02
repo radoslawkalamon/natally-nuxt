@@ -3,7 +3,7 @@ import Vue from 'vue'
 export default Vue.extend({
   name: 'WrappersNavigation',
   components: {
-    Vnode: {
+    VNode: {
       functional: true,
       // @ts-ignore: This is hacky as hell but it works :D
       render: (_h, { props }) => props.node

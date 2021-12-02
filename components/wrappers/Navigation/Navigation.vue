@@ -8,7 +8,7 @@
         :key="index"
         class="navigation__item"
       >
-        <vnode :node="child" />
+        <VNode :node="child" />
       </li>
     </template>
   </ul>
