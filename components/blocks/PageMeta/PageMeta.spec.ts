@@ -25,6 +25,6 @@ describe('Blocks / Page Meta', () => {
       }
     }))
     const footer = wrapper.find('[data-test="blocks-page-meta-footer"]')
-    expect(footer.exists()).toBeTruthy()
+    expect(footer.exists()).toBe(true)
   })
 })

@@ -20,7 +20,7 @@ describe('Utils / Mixins / Poem / First Time', () => {
     test('shall poem/firstTime/shallShow return false', async () => {
       const wrapper = await createUnitTestWrapper<MixinComponentType>({ component: mixinComponent })
 
-      expect(wrapper.vm['poem/firstTime/shallShow']).toBeFalsy()
+      expect(wrapper.vm['poem/firstTime/shallShow']).toBe(false)
 
       wrapper.destroy()
     })
@@ -44,7 +44,7 @@ describe('Utils / Mixins / Poem / First Time', () => {
 
       const wrapper = await createUnitTestWrapper<MixinComponentType>({ component: mixinComponent })
 
-      expect(wrapper.vm['poem/firstTime/shallShow']).toBeTruthy()
+      expect(wrapper.vm['poem/firstTime/shallShow']).toBe(true)
 
       wrapper.destroy()
     })
@@ -54,7 +54,7 @@ describe('Utils / Mixins / Poem / First Time', () => {
 
       const wrapper = await createUnitTestWrapper<MixinComponentType>({ component: mixinComponent })
 
-      expect(wrapper.vm['poem/firstTime/shallShow']).toBeFalsy()
+      expect(wrapper.vm['poem/firstTime/shallShow']).toBe(false)
 
       wrapper.destroy()
     })

@@ -34,7 +34,7 @@ describe('Wrappers / List Poems', () => {
     const wrapper = mount(ListPoems, defaultOptionsFactory())
     await (ListPoems as any).options.fetch.call(wrapper.vm)
     const metaPostPoemsConstructorNames = (wrapper.vm as any).metaPostPoems.map((e: any) => e.constructor.name)
-    expect(metaPostPoemsConstructorNames.every((e: string) => e === 'MockEmptyClass')).toBeTruthy()
+    expect(metaPostPoemsConstructorNames.every((e: string) => e === 'MockEmptyClass')).toBe(true)
   })
 
   describe('Randomize: false', (): void => {
@@ -45,7 +45,7 @@ describe('Wrappers / List Poems', () => {
         }
       }))
       await (ListPoems as any).options.fetch.call(wrapper.vm)
-      expect(Array.isArray((wrapper.vm as any).metaPostPoems)).toBeTruthy()
+      expect(Array.isArray((wrapper.vm as any).metaPostPoems)).toBe(true)
     })
 
     test('shall $content.limit() be called with 3 when limit = 3', async (): Promise<void> => {
@@ -74,7 +74,7 @@ describe('Wrappers / List Poems', () => {
         }
       }))
       await (ListPoems as any).options.fetch.call(wrapper.vm)
-      expect(Array.isArray((wrapper.vm as any).metaPostPoems)).toBeTruthy()
+      expect(Array.isArray((wrapper.vm as any).metaPostPoems)).toBe(true)
     })
 
     test('shall { metaPostPoems } be Array.length = 3 when limit = 3', async (): Promise<void> => {

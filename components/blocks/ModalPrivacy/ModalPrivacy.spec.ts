@@ -13,13 +13,13 @@ describe('Blocks / Modal Privacy', () => {
   test('shall not render', () => {
     const wrapper = mount(ModalPrivacy, defaultOptions)
     const isWrapperVisible = wrapper.isVisible()
-    expect(isWrapperVisible).toBeFalsy()
+    expect(isWrapperVisible).toBe(false)
   })
 
   test('shall render', async () => {
     const wrapper = mount(ModalPrivacy, defaultOptions)
     await wrapper.vm.$root.$emit('privacy/modal/toggle')
     const isWrapperVisible = wrapper.isVisible()
-    expect(isWrapperVisible).toBeTruthy()
+    expect(isWrapperVisible).toBe(true)
   })
 })

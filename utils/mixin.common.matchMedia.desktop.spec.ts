@@ -23,7 +23,7 @@ describe('Utils / Mixins / MatchMedia / Desktop', () => {
     const wrapper = await createUnitTestWrapper<MixinComponentType>({ component: mixinComponent })
     wrapper.vm['common/matchMedia/desktop/onChange'](e as MediaQueryListEvent)
 
-    expect(wrapper.vm['common/matchMedia/desktop/matches']).toBeTruthy()
+    expect(wrapper.vm['common/matchMedia/desktop/matches']).toBe(true)
 
     wrapper.destroy()
   })

@@ -6,7 +6,7 @@ export function shallRender (component: typeof Vue, defaultOptions?: object): vo
   test('shall render', (): void => {
     const wrapper = mount(component, defaultOptions)
     const isWrapperVisible = wrapper.isVisible()
-    expect(isWrapperVisible).toBeTruthy()
+    expect(isWrapperVisible).toBe(true)
   })
 }
 
@@ -37,7 +37,7 @@ export function shallHideSlotWhenNoChildren (component: typeof Vue, slot: string
     const wrapperOptions = merge(defaultOptions)
     const wrapper = mount(component, wrapperOptions)
     const slot = wrapper.find(`[data-test="${dataTestSelector}"]`)
-    expect(slot.exists()).toBeFalsy()
+    expect(slot.exists()).toBe(false)
   })
 }
 
@@ -69,7 +69,7 @@ export function shallHavePropInfluenceOverClassNames (
     })
     const wrapper = mount(component, wrapperOptions)
     const isWrapperHaveClass = wrapper.classes().some(cls => cls.includes(classNameSuffix))
-    expect(isWrapperHaveClass).toBeTruthy()
+    expect(isWrapperHaveClass).toBe(true)
   })
 }
 

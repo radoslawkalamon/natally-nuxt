@@ -22,7 +22,7 @@ describe('Utils / Mixins / Intersection Observer / Shown Once', () => {
     const wrapper = await createUnitTestWrapper<MixinComponentType>({ component: mixinComponent })
     wrapper.vm['common/intersectionObserver/observerCallback'](entries, observer)
 
-    expect(wrapper.vm['common/intersectionObserver/shownOnce']).toBeTruthy()
+    expect(wrapper.vm['common/intersectionObserver/shownOnce']).toBe(true)
 
     wrapper.destroy()
   })

@@ -16,7 +16,7 @@ describe('Utils / Mixins / Privacy / Storage', () => {
     test('get', async () => {
       const wrapper = await createUnitTestWrapper<MixinComponentType>({ component: mixinComponent })
 
-      expect(wrapper.vm['privacy/storage/getCore']).toBeTruthy()
+      expect(wrapper.vm['privacy/storage/getCore']).toBe(true)
 
       wrapper.destroy()
     })
@@ -32,7 +32,7 @@ describe('Utils / Mixins / Privacy / Storage', () => {
 
       const wrapper = await createUnitTestWrapper<MixinComponentType>({ component: mixinComponent })
 
-      expect(wrapper.vm['privacy/storage/getSoundcloud']).toBeFalsy()
+      expect(wrapper.vm['privacy/storage/getSoundcloud']).toBe(false)
 
       wrapper.destroy()
     })
@@ -43,7 +43,7 @@ describe('Utils / Mixins / Privacy / Storage', () => {
 
       const wrapper = await createUnitTestWrapper<MixinComponentType>({ component: mixinComponent })
 
-      expect(wrapper.vm['privacy/storage/getSoundcloud']).toBeTruthy()
+      expect(wrapper.vm['privacy/storage/getSoundcloud']).toBe(true)
 
       wrapper.destroy()
     })
