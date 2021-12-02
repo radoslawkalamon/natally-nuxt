@@ -1,7 +1,7 @@
 import flushPromises from 'flush-promises'
 import Vue from 'vue'
 import type { VueConstructor } from 'vue'
-import { mount, shallowMount } from '@vue/test-utils'
+import { mount, shallowMount, Wrapper } from '@vue/test-utils'
 import cloneDeep from 'lodash/cloneDeep'
 import merge from 'lodash/merge'
 
@@ -9,11 +9,11 @@ type mountArguments = Parameters<typeof mount>;
 type shallowMountArguments = Parameters<typeof shallowMount>;
 type mountOptions = shallowMountArguments[1] | mountArguments[1]
 
-export const createComponentFromMixin = ({ mixin, options = undefined }: {
+export const createComponentFromMixin = <M extends Vue>({ mixin, options = undefined }: {
   mixin: ReturnType<typeof Vue.extend>,
   options?: Parameters<typeof Vue.extend>
 }) => {
-  return (Vue as VueConstructor<Vue & InstanceType<typeof mixin>>).extend(
+  return (Vue as VueConstructor<Vue & M>).extend(
     merge(options, {
       mixins: [mixin],
       template: '<div />'
@@ -25,8 +25,8 @@ export const createDefaultOptionsFactory = (defaultOptions: mountOptions) => {
   return (options?: mountOptions): mountOptions => merge(cloneDeep(defaultOptions), options)
 }
 
-export const createIntegrationTestWrapper = async ({ component, options = {} }: {
-  component: mountArguments[0],
+export const createIntegrationTestWrapper = async <C extends Vue>({ component, options = {} }: {
+  component: mountArguments[0]
   options?: mountArguments[1]
 }) => {
   const context = {}
@@ -52,10 +52,10 @@ export const createIntegrationTestWrapper = async ({ component, options = {} }: 
 
   await flushPromises()
 
-  return wrapper
+  return wrapper as Wrapper<C>
 }
 
-export const createUnitTestWrapper = async ({ component, options = {} }: {
+export const createUnitTestWrapper = async <C extends Vue>({ component, options = {} }: {
   component: shallowMountArguments[0],
   options?: shallowMountArguments[1]
 }) => {
@@ -82,5 +82,5 @@ export const createUnitTestWrapper = async ({ component, options = {} }: {
 
   await flushPromises()
 
-  return wrapper
+  return wrapper as Wrapper<C>
 }

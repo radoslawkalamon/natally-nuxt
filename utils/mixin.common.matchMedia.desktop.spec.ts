@@ -5,9 +5,10 @@ import mixinCommonMatchMediaDesktop from '@/utils/mixin.common.matchMedia.deskto
 
 JestMockMatchMedia()
 
-const mixinComponent = createComponentFromMixin({
+const mixinComponent = createComponentFromMixin<InstanceType<typeof mixinCommonMatchMediaDesktop>>({
   mixin: mixinCommonMatchMediaDesktop
 })
+type MixinComponentType = InstanceType<typeof mixinComponent>
 
 describe('Utils / Mixins / MatchMedia / Desktop', () => {
   shallPassMixinSanityTest({
@@ -19,10 +20,9 @@ describe('Utils / Mixins / MatchMedia / Desktop', () => {
       matches: true
     }
 
-    const wrapper = await createUnitTestWrapper({ component: mixinComponent })
-    // @ts-ignore: no mixinComponent typing?
+    const wrapper = await createUnitTestWrapper<MixinComponentType>({ component: mixinComponent })
     wrapper.vm['common/matchMedia/desktop/onChange'](e as MediaQueryListEvent)
-    // @ts-ignore: no mixinComponent typing?
+
     expect(wrapper.vm['common/matchMedia/desktop/matches']).toBeTruthy()
 
     wrapper.destroy()

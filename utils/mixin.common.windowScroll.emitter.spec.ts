@@ -16,10 +16,12 @@ describe('Utils / Mixins / windowScroll / Emitter', () => {
   test('shall emit common/windowScroll on window scroll event', async () => {
     const wrapper = await createUnitTestWrapper({ component: mixinComponent })
     window.dispatchEvent(new CustomEvent('scroll'))
+
     expectRootEmit({
       name: 'common/windowScroll',
       wrapper
     })
+
     wrapper.destroy()
   })
 })

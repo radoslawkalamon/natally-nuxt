@@ -2,9 +2,10 @@ import mixinPrivacyStorage from '@/utils/mixin.privacy.storage'
 import { createComponentFromMixin, createUnitTestWrapper } from '@/devtools/jest.common.spec.utils'
 import { shallPassMixinSanityTest } from '@/devtools/jest.common.spec'
 
-const mixinComponent = createComponentFromMixin({
+const mixinComponent = createComponentFromMixin<InstanceType<typeof mixinPrivacyStorage>>({
   mixin: mixinPrivacyStorage
 })
+type MixinComponentType = InstanceType<typeof mixinComponent>
 
 describe('Utils / Mixins / Privacy / Storage', () => {
   shallPassMixinSanityTest({
@@ -13,9 +14,10 @@ describe('Utils / Mixins / Privacy / Storage', () => {
 
   describe('Core', () => {
     test('get', async () => {
-      const wrapper = await createUnitTestWrapper({ component: mixinComponent })
-      // @ts-ignore: no mixinComponent typing?
+      const wrapper = await createUnitTestWrapper<MixinComponentType>({ component: mixinComponent })
+
       expect(wrapper.vm['privacy/storage/getCore']).toBeTruthy()
+
       wrapper.destroy()
     })
   })
@@ -28,8 +30,8 @@ describe('Utils / Mixins / Privacy / Storage', () => {
     test('get default', async () => {
       process.client = false
 
-      const wrapper = await createUnitTestWrapper({ component: mixinComponent })
-      // @ts-ignore: no mixinComponent typing?
+      const wrapper = await createUnitTestWrapper<MixinComponentType>({ component: mixinComponent })
+
       expect(wrapper.vm['privacy/storage/getSoundcloud']).toBeFalsy()
 
       wrapper.destroy()
@@ -39,8 +41,8 @@ describe('Utils / Mixins / Privacy / Storage', () => {
       process.client = true
       Storage.prototype.getItem = jest.fn(() => '1')
 
-      const wrapper = await createUnitTestWrapper({ component: mixinComponent })
-      // @ts-ignore: no mixinComponent typing?
+      const wrapper = await createUnitTestWrapper<MixinComponentType>({ component: mixinComponent })
+
       expect(wrapper.vm['privacy/storage/getSoundcloud']).toBeTruthy()
 
       wrapper.destroy()
@@ -49,9 +51,9 @@ describe('Utils / Mixins / Privacy / Storage', () => {
     test('set', async () => {
       const spy = jest.spyOn(Storage.prototype, 'setItem')
 
-      const wrapper = await createUnitTestWrapper({ component: mixinComponent })
-      // @ts-ignore: no mixinComponent typing?
+      const wrapper = await createUnitTestWrapper<MixinComponentType>({ component: mixinComponent })
       wrapper.vm['privacy/storage/setSoundcloud'](true)
+
       expect(spy).toBeCalledWith('privacy-settings-soundcloud', '1')
 
       wrapper.destroy()

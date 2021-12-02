@@ -5,9 +5,10 @@ import mixinCommonIntersectionObserverShownOnce from '@/utils/mixin.common.inter
 
 JestMockIntersectionObserver()
 
-const mixinComponent = createComponentFromMixin({
+const mixinComponent = createComponentFromMixin<InstanceType<typeof mixinCommonIntersectionObserverShownOnce>>({
   mixin: mixinCommonIntersectionObserverShownOnce
 })
+type MixinComponentType = InstanceType<typeof mixinComponent>
 
 describe('Utils / Mixins / Intersection Observer / Shown Once', () => {
   shallPassMixinSanityTest({
@@ -15,13 +16,12 @@ describe('Utils / Mixins / Intersection Observer / Shown Once', () => {
   })
 
   test('shall change common/intersectionObserver/shownOnce to true, when callback called', async () => {
-    const wrapper = await createUnitTestWrapper({ component: mixinComponent })
-    // @ts-ignore: no mixinComponent typing?
-    wrapper.vm['common/intersectionObserver/observerCallback'](
-      [{ isIntersecting: true }],
-      { disconnect: jest.fn() }
-    )
-    // @ts-ignore: no mixinComponent typing?
+    const entries = [{ isIntersecting: true }] as IntersectionObserverEntry[]
+    const observer = { disconnect: jest.fn() } as unknown as IntersectionObserver
+
+    const wrapper = await createUnitTestWrapper<MixinComponentType>({ component: mixinComponent })
+    wrapper.vm['common/intersectionObserver/observerCallback'](entries, observer)
+
     expect(wrapper.vm['common/intersectionObserver/shownOnce']).toBeTruthy()
 
     wrapper.destroy()
