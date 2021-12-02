@@ -6,7 +6,9 @@ import {
   createUnitTestWrapper
 } from '@/devtools/jest.common.spec.utils'
 
-type Wrapper = Awaited<ReturnType<typeof createUnitTestWrapper>> | Awaited<ReturnType<typeof createIntegrationTestWrapper>>
+/** Awaited<ReturnType<typeof T>> Polyfill */
+type AsyncReturnType<T extends (...args: any) => any> = T extends (...args: any) => Promise<infer U> ? U : any
+type Wrapper = AsyncReturnType<typeof createUnitTestWrapper> | AsyncReturnType<typeof createIntegrationTestWrapper>
 
 export const expectHeadMatchSnapshot = ({ wrapper }: {
   wrapper: Wrapper
