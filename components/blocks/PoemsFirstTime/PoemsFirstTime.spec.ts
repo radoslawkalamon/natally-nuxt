@@ -1,20 +1,62 @@
-import merge from 'lodash/merge'
 import PoemsFirstTime from '@/components/blocks/PoemsFirstTime/PoemsFirstTime.vue'
-import { shallRender } from '@/devtools/jest.shared.spec'
+import { shallPassIntegrationSanityTest, shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
+import { createDefaultOptionsFactory, createUnitTestWrapper } from '@/devtools/jest.common.spec.utils'
 
-const defaultOptionsFactory = (options?: object) => merge({
+const defaultOptionsUnitFactory = createDefaultOptionsFactory({
   stubs: [
-    'ClientOnly',
+    'ComponentsButtonLink',
     'WrappersSection',
-    'WrappersText',
-    'ComponentsButtonLink'
+    'WrappersText'
   ]
-}, options)
+})
 
 describe('Blocks / Poems First Time', () => {
-  beforeAll(() => {
-    process.client = true
+  beforeEach(() => {
+    jest.restoreAllMocks()
   })
 
-  shallRender(PoemsFirstTime, defaultOptionsFactory())
+  describe('Unit', () => {
+    shallPassUnitSanityTest({
+      component: PoemsFirstTime,
+      description: 'hide',
+      options: defaultOptionsUnitFactory({
+        beforeCreate () {
+          process.client = true
+          Storage.prototype.getItem = jest.fn(() => '3')
+        }
+      })
+    })
+
+    shallPassUnitSanityTest({
+      component: PoemsFirstTime,
+      description: 'show',
+      options: defaultOptionsUnitFactory({
+        beforeCreate () {
+          process.client = true
+          Storage.prototype.getItem = jest.fn(() => '0')
+        }
+      })
+    })
+
+    test('shall on mounted call Storage Set', async () => {
+      const spy = jest.spyOn(Storage.prototype, 'setItem')
+      const wrapper = await createUnitTestWrapper({
+        component: PoemsFirstTime
+      })
+      expect(spy).toBeCalledWith('poem-first-time-visits', '1')
+      wrapper.destroy()
+    })
+  })
+
+  describe('Integration', () => {
+    shallPassIntegrationSanityTest({
+      component: PoemsFirstTime,
+      options: {
+        beforeCreate () {
+          process.client = true
+          Storage.prototype.getItem = jest.fn(() => '0')
+        }
+      }
+    })
+  })
 })
