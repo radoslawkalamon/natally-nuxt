@@ -1,18 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Blocks / Audiobook shall render iframe 1`] = `
+exports[`Blocks / Audiobook Integration shall pass integration sanity test | Iframe 1`] = `
 "<div class=\\"audiobook\\">
   <clientonly-stub><iframe width=\\"100%\\" height=\\"128\\" scrolling=\\"no\\" frameborder=\\"no\\" allow=\\"autoplay\\" src=\\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1234567890&amp;color=%23c0392b&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true\\"></iframe></clientonly-stub>
 </div>"
 `;
 
-exports[`Blocks / Audiobook shall render prompt 1`] = `
+exports[`Blocks / Audiobook Integration shall pass integration sanity test | Prompt 1`] = `
 "<div class=\\"audiobook\\">
   <clientonly-stub>
     <div class=\\"text\\">
-      Aby odsłuchać audiobooka,<br>
-      <componentsbuttontext-stub label=\\"zmień ustawienia prywatności\\"></componentsbuttontext-stub>
-    </div>
+      Aby odsłuchać audiobooka,<br> <button type=\\"button\\" data-test=\\"blocks-audiobook-privacy-modal-open\\" class=\\"button-text\\">zmień ustawienia prywatności</button></div>
   </clientonly-stub>
+</div>"
+`;
+
+exports[`Blocks / Audiobook Unit shall pass unit sanity test | ID = 0 1`] = `""`;
+
+exports[`Blocks / Audiobook Unit shall pass unit sanity test | Iframe 1`] = `
+"<div class=\\"audiobook\\">
+  <clientonly><iframe width=\\"100%\\" height=\\"128\\" scrolling=\\"no\\" frameborder=\\"no\\" allow=\\"autoplay\\" src=\\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1234567890&amp;color=%23c0392b&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true\\"></iframe></clientonly>
+</div>"
+`;
+
+exports[`Blocks / Audiobook Unit shall pass unit sanity test | Prompt 1`] = `
+"<div class=\\"audiobook\\">
+  <clientonly>
+    <wrapperstext-stub>
+      Aby odsłuchać audiobooka,<br>
+      <componentsbuttontext-stub data-test=\\"blocks-audiobook-privacy-modal-open\\" label=\\"zmień ustawienia prywatności\\"></componentsbuttontext-stub>
+    </wrapperstext-stub>
+  </clientonly>
+</div>"
+`;
+
+exports[`Blocks / Audiobook Unit shall pass unit sanity test | Prompt on server with Storage = 1 1`] = `
+"<div class=\\"audiobook\\">
+  <clientonly>
+    <wrapperstext-stub>
+      Aby odsłuchać audiobooka,<br>
+      <componentsbuttontext-stub data-test=\\"blocks-audiobook-privacy-modal-open\\" label=\\"zmień ustawienia prywatności\\"></componentsbuttontext-stub>
+    </wrapperstext-stub>
+  </clientonly>
 </div>"
 `;

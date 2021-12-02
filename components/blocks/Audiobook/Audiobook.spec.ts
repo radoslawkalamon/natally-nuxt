@@ -1,31 +1,121 @@
-import flushPromises from 'flush-promises'
-import { mount } from '@vue/test-utils'
-import merge from 'lodash/merge'
-import Audiobook from './Audiobook.vue'
+import Audiobook from '@/components/blocks/Audiobook/Audiobook.vue'
+import { expectRootEmit, shallPassIntegrationSanityTest, shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
+import { createDefaultOptionsFactory, createIntegrationTestWrapper } from '@/devtools/jest.common.spec.utils'
 
-const defaultOptionsFactory = (options?: object) => merge({
+const defaultOptionsUnitFactory = createDefaultOptionsFactory({
   propsData: {
     id: '1234567890'
   },
   stubs: [
-    'ClientOnly',
-    'ComponentsButtonText'
+    'ComponentsButtonText',
+    'WrappersText'
   ]
-}, options)
+})
+
+const defaultOptionsIntegrationFactory = createDefaultOptionsFactory({
+  propsData: {
+    id: '1234567890'
+  }
+})
 
 describe('Blocks / Audiobook', () => {
-  test('shall render prompt', async (): Promise<void> => {
-    Storage.prototype.getItem = jest.fn(() => '0')
-    const wrapper = mount(Audiobook, defaultOptionsFactory())
-    await flushPromises()
-    expect(wrapper.html()).toMatchSnapshot()
+  describe('Unit', () => {
+    beforeEach(() => {
+      jest.resetAllMocks()
+    })
+
+    shallPassUnitSanityTest({
+      component: Audiobook,
+      description: 'ID = 0',
+      options: defaultOptionsUnitFactory({
+        beforeCreate () {
+          process.client = true
+        },
+        propsData: {
+          id: '0'
+        }
+      })
+    })
+
+    shallPassUnitSanityTest({
+      component: Audiobook,
+      description: 'Prompt',
+      options: defaultOptionsUnitFactory({
+        beforeCreate () {
+          process.client = true
+          Storage.prototype.getItem = jest.fn(() => '0')
+        }
+      })
+    })
+
+    shallPassUnitSanityTest({
+      component: Audiobook,
+      description: 'Prompt on server with Storage = 1',
+      options: defaultOptionsUnitFactory({
+        beforeCreate () {
+          process.client = false
+          Storage.prototype.getItem = jest.fn(() => '1')
+        }
+      })
+    })
+
+    shallPassUnitSanityTest({
+      component: Audiobook,
+      description: 'Iframe',
+      options: defaultOptionsUnitFactory({
+        beforeCreate () {
+          process.client = true
+          Storage.prototype.getItem = jest.fn(() => '1')
+        }
+      })
+    })
   })
 
-  test('shall render iframe', async (): Promise<void> => {
-    process.client = true
-    Storage.prototype.getItem = jest.fn(() => '1')
-    const wrapper = mount(Audiobook, defaultOptionsFactory())
-    await flushPromises()
-    expect(wrapper.html()).toMatchSnapshot()
+  describe('Integration', () => {
+    beforeEach(() => {
+      jest.resetAllMocks()
+    })
+
+    shallPassIntegrationSanityTest({
+      component: Audiobook,
+      description: 'Prompt',
+      options: defaultOptionsIntegrationFactory({
+        beforeCreate () {
+          process.client = true
+          Storage.prototype.getItem = jest.fn(() => '0')
+        }
+      })
+    })
+
+    test('shall root emit "privacy/modal/toggle" on prompt button click', async () => {
+      const wrapper = await createIntegrationTestWrapper({
+        component: Audiobook,
+        options: defaultOptionsIntegrationFactory({
+          beforeCreate () {
+            process.client = true
+            Storage.prototype.getItem = jest.fn(() => '0')
+          }
+        })
+      })
+
+      wrapper.get('[data-test="blocks-audiobook-privacy-modal-open"]').trigger('click')
+      expectRootEmit({
+        name: 'privacy/modal/toggle',
+        wrapper
+      })
+
+      wrapper.destroy()
+    })
+
+    shallPassIntegrationSanityTest({
+      component: Audiobook,
+      description: 'Iframe',
+      options: defaultOptionsIntegrationFactory({
+        beforeCreate () {
+          process.client = true
+          Storage.prototype.getItem = jest.fn(() => '1')
+        }
+      })
+    })
   })
 })
