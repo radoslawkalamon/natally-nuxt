@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blocks / List Stories Suggestions Integration shall pass integration sanity test 1`] = `
+"<section class=\\"section list-stories-suggestions\\">
+  <header data-test=\\"wrappers-section-header\\" class=\\"section__header\\">
+    <h2 class=\\"list-stories-suggestions__title title title--design-2 title--underscore\\">Opowiadania</h2>
+  </header>
+  <div class=\\"section__inner\\">
+    <div class=\\"list-stories list-stories-suggestions__stories\\"></div>
+  </div>
+  <footer data-test=\\"wrappers-section-footer\\" class=\\"section__footer\\">
+    <nuxtlink to=\\"/\\" class=\\"button-link\\">Więcej opowiadań</nuxtlink>
+  </footer>
+</section>"
+`;
+
+exports[`Blocks / List Stories Suggestions Unit shall pass unit sanity test 1`] = `
+"<wrapperssection-stub class=\\"list-stories-suggestions\\">
+  <wrappersliststories-stub limit=\\"2\\" randomize=\\"true\\" without=\\"\\" class=\\"list-stories-suggestions__stories\\"></wrappersliststories-stub>
+</wrapperssection-stub>"
+`;
