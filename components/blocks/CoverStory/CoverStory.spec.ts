@@ -1,14 +1,56 @@
-import CoverStory from './CoverStory.vue'
-import { shallRender } from '@/devtools/jest.shared.spec'
+import CoverStory from '@/components/blocks/CoverStory/CoverStory.vue'
+import { shallPassIntegrationSanityTest, shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
 
 describe('Blocks / Cover Story', () => {
-  shallRender(CoverStory, {
-    propsData: {
-      images: [
-        'https://www.fillmurray.com/600/300',
-        'https://www.fillmurray.com/1200/600'
-      ]
-    },
-    stubs: ['ComponentsCover']
+  describe('Unit', () => {
+    shallPassUnitSanityTest({
+      component: CoverStory,
+      description: 'no images',
+      options: {
+        propsData: {
+          images: []
+        },
+        stubs: ['ComponentsCover']
+      }
+    })
+
+    shallPassUnitSanityTest({
+      component: CoverStory,
+      description: 'with images',
+      options: {
+        propsData: {
+          images: [
+            '/images/post.test-post.1x.jpg',
+            '/images/post.test-post.2x.jpg'
+          ]
+        },
+        stubs: ['ComponentsCover']
+      }
+    })
+  })
+
+  describe('Integration', () => {
+    shallPassIntegrationSanityTest({
+      component: CoverStory,
+      description: 'no images',
+      options: {
+        propsData: {
+          images: []
+        }
+      }
+    })
+
+    shallPassIntegrationSanityTest({
+      component: CoverStory,
+      description: 'with images',
+      options: {
+        propsData: {
+          images: [
+            '/images/post.test-post.1x.jpg',
+            '/images/post.test-post.2x.jpg'
+          ]
+        }
+      }
+    })
   })
 })
