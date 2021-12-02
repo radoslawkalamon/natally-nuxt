@@ -24,7 +24,7 @@ describe('Utils / Mixins / Privacy / Storage', () => {
 
   describe('Soundcloud', () => {
     beforeEach(() => {
-      jest.resetAllMocks()
+      jest.restoreAllMocks()
     })
 
     test('get default', async () => {

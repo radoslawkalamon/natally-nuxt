@@ -21,7 +21,7 @@ const defaultOptionsIntegrationFactory = createDefaultOptionsFactory({
 describe('Blocks / Audiobook', () => {
   describe('Unit', () => {
     beforeEach(() => {
-      jest.resetAllMocks()
+      jest.restoreAllMocks()
     })
 
     shallPassUnitSanityTest({
@@ -73,7 +73,7 @@ describe('Blocks / Audiobook', () => {
 
   describe('Integration', () => {
     beforeEach(() => {
-      jest.resetAllMocks()
+      jest.restoreAllMocks()
     })
 
     shallPassIntegrationSanityTest({

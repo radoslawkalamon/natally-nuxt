@@ -32,7 +32,7 @@ describe('Utils / Mixins / Poem / First Time', () => {
     })
 
     beforeEach(() => {
-      jest.resetAllMocks()
+      jest.restoreAllMocks()
     })
 
     shallPassMixinSanityTest({
