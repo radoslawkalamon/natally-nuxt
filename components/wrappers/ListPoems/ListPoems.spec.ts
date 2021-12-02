@@ -35,7 +35,7 @@ describe('Wrappers / List Poems', () => {
       })
 
       test('shall $content.limit() be called with 3 when limit = 3', async () => {
-        const MockNuxtContent = JestMockNuxtContent(Array(1).fill({}))
+        const MockNuxtContent = JestMockNuxtContent({})
         const wrapper = await createUnitTestWrapper({
           component: ListPoems,
           options: defaultOptionsFactory({
@@ -51,8 +51,8 @@ describe('Wrappers / List Poems', () => {
         wrapper.destroy()
       })
 
-      test('shall $content.where() be called with "/mock-path/" when without = "/mock-path/"', async () => {
-        const MockNuxtContent = JestMockNuxtContent(Array(1).fill({}))
+      test('shall $content.where() be called with "/mock-path-false/" when without = "/mock-path-false/"', async () => {
+        const MockNuxtContent = JestMockNuxtContent({})
         const wrapper = await createUnitTestWrapper({
           component: ListPoems,
           options: defaultOptionsFactory({
@@ -60,11 +60,11 @@ describe('Wrappers / List Poems', () => {
               $content: MockNuxtContent
             },
             propsData: {
-              without: ['/mock-path/']
+              without: ['/mock-path-false/']
             }
           })
         })
-        expect(MockNuxtContent().where).toHaveBeenCalledWith({ path: { $nin: ['/mock-path/'] } })
+        expect(MockNuxtContent().where).toHaveBeenCalledWith({ path: { $nin: ['/mock-path-false/'] } })
         wrapper.destroy()
       })
     })
@@ -84,7 +84,7 @@ describe('Wrappers / List Poems', () => {
         wrapper.destroy()
       })
 
-      test('shall $content.limit() be called with 3 when limit = 3', async () => {
+      test('shall { metaPostPoems } have length 3 when limit = 3', async () => {
         const wrapper = await createUnitTestWrapper({
           component: ListPoems,
           options: defaultOptionsFactory({
@@ -99,8 +99,8 @@ describe('Wrappers / List Poems', () => {
         wrapper.destroy()
       })
 
-      test('shall $content.where() be called with "/mock-path/" when without = "/mock-path/"', async () => {
-        const MockNuxtContent = JestMockNuxtContent(Array(1).fill({}))
+      test('shall $content.where() be called with "/mock-path-true/" when without = "/mock-path-true/"', async () => {
+        const MockNuxtContent = JestMockNuxtContent({})
         const wrapper = await createUnitTestWrapper({
           component: ListPoems,
           options: defaultOptionsFactory({
@@ -109,11 +109,11 @@ describe('Wrappers / List Poems', () => {
             },
             propsData: {
               randomize: true,
-              without: ['/mock-path/']
+              without: ['/mock-path-true/']
             }
           })
         })
-        expect(MockNuxtContent().where).toHaveBeenCalledWith({ path: { $nin: ['/mock-path/'] } })
+        expect(MockNuxtContent().where).toHaveBeenCalledWith({ path: { $nin: ['/mock-path-true/'] } })
         wrapper.destroy()
       })
     })
