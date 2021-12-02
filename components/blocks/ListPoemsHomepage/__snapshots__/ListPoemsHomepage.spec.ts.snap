@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blocks / List Poems Homepage Integration shall pass integration sanity test 1`] = `
+"<section class=\\"section list-poems-homepage\\">
+  <header data-test=\\"wrappers-section-header\\" class=\\"section__header\\">
+    <h2 class=\\"list-poems-homepage__title title title--design-2 title--underscore\\">Poezja 3.14</h2>
+  </header>
+  <div class=\\"section__inner\\">
+    <div class=\\"list-poems list-poems-homepage__poems\\"></div>
+  </div>
+  <footer data-test=\\"wrappers-section-footer\\" class=\\"section__footer\\">
+    <nuxtlink to=\\"/poezja-314/\\" class=\\"button-link\\">Więcej Poezji 3.14</nuxtlink>
+  </footer>
+</section>"
+`;
+
+exports[`Blocks / List Poems Homepage Unit shall pass unit sanity test 1`] = `
+"<wrapperssection-stub class=\\"list-poems-homepage\\">
+  <wrapperslistpoems-stub limit=\\"6\\" class=\\"list-poems-homepage__poems\\"></wrapperslistpoems-stub>
+</wrapperssection-stub>"
+`;

@@ -1,17 +1,25 @@
-import merge from 'lodash/merge'
-import ListPoemsHomepage from './ListPoemsHomepage.vue'
-import { shallRender } from '@/devtools/jest.shared.spec'
-
-const defaultOptionsFactory = (options?: object) => merge({
-  stubs: [
-    'WrappersSection',
-    'ComponentsTitle',
-    'WrappersListPoems',
-    'ComponentsCardPoem',
-    'ComponentsButtonLink'
-  ]
-}, options)
+import ListPoemsHomepage from '@/components/blocks/ListPoemsHomepage/ListPoemsHomepage.vue'
+import { shallPassIntegrationSanityTest, shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
 
 describe('Blocks / List Poems Homepage', () => {
-  shallRender(ListPoemsHomepage, defaultOptionsFactory())
+  describe('Unit', () => {
+    shallPassUnitSanityTest({
+      component: ListPoemsHomepage,
+      options: {
+        stubs: [
+          'ComponentsButtonLink',
+          'ComponentsCardPoem',
+          'ComponentsTitle',
+          'WrappersListPoems',
+          'WrappersSection'
+        ]
+      }
+    })
+  })
+
+  describe('Integration', () => {
+    shallPassIntegrationSanityTest({
+      component: ListPoemsHomepage
+    })
+  })
 })
