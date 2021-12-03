@@ -13,8 +13,13 @@
   # Common
   RewriteRule ^o-mnie/$ https://radoslawkalamon.pl/ [R=301,L,NC]
   RewriteRule ^kontakt/$ https://m.me/169cmpl [R=301,L,NC]
-  RewriteRule ^feed/$ /feed.xml [R=301,L,NC]
   RewriteRule ^404/$ / [R=301,L,NC]
+
+  # Feed
+  RewriteRule ^feed/$ /feed.xml [R=301,L,NC]
+  RewriteRule ^page-sitemap.xml$ /feed.xml [R=301,L,NC]
+  RewriteRule ^post-sitemap.xml$ /feed.xml [R=301,L,NC]
+  RewriteRule ^sitemap_index.xml$ /feed.xml [R=301,L,NC]
 
   # Stories
   RewriteRule ^opowiadania/$ / [R=301,L,NC]
