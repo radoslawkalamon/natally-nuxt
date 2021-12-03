@@ -81,6 +81,7 @@
   RewriteRule ^wp-content/uploads/2020/04/poezja-314-ocena-social.png$ /images/poezja-314.ocena.opengraph.png [R=301,L,NC]
   RewriteRule ^wp-content/uploads/2021/01/poezja-314-zestaw-prezentowy-social.png$ /images/poezja-314.zestaw-prezentowy.opengraph.png [R=301,L,NC]
   RewriteRule ^wp-content/uploads/2019/11/poezja-314-perspektywy-social.png$ /images/poezja-314.perspektywy.opengraph.png [R=301,L,NC]
+  RewriteRule ^wp-content/uploads/2019/03/poezja-3-14-dwa-spojrzenia.jpg$ /images/poezja-314.perspektywy.opengraph.png [R=301,L,NC]
   RewriteRule ^wp-content/uploads/2019/11/poezja-314-miedzy-wierszami-social.png$ /images/poezja-314.miedzy-wierszami.opengraph.png [R=301,L,NC]
   RewriteRule ^wp-content/uploads/2019/11/poezja-314-masz-ci-los-social.png$ /images/poezja-314.masz-ci-los.opengraph.png [R=301,L,NC]
   RewriteRule ^wp-content/uploads/2019/11/poezja-314-grzeszki-social.png$ /images/poezja-314.grzeszki.opengraph.png [R=301,L,NC]
