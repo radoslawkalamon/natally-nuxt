@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blocks / Loading Bar Integration shall pass integration sanity test 1`] = `
+"<transition-stub name=\\"fade\\">
+  <div aria-hidden=\\"true\\" class=\\"loading-bar\\">
+    <div class=\\"progress-bar loading-bar__inner\\" style=\\"width: 1.00%;\\"></div>
+  </div>
+</transition-stub>"
+`;
+
+exports[`Blocks / Loading Bar Unit shall increase progress bar width 1`] = `
+"<transition-stub name=\\"fade\\">
+  <div aria-hidden=\\"true\\" class=\\"loading-bar\\">
+    <componentsprogressbar-stub width=\\"40\\" class=\\"loading-bar__inner\\"></componentsprogressbar-stub>
+  </div>
+</transition-stub>"
+`;
+
+exports[`Blocks / Loading Bar Unit shall loading bar be visible after finish() & start() 1`] = `
+"<transition-stub name=\\"fade\\">
+  <div aria-hidden=\\"true\\" class=\\"loading-bar\\">
+    <componentsprogressbar-stub width=\\"1\\" class=\\"loading-bar__inner\\"></componentsprogressbar-stub>
+  </div>
+</transition-stub>"
+`;
+
+exports[`Blocks / Loading Bar Unit shall pass unit sanity test 1`] = `
+"<transition-stub name=\\"fade\\">
+  <!---->
+</transition-stub>"
+`;
+
+exports[`Blocks / Loading Bar Unit shall progress bar width be 100 & hide after timeout 1`] = `
+"<transition-stub name=\\"fade\\">
+  <div aria-hidden=\\"true\\" class=\\"loading-bar\\">
+    <componentsprogressbar-stub width=\\"100\\" class=\\"loading-bar__inner\\"></componentsprogressbar-stub>
+  </div>
+</transition-stub>"
+`;
+
+exports[`Blocks / Loading Bar Unit shall progress bar width be 100 & hide after timeout 2`] = `
+"<transition-stub name=\\"fade\\">
+  <!---->
+</transition-stub>"
+`;
+
+exports[`Blocks / Loading Bar Unit shall show progress bar 1`] = `
+"<transition-stub name=\\"fade\\">
+  <div aria-hidden=\\"true\\" class=\\"loading-bar\\">
+    <componentsprogressbar-stub width=\\"1\\" class=\\"loading-bar__inner\\"></componentsprogressbar-stub>
+  </div>
+</transition-stub>"
+`;
