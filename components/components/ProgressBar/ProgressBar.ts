@@ -12,7 +12,7 @@ export default Vue.extend({
   computed: {
     style (): Record<string, string> {
       return {
-        width: `${this.width}%`
+        width: `${this.width.toFixed(2)}%`
       }
     }
   }

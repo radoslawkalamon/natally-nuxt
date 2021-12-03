@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blocks / Reading Progress Integration shall pass integration sanity test 1`] = `
+"<div aria-hidden=\\"true\\" class=\\"reading-progress\\">
+  <div class=\\"progress-bar reading-progress__inner\\" style=\\"width: 0.00%;\\"></div>
+</div>"
+`;
+
+exports[`Blocks / Reading Progress Integration shall progress be between 0 & 100 1`] = `
+"<div aria-hidden=\\"true\\" class=\\"reading-progress\\">
+  <div class=\\"progress-bar reading-progress__inner\\" style=\\"width: 40.04%;\\"></div>
+</div>"
+`;
+
+exports[`Blocks / Reading Progress Integration shall progress be equal 100 1`] = `
+"<div aria-hidden=\\"true\\" class=\\"reading-progress\\">
+  <div class=\\"progress-bar reading-progress__inner\\" style=\\"width: 100.00%;\\"></div>
+</div>"
+`;
+
+exports[`Blocks / Reading Progress Integration shall progress equal 0 1`] = `
+"<div aria-hidden=\\"true\\" class=\\"reading-progress\\">
+  <div class=\\"progress-bar reading-progress__inner\\" style=\\"width: 0.00%;\\"></div>
+</div>"
+`;
