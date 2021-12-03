@@ -1,43 +1,41 @@
-import { mount } from '@vue/test-utils'
-import Title from './Title.vue'
-import { shallRender, shallHaveStringProp, shallHavePropInfluenceOverClassNames } from '@/devtools/jest.shared.spec'
+import Title from '@/components/components/Title/Title.vue'
+import { shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
+import { createDefaultOptionsFactory } from '@/devtools/jest.common.spec.utils'
 
-describe('Components/Logo', () => {
-  const defaultOptions = {
-    propsData: {
-      title: 'Default Prop Title'
-    }
+const defaultOptionsFactory = createDefaultOptionsFactory({
+  propsData: {
+    title: 'Default title'
   }
+})
 
-  shallRender(Title, defaultOptions)
-
-  describe('Props', () => {
-    shallHaveStringProp(Title, 'title', defaultOptions)
-
-    test("shall have number prop 'type' influence over wrapper tag", () => {
-      const type = 3
-      const wrapper = mount(Title, {
-        propsData: {
-          ...defaultOptions.propsData,
-          type
-        }
-      })
-      expect(wrapper.element.tagName.toLowerCase()).toBe('h3')
+describe('Components / Title', () => {
+  describe('Unit', () => {
+    shallPassUnitSanityTest({
+      component: Title,
+      description: 'defaults',
+      options: defaultOptionsFactory()
     })
 
-    test("shall have number prop 'type' no influence over wrapper classes", () => {
-      const type = 3
-      const wrapper = mount(Title, {
+    shallPassUnitSanityTest({
+      component: Title,
+      description: 'with optional props passed',
+      options: defaultOptionsFactory({
         propsData: {
-          ...defaultOptions.propsData,
-          type
+          type: 3,
+          design: 4,
+          shallShowUnderscore: false
         }
       })
-      const isWrapperHaveClass = wrapper.classes().some(cls => cls.includes('design-3'))
-      expect(isWrapperHaveClass).toBeFalsy()
     })
 
-    shallHavePropInfluenceOverClassNames(Title, 'design', 4, 'design-4', defaultOptions)
-    shallHavePropInfluenceOverClassNames(Title, 'shallShowUnderscore', true, 'underscore', defaultOptions)
+    shallPassUnitSanityTest({
+      component: Title,
+      description: 'type have no influence over design',
+      options: defaultOptionsFactory({
+        propsData: {
+          type: 4
+        }
+      })
+    })
   })
 })

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Wrappers / Navigation Integration shall pass integration sanity test | no children 1`] = `""`;
+
+exports[`Wrappers / Navigation Integration shall pass integration sanity test | with children 1`] = `
+"<ul class=\\"navigation\\">
+  <li class=\\"navigation__item\\"><span>Tag child 1</span></li>
+  <li class=\\"navigation__item\\"><span>Tag child 2</span></li>
+</ul>"
+`;

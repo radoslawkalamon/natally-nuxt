@@ -2,7 +2,6 @@
   <div
     aria-hidden="true"
     class="cover"
-    data-test="components-cover"
     :style="style"
   />
 </template>

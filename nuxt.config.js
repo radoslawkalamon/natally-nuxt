@@ -1,9 +1,10 @@
+import nodeFs from 'fs'
+import nodePath from 'path'
+import { $content } from '@nuxt/content'
+import { DTOMetaPage } from './utils/dto.meta.page'
 import { factoryHead } from './utils/factory.head'
-import { getURL } from './utils/factory.head.utils'
-import { nuxtFeed } from './utils/nuxt.feed'
-import { nuxtGenerateRoutes } from './utils/nuxt.generate.routes'
+import { getTitle, getURL, headDefault } from './utils/factory.head.utils'
 import { nuxtHooksContentFileBeforeParseTextAlignment } from './utils/nuxt.hooks.content.file.beforeParse.textAlignment'
-import { nuxtSitemapRoutes } from './utils/nuxt.sitemap.routes'
 
 export default {
   target: 'static',
@@ -59,11 +60,65 @@ export default {
     '@/assets/styles/schemas.css',
     '@/assets/styles/body.css'
   ],
-  feed: nuxtFeed,
+  feed () {
+    return [{
+      path: '/feed.xml',
+      create: async (feed) => {
+        const pagesToFilter = [
+          '/',
+          '/404/',
+          '/audiobooki/',
+          '/poezja-314/',
+          '/polityka-prywatnosci/'
+        ]
+
+        const pages = await $content('/', { deep: true }).fetch()
+        const articlesMeta = pages
+          .map(page => new DTOMetaPage(page))
+          .filter(page => !pagesToFilter.includes(page.path))
+          .sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime())
+
+        articlesMeta.forEach((articleMeta) => {
+          const { createdAt, description, imageOpenGraph, path, title } = articleMeta
+          const URL = getURL({ path })
+          feed.addItem({
+            content: `<p>${description}</p><p>Czytaj dalej na <a href="${URL}">${URL}</a></p>`,
+            date: createdAt,
+            description,
+            id: URL,
+            image: {
+              length: nodeFs.statSync(nodePath.resolve(__dirname, `static${imageOpenGraph}`)).size,
+              url: getURL({ path: imageOpenGraph })
+            },
+            link: URL,
+            title
+          })
+        })
+
+        feed.options = {
+          copyright: `169cm.pl © ${(new Date()).getFullYear()}`,
+          description: headDefault.description,
+          image: getURL({ path: '/images/common.icon.192x192.white.png' }),
+          language: 'pl-PL',
+          link: getURL(),
+          id: 'rss2',
+          title: getTitle()
+        }
+      },
+      cacheTime: 1000 * 60 * 60 * 24,
+      type: 'rss2'
+    }]
+  },
   generate: {
     crawler: false,
     fallback: '404.html',
-    routes: nuxtGenerateRoutes
+    async routes () {
+      const pages = await $content('/', { deep: true }).fetch()
+      return pages.map((page) => {
+        const pageMeta = new DTOMetaPage(page)
+        return pageMeta.path
+      })
+    }
   },
   head: factoryHead(),
   hooks: {
@@ -84,7 +139,19 @@ export default {
       return routes.filter(route => !pagesToFilter.includes(route.path))
     },
     hostname: getURL(),
-    routes: nuxtSitemapRoutes,
+    async routes () {
+      const pages = await $content('/', { deep: true }).fetch()
+      return pages.map((page) => {
+        const pageMeta = new DTOMetaPage(page)
+        return {
+          url: pageMeta.path,
+          img: [{
+            url: pageMeta.imageOpenGraph
+          }],
+          lastmod: pageMeta.updatedAt
+        }
+      })
+    },
     trailingSlash: true
   },
   storybook: {

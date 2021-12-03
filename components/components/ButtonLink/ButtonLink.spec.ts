@@ -1,18 +1,15 @@
-import ButtonLink from './ButtonLink.vue'
-import { shallRender, shallHaveStringProp } from '@/devtools/jest.shared.spec'
+import ButtonLink from '@/components/components/ButtonLink/ButtonLink.vue'
+import { shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
 
 describe('Components / Button Link', () => {
-  const defaultOptions = {
-    propsData: {
-      label: 'Click here'
-    },
-    stubs: {
-      NuxtLink: {
-        template: '<a href="#"><slot /></a>'
+  describe('Unit', () => {
+    shallPassUnitSanityTest({
+      component: ButtonLink,
+      options: {
+        propsData: {
+          label: 'Item label'
+        }
       }
-    }
-  }
-
-  shallRender(ButtonLink, defaultOptions)
-  shallHaveStringProp(ButtonLink, 'label', defaultOptions)
+    })
+  })
 })

@@ -1,37 +1,54 @@
-import merge from 'lodash/merge'
-import { mount } from '@vue/test-utils'
-import AdjacentPostLinksPoem from './AdjacentPostLinksPoem.vue'
+import AdjacentPostLinksPoem from '@/components/blocks/AdjacentPostLinksPoem/AdjacentPostLinksPoem.vue'
+import { shallPassIntegrationSanityTest } from '@/devtools/jest.common.spec'
+import { createDefaultOptionsFactory } from '@/devtools/jest.common.spec.utils'
 import { JestMockNuxtContent } from '@/devtools/jest.mock.nuxt.content'
 
-jest.mock('@/utils/dto.meta.post.poem', () => ({
-  DTOMetaPostPoem: class MockEmptyClass {
-    path: string;
-    title: string;
+const mockPoemPost = {
+  createdAt: '2021-01-18T11:00:06+00:00',
+  description: 'Interes to interes, przyjemności to przyjemności.',
+  imageCover: 'poezja-314.biznes.webp',
+  imageOpenGraph: 'poezja-314.biznes.opengraph.png',
+  path: '/poezja-314/mock-post/',
+  title: 'Biznes',
+  updatedAt: '2021-01-12T12:33:36+00:00'
+}
 
-    constructor () {
-      this.path = '/poezja-314/test-poem'
-      this.title = 'Test poem'
-    }
-  }
-}))
-
-const defaultOptionsFactory = (options?: object) => merge({
-  mocks: {
-    $content: JestMockNuxtContent(Array(2).fill({}))
-  },
+const defaultOptionsFactory = createDefaultOptionsFactory({
   propsData: {
     slug: 'test-slug'
-  },
-  stubs: [
-    'ComponentsAdjacentPostLinkPrevious',
-    'ComponentsAdjacentPostLinkNext'
-  ]
-}, options)
+  }
+})
 
 describe('Blocks / Adjacent Post Links Poem', () => {
-  test('shall render', async (): Promise<void> => {
-    const wrapper = mount(AdjacentPostLinksPoem, defaultOptionsFactory())
-    await (AdjacentPostLinksPoem as any).options.fetch.call(wrapper.vm)
-    expect(wrapper.html()).toMatchSnapshot()
+  describe('Integration', () => {
+    shallPassIntegrationSanityTest({
+      component: AdjacentPostLinksPoem,
+      description: 'prev / next post',
+      options: defaultOptionsFactory({
+        mocks: {
+          $content: JestMockNuxtContent([mockPoemPost, mockPoemPost])
+        }
+      })
+    })
+
+    shallPassIntegrationSanityTest({
+      component: AdjacentPostLinksPoem,
+      description: 'prev post only',
+      options: defaultOptionsFactory({
+        mocks: {
+          $content: JestMockNuxtContent([mockPoemPost, null])
+        }
+      })
+    })
+
+    shallPassIntegrationSanityTest({
+      component: AdjacentPostLinksPoem,
+      description: 'next post only',
+      options: defaultOptionsFactory({
+        mocks: {
+          $content: JestMockNuxtContent([null, mockPoemPost])
+        }
+      })
+    })
   })
 })

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Poems / Wsparcie Unit shall pass unit sanity test 1`] = `
+"<div class=\\"wsparcie\\">
+  <p><img alt=\\"Zielona błyskawica\\" src=\\"./images/zielona-blyskawica.svg\\" class=\\"wsparcie__image\\"></p>
+  <p>
+    Wsparcie to coś
+  </p>
+  <p>
+    więcej niż <span class=\\"wsparcie__mts\\">widzisz</span></p>
+  <p><a href=\\"https://federa.org.pl/\\" rel=\\"noopener noreferrer\\" target=\\"_blank\\" class=\\"wsparcie__sl\\">o wiele więcej</a></p>
+</div>"
+`;

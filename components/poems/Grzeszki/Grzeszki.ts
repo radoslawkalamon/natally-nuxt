@@ -5,8 +5,8 @@ export default Vue.extend({
   methods: {
     breadcrumbsStyle (): Record<string, string> {
       return {
-        left: `${Math.random() * 100}%`,
-        top: `${Math.random() * 100}%`
+        left: `${(Math.random() * 100).toFixed(3)}%`,
+        top: `${(Math.random() * 100).toFixed(3)}%`
       }
     }
   }

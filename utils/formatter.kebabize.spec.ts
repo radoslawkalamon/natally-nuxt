@@ -20,4 +20,8 @@ describe('Utils / Formatter / Kebabize', () => {
   test('shall kebabize string "TESTString"', () => {
     expect(formatterKebabize('TESTString')).toBe('t-e-s-t-string')
   })
+
+  test('shall kebabize string "TestSTRING"', () => {
+    expect(formatterKebabize('TestSTRING')).toBe('test-s-t-r-i-n-g')
+  })
 })

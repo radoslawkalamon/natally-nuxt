@@ -1,7 +1,6 @@
 <template>
   <NuxtLink
     class="link-text"
-    data-test="components-link-text"
     v-bind="$attrs"
     v-on="$listeners"
     v-text="label"

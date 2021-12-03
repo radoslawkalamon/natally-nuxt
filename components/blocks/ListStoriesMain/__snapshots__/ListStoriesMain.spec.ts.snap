@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blocks / List Stories Main Integration shall pass integration sanity test 1`] = `
+"<section class=\\"section list-stories-main\\">
+  <header data-test=\\"wrappers-section-header\\" class=\\"section__header\\">
+    <h2 class=\\"list-stories-main__title title title--design-2 title--underscore\\">Opowiadania</h2>
+  </header>
+  <div class=\\"section__inner\\">
+    <div class=\\"list-stories list-stories-main__stories\\"></div>
+  </div>
+  <!---->
+</section>"
+`;
+
+exports[`Blocks / List Stories Main Unit shall pass unit sanity test 1`] = `
+"<wrapperssection-stub class=\\"list-stories-main\\">
+  <wrappersliststories-stub class=\\"list-stories-main__stories\\"></wrappersliststories-stub>
+</wrapperssection-stub>"
+`;

@@ -1,13 +1,15 @@
-import TextMeta from './TextMeta.vue'
-import { shallHaveStringProp, shallRender } from '@/devtools/jest.shared.spec'
+import TextMeta from '@/components/components/TextMeta/TextMeta.vue'
+import { shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
 
-describe('Wrappers / Text Meta', () => {
-  const defaultOptions = {
-    propsData: {
-      text: 'Default Prop Text'
-    }
-  }
-
-  shallRender(TextMeta, defaultOptions)
-  shallHaveStringProp(TextMeta, 'text', defaultOptions)
+describe('Components / Text Meta', () => {
+  describe('Unit', () => {
+    shallPassUnitSanityTest({
+      component: TextMeta,
+      options: {
+        propsData: {
+          text: 'Default Prop Text'
+        }
+      }
+    })
+  })
 })

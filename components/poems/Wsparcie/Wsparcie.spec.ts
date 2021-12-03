@@ -1,6 +1,8 @@
-import Wsparcie from './Wsparcie.vue'
-import { shallRender } from '@/devtools/jest.shared.spec'
+import Wsparcie from '@/components/poems/Wsparcie/Wsparcie.vue'
+import { shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
 
 describe('Poems / Wsparcie', () => {
-  shallRender(Wsparcie)
+  describe('Unit', () => {
+    shallPassUnitSanityTest({ component: Wsparcie })
+  })
 })

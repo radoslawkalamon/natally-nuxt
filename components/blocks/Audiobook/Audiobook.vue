@@ -2,7 +2,6 @@
   <div
     v-if="shallShowAudiobookBlock"
     class="audiobook"
-    data-test="blocks-audiobook"
   >
     <ClientOnly>
       <iframe
@@ -17,6 +16,7 @@
       <WrappersText v-else>
         Aby odsłuchać audiobooka,<br>
         <ComponentsButtonText
+          data-test="blocks-audiobook-privacy-modal-open"
           label="zmień ustawienia prywatności"
           @click="togglePrivacyModal"
         />

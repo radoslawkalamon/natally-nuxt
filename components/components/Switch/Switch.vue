@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="switch"
-    data-test="components-switch"
-  >
+  <div class="switch">
     <label
       class="switch__label-wrapper"
       :for="name"
@@ -10,7 +7,6 @@
       <input
         :id="name"
         class="switch__checkbox"
-        data-test="components-switch-input"
         type="checkbox"
         :name="name"
         v-bind="$attrs"
@@ -24,7 +20,6 @@
     <WrappersText
       v-if="$slots.default"
       class="switch__description"
-      data-test="components-switch-description"
     >
       <slot />
     </WrappersText>

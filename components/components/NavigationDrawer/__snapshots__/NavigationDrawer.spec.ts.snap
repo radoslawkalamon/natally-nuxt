@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components / Navigation Drawer Integration shall pass integration sanity test 1`] = `
+"<nav>
+  <ul class=\\"navigation\\">
+    <li class=\\"navigation__item\\">
+      <nuxtlink data-test=\\"navigation-item\\" to=\\"/\\" class=\\"link-text\\">Strona główna</nuxtlink>
+    </li>
+    <li class=\\"navigation__item\\">
+      <nuxtlink data-test=\\"navigation-item\\" target=\\"_blank\\" to=\\"/o-mnie/\\" rel=\\"noopener noreferrer\\" class=\\"link-text\\">O mnie</nuxtlink>
+    </li>
+    <li class=\\"navigation__item\\">
+      <nuxtlink data-test=\\"navigation-item\\" to=\\"/poezja-314/\\" class=\\"link-text\\">Poezja 3.14</nuxtlink>
+    </li>
+    <li class=\\"navigation__item\\">
+      <nuxtlink data-test=\\"navigation-item\\" to=\\"/audiobooki/\\" class=\\"link-text\\">Audiobooki</nuxtlink>
+    </li>
+    <li class=\\"navigation__item\\">
+      <nuxtlink data-test=\\"navigation-item\\" target=\\"_blank\\" to=\\"/kontakt/\\" rel=\\"noopener noreferrer\\" class=\\"link-text\\">Kontakt</nuxtlink>
+    </li>
+  </ul>
+</nav>"
+`;
+
+exports[`Components / Navigation Drawer Unit shall pass unit sanity test 1`] = `
+"<nav>
+  <wrappersnavigation-stub>
+    <componentslinktext-stub data-test=\\"navigation-item\\" label=\\"Strona główna\\" to=\\"/\\"></componentslinktext-stub>
+    <componentslinktext-stub data-test=\\"navigation-item\\" label=\\"O mnie\\" target=\\"_blank\\" to=\\"/o-mnie/\\" rel=\\"noopener noreferrer\\"></componentslinktext-stub>
+    <componentslinktext-stub data-test=\\"navigation-item\\" label=\\"Poezja 3.14\\" to=\\"/poezja-314/\\"></componentslinktext-stub>
+    <componentslinktext-stub data-test=\\"navigation-item\\" label=\\"Audiobooki\\" to=\\"/audiobooki/\\"></componentslinktext-stub>
+    <componentslinktext-stub data-test=\\"navigation-item\\" label=\\"Kontakt\\" target=\\"_blank\\" to=\\"/kontakt/\\" rel=\\"noopener noreferrer\\"></componentslinktext-stub>
+  </wrappersnavigation-stub>
+</nav>"
+`;

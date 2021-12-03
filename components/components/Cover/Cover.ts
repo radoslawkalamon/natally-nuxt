@@ -5,7 +5,7 @@ export default Vue.extend({
   props: {
     images: {
       type: Array as Vue.PropType<String[]>,
-      required: true
+      default: () => []
     }
   },
   computed: {

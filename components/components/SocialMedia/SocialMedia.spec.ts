@@ -1,6 +1,8 @@
-import SocialMedia from './SocialMedia.vue'
-import { shallRender } from '@/devtools/jest.shared.spec'
+import SocialMedia from '@/components/components/SocialMedia/SocialMedia.vue'
+import { shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
 
 describe('Components / Social Media', () => {
-  shallRender(SocialMedia)
+  describe('Unit', () => {
+    shallPassUnitSanityTest({ component: SocialMedia })
+  })
 })

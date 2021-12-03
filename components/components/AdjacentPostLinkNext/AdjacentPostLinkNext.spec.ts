@@ -1,18 +1,17 @@
-import merge from 'lodash/merge'
-import AdjacentPostLinkNext from './AdjacentPostLinkNext.vue'
-import { shallRender } from '@/devtools/jest.shared.spec'
-
-const defaultOptionsFactory = (options?: object) => merge({
-  propsData: {
-    label: 'Następny',
-    path: '/post/test-path/',
-    title: 'Post testowy'
-  },
-  stubs: [
-    'NuxtLink'
-  ]
-}, options)
+import AdjacentPostLinkNext from '@/components/components/AdjacentPostLinkNext/AdjacentPostLinkNext.vue'
+import { shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
 
 describe('Components / Adjacent Post Link Next', () => {
-  shallRender(AdjacentPostLinkNext, defaultOptionsFactory())
+  describe('Unit', () => {
+    shallPassUnitSanityTest({
+      component: AdjacentPostLinkNext,
+      options: {
+        propsData: {
+          label: 'Następny',
+          path: '/post/test-path/',
+          title: 'Post testowy'
+        }
+      }
+    })
+  })
 })

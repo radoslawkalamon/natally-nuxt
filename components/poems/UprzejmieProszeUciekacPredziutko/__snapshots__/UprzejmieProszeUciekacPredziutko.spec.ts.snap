@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Poems / Uprzejmie Proszę Uciekać Prędziutko Unit shall pass unit sanity test 1`] = `"<p class=\\"uprzejmie-prosze-uciekac-predziutko\\"><img alt=\\"Czerwona błyskawica\\" src=\\"./images/czerwona-blyskawica.svg\\" class=\\"uprzejmie-prosze-uciekac-predziutko__image\\"></p>"`;

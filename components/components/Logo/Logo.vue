@@ -1,7 +1,6 @@
 <template>
   <svg
     class="logo"
-    data-test="components-logo"
     width="234"
     height="70"
     viewBox="0 0 234 70"

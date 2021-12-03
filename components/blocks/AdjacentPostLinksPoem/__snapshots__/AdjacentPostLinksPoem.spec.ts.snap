@@ -1,8 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Blocks / Adjacent Post Links Poem shall render 1`] = `
-"<div data-test=\\"blocks-adjacent-post-links-poem\\" class=\\"adjacent-post-links-poem\\">
-  <componentsadjacentpostlinkprevious-stub label=\\"Poprzednia\\" path=\\"/poezja-314/test-poem\\" title=\\"Test poem\\" class=\\"adjacent-post-links-poem__previous\\"></componentsadjacentpostlinkprevious-stub>
-  <componentsadjacentpostlinknext-stub label=\\"Następna\\" path=\\"/poezja-314/test-poem\\" title=\\"Test poem\\" class=\\"adjacent-post-links-poem__next\\"></componentsadjacentpostlinknext-stub>
+exports[`Blocks / Adjacent Post Links Poem Integration shall pass integration sanity test | next post only 1`] = `
+"<div class=\\"adjacent-post-links-poem\\">
+  <!---->
+  <nuxtlink to=\\"/poezja-314/mock-post/\\" class=\\"adjacent-post-link-next adjacent-post-links-poem__next\\"><span class=\\"adjacent-post-link-next__title\\">Biznes</span> <span class=\\"adjacent-post-link-next__label\\">Następna</span></nuxtlink>
+</div>"
+`;
+
+exports[`Blocks / Adjacent Post Links Poem Integration shall pass integration sanity test | prev / next post 1`] = `
+"<div class=\\"adjacent-post-links-poem\\">
+  <nuxtlink to=\\"/poezja-314/mock-post/\\" class=\\"adjacent-post-link-previous adjacent-post-links-poem__previous\\"><span class=\\"adjacent-post-link-previous__title\\">Biznes</span> <span class=\\"adjacent-post-link-previous__label\\">Poprzednia</span></nuxtlink>
+  <nuxtlink to=\\"/poezja-314/mock-post/\\" class=\\"adjacent-post-link-next adjacent-post-links-poem__next\\"><span class=\\"adjacent-post-link-next__title\\">Biznes</span> <span class=\\"adjacent-post-link-next__label\\">Następna</span></nuxtlink>
+</div>"
+`;
+
+exports[`Blocks / Adjacent Post Links Poem Integration shall pass integration sanity test | prev post only 1`] = `
+"<div class=\\"adjacent-post-links-poem\\">
+  <nuxtlink to=\\"/poezja-314/mock-post/\\" class=\\"adjacent-post-link-previous adjacent-post-links-poem__previous\\"><span class=\\"adjacent-post-link-previous__title\\">Biznes</span> <span class=\\"adjacent-post-link-previous__label\\">Poprzednia</span></nuxtlink>
+  <!---->
 </div>"
 `;

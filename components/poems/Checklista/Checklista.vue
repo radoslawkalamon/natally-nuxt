@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="checklista"
-    data-test="poems-checklista"
-  >
+  <div class="checklista">
     <label
       v-for="[label, name, checked] in checkboxes"
       :key="name"

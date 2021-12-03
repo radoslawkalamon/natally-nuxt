@@ -1,7 +1,6 @@
 <template>
   <button
     class="button-text"
-    data-test="components-button-text"
     type="button"
     v-bind="$attrs"
     v-on="$listeners"

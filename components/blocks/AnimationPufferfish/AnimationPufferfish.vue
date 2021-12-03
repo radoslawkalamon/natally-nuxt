@@ -2,7 +2,6 @@
   <div
     aria-label="Animacja przedstawia rozdymkę unoszącą się na wodzie"
     class="animation-pufferfish"
-    data-test="blocks-animation-pufferfish"
   >
     <img
       class="animation-pufferfish__fish"

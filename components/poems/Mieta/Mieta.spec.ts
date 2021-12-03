@@ -1,6 +1,8 @@
-import Mieta from './Mieta.vue'
-import { shallRender } from '@/devtools/jest.shared.spec'
+import Mieta from '@/components/poems/Mieta/Mieta.vue'
+import { shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
 
-describe('Poems / Mieta', () => {
-  shallRender(Mieta)
+describe('Poems / Mięta', () => {
+  describe('Unit', () => {
+    shallPassUnitSanityTest({ component: Mieta })
+  })
 })

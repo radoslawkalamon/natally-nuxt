@@ -1,7 +1,6 @@
 <template>
   <NuxtLink
     class="adjacent-post-link-previous"
-    data-test="components-adjacent-post-link-previous"
     :to="path"
   >
     <span

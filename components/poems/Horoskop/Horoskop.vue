@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="horoskop"
-    data-test="poems-horoskop"
-  >
+  <div class="horoskop">
     <transition
       name="poem-horoskop"
       mode="out-in"
@@ -19,6 +16,7 @@
             v-for="zodiac in zodiacs"
             :key="zodiac"
             class="horoskop__button"
+            data-test="horoskop-zodiac-button"
             type="button"
             @click="onZodiacClick"
             v-text="zodiac"
@@ -56,6 +54,7 @@
         </h1>
         <button
           class="horoskop__button horoskop__button--small"
+          data-test="horoskop-reset-button"
           type="button"
           :style="getOpacity(showReset)"
           @click="onResetClick"

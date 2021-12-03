@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="smutek-2-0"
-    data-test="poems-smutek-2-0"
-  >
+  <div class="smutek-2-0">
     <blockquote
       class="twitter-tweet"
       data-lang="pl"

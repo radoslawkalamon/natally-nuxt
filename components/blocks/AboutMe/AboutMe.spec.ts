@@ -1,14 +1,8 @@
-import AboutMe from './AboutMe.vue'
-import { shallRender } from '@/devtools/jest.shared.spec'
+import AboutMe from '@/components/blocks/AboutMe/AboutMe.vue'
+import { shallPassIntegrationSanityTest } from '@/devtools/jest.common.spec'
 
 describe('Blocks / About Me', () => {
-  const defaultOptions = {
-    stubs: {
-      WrappersText: {
-        template: '<div><slot /></div>'
-      }
-    }
-  }
-
-  shallRender(AboutMe, defaultOptions)
+  describe('Integration', () => {
+    shallPassIntegrationSanityTest({ component: AboutMe })
+  })
 })

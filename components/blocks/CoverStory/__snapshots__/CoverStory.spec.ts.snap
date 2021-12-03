@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blocks / Cover Story Integration shall pass integration sanity test | no images 1`] = `"<div aria-hidden=\\"true\\" class=\\"cover cover-story\\"></div>"`;
+
+exports[`Blocks / Cover Story Integration shall pass integration sanity test | with images 1`] = `"<div aria-hidden=\\"true\\" class=\\"cover cover-story\\"></div>"`;
+
+exports[`Blocks / Cover Story Unit shall pass unit sanity test | no images 1`] = `"<componentscover-stub images=\\"\\" class=\\"cover-story\\"></componentscover-stub>"`;
+
+exports[`Blocks / Cover Story Unit shall pass unit sanity test | with images 1`] = `"<componentscover-stub images=\\"/images/post.test-post.1x.jpg,/images/post.test-post.2x.jpg\\" class=\\"cover-story\\"></componentscover-stub>"`;

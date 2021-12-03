@@ -1,8 +1,5 @@
 <template>
-  <WrappersSection
-    class="list-poems-suggestions"
-    data-test="blocks-list-poems-suggestions"
-  >
+  <WrappersSection class="list-poems-suggestions">
     <template #header>
       <ComponentsTitle
         class="list-poems-suggestions__title"

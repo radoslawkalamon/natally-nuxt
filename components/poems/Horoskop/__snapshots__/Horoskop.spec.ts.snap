@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Poems / Horoskop Unit shall pass unit sanity test 1`] = `
+"<div class=\\"horoskop\\">
+  <transition-stub name=\\"poem-horoskop\\" mode=\\"out-in\\">
+    <div class=\\"horoskop__slide horoskop__slide--1\\">
+      <h2>Sztuczna inteligencja przepowie twoją przyszłość!</h2>
+      <h3>Wybierz swój znak zodiaku:</h3>
+      <div class=\\"horoskop__zodiacs-list\\"><button data-test=\\"horoskop-zodiac-button\\" type=\\"button\\" class=\\"horoskop__button\\">Baran</button><button data-test=\\"horoskop-zodiac-button\\" type=\\"button\\" class=\\"horoskop__button\\">Byk</button><button data-test=\\"horoskop-zodiac-button\\" type=\\"button\\" class=\\"horoskop__button\\">Bliźnięta</button><button data-test=\\"horoskop-zodiac-button\\" type=\\"button\\" class=\\"horoskop__button\\">Rak</button><button data-test=\\"horoskop-zodiac-button\\" type=\\"button\\" class=\\"horoskop__button\\">Lew</button><button data-test=\\"horoskop-zodiac-button\\" type=\\"button\\" class=\\"horoskop__button\\">Panna</button><button data-test=\\"horoskop-zodiac-button\\" type=\\"button\\" class=\\"horoskop__button\\">Waga</button><button data-test=\\"horoskop-zodiac-button\\" type=\\"button\\" class=\\"horoskop__button\\">Skorpion</button><button data-test=\\"horoskop-zodiac-button\\" type=\\"button\\" class=\\"horoskop__button\\">Strzelec</button><button data-test=\\"horoskop-zodiac-button\\" type=\\"button\\" class=\\"horoskop__button\\">Koziorożec</button><button data-test=\\"horoskop-zodiac-button\\" type=\\"button\\" class=\\"horoskop__button\\">Wodnik</button><button data-test=\\"horoskop-zodiac-button\\" type=\\"button\\" class=\\"horoskop__button\\">Ryby</button></div>
+    </div>
+    <!---->
+    <!---->
+  </transition-stub>
+</div>"
+`;
+
+exports[`Poems / Horoskop Unit shall reset click trigger component reset 1`] = `
+"<div class=\\"horoskop\\">
+  <transition-stub name=\\"poem-horoskop\\" mode=\\"out-in\\">
+    <!---->
+    <!---->
+    <div class=\\"horoskop__slide horoskop__slide--3\\">
+      <h2>Twój horoskop<br>na dziś:</h2>
+      <h1 class=\\"horoskop__horoscope\\" style=\\"opacity: 1;\\">
+        BĘDZIE<br>DOBRZE!
+      </h1> <button data-test=\\"horoskop-reset-button\\" type=\\"button\\" class=\\"horoskop__button horoskop__button--small\\" style=\\"opacity: 1;\\">
+        Jeszcze raz!
+      </button>
+    </div>
+  </transition-stub>
+</div>"
+`;
+
+exports[`Poems / Horoskop Unit shall reset click trigger component reset 2`] = `
+"<div class=\\"horoskop\\">
+  <transition-stub name=\\"poem-horoskop\\" mode=\\"out-in\\">
+    <div class=\\"horoskop__slide horoskop__slide--1\\">
+      <h2>Sztuczna inteligencja przepowie twoją przyszłość!</h2>
+      <h3>Wybierz swój znak zodiaku:</h3>
+      <div class=\\"horoskop__zodiacs-list\\"><button data-test=\\"horoskop-zodiac-button\\" type=\\"button\\" class=\\"horoskop__button\\">Baran</button><button data-test=\\"horoskop-zodiac-button\\" type=\\"button\\" class=\\"horoskop__button\\">Byk</button><button data-test=\\"horoskop-zodiac-button\\" type=\\"button\\" class=\\"horoskop__button\\">Bliźnięta</button><button data-test=\\"horoskop-zodiac-button\\" type=\\"button\\" class=\\"horoskop__button\\">Rak</button><button data-test=\\"horoskop-zodiac-button\\" type=\\"button\\" class=\\"horoskop__button\\">Lew</button><button data-test=\\"horoskop-zodiac-button\\" type=\\"button\\" class=\\"horoskop__button\\">Panna</button><button data-test=\\"horoskop-zodiac-button\\" type=\\"button\\" class=\\"horoskop__button\\">Waga</button><button data-test=\\"horoskop-zodiac-button\\" type=\\"button\\" class=\\"horoskop__button\\">Skorpion</button><button data-test=\\"horoskop-zodiac-button\\" type=\\"button\\" class=\\"horoskop__button\\">Strzelec</button><button data-test=\\"horoskop-zodiac-button\\" type=\\"button\\" class=\\"horoskop__button\\">Koziorożec</button><button data-test=\\"horoskop-zodiac-button\\" type=\\"button\\" class=\\"horoskop__button\\">Wodnik</button><button data-test=\\"horoskop-zodiac-button\\" type=\\"button\\" class=\\"horoskop__button\\">Ryby</button></div>
+    </div>
+    <!---->
+    <!---->
+  </transition-stub>
+</div>"
+`;
+
+exports[`Poems / Horoskop Unit shall zodiac click trigger animation | snapshots check 1`] = `
+"<div class=\\"horoskop\\">
+  <transition-stub name=\\"poem-horoskop\\" mode=\\"out-in\\">
+    <!---->
+    <div class=\\"horoskop__slide horoskop__slide--2\\">
+      <h3>Proszę czekać...</h3>
+      <div class=\\"horoskop__loading-bar-wrapper\\">
+        <div class=\\"horoskop__loading-bar\\"><span class=\\"horoskop__loading-bar-item\\">Dotykam duszy…</span><span class=\\"horoskop__loading-bar-item\\">Kontempluję Feng shui…</span><span class=\\"horoskop__loading-bar-item\\">Otwieram czakry…</span><span class=\\"horoskop__loading-bar-item\\">Wypłaszczam Ziemię…</span><span class=\\"horoskop__loading-bar-item\\">Szukam Yin i Yang…</span><span class=\\"horoskop__loading-bar-item\\">Rozciągam orbity…</span><span class=\\"horoskop__loading-bar-item\\">Magnesuje pola…</span></div>
+      </div>
+    </div>
+    <!---->
+  </transition-stub>
+</div>"
+`;
+
+exports[`Poems / Horoskop Unit shall zodiac click trigger animation | snapshots check 2`] = `
+"<div class=\\"horoskop\\">
+  <transition-stub name=\\"poem-horoskop\\" mode=\\"out-in\\">
+    <!---->
+    <!---->
+    <div class=\\"horoskop__slide horoskop__slide--3\\">
+      <h2>Twój horoskop<br>na dziś:</h2>
+      <h1 class=\\"horoskop__horoscope\\" style=\\"opacity: 0;\\">
+        BĘDZIE<br>DOBRZE!
+      </h1> <button data-test=\\"horoskop-reset-button\\" type=\\"button\\" class=\\"horoskop__button horoskop__button--small\\" style=\\"opacity: 0;\\">
+        Jeszcze raz!
+      </button>
+    </div>
+  </transition-stub>
+</div>"
+`;
+
+exports[`Poems / Horoskop Unit shall zodiac click trigger animation | snapshots check 3`] = `
+"<div class=\\"horoskop\\">
+  <transition-stub name=\\"poem-horoskop\\" mode=\\"out-in\\">
+    <!---->
+    <!---->
+    <div class=\\"horoskop__slide horoskop__slide--3\\">
+      <h2>Twój horoskop<br>na dziś:</h2>
+      <h1 class=\\"horoskop__horoscope\\" style=\\"opacity: 1;\\">
+        BĘDZIE<br>DOBRZE!
+      </h1> <button data-test=\\"horoskop-reset-button\\" type=\\"button\\" class=\\"horoskop__button horoskop__button--small\\" style=\\"opacity: 0;\\">
+        Jeszcze raz!
+      </button>
+    </div>
+  </transition-stub>
+</div>"
+`;
+
+exports[`Poems / Horoskop Unit shall zodiac click trigger animation | snapshots check 4`] = `
+"<div class=\\"horoskop\\">
+  <transition-stub name=\\"poem-horoskop\\" mode=\\"out-in\\">
+    <!---->
+    <!---->
+    <div class=\\"horoskop__slide horoskop__slide--3\\">
+      <h2>Twój horoskop<br>na dziś:</h2>
+      <h1 class=\\"horoskop__horoscope\\" style=\\"opacity: 1;\\">
+        BĘDZIE<br>DOBRZE!
+      </h1> <button data-test=\\"horoskop-reset-button\\" type=\\"button\\" class=\\"horoskop__button horoskop__button--small\\" style=\\"opacity: 1;\\">
+        Jeszcze raz!
+      </button>
+    </div>
+  </transition-stub>
+</div>"
+`;

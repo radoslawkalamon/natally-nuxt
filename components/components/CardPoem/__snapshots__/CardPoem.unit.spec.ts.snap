@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components / Card Poem Unit shall pass unit sanity test | in the viewport 1`] = `
+"<article class=\\"card-poem\\">
+  <nuxtlink-stub to=\\"/test-url/\\" class=\\"card-poem__link\\">
+    <componentscover-stub images=\\"/images/image-cover.webp\\" class=\\"card-poem__cover\\"></componentscover-stub>
+    <div class=\\"card-poem__content\\">
+      <header class=\\"card-poem__header\\">
+        <componentstitle-stub design=\\"3\\" title=\\"Test title\\" type=\\"1\\" class=\\"card-poem__title\\"></componentstitle-stub>
+      </header>
+      <footer class=\\"card-poem__footer\\">
+        <componentstextmeta-stub aria-label=\\"Opublikowano Mocked date formatter\\" text=\\"Mocked date formatter\\" title=\\"Opublikowano Mocked date formatter\\" class=\\"card-poem__meta\\"></componentstextmeta-stub>
+      </footer>
+    </div>
+  </nuxtlink-stub>
+</article>"
+`;
+
+exports[`Components / Card Poem Unit shall pass unit sanity test | not in the viewport 1`] = `
+"<article class=\\"card-poem\\">
+  <nuxtlink-stub to=\\"/test-url/\\" class=\\"card-poem__link\\">
+    <componentscover-stub images=\\"\\" class=\\"card-poem__cover\\"></componentscover-stub>
+    <div class=\\"card-poem__content\\">
+      <header class=\\"card-poem__header\\">
+        <componentstitle-stub design=\\"3\\" title=\\"Test title\\" type=\\"1\\" class=\\"card-poem__title\\"></componentstitle-stub>
+      </header>
+      <footer class=\\"card-poem__footer\\">
+        <componentstextmeta-stub aria-label=\\"Opublikowano Mocked date formatter\\" text=\\"Mocked date formatter\\" title=\\"Opublikowano Mocked date formatter\\" class=\\"card-poem__meta\\"></componentstextmeta-stub>
+      </footer>
+    </div>
+  </nuxtlink-stub>
+</article>"
+`;

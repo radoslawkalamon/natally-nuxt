@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blocks / Footer Integration shall pass integration sanity test 1`] = `
+"<footer class=\\"footer\\">
+  <nav class=\\"navigation-footer\\">
+    <ul class=\\"navigation\\">
+      <li class=\\"navigation__item\\">
+        <nuxtlink to=\\"/polityka-prywatnosci/\\" class=\\"link-text\\">Polityka prywatności</nuxtlink>
+      </li>
+      <li class=\\"navigation__item\\"><button type=\\"button\\" data-test=\\"open-privacy-modal\\" class=\\"button-text\\">Ustawienia prywatności</button></li>
+    </ul>
+  </nav> <a href=\\"https://pieczywotwarde.pl\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\"><img alt=\\"Logo firmy Pieczywo Twarde\\" height=\\"128\\" src=\\"./images/crusty-bread.svg\\" title=\\"Logo firmy Pieczywo Twarde\\" width=\\"56\\"></a>
+  <div class=\\"text\\">
+    <p>169cm.pl © 2021</p>
+  </div>
+</footer>"
+`;
+
+exports[`Blocks / Footer Unit shall pass unit sanity test 1`] = `
+"<footer class=\\"footer\\">
+  <componentsnavigationfooter-stub></componentsnavigationfooter-stub> <a href=\\"https://pieczywotwarde.pl\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">
+    <componentslogocrustybread-stub></componentslogocrustybread-stub>
+  </a>
+  <wrapperstext-stub>
+    <p>169cm.pl © 2021</p>
+  </wrapperstext-stub>
+</footer>"
+`;

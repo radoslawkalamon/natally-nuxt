@@ -1,7 +1,6 @@
 <template>
   <a
     class="card-audiobook-service"
-    data-test="components-card-audiobook-service"
     :href="url"
     rel="noopener noreferrer"
     target="_blank"
@@ -10,7 +9,6 @@
       <img
         :alt="iconAlt"
         class="card-audiobook-service__logo"
-        data-test="components-card-audiobook-service-logo"
         :src="icon"
       >
     </div>

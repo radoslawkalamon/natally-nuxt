@@ -1,5 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Wrappers / List Stories shall have slot default 1`] = `"<div data-test=\\"wrappers-list-stories\\" class=\\"list-stories\\">This is slot \\"default\\" test.</div>"`;
+exports[`Wrappers / List Stories Unit Randomize: false shall { metaPostStories } match snapshot 1`] = `
+Array [
+  DTOMetaPostStory {},
+  DTOMetaPostStory {},
+  DTOMetaPostStory {},
+  DTOMetaPostStory {},
+  DTOMetaPostStory {},
+  DTOMetaPostStory {},
+  DTOMetaPostStory {},
+  DTOMetaPostStory {},
+  DTOMetaPostStory {},
+  DTOMetaPostStory {},
+]
+`;
 
-exports[`Wrappers / List Stories shall render 1`] = `"<div data-test=\\"wrappers-list-stories\\" class=\\"list-stories\\"></div>"`;
+exports[`Wrappers / List Stories Unit Randomize: true shall { metaPostStories } match snapshot 1`] = `
+Array [
+  DTOMetaPostStory {},
+  DTOMetaPostStory {},
+  DTOMetaPostStory {},
+  DTOMetaPostStory {},
+  DTOMetaPostStory {},
+  DTOMetaPostStory {},
+  DTOMetaPostStory {},
+  DTOMetaPostStory {},
+  DTOMetaPostStory {},
+  DTOMetaPostStory {},
+]
+`;
+
+exports[`Wrappers / List Stories Unit shall pass unit sanity test 1`] = `"<div class=\\"list-stories\\">This is slot \\"default\\" test.</div>"`;

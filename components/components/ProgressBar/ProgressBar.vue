@@ -1,7 +1,6 @@
 <template>
   <div
     class="progress-bar"
-    data-test="components-progress-bar"
     :style="style"
   />
 </template>

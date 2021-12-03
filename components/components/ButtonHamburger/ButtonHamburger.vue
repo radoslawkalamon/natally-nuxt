@@ -2,7 +2,6 @@
   <button
     :aria-label="ariaLabel"
     class="button-hamburger"
-    data-test="components-button-hamburger"
     type="button"
     @click="clickCallback"
   >

@@ -1,37 +1,56 @@
-import merge from 'lodash/merge'
-import { mount } from '@vue/test-utils'
-import AdjacentPostLinksStory from './AdjacentPostLinksStory.vue'
+import AdjacentPostLinksStory from '@/components/blocks/AdjacentPostLinksStory/AdjacentPostLinksStory.vue'
+import { shallPassIntegrationSanityTest } from '@/devtools/jest.common.spec'
+import { createDefaultOptionsFactory } from '@/devtools/jest.common.spec.utils'
 import { JestMockNuxtContent } from '@/devtools/jest.mock.nuxt.content'
 
-jest.mock('@/utils/dto.meta.post.story', () => ({
-  DTOMetaPostStory: class MockEmptyClass {
-    path: string;
-    title: string;
+const mockStoryPost = {
+  createdAt: '2016-12-28T21:23:23+00:00',
+  description: 'Burzę, która znalazła się tuż nad nim uznał za jednocześnie zachwycającą, ale i gwałtowną, niebezpieczną. Nigdy nie widział czegoś tak pięknego.',
+  imageCover: 'opowiadania.burza.1x.webp',
+  imageCover2x: 'opowiadania.burza.2x.webp',
+  imageOpenGraph: 'poezja-314.biznes.opengraph.png',
+  path: '/opowiadania/mock-post/',
+  timeReading: 28,
+  title: 'timeReading',
+  updatedAt: '2021-08-07T16:08:02+00:00'
+}
 
-    constructor () {
-      this.path = '/opowiadania/test-story'
-      this.title = 'Test story'
-    }
-  }
-}))
-
-const defaultOptionsFactory = (options?: object) => merge({
-  mocks: {
-    $content: JestMockNuxtContent(Array(2).fill({}))
-  },
+const defaultOptionsFactory = createDefaultOptionsFactory({
   propsData: {
     slug: 'test-slug'
-  },
-  stubs: [
-    'ComponentsAdjacentPostLinkPrevious',
-    'ComponentsAdjacentPostLinkNext'
-  ]
-}, options)
+  }
+})
 
 describe('Blocks / Adjacent Post Links Story', () => {
-  test('shall render', async (): Promise<void> => {
-    const wrapper = mount(AdjacentPostLinksStory, defaultOptionsFactory())
-    await (AdjacentPostLinksStory as any).options.fetch.call(wrapper.vm)
-    expect(wrapper.html()).toMatchSnapshot()
+  describe('Integration', () => {
+    shallPassIntegrationSanityTest({
+      component: AdjacentPostLinksStory,
+      description: 'prev / next post',
+      options: defaultOptionsFactory({
+        mocks: {
+          $content: JestMockNuxtContent([mockStoryPost, mockStoryPost])
+        }
+      })
+    })
+
+    shallPassIntegrationSanityTest({
+      component: AdjacentPostLinksStory,
+      description: 'prev post only',
+      options: defaultOptionsFactory({
+        mocks: {
+          $content: JestMockNuxtContent([mockStoryPost, null])
+        }
+      })
+    })
+
+    shallPassIntegrationSanityTest({
+      component: AdjacentPostLinksStory,
+      description: 'next post only',
+      options: defaultOptionsFactory({
+        mocks: {
+          $content: JestMockNuxtContent([null, mockStoryPost])
+        }
+      })
+    })
   })
 })

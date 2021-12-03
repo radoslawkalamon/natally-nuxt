@@ -1,14 +1,24 @@
-import PageMeta404 from './PageMeta404.vue'
-import { shallRender } from '@/devtools/jest.shared.spec'
+import PageMeta404 from '@/components/blocks/PageMeta404/PageMeta404.vue'
+import { shallPassIntegrationSanityTest, shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
 
 describe('Blocks / Page Meta 404', () => {
-  shallRender(PageMeta404, {
-    stubs: [
-      'ComponentsButtonLink',
-      'ComponentsTitle',
-      'NuxtLink',
-      'WrappersText',
-      'WrappersSection'
-    ]
+  describe('Unit', () => {
+    shallPassUnitSanityTest({
+      component: PageMeta404,
+      options: {
+        stubs: [
+          'ComponentsButtonLink',
+          'ComponentsTitle',
+          'WrappersText',
+          'WrappersSection'
+        ]
+      }
+    })
+  })
+
+  describe('Integration', () => {
+    shallPassIntegrationSanityTest({
+      component: PageMeta404
+    })
   })
 })

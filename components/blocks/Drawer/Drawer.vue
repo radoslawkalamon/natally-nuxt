@@ -3,7 +3,6 @@
     <div
       v-show="shouldOpenDrawer"
       class="drawer"
-      data-test="blocks-drawer"
     >
       <ComponentsNavigationDrawer
         class="drawer__navigation"

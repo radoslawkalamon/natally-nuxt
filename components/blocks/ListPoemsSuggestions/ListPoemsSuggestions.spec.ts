@@ -1,17 +1,25 @@
-import merge from 'lodash/merge'
-import ListPoemsSuggestions from './ListPoemsSuggestions.vue'
-import { shallRender } from '@/devtools/jest.shared.spec'
-
-const defaultOptionsFactory = (options?: object) => merge({
-  stubs: [
-    'WrappersSection',
-    'ComponentsTitle',
-    'WrappersListPoems',
-    'ComponentsCardPoem',
-    'ComponentsButtonLink'
-  ]
-}, options)
+import ListPoemsSuggestions from '@/components/blocks/ListPoemsSuggestions/ListPoemsSuggestions.vue'
+import { shallPassIntegrationSanityTest, shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
 
 describe('Blocks / List Poems Suggestions', () => {
-  shallRender(ListPoemsSuggestions, defaultOptionsFactory())
+  describe('Unit', () => {
+    shallPassUnitSanityTest({
+      component: ListPoemsSuggestions,
+      options: {
+        stubs: [
+          'ComponentsButtonLink',
+          'ComponentsCardPoem',
+          'ComponentsTitle',
+          'WrappersListPoems',
+          'WrappersSection'
+        ]
+      }
+    })
+  })
+
+  describe('Integration', () => {
+    shallPassIntegrationSanityTest({
+      component: ListPoemsSuggestions
+    })
+  })
 })

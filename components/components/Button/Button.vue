@@ -1,7 +1,6 @@
 <template>
   <button
     class="button"
-    data-test="components-button"
     type="button"
     @click="onClick"
     v-text="label"

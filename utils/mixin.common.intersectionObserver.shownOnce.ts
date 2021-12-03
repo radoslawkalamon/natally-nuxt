@@ -7,7 +7,11 @@ export default Vue.extend({
     }
   },
   mounted (): void {
-    const callback: IntersectionObserverCallback = (entries, observer) => {
+    const intersectionObserver = new IntersectionObserver(this['common/intersectionObserver/observerCallback'])
+    intersectionObserver.observe(this.$el)
+  },
+  methods: {
+    'common/intersectionObserver/observerCallback' (entries: IntersectionObserverEntry[], observer: IntersectionObserver) {
       entries.forEach((entry: IntersectionObserverEntry) => {
         if (entry.isIntersecting) {
           this['common/intersectionObserver/shownOnce'] = true
@@ -15,8 +19,5 @@ export default Vue.extend({
         }
       })
     }
-
-    const intersectionObserver = new IntersectionObserver(callback)
-    intersectionObserver.observe(this.$el)
   }
 })

@@ -2,8 +2,8 @@
   <transition name="header">
     <header
       v-show="shallShowHeader"
+      data-test="block-header"
       class="header"
-      data-test="blocks-header"
     >
       <ComponentsButtonHamburger
         class="header__button"
@@ -12,6 +12,7 @@
         @toggle="toggleDrawer"
       />
       <NuxtLink
+        data-test="blocks-header-logo"
         to="/"
         @click.native="closeDrawer"
       >

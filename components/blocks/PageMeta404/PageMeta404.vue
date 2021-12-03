@@ -1,8 +1,5 @@
 <template>
-  <WrappersSection
-    class="page-meta-404"
-    data-test="blocks-page-meta-404"
-  >
+  <WrappersSection class="page-meta-404">
     <template #header>
       <ComponentsTitle title="Porobiło się!" />
     </template>

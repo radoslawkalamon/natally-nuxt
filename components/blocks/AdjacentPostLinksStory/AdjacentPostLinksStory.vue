@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="adjacent-post-links-story"
-    data-test="blocks-adjacent-post-links-story"
-  >
+  <div class="adjacent-post-links-story">
     <ComponentsAdjacentPostLinkPrevious
       v-if="previousStory"
       class="adjacent-post-links-story__previous"

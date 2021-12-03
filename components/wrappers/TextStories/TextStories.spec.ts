@@ -1,7 +1,15 @@
-import TextStories from './TextStories.vue'
-import { shallHaveSlot, shallRender } from '@/devtools/jest.shared.spec'
+import TextStories from '@/components/wrappers/TextStories/TextStories.vue'
+import { shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
 
 describe('Wrappers / Text Stories', () => {
-  shallRender(TextStories)
-  shallHaveSlot(TextStories, 'default')
+  describe('Unit', () => {
+    shallPassUnitSanityTest({
+      component: TextStories,
+      options: {
+        slots: {
+          default: 'Slot default text'
+        }
+      }
+    })
+  })
 })

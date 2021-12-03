@@ -1,7 +1,6 @@
 <template>
   <p
     class="text-meta"
-    data-test="components-text-meta"
     v-text="text"
   />
 </template>

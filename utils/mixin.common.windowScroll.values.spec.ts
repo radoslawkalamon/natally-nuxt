@@ -1,32 +1,30 @@
-import Vue from 'vue'
-import type { VueConstructor } from 'vue'
-import { mount } from '@vue/test-utils'
+import { shallPassMixinSanityTest } from '@/devtools/jest.common.spec'
+import { createComponentFromMixin, createUnitTestWrapper } from '@/devtools/jest.common.spec.utils'
 import mixinCommonWindowScrollValues from '@/utils/mixin.common.windowScroll.values'
-
-const Component = (Vue as VueConstructor<
-  Vue
-  & InstanceType<typeof mixinCommonWindowScrollValues>
->).extend({
-  mixins: [mixinCommonWindowScrollValues],
-  template: '<div />'
-})
 
 jest.mock('lodash/throttle', () => (cb: Function) => cb)
 
-describe('Utils / Mixins / windowScroll / Emitter', () => {
-  test('shall mount & destroy', () => {
-    expect(() => {
-      const wrapper = mount(Component)
-      wrapper.destroy()
-    }).not.toThrowError()
+const mixinComponent = createComponentFromMixin<InstanceType<typeof mixinCommonWindowScrollValues>>({
+  mixin: mixinCommonWindowScrollValues
+})
+type MixinComponentType = InstanceType<typeof mixinComponent>
+
+describe('Utils / Mixins / windowScroll / Values', () => {
+  shallPassMixinSanityTest({
+    mixin: mixinCommonWindowScrollValues
   })
 
-  test('shall update data on common/windowScroll', () => {
-    const wrapper = mount(Component)
+  test('shall update data on common/windowScroll', async () => {
+    const wrapper = await createUnitTestWrapper<MixinComponentType>({ component: mixinComponent })
+
     // @ts-ignore: window.scrollY mock
     window.scrollY = 500
+
     wrapper.vm.$root.$emit('common/windowScroll')
+
     expect(wrapper.vm['common/windowScroll/scrollPosition']).toBeGreaterThan(0)
     expect(wrapper.vm['common/windowScroll/scrollDelta']).toBeGreaterThan(0)
+
+    wrapper.destroy()
   })
 })

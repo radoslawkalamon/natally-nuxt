@@ -1,14 +1,31 @@
-import Button from './Button.vue'
-import { shallRender, shallHaveStringProp, shallClickTriggerEvent } from '@/devtools/jest.shared.spec'
+import Button from '@/components/components/Button/Button.vue'
+import { expectWrapperEmit, shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
+import { createDefaultOptionsFactory, createUnitTestWrapper } from '@/devtools/jest.common.spec.utils'
+
+const defaultOptionsFactory = createDefaultOptionsFactory({
+  propsData: {
+    label: 'Item label'
+  }
+})
 
 describe('Components / Button', () => {
-  const defaultOptions = {
-    propsData: {
-      label: 'Click here'
-    }
-  }
+  describe('Unit', () => {
+    shallPassUnitSanityTest({
+      component: Button,
+      options: defaultOptionsFactory()
+    })
 
-  shallRender(Button, defaultOptions)
-  shallHaveStringProp(Button, 'label', defaultOptions)
-  shallClickTriggerEvent(Button, 'click', defaultOptions)
+    test('shall emit "click" on @click', async () => {
+      const wrapper = await createUnitTestWrapper({
+        component: Button,
+        options: defaultOptionsFactory()
+      })
+      wrapper.trigger('click')
+      expectWrapperEmit({
+        emit: 'click',
+        wrapper
+      })
+      wrapper.destroy()
+    })
+  })
 })

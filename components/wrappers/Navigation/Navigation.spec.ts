@@ -1,26 +1,25 @@
-import { mount } from '@vue/test-utils'
-import Navigation from './Navigation.vue'
-import { shallRender } from '@/devtools/jest.shared.spec'
+import Navigation from '@/components/wrappers/Navigation/Navigation.vue'
+import { shallPassIntegrationSanityTest } from '@/devtools/jest.common.spec'
 
 describe('Wrappers / Navigation', () => {
-  shallRender(Navigation)
-
-  describe('children', () => {
-    let wrapper: ReturnType<typeof mount>
-    beforeAll(() => {
-      wrapper = mount(Navigation, {
+  describe('Integration', () => {
+    shallPassIntegrationSanityTest({
+      component: Navigation,
+      description: 'with children',
+      options: {
         slots: {
-          default: '<span>Tag child</span>Text child'
+          default: [
+            { template: '<span>Tag child 1</span>' },
+            'Text child',
+            { template: '<span>Tag child 2</span>' }
+          ]
         }
-      })
+      }
     })
 
-    test('shall filter text child', () => {
-      expect(wrapper.html()).not.toContain('Text child')
-    })
-
-    test('shall wrap child with <li>', () => {
-      expect(wrapper.findAll('li')).toHaveLength(1)
+    shallPassIntegrationSanityTest({
+      component: Navigation,
+      description: 'no children'
     })
   })
 })

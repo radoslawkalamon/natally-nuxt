@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Poems / Smutek 2.0 Unit shall head match snapshot 1`] = `
+Object {
+  "script": Array [
+    Object {
+      "async": true,
+      "charset": "utf-8",
+      "defer": true,
+      "hid": "script:twitter:widgets",
+      "src": "https://platform.twitter.com/widgets.js",
+    },
+  ],
+}
+`;
+
+exports[`Poems / Smutek 2.0 Unit shall pass unit sanity test 1`] = `
+"<div class=\\"smutek-2-0\\">
+  <blockquote data-lang=\\"pl\\" class=\\"twitter-tweet\\">
+    <p lang=\\"und\\" dir=\\"ltr\\">
+      :(
+    </p>— Radosław Kalamon (@radoslawkalamon) <a href=\\"https://twitter.com/radoslawkalamon/status/833004185696206852?ref_src=twsrc%5Etfw\\">18 lutego 2017</a>
+  </blockquote>
+</div>"
+`;

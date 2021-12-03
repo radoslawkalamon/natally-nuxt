@@ -4,7 +4,6 @@
       v-if="shallShow"
       aria-hidden="true"
       class="loading-bar"
-      data-test="blocks-loading-bar"
     >
       <ComponentsProgressBar
         class="loading-bar__inner"

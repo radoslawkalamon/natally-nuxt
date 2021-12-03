@@ -82,7 +82,7 @@ export default Vue.extend({
       this.activeImage = (this.activeImage + 1) % this.imagesCount
     },
     getRandomNumberBetween (min: number, max: number): string {
-      return ((Math.random() * (max - min)) + min).toString()
+      return ((Math.random() * (max - min)) + min).toFixed(3)
     },
     buyClick (): void {
       this.startAnimation = true

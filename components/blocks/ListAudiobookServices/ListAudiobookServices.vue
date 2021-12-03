@@ -1,8 +1,5 @@
 <template>
-  <ul
-    class="list-audiobook-services"
-    data-test="blocks-list-audiobook-services"
-  >
+  <ul class="list-audiobook-services">
     <template v-for="(audiobookService, index) in audiobookServices">
       <li
         :key="index"

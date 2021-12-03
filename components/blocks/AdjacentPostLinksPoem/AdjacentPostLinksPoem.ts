@@ -24,7 +24,7 @@ export default Vue.extend({
       .surround(this.slug)
       .fetch<DTOMetaPostPoemConstructor>()
 
-    this.articles = !Array.isArray(articles) ? [articles] : articles
+    this.articles = articles as DTOMetaPostPoemConstructor[]
   },
   computed: {
     previousPoem (): DTOMetaPostPoem | null {

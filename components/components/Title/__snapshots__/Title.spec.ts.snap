@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components / Title Unit shall pass unit sanity test | defaults 1`] = `"<h1 class=\\"title title--design-1 title--underscore\\">Default title</h1>"`;
+
+exports[`Components / Title Unit shall pass unit sanity test | type have no influence over design 1`] = `"<h4 class=\\"title title--design-1 title--underscore\\">Default title</h4>"`;
+
+exports[`Components / Title Unit shall pass unit sanity test | with optional props passed 1`] = `"<h3 class=\\"title title--design-4\\">Default title</h3>"`;

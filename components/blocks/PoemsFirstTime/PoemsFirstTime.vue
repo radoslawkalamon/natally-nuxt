@@ -2,7 +2,6 @@
   <WrappersSection
     v-if="shallShowSection"
     class="poems-first-time"
-    data-test="blocks-poems-first-time"
   >
     <template #header>
       <ComponentsTitle

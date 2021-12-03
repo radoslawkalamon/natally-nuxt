@@ -1,10 +1,15 @@
-import ProgressBar from './ProgressBar.vue'
-import { shallRender } from '@/devtools/jest.shared.spec'
+import ProgressBar from '@/components/components/ProgressBar/ProgressBar.vue'
+import { shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
 
 describe('Components / Progress Bar', () => {
-  shallRender(ProgressBar, {
-    propsData: {
-      width: 25
-    }
+  describe('Unit', () => {
+    shallPassUnitSanityTest({
+      component: ProgressBar,
+      options: {
+        propsData: {
+          width: 25
+        }
+      }
+    })
   })
 })

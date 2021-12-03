@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Wrappers / Text Stories Unit shall pass unit sanity test 1`] = `"<div class=\\"text text-stories\\">Slot default text</div>"`;
