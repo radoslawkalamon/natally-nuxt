@@ -33,7 +33,9 @@
       <BlocksListPoemsSuggestions :without="[article.path]" />
     </LazyHydrate>
 
-    <BlocksReadingProgress />
+    <LazyHydrate when-idle>
+      <BlocksReadingProgress />
+    </LazyHydrate>
   </article>
 </template>
 
