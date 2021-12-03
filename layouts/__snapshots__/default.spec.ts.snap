@@ -2,12 +2,12 @@
 
 exports[`Layouts / Default Integration shall pass integration sanity test 1`] = `
 "<div class=\\"layout-default\\">
-  <header class=\\"header\\"><button aria-label=\\"Otwórz menu nawigacyjne\\" type=\\"button\\" class=\\"button-hamburger header__button\\" data-test=\\"blocks-header-button\\">
+  <header data-test=\\"block-header\\" class=\\"header\\"><button aria-label=\\"Otwórz menu nawigacyjne\\" type=\\"button\\" class=\\"button-hamburger header__button\\" data-test=\\"blocks-header-button\\">
       <div aria-hidden=\\"true\\" data-open=\\"false\\" class=\\"button-hamburger__line button-hamburger__line--1\\"></div>
       <div aria-hidden=\\"true\\" data-open=\\"false\\" class=\\"button-hamburger__line button-hamburger__line--2\\"></div>
       <div aria-hidden=\\"true\\" data-open=\\"false\\" class=\\"button-hamburger__line button-hamburger__line--3\\"></div>
     </button>
-    <nuxtlink to=\\"/\\"><svg width=\\"234\\" height=\\"70\\" viewBox=\\"0 0 234 70\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"logo header__logo\\">
+    <nuxtlink data-test=\\"blocks-header-logo\\" to=\\"/\\"><svg width=\\"234\\" height=\\"70\\" viewBox=\\"0 0 234 70\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"logo header__logo\\">
         <title>Logo 169cm.pl</title>
         <path d=\\"m0 0h30v40c-12 10-15 30-15 30v-22c5 0 5-8 0-8v-25h-15z\\"></path>
         <path d=\\"m0 15v25c12 10 15 30 15 30v-22c-5 0-5-8 0-8v-25h-15z\\" fill-opacity=\\"0.15\\"></path>
