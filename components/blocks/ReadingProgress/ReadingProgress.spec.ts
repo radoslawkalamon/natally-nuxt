@@ -30,6 +30,7 @@ const expectComponentToMatchSnapshot = async (boundingClientRectMock: ReturnType
 describe('Blocks / Reading Progress', () => {
   describe('Integration', () => {
     beforeEach(() => {
+      // @ts-ignore: window.innerHeight mock
       window.innerHeight = 600
     })
 

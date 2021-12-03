@@ -7,6 +7,7 @@ import { JestMockMatchMedia } from '@/devtools/jest.mock.matchMedia'
 JestMockMatchMedia()
 
 const windowScrollTo = (scrollYPosition: number, wrapper: Wrapper) => {
+  // @ts-ignore: window.scrollY mock
   window.scrollY = scrollYPosition
   wrapper.vm.$root.$emit('common/windowScroll')
 }
