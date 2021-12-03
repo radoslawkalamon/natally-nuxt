@@ -120,7 +120,7 @@
 
 # Charset
 AddDefaultCharset utf-8
-AddCharset utf-8 .css .html .js
+AddCharset utf-8 .css .html .js .svg
 
 # Cache-Control
 <IfModule mod_headers.c>
