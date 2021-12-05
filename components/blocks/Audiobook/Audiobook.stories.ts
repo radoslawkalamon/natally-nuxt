@@ -1,4 +1,5 @@
 import type { Meta, Story } from '@storybook/vue'
+import { action } from '@storybook/addon-actions'
 import BlocksAudiobook from '@/components/blocks/Audiobook/Audiobook.vue'
 import mixinPrivacyStorage from '@/utils/mixin.privacy.storage'
 
@@ -12,6 +13,8 @@ export const ShowPrompt: Story = (_args, { argTypes }) => ({
   beforeMount () {
     // @ts-ignore
     this['privacy/storage/setSoundcloud'](false)
+    // @ts-ignore
+    this.$root.$on('privacy/modal/toggle', action('privacy/modal/toggle'))
   },
   components: {
     BlocksAudiobook
