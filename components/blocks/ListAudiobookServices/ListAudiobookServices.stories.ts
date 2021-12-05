@@ -1,13 +1,15 @@
-import { Meta, Story } from '@storybook/vue'
-import ListAudiobookServices from './ListAudiobookServices.vue'
+import type { Meta, Story } from '@storybook/vue'
+import BlocksListAudiobookServices from '@/components/blocks/ListAudiobookServices/ListAudiobookServices.vue'
 
 const meta: Meta = {
   title: 'Blocks / List Audiobook Services',
-  component: ListAudiobookServices
+  component: BlocksListAudiobookServices
 }
 export default meta
 
 export const Default: Story = () => ({
-  components: { ListAudiobookServices },
-  template: '<ListAudiobookServices />'
+  components: {
+    BlocksListAudiobookServices
+  },
+  template: '<BlocksListAudiobookServices />'
 })
