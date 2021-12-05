@@ -1,13 +1,15 @@
-import { Meta, Story } from '@storybook/vue'
-import Dysonans from './Dysonans.vue'
+import type { Meta, Story } from '@storybook/vue'
+import PoemsDysonans from '@/components/poems/Dysonans/Dysonans.vue'
 
 const meta: Meta = {
   title: 'Poems / Dysonans',
-  component: Dysonans
+  component: PoemsDysonans
 }
 export default meta
 
 export const Default: Story = () => ({
-  components: { Dysonans },
-  template: '<Dysonans />'
+  components: {
+    PoemsDysonans
+  },
+  template: '<div class="__storybook-section__"><PoemsDysonans /></div>'
 })
