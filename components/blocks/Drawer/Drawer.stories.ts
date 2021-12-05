@@ -1,15 +1,30 @@
-import { Meta, Story } from '@storybook/vue'
-import Drawer from './Drawer.vue'
+import type { Meta, Story } from '@storybook/vue'
+import BlocksDrawer from '@/components/blocks/Drawer/Drawer.vue'
 
 const meta: Meta = {
   title: 'Blocks / Drawer',
-  component: Drawer
+  component: BlocksDrawer
 }
 export default meta
 
-export const Default: Story = () => ({
-  components: { Drawer },
-  template: `<div style="background-color: var(--color-background-1); height: 2000px;">
-    <Drawer />
+export const Open: Story = () => ({
+  mounted () {
+    // @ts-ignore
+    this.$root.$emit('blocks/drawer/toggleDrawer', true)
+  },
+  components: {
+    BlocksDrawer
+  },
+  template: `<div style="height: 2000px;">
+    <BlocksDrawer />
+  </div>`
+})
+
+export const Close: Story = () => ({
+  components: {
+    BlocksDrawer
+  },
+  template: `<div style="height: 2000px;">
+    <BlocksDrawer />
   </div>`
 })
