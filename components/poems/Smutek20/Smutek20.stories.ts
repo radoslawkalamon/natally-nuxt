@@ -1,13 +1,21 @@
-import { Meta, Story } from '@storybook/vue'
-import Smutek20 from './Smutek20.vue'
+import type { Meta, Story } from '@storybook/vue'
+import PoemsSmutek20 from '@/components/poems/Smutek20/Smutek20.vue'
+import WrapperTextPoems from '@/components/wrappers/TextPoems/TextPoems.vue'
 
 const meta: Meta = {
   title: 'Poems / Smutek 2.0',
-  component: Smutek20
+  component: PoemsSmutek20
 }
 export default meta
 
 export const Default: Story = () => ({
-  components: { Smutek20 },
-  template: '<Smutek20 />'
+  components: {
+    PoemsSmutek20,
+    WrapperTextPoems
+  },
+  template: `<div class="__storybook-section__">
+    <WrappersTextPoems>
+      <PoemsSmutek20 />
+    </WrappersTextPoems>
+  </div>`
 })
