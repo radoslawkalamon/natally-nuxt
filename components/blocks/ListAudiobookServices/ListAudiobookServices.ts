@@ -17,37 +17,37 @@ export default Vue.extend({
         {
           icon: require('./images/apple-podcasts.svg'),
           name: 'Apple Podcasts',
-          url: 'https://169cm.pl/audiobooki/itunes'
+          url: '/audiobooki/itunes/'
         },
         {
           icon: require('./images/castbox.svg'),
           name: 'Castbox',
-          url: 'https://169cm.pl/audiobooki/castbox'
+          url: '/audiobooki/castbox/'
         },
         {
           icon: require('./images/google-podcasts.svg'),
           name: 'Google Podcasts',
-          url: 'https://169cm.pl/audiobooki/google-podcasts'
+          url: '/audiobooki/google-podcasts/'
         },
         {
           icon: require('./images/pocket-casts.svg'),
           name: 'Pocket Casts',
-          url: 'https://169cm.pl/audiobooki/pocket-casts'
+          url: '/audiobooki/pocket-casts/'
         },
         {
           icon: require('./images/soundcloud.svg'),
           name: 'Soundcloud',
-          url: 'https://169cm.pl/audiobooki/soundcloud'
+          url: '/audiobooki/soundcloud/'
         },
         {
           icon: require('./images/spotify.svg'),
           name: 'Spotify',
-          url: 'https://169cm.pl/audiobooki/spotify'
+          url: '/audiobooki/spotify/'
         },
         {
           icon: require('./images/youtube.svg'),
           name: 'YouTube',
-          url: 'https://169cm.pl/audiobooki/youtube'
+          url: '/audiobooki/youtube/'
         }
       ]
     }
