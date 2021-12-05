@@ -1,25 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components / Switch Integration shall pass integration sanity test | no slot 1`] = `
-"<div class=\\"switch\\"><label for=\\"test-name\\" class=\\"switch__label-wrapper\\"><input id=\\"test-name\\" type=\\"checkbox\\" name=\\"test-name\\" class=\\"switch__checkbox\\"> <span class=\\"switch__label\\">Test label</span></label>
+"<div class=\\"switch\\"><label for=\\"test-name\\" class=\\"switch__label-wrapper\\"><input id=\\"test-name\\" type=\\"checkbox\\" name=\\"test-name\\" class=\\"switch__checkbox\\">
+    <div class=\\"switch__fake-checkbox\\"></div> <span class=\\"switch__label\\">Test label</span>
+  </label>
   <!---->
 </div>"
 `;
 
 exports[`Components / Switch Integration shall pass integration sanity test | with slot 1`] = `
-"<div class=\\"switch\\"><label for=\\"test-name\\" class=\\"switch__label-wrapper\\"><input id=\\"test-name\\" type=\\"checkbox\\" name=\\"test-name\\" class=\\"switch__checkbox\\"> <span class=\\"switch__label\\">Test label</span></label>
+"<div class=\\"switch\\"><label for=\\"test-name\\" class=\\"switch__label-wrapper\\"><input id=\\"test-name\\" type=\\"checkbox\\" name=\\"test-name\\" class=\\"switch__checkbox\\">
+    <div class=\\"switch__fake-checkbox\\"></div> <span class=\\"switch__label\\">Test label</span>
+  </label>
   <div class=\\"switch__description text\\">Default slot test</div>
 </div>"
 `;
 
 exports[`Components / Switch Unit shall pass unit sanity test | no slot 1`] = `
-"<div class=\\"switch\\"><label for=\\"test-name\\" class=\\"switch__label-wrapper\\"><input id=\\"test-name\\" type=\\"checkbox\\" name=\\"test-name\\" class=\\"switch__checkbox\\"> <span class=\\"switch__label\\">Test label</span></label>
+"<div class=\\"switch\\"><label for=\\"test-name\\" class=\\"switch__label-wrapper\\"><input id=\\"test-name\\" type=\\"checkbox\\" name=\\"test-name\\" class=\\"switch__checkbox\\">
+    <div class=\\"switch__fake-checkbox\\"></div> <span class=\\"switch__label\\">Test label</span>
+  </label>
   <!---->
 </div>"
 `;
 
 exports[`Components / Switch Unit shall pass unit sanity test | with slot 1`] = `
-"<div class=\\"switch\\"><label for=\\"test-name\\" class=\\"switch__label-wrapper\\"><input id=\\"test-name\\" type=\\"checkbox\\" name=\\"test-name\\" class=\\"switch__checkbox\\"> <span class=\\"switch__label\\">Test label</span></label>
+"<div class=\\"switch\\"><label for=\\"test-name\\" class=\\"switch__label-wrapper\\"><input id=\\"test-name\\" type=\\"checkbox\\" name=\\"test-name\\" class=\\"switch__checkbox\\">
+    <div class=\\"switch__fake-checkbox\\"></div> <span class=\\"switch__label\\">Test label</span>
+  </label>
   <wrapperstext-stub class=\\"switch__description\\">Default slot test</wrapperstext-stub>
 </div>"
 `;

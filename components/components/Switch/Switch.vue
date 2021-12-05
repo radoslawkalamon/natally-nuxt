@@ -12,6 +12,7 @@
         v-bind="$attrs"
         v-on="$listeners"
       >
+      <div class="switch__fake-checkbox" />
       <span
         class="switch__label"
         v-text="label"

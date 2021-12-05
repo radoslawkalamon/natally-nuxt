@@ -7,14 +7,18 @@ exports[`Blocks / Modal Privacy Integration shall open & hide on "privacy/modal/
   <div class=\\"modal__frame\\">
     <h1 class=\\"modal__title title title--design-2 title--underscore\\">Ustawienia prywatności</h1>
     <div class=\\"modal__canvas\\">
-      <div class=\\"switch\\"><label for=\\"cookies-core\\" class=\\"switch__label-wrapper\\"><input id=\\"cookies-core\\" type=\\"checkbox\\" name=\\"cookies-core\\" disabled=\\"disabled\\" class=\\"switch__checkbox\\"> <span class=\\"switch__label\\">Funkcjonalności własne</span></label>
+      <div class=\\"switch\\"><label for=\\"cookies-core\\" class=\\"switch__label-wrapper\\"><input id=\\"cookies-core\\" type=\\"checkbox\\" name=\\"cookies-core\\" disabled=\\"disabled\\" class=\\"switch__checkbox\\">
+          <div class=\\"switch__fake-checkbox\\"></div> <span class=\\"switch__label\\">Funkcjonalności własne</span>
+        </label>
         <div class=\\"switch__description text\\">
           <p>
             Nie&nbsp;możesz wyłączyć tych funkcjonalności, ponieważ są&nbsp;one niezbędne&nbsp;by strona działała prawidłowo.
           </p>
         </div>
       </div>
-      <div class=\\"switch\\"><label for=\\"cookies-soundcloud\\" class=\\"switch__label-wrapper\\"><input id=\\"cookies-soundcloud\\" type=\\"checkbox\\" name=\\"cookies-soundcloud\\" data-test=\\"blocks-modal-privacy-soundcloud\\" class=\\"switch__checkbox\\"> <span class=\\"switch__label\\">Odtwarzacz Soundcloud</span></label>
+      <div class=\\"switch\\"><label for=\\"cookies-soundcloud\\" class=\\"switch__label-wrapper\\"><input id=\\"cookies-soundcloud\\" type=\\"checkbox\\" name=\\"cookies-soundcloud\\" data-test=\\"blocks-modal-privacy-soundcloud\\" class=\\"switch__checkbox\\">
+          <div class=\\"switch__fake-checkbox\\"></div> <span class=\\"switch__label\\">Odtwarzacz Soundcloud</span>
+        </label>
         <div class=\\"switch__description text\\">
           <p>
             Na&nbsp;blogu osadzany jest odtwarzacz audiobooków. W&nbsp;związku z&nbsp;tym, wykorzystywane są&nbsp;pliki cookies SoundCloud. Jeżeli włączysz te&nbsp;pliki cookies, audiobooki będą dla Ciebie dostępne.
