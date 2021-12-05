@@ -1,10 +1,10 @@
 import type { Meta, Story } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
-import BlockFooter from '@/components/blocks/Footer/Footer.vue'
+import BlocksFooter from '@/components/blocks/Footer/Footer.vue'
 
 const meta: Meta = {
   title: 'Blocks / Footer',
-  component: BlockFooter
+  component: BlocksFooter
 }
 export default meta
 
@@ -14,7 +14,7 @@ export const Default: Story = () => ({
     this.$root.$on('privacy/modal/toggle', action('privacy/modal/toggle'))
   },
   components: {
-    BlockFooter
+    BlocksFooter
   },
-  template: '<BlockFooter />'
+  template: '<BlocksFooter />'
 })

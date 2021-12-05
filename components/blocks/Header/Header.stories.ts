@@ -1,10 +1,10 @@
 import type { Meta, Story } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
-import BlockHeader from '@/components/blocks/Header/Header.vue'
+import BlocksHeader from '@/components/blocks/Header/Header.vue'
 
 const meta: Meta = {
   title: 'Blocks / Header',
-  component: BlockHeader
+  component: BlocksHeader
 }
 export default meta
 
@@ -20,7 +20,7 @@ export const Default: Story = () => ({
     this.$root.$on('blocks/drawer/syncDrawerState', action('blocks/drawer/syncDrawerState'))
   },
   components: {
-    BlockHeader
+    BlocksHeader
   },
   data () {
     return {
@@ -33,7 +33,7 @@ export const Default: Story = () => ({
       this.isDrawerOpen = !this.isDrawerOpen
     }
   },
-  template: '<div style="background-color: var(--color-background-1); height: 2000px"><BlockHeader /></div>',
+  template: '<div style="background-color: var(--color-background-1); height: 2000px"><BlocksHeader /></div>',
   watch: {
     isDrawerOpen (v: boolean) {
       // @ts-ignore
