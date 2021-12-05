@@ -1,13 +1,18 @@
-import { Meta, Story } from '@storybook/vue'
-import ListPoemsHomepage from './ListPoemsHomepage.vue'
+import type { Meta, Story } from '@storybook/vue'
+import BlocksListPoemsHomepage from '@/components/blocks/ListPoemsHomepage/ListPoemsHomepage.vue'
+import { storybookOnlyDevTemplate } from '@/devtools/storybook.onlyDev.template'
 
 const meta: Meta = {
   title: 'Blocks / List Poems Homepage',
-  component: ListPoemsHomepage
+  component: BlocksListPoemsHomepage
 }
 export default meta
 
 export const Default: Story = () => ({
-  components: { ListPoemsHomepage },
-  template: '<div class="__storybook-section__"><ListPoemsHomepage /></div>'
+  components: {
+    BlocksListPoemsHomepage
+  },
+  template: process.env.NODE_ENV !== 'production'
+    ? '<div class="__storybook-section__"><BlocksListPoemsHomepage /></div>'
+    : storybookOnlyDevTemplate
 })
