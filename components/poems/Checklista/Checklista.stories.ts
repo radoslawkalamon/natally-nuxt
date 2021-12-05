@@ -1,13 +1,15 @@
-import { Meta, Story } from '@storybook/vue'
-import Checklista from '@/components/poems/Checklista.vue'
+import type { Meta, Story } from '@storybook/vue'
+import PoemsChecklista from '@/components/poems/Checklista/Checklista.vue'
 
 const meta: Meta = {
   title: 'Poems / Checklista',
-  component: Checklista
+  component: PoemsChecklista
 }
 export default meta
 
 export const Default: Story = () => ({
-  components: { Checklista },
-  template: '<Checklista />'
+  components: {
+    PoemsChecklista
+  },
+  template: '<div class="__storybook-section__"><PoemsChecklista /></div>'
 })
