@@ -5,8 +5,7 @@ export default Vue.extend({
   components: {
     VNode: {
       functional: true,
-      // @ts-ignore: This is hacky as hell but it works :D
-      render: (_h, { props }) => props.node
+      render: (_h: Vue.CreateElement, ctx: Vue.RenderContext) => ctx.props.node
     }
   },
   computed: {
