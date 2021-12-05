@@ -1,13 +1,15 @@
-import { Meta, Story } from '@storybook/vue'
-import PageMeta404 from './PageMeta404.vue'
+import type { Meta, Story } from '@storybook/vue'
+import BlocksPageMeta404 from '@/components/blocks/PageMeta404/PageMeta404.vue'
 
 const meta: Meta = {
-  title: 'Blocks / Page Meta404',
-  component: PageMeta404
+  title: 'Blocks / Page Meta 404',
+  component: BlocksPageMeta404
 }
 export default meta
 
 export const Default: Story = () => ({
-  components: { PageMeta404 },
-  template: '<PageMeta404 />'
+  components: {
+    BlocksPageMeta404
+  },
+  template: '<BlocksPageMeta404 />'
 })
