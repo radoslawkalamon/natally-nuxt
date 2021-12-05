@@ -1,5 +1,6 @@
 import type { Meta, Story } from '@storybook/vue'
 import PoemsDysonans from '@/components/poems/Dysonans/Dysonans.vue'
+import WrappersTextPoems from '@/components/wrappers/TextPoems/TextPoems.vue'
 
 const meta: Meta = {
   title: 'Poems / Dysonans',
@@ -9,7 +10,12 @@ export default meta
 
 export const Default: Story = () => ({
   components: {
-    PoemsDysonans
+    PoemsDysonans,
+    WrappersTextPoems
   },
-  template: '<div class="__storybook-section__"><PoemsDysonans /></div>'
+  template: `<div class="__storybook-section__">
+    <WrappersTextPoems>
+      <PoemsDysonans />
+    </WrappersTextPoems>
+  </div>`
 })
