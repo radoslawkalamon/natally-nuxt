@@ -2,6 +2,8 @@
   display: flex;
   flex-flow: column nowrap;
   gap: var(--gap);
+
+  --checkbox-size: 20px;
 }
 
 .checklista__last-line {
@@ -20,10 +22,63 @@
   align-items: center;
   display: flex;
   gap: 12px;
+  position: relative;
 }
 
 .checklista__input {
-  cursor: pointer;
+  appearance: none;
+  left: 0;
   margin: 0;
-  padding: 0;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+}
+
+/** Stale */
+.checklista__input + .checklista__fake-input {
+  border: var(--border-size) solid var(--color-base);
+  border-radius: calc(var(--border-radius) / 2);
+  box-sizing: border-box;
+  cursor: pointer;
+  height: var(--checkbox-size);
+  margin: 0;
+  min-width: var(--checkbox-size);
+  position: relative;
+  transition: background-color var(--time-animation) ease, border var(--time-animation) ease;
+  width: var(--checkbox-size);
+}
+
+.checklista__input + .checklista__fake-input::before,
+.checklista__input + .checklista__fake-input::after {
+  background-color: var(--color-base);
+  border-radius: 1px;
+  content: '';
+  display: block;
+  height: 2px;
+  left: 2px;
+  opacity: 0;
+  position: absolute;
+  top: calc(50% - 1px);
+  transition: opacity var(--time-animation) ease;
+  width: calc(var(--checkbox-size) - 6px);
+  z-index: 1;
+}
+
+.checklista__input + .checklista__fake-input::before {
+  transform: rotate(-45deg);
+}
+
+.checklista__input + .checklista__fake-input::after {
+  transform: rotate(45deg);
+}
+
+/** Checked */
+.checklista__input:checked + .checklista__fake-input {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.checklista__input:checked + .checklista__fake-input::before,
+.checklista__input:checked + .checklista__fake-input::after {
+  opacity: 1;
 }

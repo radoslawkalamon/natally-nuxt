@@ -13,6 +13,7 @@
         :name="name"
         :checked="checked"
       >
+      <div class="checklista__fake-input" />
       <span
         class="checklista__label"
         v-text="label"
