@@ -1,12 +1,12 @@
-import { Meta, Story } from '@storybook/vue'
-import TextPoems from './TextPoems.vue'
+import type { Meta, Story } from '@storybook/vue'
+import WrappersTextPoems from '@/components/wrappers/TextPoems/TextPoems.vue'
 
 const meta: Meta = {
   title: 'Wrappers / Text Poems',
-  component: TextPoems,
+  component: WrappersTextPoems,
   argTypes: {
     default: {
-      description: '`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<p>`, `<ol>` & `<ul>` gets design system styling. Also component\'s `min-height` is `70vh`',
+      description: '`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<p>`, `<ol>` & `<ul>` gets design system styling. Component\'s `min-height` is `60vh`',
       table: {
         type: null,
         defaultValue: null
@@ -17,8 +17,10 @@ const meta: Meta = {
 export default meta
 
 export const Default: Story = () => ({
-  components: { TextPoems },
-  template: `<TextPoems>
+  components: {
+    WrappersTextPoems
+  },
+  template: `<WrappersTextPoems>
     <h1>Header 1</h1>
     <h2>Header 2</h2>
     <h3>Header 3</h3>
@@ -32,5 +34,5 @@ export const Default: Story = () => ({
       <li>Item 1</li>
       <li>Item 2</li>
     </ol>
-  </TextPoems>`
+  </WrappersTextPoems>`
 })
