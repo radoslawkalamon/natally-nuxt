@@ -1,19 +1,22 @@
-import { Meta, Story } from '@storybook/vue'
-import ButtonLink from './ButtonLink.vue'
+import type { Meta, Story } from '@storybook/vue'
+import ComponentsButtonLink from '@/components/components/ButtonLink/ButtonLink.vue'
 
 const meta: Meta = {
   title: 'Components / Button Link',
-  component: ButtonLink
+  component: ComponentsButtonLink
 }
 export default meta
 
 const Template: Story = (_args, { argTypes }) => ({
-  components: { ButtonLink },
+  components: {
+    ComponentsButtonLink
+  },
   props: Object.keys(argTypes),
-  template: '<ButtonLink v-bind="$props" />'
+  template: '<ComponentsButtonLink v-bind="$props" />'
 })
 
 export const Default: Story = Template.bind({})
 Default.args = {
-  label: 'Click here'
+  label: 'Click here',
+  to: '/the-url/'
 }
