@@ -1,17 +1,19 @@
-import { Meta, Story } from '@storybook/vue'
-import CardStory from './CardStory.vue'
+import type { Meta, Story } from '@storybook/vue'
+import ComponentsCardStory from '@/components/components/CardStory/CardStory.vue'
 import { DTOMetaPostStory } from '@/utils/dto.meta.post.story'
 
 const meta: Meta = {
   title: 'Components / Card Story',
-  component: CardStory
+  component: ComponentsCardStory
 }
 export default meta
 
 const Template: Story = (_args, { argTypes }) => ({
-  components: { CardStory },
+  components: {
+    ComponentsCardStory
+  },
   props: Object.keys(argTypes),
-  template: '<CardStory v-bind="$props" />'
+  template: '<ComponentsCardStory v-bind="$props" />'
 })
 
 export const Audiobook: Story = Template.bind({})
