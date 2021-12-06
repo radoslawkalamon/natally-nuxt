@@ -1,16 +1,18 @@
-import { Meta, Story } from '@storybook/vue'
-import CardAudiobookService from './CardAudiobookService.vue'
+import type { Meta, Story } from '@storybook/vue'
+import ComponentsCardAudiobookService from '@/components/components/CardAudiobookService/CardAudiobookService.vue'
 
 const meta: Meta = {
   title: 'Components / Card Audiobook Service',
-  component: CardAudiobookService
+  component: ComponentsCardAudiobookService
 }
 export default meta
 
 const Template: Story = (_args, { argTypes }) => ({
-  components: { CardAudiobookService },
+  components: {
+    ComponentsCardAudiobookService
+  },
   props: Object.keys(argTypes),
-  template: '<CardAudiobookService v-bind="$props" />'
+  template: '<ComponentsCardAudiobookService v-bind="$props" />'
 })
 
 export const Default: Story = Template.bind({})
