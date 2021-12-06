@@ -1,8 +1,8 @@
-import { Meta, Story } from '@storybook/vue'
-import Title from './Title.vue'
+import type { Meta, Story } from '@storybook/vue'
+import ComponentsTitle from '@/components/components/Title/Title.vue'
 
 const meta: Meta = {
-  component: Title,
+  component: ComponentsTitle,
   title: 'Components / Title',
   argTypes: {
     design: {
@@ -22,9 +22,11 @@ const meta: Meta = {
 export default meta
 
 const Template: Story = (_args, { argTypes }) => ({
-  components: { Title },
+  components: {
+    ComponentsTitle
+  },
   props: Object.keys(argTypes),
-  template: '<Title v-bind="$props" />'
+  template: '<ComponentsTitle v-bind="$props" />'
 })
 
 export const withUnderscore: Story = Template.bind({})
