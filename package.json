@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "bootstrap:component": "ts-node ./bootstrap.component.ts",
-    "build": "nuxt build",
     "deploy:storybook": "npm run storybook:build && ts-node ./deploy.storybook.ts",
     "deploy:stage": "npm run generate && ts-node ./deploy.stage.ts",
     "deploy:prod": "npm run generate && ts-node ./deploy.prod.ts",
@@ -14,7 +13,6 @@
     "lint:script": "eslint --ext \".ts,.js,.vue\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
     "prepare": "husky install",
-    "start": "nuxt start",
     "storybook:run": "nuxt storybook",
     "storybook:build": "nuxt storybook build",
     "test": "jest"

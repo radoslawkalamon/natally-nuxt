@@ -1,6 +1,11 @@
-# Natally v3 (Nuxt)
+# Nuxt Static Site for 169cm.pl | natally-nuxt 3.1.0 
 
-## Build Setup
+## Entry points
+- [https://169cm.pl](https://169cm.pl)
+- [https://stage.169cm.pl](https://stage.169cm.pl)
+- [https://storybook.169cm.pl](https://storybook.169cm.pl)
+
+## Commands
 
 ```bash
 # install submodules
@@ -13,61 +18,70 @@ $ npm install
 # serve with hot reload at localhost:3000
 $ npm run dev
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+# run tests
+$ npm run test
 
 # generate static project
 $ npm run generate
+
+---
+
+# bootstrap new component
+$ npm run bootstrap:component [type] [name]
+$ npm run bootstrap:component poems Nastawienie
+
+# deploy code on server (need .env file)
+$ npm run deploy:storybook
+$ npm run deploy:stage
+$ npm run deploy:prod
+
+# storybook
+$ npm run storybook:run
+$ npm run storybook:build
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+## Wait, there is more!
 
-## Special Directories
+You need access to 3 more repositories to start the project:
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+- `natally-nuxt-content` - where markdown files lives,
+- `natally-nuxt-images` - where any public images are placed (e.g. covers & open graphs),
+- `natally-nuxt-deploy` - where CI/CD happens
 
-### `assets`
+Please note: This repository is portfolio-like to showcase my latest development skill ;)
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+## FAQ
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+### Why did you do this?
+- to showcase my latest Front End development skills,
+- to experiment with some of the project's design, ideas & patterns,
+- to rewrite WordPress theme for my own blog, 169cm.pl,
+- to get familiar with Nuxt.
 
-### `components`
+### Do you like Nuxt?
+Version 2 is quite nice, but I look for Version 3. It is faster & have better TypeScript support. Yet, mein gott! This project was a Nuxt crash course for me. Modules, Head, Plugins, Lazy Hydration, SSR / SSG, no browser context on the server side, Content Mismatch & a bit of Lighthouse performance fights :D
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+### Why not Nuxt 3?
+I started development in August 2021. There were no Nuxt 3 beta then. Also, I gave a try for `nuxt/content` and it not supports v3 yet.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+### Where is the SASS / LESS / Stylus / other CSS preprocessor?
+Is it possible to create medium size project with CSS only? It was fun, but I missed SCSS a lot (especially mixins and tooling). Today, I would go with the SCSS from the start.
 
-### `layouts`
+### What is the Block -> Wrapper -> Component structure?
+This is the legacy components approach from the `natally-wordpress` and... it is terrible thing for Vue. Blocks can not be the "the self constituting pieces", like in the PHP version. I lost a bit of performance because of this. This is the last time when I used it. Time to bury it deeper than expected and look for something better!
 
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+### What a nice light / dark theme support!
+Light / Dark theme with CSS Variable are awesome! Still, there is a room for improvements here. `_variables.css` should have most generic colors, and stage two variables like shadow, border etc. Then components should define their variables inside their styles. This is kind of obvious, but I did not do it here! I will keep this in mind for the future projects.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
+### What do you think about `nuxt/content`?
+It is gloriously superb for the SSR, but with the SSG is terribly bad. Why?
+- no loading state,
+- strange fallback page behavior - no `nuxt/content` fetch there,
+- hard-coded content on pages - no content randomization for the Related Posts section.
 
+### Why not 100% test coverage?
+Because of the Nuxt's asyncData / fetch hooks. These cannot be fired when doing integration tests of blocks.
+Yes, I am looking at you! Feel free to create an issue if you have a solution for this!
 
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+### Why ... ?
+If you have any questions, feel free to create an issue!
