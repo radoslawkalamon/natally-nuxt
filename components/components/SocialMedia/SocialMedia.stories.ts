@@ -1,13 +1,15 @@
-import { Meta, Story } from '@storybook/vue'
-import SocialMedia from './SocialMedia.vue'
+import type { Meta, Story } from '@storybook/vue'
+import ComponentsSocialMedia from '@/components/components/SocialMedia/SocialMedia.vue'
 
 const meta: Meta = {
   title: 'Components / Social Media',
-  component: SocialMedia
+  component: ComponentsSocialMedia
 }
 export default meta
 
 export const Default: Story = () => ({
-  components: { SocialMedia },
-  template: '<div class="__storybook-section__"><SocialMedia /></div>'
+  components: {
+    ComponentsSocialMedia
+  },
+  template: '<div class="__storybook-section__"><ComponentsSocialMedia /></div>'
 })
