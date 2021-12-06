@@ -1,13 +1,15 @@
-import { Meta, Story } from '@storybook/vue'
-import AboutMe from './AboutMe.vue'
+import type { Meta, Story } from '@storybook/vue'
+import BlocksAboutMe from '@/components/blocks/AboutMe/AboutMe.vue'
 
 const meta: Meta = {
   title: 'Blocks / About Me',
-  component: AboutMe
+  component: BlocksAboutMe
 }
 export default meta
 
 export const Default: Story = () => ({
-  components: { AboutMe },
-  template: '<div class="__storybook-section__"><AboutMe /></div>'
+  components: {
+    BlocksAboutMe
+  },
+  template: '<div class="__storybook-section__"><BlocksAboutMe /></div>'
 })

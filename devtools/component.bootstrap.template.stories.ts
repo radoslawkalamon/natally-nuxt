@@ -4,7 +4,7 @@ import { formatterSpacelize } from '../utils/formatter.spacelize'
 export const componentBootstrapTemplateStories = (type: string, name: string): string => {
   const title = `${formatterCapitalize(type)} / ${formatterSpacelize(name)}`
 
-  return `import { Meta, Story } from '@storybook/vue'
+  return `import type { Meta, Story } from '@storybook/vue'
 import ${name} from '@/components/${type}/${name}/${name}.vue'
 
 const meta: Meta = {

@@ -1,16 +1,18 @@
-import { Meta, Story } from '@storybook/vue'
-import CoverStory from './CoverStory.vue'
+import type { Meta, Story } from '@storybook/vue'
+import BlocksCoverStory from '@/components/blocks/CoverStory/CoverStory.vue'
 
 const meta: Meta = {
   title: 'Blocks / Cover Story',
-  component: CoverStory
+  component: BlocksCoverStory
 }
 export default meta
 
 const Template: Story = (_args, { argTypes }) => ({
-  components: { CoverStory },
+  components: {
+    BlocksCoverStory
+  },
   props: Object.keys(argTypes),
-  template: '<CoverStory v-bind="$props" />'
+  template: '<BlocksCoverStory v-bind="$props" />'
 })
 
 export const Default: Story = Template.bind({})

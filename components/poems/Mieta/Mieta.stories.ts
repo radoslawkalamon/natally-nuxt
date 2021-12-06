@@ -1,13 +1,21 @@
-import { Meta, Story } from '@storybook/vue'
-import Mieta from './Mieta.vue'
+import type { Meta, Story } from '@storybook/vue'
+import PoemsMieta from '@/components/poems/Mieta/Mieta.vue'
+import WrappersTextPoems from '@/components/wrappers/TextPoems/TextPoems.vue'
 
 const meta: Meta = {
   title: 'Poems / Mieta',
-  component: Mieta
+  component: PoemsMieta
 }
 export default meta
 
 export const Default: Story = () => ({
-  components: { Mieta },
-  template: '<Mieta />'
+  components: {
+    PoemsMieta,
+    WrappersTextPoems
+  },
+  template: `<div class="__storybook-section__">
+    <WrappersTextPoems>
+      <PoemsMieta />
+    </WrappersTextPoems>
+  </div>`
 })

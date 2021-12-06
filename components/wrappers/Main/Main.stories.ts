@@ -1,9 +1,9 @@
-import { Meta, Story } from '@storybook/vue'
-import Main from './Main.vue'
+import type { Meta, Story } from '@storybook/vue'
+import WrappersMain from '@/components/wrappers/Main/Main.vue'
 
 const meta: Meta = {
   title: 'Wrappers / Main',
-  component: Main,
+  component: WrappersMain,
   argTypes: {
     default: {
       description: '-',
@@ -17,6 +17,8 @@ const meta: Meta = {
 export default meta
 
 export const Default: Story = () => ({
-  components: { Main },
-  template: '<Main>Default Slot</Main>'
+  components: {
+    WrappersMain
+  },
+  template: '<WrappersMain>Default Slot</WrappersMain>'
 })

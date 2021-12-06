@@ -1,16 +1,18 @@
-import { Meta, Story } from '@storybook/vue'
-import TextMeta from './TextMeta.vue'
+import type { Meta, Story } from '@storybook/vue'
+import ComponentsTextMeta from '@/components/components/TextMeta/TextMeta.vue'
 
 const meta: Meta = {
-  component: TextMeta,
+  component: ComponentsTextMeta,
   title: 'Components / Text Meta'
 }
 export default meta
 
 const Template: Story = (_args, { argTypes }) => ({
-  components: { TextMeta },
+  components: {
+    ComponentsTextMeta
+  },
   props: Object.keys(argTypes),
-  template: '<TextMeta v-bind="$props" />'
+  template: '<ComponentsTextMeta v-bind="$props" />'
 })
 
 export const Default: Story = Template.bind({})

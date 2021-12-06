@@ -2,7 +2,7 @@ import Vue from 'vue'
 import TextBase from '@/components/wrappers/Text/Text.vue'
 
 export default Vue.extend({
-  name: 'ComponentsTextStories',
+  name: 'WrappersTextStories',
   extends: TextBase,
   computed: {
     wrapperClasses (): string[] {

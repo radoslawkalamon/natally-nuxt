@@ -1,13 +1,21 @@
-import { Meta, Story } from '@storybook/vue'
-import MiedzyWierszami from './MiedzyWierszami.vue'
+import type { Meta, Story } from '@storybook/vue'
+import PoemsMiedzyWierszami from '@/components/poems/MiedzyWierszami/MiedzyWierszami.vue'
+import WrappersTextPoems from '@/components/wrappers/TextPoems/TextPoems.vue'
 
 const meta: Meta = {
   title: 'Poems / Między Wierszami',
-  component: MiedzyWierszami
+  component: PoemsMiedzyWierszami
 }
 export default meta
 
 export const Default: Story = () => ({
-  components: { MiedzyWierszami },
-  template: '<MiedzyWierszami />'
+  components: {
+    PoemsMiedzyWierszami,
+    WrappersTextPoems
+  },
+  template: `<div class="__storybook-section__">
+    <WrappersTextPoems>
+      <PoemsMiedzyWierszami />
+    </WrappersTextPoems>
+  </div>`
 })

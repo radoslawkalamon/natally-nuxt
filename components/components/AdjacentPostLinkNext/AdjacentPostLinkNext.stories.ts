@@ -1,16 +1,18 @@
-import { Meta, Story } from '@storybook/vue'
-import AdjacentPostLinkNext from './AdjacentPostLinkNext.vue'
+import type { Meta, Story } from '@storybook/vue'
+import ComponentsAdjacentPostLinkNext from '@/components/components/AdjacentPostLinkNext/AdjacentPostLinkNext.vue'
 
 const meta: Meta = {
   title: 'Components / Adjacent Post Link Next',
-  component: AdjacentPostLinkNext
+  component: ComponentsAdjacentPostLinkNext
 }
 export default meta
 
 const Template: Story = (_args, { argTypes }) => ({
-  components: { AdjacentPostLinkNext },
+  components: {
+    ComponentsAdjacentPostLinkNext
+  },
   props: Object.keys(argTypes),
-  template: '<AdjacentPostLinkNext v-bind="$props" />'
+  template: '<ComponentsAdjacentPostLinkNext v-bind="$props" />'
 })
 
 export const Default: Story = Template.bind({})

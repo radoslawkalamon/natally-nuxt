@@ -1,13 +1,21 @@
-import { Meta, Story } from '@storybook/vue'
-import Horoskop from './Horoskop.vue'
+import type { Meta, Story } from '@storybook/vue'
+import PoemsHoroskop from '@/components/poems/Horoskop/Horoskop.vue'
+import WrappersTextPoems from '@/components/wrappers/TextPoems/TextPoems.vue'
 
 const meta: Meta = {
   title: 'Poems / Horoskop',
-  component: Horoskop
+  component: PoemsHoroskop
 }
 export default meta
 
 export const Default: Story = () => ({
-  components: { Horoskop },
-  template: '<Horoskop />'
+  components: {
+    PoemsHoroskop,
+    WrappersTextPoems
+  },
+  template: `<div class="__storybook-section__">
+    <WrappersTextPoems>
+      <PoemsHoroskop />
+    </WrappersTextPoems>
+  </div>`
 })

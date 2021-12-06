@@ -1,12 +1,12 @@
-import { Meta, Story } from '@storybook/vue'
-import TextStories from './TextStories.vue'
+import type { Meta, Story } from '@storybook/vue'
+import WrappersTextStories from '@/components/wrappers/TextStories/TextStories.vue'
 
 const meta: Meta = {
   title: 'Wrappers / Text Stories',
-  component: TextStories,
+  component: WrappersTextStories,
   argTypes: {
     default: {
-      description: '`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<p>`, `<ol>` & `<ul>` gets design system styling. Also `<p>` gets `text-indent` CSS property',
+      description: '`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<p>`, `<ol>` & `<ul>` gets design system styling. Also `<p>` gets `text-indent`',
       table: {
         type: null,
         defaultValue: null
@@ -17,8 +17,10 @@ const meta: Meta = {
 export default meta
 
 export const Default: Story = () => ({
-  components: { TextStories },
-  template: `<TextStories>
+  components: {
+    WrappersTextStories
+  },
+  template: `<WrappersTextStories>
     <h1>Header 1</h1>
     <h2>Header 2</h2>
     <h3>Header 3</h3>
@@ -32,5 +34,5 @@ export const Default: Story = () => ({
       <li>Item 1</li>
       <li>Item 2</li>
     </ol>
-  </TextStories>`
+  </WrappersTextStories>`
 })

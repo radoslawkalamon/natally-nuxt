@@ -1,13 +1,15 @@
-import { Meta, Story } from '@storybook/vue'
-import AnimationPufferfish from './AnimationPufferfish.vue'
+import type { Meta, Story } from '@storybook/vue'
+import BlocksAnimationPufferfish from '@/components/blocks/AnimationPufferfish/AnimationPufferfish.vue'
 
 const meta: Meta = {
   title: 'Blocks / Animation Pufferfish',
-  component: AnimationPufferfish
+  component: BlocksAnimationPufferfish
 }
 export default meta
 
 export const Default: Story = () => ({
-  components: { AnimationPufferfish },
-  template: '<AnimationPufferfish />'
+  components: {
+    BlocksAnimationPufferfish
+  },
+  template: '<BlocksAnimationPufferfish />'
 })

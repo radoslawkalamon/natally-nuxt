@@ -1,13 +1,15 @@
-import { Meta, Story } from '@storybook/vue'
-import LogoCrustyBread from './LogoCrustyBread.vue'
+import type { Meta, Story } from '@storybook/vue'
+import ComponentsLogoCrustyBread from '@/components/components/LogoCrustyBread/LogoCrustyBread.vue'
 
 const meta: Meta = {
   title: 'Components / Logo Crusty Bread',
-  component: LogoCrustyBread
+  component: ComponentsLogoCrustyBread
 }
 export default meta
 
 export const Default: Story = () => ({
-  components: { LogoCrustyBread },
-  template: '<LogoCrustyBread />'
+  components: {
+    ComponentsLogoCrustyBread
+  },
+  template: '<ComponentsLogoCrustyBread />'
 })

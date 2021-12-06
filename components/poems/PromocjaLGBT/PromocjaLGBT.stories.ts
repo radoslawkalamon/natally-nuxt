@@ -1,13 +1,21 @@
-import { Meta, Story } from '@storybook/vue'
-import PromocjaLGBT from './PromocjaLGBT.vue'
+import type { Meta, Story } from '@storybook/vue'
+import PoemsPromocjaLGBT from '@/components/poems/PromocjaLGBT/PromocjaLGBT.vue'
+import WrappersTextPoems from '@/components/wrappers/TextPoems/TextPoems.vue'
 
 const meta: Meta = {
   title: 'Poems / Promocja LGBT',
-  component: PromocjaLGBT
+  component: PoemsPromocjaLGBT
 }
 export default meta
 
 export const Default: Story = () => ({
-  components: { PromocjaLGBT },
-  template: '<PromocjaLGBT />'
+  components: {
+    PoemsPromocjaLGBT,
+    WrappersTextPoems
+  },
+  template: `<div class="__storybook-section__">
+    <WrappersTextPoems>
+      <PoemsPromocjaLGBT />
+    </WrappersTextPoems>
+  </div>`
 })

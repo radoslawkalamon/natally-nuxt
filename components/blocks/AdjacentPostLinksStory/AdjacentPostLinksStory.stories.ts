@@ -1,19 +1,24 @@
-import { Meta, Story } from '@storybook/vue'
-import AdjacentPostLinksStory from './AdjacentPostLinksStory.vue'
+import type { Meta, Story } from '@storybook/vue'
+import BlocksAdjacentPostLinksStory from '@/components/blocks/AdjacentPostLinksStory/AdjacentPostLinksStory.vue'
+import { storybookOnlyDevTemplate } from '@/devtools/storybook.onlyDev.template'
 
 const meta: Meta = {
   title: 'Blocks / Adjacent Post Links Story',
-  component: AdjacentPostLinksStory
+  component: BlocksAdjacentPostLinksStory
 }
 export default meta
 
 const Template: Story = (_args, { argTypes }) => ({
-  components: { AdjacentPostLinksStory },
+  components: {
+    BlocksAdjacentPostLinksStory
+  },
   props: Object.keys(argTypes),
-  template: '<AdjacentPostLinksStory v-bind="$props" />'
+  template: process.env.NODE_ENV !== 'production'
+    ? '<div class="__storybook-section__"><BlocksAdjacentPostLinksStory v-bind="$props" /></div>'
+    : storybookOnlyDevTemplate
 })
 
 export const Default: Story = Template.bind({})
 Default.args = {
-  slug: 'test-post'
+  slug: 'bajka'
 }
