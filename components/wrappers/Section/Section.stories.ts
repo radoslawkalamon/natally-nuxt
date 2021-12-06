@@ -1,12 +1,12 @@
-import { Meta, Story } from '@storybook/vue'
-import ComponentSection from './Section.vue'
+import type { Meta, Story } from '@storybook/vue'
+import WrappersSection from '@/components/wrappers/Section/Section.vue'
 
 const meta: Meta = {
   title: 'Wrappers / Section',
-  component: ComponentSection,
+  component: WrappersSection,
   argTypes: {
     header: {
-      description: 'hidden if no children passed',
+      description: 'hidden when no children',
       table: {
         type: null,
         defaultValue: null
@@ -20,7 +20,7 @@ const meta: Meta = {
       }
     },
     footer: {
-      description: 'hidden if no children passed',
+      description: 'hidden when no children',
       table: {
         type: null,
         defaultValue: null
@@ -31,8 +31,10 @@ const meta: Meta = {
 export default meta
 
 export const allSlots: Story = () => ({
-  components: { ComponentSection },
-  template: `<ComponentSection>
+  components: {
+    WrappersSection
+  },
+  template: `<WrappersSection>
     <template #header>
       Header slot
     </template>
@@ -42,36 +44,42 @@ export const allSlots: Story = () => ({
     <template #footer>
       Footer slot
     </template>
-  </ComponentSection>`
+  </WrappersSection>`
 })
 
 export const noHeader: Story = () => ({
-  components: { ComponentSection },
-  template: `<ComponentSection>
+  components: {
+    WrappersSection
+  },
+  template: `<WrappersSection>
     <template>
       Default slot
     </template>
     <template #footer>
       Footer slot
     </template>
-  </ComponentSection>`
+  </WrappersSection>`
 })
 
 export const noFooter: Story = () => ({
-  components: { ComponentSection },
-  template: `<ComponentSection>
+  components: {
+    WrappersSection
+  },
+  template: `<WrappersSection>
     <template #header>
       Header slot
     </template>
     <template>
       Default slot
     </template>
-  </ComponentSection>`
+  </WrappersSection>`
 })
 
 export const noHeaderNoFooter: Story = () => ({
-  components: { ComponentSection },
-  template: `<ComponentSection>
+  components: {
+    WrappersSection
+  },
+  template: `<WrappersSection>
     Default slot
-  </ComponentSection>`
+  </WrappersSection>`
 })

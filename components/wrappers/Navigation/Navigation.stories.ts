@@ -17,7 +17,9 @@ const meta: Meta = {
 export default meta
 
 export const Default: Story = () => ({
-  components: { WrappersNavigation },
+  components: {
+    WrappersNavigation
+  },
   template: `<WrappersNavigation>
     <span>Child 1</span>
     <span>Child 2</span>
