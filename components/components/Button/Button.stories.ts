@@ -1,17 +1,19 @@
-import { Meta, Story } from '@storybook/vue'
+import type { Meta, Story } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
-import Button from './Button.vue'
+import ComponentsButton from '@/components/components/Button/Button.vue'
 
 const meta: Meta = {
   title: 'Components / Button',
-  component: Button
+  component: ComponentsButton
 }
 export default meta
 
 const Template: Story = (_args, { argTypes }) => ({
-  components: { Button },
+  components: {
+    ComponentsButton
+  },
   props: Object.keys(argTypes),
-  template: '<Button v-bind="$props" @click="onClick" />',
+  template: '<ComponentsButton v-bind="$props" @click="onClick" />',
   methods: {
     onClick () {
       action('click')()
