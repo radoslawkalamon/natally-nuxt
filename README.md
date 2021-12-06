@@ -54,24 +54,24 @@ Please note: This repository is portfolio-like to showcase my latest development
 
 ### Why did you do this?
 - to showcase my latest Front End development skills,
-- to experiment with some of the project's design, ideas & patterns,
+- to experiment with the project's design, ideas & patterns,
 - to rewrite WordPress theme for my own blog, 169cm.pl,
 - to get familiar with Nuxt.
 
 ### Do you like Nuxt?
-Version 2 is quite nice, but I look for Version 3. It is faster & have better TypeScript support. Yet, mein gott! This project was a Nuxt crash course for me. Modules, Head, Plugins, Lazy Hydration, SSR / SSG, no browser context on the server side, Content Mismatch & a bit of Lighthouse performance fights :D
+Version 2 is quite nice, but I am looking for Version 3. It is faster & have better TypeScript support. Yet, mein gott! This project was a Nuxt crash course for me. Modules, Head, Plugins, Lazy Hydration, SSR / SSG, no browser context on the server side, Content Mismatch & a bit of Lighthouse performance fights :D
 
 ### Why not Nuxt 3?
-I started development in August 2021. There were no Nuxt 3 beta then. Also, I gave a try for `nuxt/content` and it not supports v3 yet.
+I started development in August 2021. There were no Nuxt 3 beta then. Also, I tried the `nuxt/content` and it not supports v3 yet.
 
 ### Where is the SASS / LESS / Stylus / other CSS preprocessor?
-Is it possible to create medium size project with CSS only? It was fun, but I missed SCSS a lot (especially mixins and tooling). Today, I would go with the SCSS from the start.
+Is it possible to create medium size project with CSS only? It was fun, but I missed SCSS a lot (especially mixins and tooling). Today, I would go with the SCSS from the beginning.
 
 ### What is the Block -> Wrapper -> Component structure?
-This is the legacy components approach from the `natally-wordpress` and... it is terrible thing for Vue. Blocks can not be the "the self constituting pieces", like in the PHP version. I lost a bit of performance because of this. This is the last time when I used it. Time to bury it deeper than expected and look for something better!
+This is the legacy components approach from the `natally-wordpress` and... it is terrible thing for Vue. Blocks cannot be the "the self constituting pieces", like in the PHP version. I lost a bit of performance because of this. This is the last time when I used it. Time to bury it deeper than expected and look for something better!
 
 ### What a nice light / dark theme support!
-Light / Dark theme with CSS Variable are awesome! Still, there is a room for improvements here. `_variables.css` should have most generic colors, and stage two variables like shadow, border etc. Then components should define their variables inside their styles. This is kind of obvious, but I did not do it here! I will keep this in mind for the future projects.
+Light / Dark theme with CSS Variable are awesome! Still, there is a room for improvements here. `_variables.css` should have generic colors, and stage two variables like shadow, border etc. Then components should define their variables inside their styles. This is kind of obvious, but I did not do it here! I will keep this in mind for the future projects.
 
 ### What do you think about `nuxt/content`?
 It is gloriously superb for the SSR, but with the SSG is terribly bad. Why?
@@ -80,7 +80,7 @@ It is gloriously superb for the SSR, but with the SSG is terribly bad. Why?
 - hard-coded content on pages - no content randomization for the Related Posts section.
 
 ### Why not 100% test coverage?
-Because of the Nuxt's asyncData / fetch hooks. These cannot be fired when doing integration tests of blocks.
+Because of the Nuxt's asyncData / fetch hooks. These cannot be called when doing integration tests of blocks.
 Yes, I am looking at you! Feel free to create an issue if you have a solution for this!
 
 ### Why ... ?
