@@ -1,17 +1,19 @@
-import { Meta, Story } from '@storybook/vue'
+import type { Meta, Story } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
-import ButtonHamburger from './ButtonHamburger.vue'
+import ComponentsButtonHamburger from '@/components/components/ButtonHamburger/ButtonHamburger.vue'
 
 const meta: Meta = {
-  component: ButtonHamburger,
+  component: ComponentsButtonHamburger,
   title: 'Components / Button Hamburger'
 }
 export default meta
 
 const Template: Story = (_args, { argTypes }) => ({
-  components: { ButtonHamburger },
+  components: {
+    ComponentsButtonHamburger
+  },
   props: Object.keys(argTypes),
-  template: '<ButtonHamburger v-bind="$props" @toggle="onToggle" />',
+  template: '<ComponentsButtonHamburger v-bind="$props" @toggle="onToggle" />',
   methods: {
     onToggle () {
       action('toggle')()
