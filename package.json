@@ -1,6 +1,6 @@
 {
   "name": "natally-nuxt",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "private": true,
   "scripts": {
     "bootstrap:component": "ts-node ./bootstrap.component.ts",
