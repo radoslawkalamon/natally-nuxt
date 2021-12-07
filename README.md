@@ -1,4 +1,4 @@
-# Nuxt Static Site for 169cm.pl | natally-nuxt 3.1.0 
+# Nuxt Static Site for 169cm.pl | natally-nuxt 3.1.1 
 
 ## Entry points
 - [https://169cm.pl](https://169cm.pl)
@@ -69,6 +69,9 @@ Is it possible to create medium size project with CSS only? It was fun, but I mi
 
 ### What is the Block -> Wrapper -> Component structure?
 This is the legacy components approach from the `natally-wordpress` and... it is terrible thing for Vue. Blocks cannot be the "the self constituting pieces", like in the PHP version. I lost a bit of performance because of this. This is the last time when I used it. Time to bury it deeper than expected and look for something better!
+
+### Why Event Bus, not Vuex?
+This was an experiment. I always wanted to try the Event Bus approach. It is good for global events (like scroll / resize), but it gets messy and entangled when it comes about specific components (like Header <-> Drawer relationship here). I will stick to the Vuex next time. Most developers would expect it (Principle Of Least Astonishment).
 
 ### What a nice light / dark theme support!
 Light / Dark theme with CSS Variable are awesome! Still, there is a room for improvements here. `_variables.css` should have generic colors, and stage two variables like shadow, border etc. Then components should define their variables inside their styles. This is kind of obvious, but I did not do it here! I will keep this in mind for the future projects.
