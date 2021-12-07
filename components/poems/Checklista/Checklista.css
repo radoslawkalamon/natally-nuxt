@@ -80,5 +80,6 @@
 
 .checklista__input:checked + .checklista__fake-input::before,
 .checklista__input:checked + .checklista__fake-input::after {
+  background-color: var(--color-off-white-1);
   opacity: 1;
 }
