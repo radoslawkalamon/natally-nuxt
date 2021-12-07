@@ -1,25 +1,21 @@
+import { shallowMount } from '@vue/test-utils'
 import Navigation from '@/components/wrappers/Navigation/Navigation.vue'
-import { shallPassIntegrationSanityTest } from '@/devtools/jest.common.spec'
+import { createDefaultOptionsFactory } from '@/devtools/jest.common.spec.utils'
+
+const defaultOptionsFactory = createDefaultOptionsFactory({
+  slots: {
+    default: [
+      { template: '<span>Tag child 1</span>' },
+      'Text child',
+      { template: '<span>Tag child 2</span>' }
+    ]
+  }
+})
 
 describe('Wrappers / Navigation', () => {
-  describe('Integration', () => {
-    shallPassIntegrationSanityTest({
-      component: Navigation,
-      description: 'with children',
-      options: {
-        slots: {
-          default: [
-            { template: '<span>Tag child 1</span>' },
-            'Text child',
-            { template: '<span>Tag child 2</span>' }
-          ]
-        }
-      }
-    })
-
-    shallPassIntegrationSanityTest({
-      component: Navigation,
-      description: 'no children'
-    })
+  test('shall pass unit sanity test', () => {
+    const wrapper = shallowMount(Navigation, defaultOptionsFactory())
+    expect(wrapper.html()).toMatchSnapshot()
+    wrapper.destroy()
   })
 })

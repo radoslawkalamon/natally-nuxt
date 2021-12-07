@@ -10,9 +10,11 @@
       <Nuxt class="layout-default__article" />
     </WrappersMain>
 
-    <BlocksFooter />
-
     <LazyHydrate when-visible>
+      <BlocksFooter />
+    </LazyHydrate>
+
+    <LazyHydrate when-idle>
       <BlocksModalPrivacy />
     </LazyHydrate>
   </div>
