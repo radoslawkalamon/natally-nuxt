@@ -2,16 +2,30 @@ import Vue from 'vue'
 
 export default Vue.extend({
   name: 'WrappersNavigation',
-  components: {
-    VNode: {
-      functional: true,
-      render: (_h: Vue.CreateElement, ctx: Vue.RenderContext) => ctx.props.node
+  functional: true,
+  render (h: Vue.CreateElement, ctx: Vue.RenderContext) {
+    const { children, data } = ctx
+    const wrapperProps = {
+      attrs: {
+        ...data.attrs
+      },
+      class: [
+        data.staticClass,
+        {
+          navigation: true
+        }
+      ]
     }
-  },
-  computed: {
-    children () {
-      return (this.$slots.default || [])
+    const itemProps = {
+      class: 'navigation__item'
+    }
+
+    return h(
+      'ul',
+      wrapperProps,
+      (children || [])
         .filter(child => !child.text)
-    }
+        .map(child => h('li', itemProps, [child]))
+    )
   }
 })
