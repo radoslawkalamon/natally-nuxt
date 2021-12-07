@@ -71,6 +71,7 @@
 }
 
 .switch__checkbox:checked + .switch__fake-checkbox::before {
+  background-color: var(--color-off-white-1);
   transform: translateX(var(--switch-checked-position));
 }
 
