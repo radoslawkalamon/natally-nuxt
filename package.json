@@ -1,6 +1,6 @@
 {
   "name": "natally-nuxt",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "private": true,
   "scripts": {
     "bootstrap:component": "ts-node ./bootstrap.component.ts",
@@ -30,7 +30,7 @@
     "vue-lazy-hydration": "^2.0.0-beta.4"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.16.3",
+    "@babel/eslint-parser": "^7.16.5",
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
     "@nuxt/types": "^2.15.7",
