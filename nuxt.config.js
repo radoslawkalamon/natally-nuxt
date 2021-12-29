@@ -66,7 +66,6 @@ export default {
       create: async (feed) => {
         const pagesToFilter = [
           '/',
-          '/404/',
           '/audiobooki/',
           '/poezja-314/',
           '/polityka-prywatnosci/'
@@ -135,7 +134,7 @@ export default {
   },
   sitemap: {
     filter ({ routes }) {
-      const pagesToFilter = ['/404/']
+      const pagesToFilter = []
       return routes.filter(route => !pagesToFilter.includes(route.path))
     },
     hostname: getURL(),

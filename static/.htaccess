@@ -147,4 +147,4 @@ AddCharset utf-8 .css .html .js .svg
 </IfModule>
 
 # Page 404
-ErrorDocument 404 /404/index.html
+ErrorDocument 404 /404.html
