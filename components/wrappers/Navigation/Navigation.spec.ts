@@ -13,8 +13,14 @@ const defaultOptionsFactory = createDefaultOptionsFactory({
 })
 
 describe('Wrappers / Navigation', () => {
-  test('shall pass unit sanity test', () => {
+  test('shall pass unit sanity test | with children', () => {
     const wrapper = shallowMount(Navigation, defaultOptionsFactory())
+    expect(wrapper.html()).toMatchSnapshot()
+    wrapper.destroy()
+  })
+
+  test('shall pass unit sanity test | No children', () => {
+    const wrapper = shallowMount(Navigation, {})
     expect(wrapper.html()).toMatchSnapshot()
     wrapper.destroy()
   })
