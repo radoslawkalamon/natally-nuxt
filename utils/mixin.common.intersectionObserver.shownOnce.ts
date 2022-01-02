@@ -7,7 +7,13 @@ export default Vue.extend({
     }
   },
   mounted (): void {
-    const intersectionObserver = new IntersectionObserver(this['common/intersectionObserver/observerCallback'])
+    const intersectionObserverInit: IntersectionObserverInit = {
+      rootMargin: '160px 0px'
+    }
+    const intersectionObserver = new IntersectionObserver(
+      this['common/intersectionObserver/observerCallback'],
+      intersectionObserverInit
+    )
     intersectionObserver.observe(this.$el)
   },
   methods: {
