@@ -8,3 +8,15 @@
 .text-stories >>> .text-alignment-right {
   text-indent: 0;
 }
+
+.text-stories >>> .text-alignment-left {
+  text-align: left;
+}
+
+.text-stories >>> .text-alignment-center {
+  text-align: center;
+}
+
+.text-stories >>> .text-alignment-right {
+  text-align: right;
+}
