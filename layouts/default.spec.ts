@@ -6,6 +6,10 @@ import { JestMockMatchMedia } from '@/devtools/jest.mock.matchMedia'
 jest.mock('lodash/throttle', () => (cb: Function) => cb)
 JestMockMatchMedia()
 
+jest
+  .useFakeTimers()
+  .setSystemTime(new Date('2021-11-01').getTime())
+
 const defaultOptionsFactory = createDefaultOptionsFactory({
   attachTo: document.body
 })

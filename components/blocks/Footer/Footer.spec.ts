@@ -1,6 +1,10 @@
 import Footer from '@/components/blocks/Footer/Footer.vue'
 import { shallPassIntegrationSanityTest, shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
 
+jest
+  .useFakeTimers()
+  .setSystemTime(new Date('2021-11-01').getTime())
+
 describe('Blocks / Footer', () => {
   describe('Unit', () => {
     shallPassUnitSanityTest({
