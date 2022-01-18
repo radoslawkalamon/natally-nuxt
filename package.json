@@ -19,7 +19,7 @@
   },
   "lint-staged": {
     "*.{ts,js,vue}": "eslint",
-    "*.{css,vue}": "stylelint"
+    "*.css": "stylelint"
   },
   "dependencies": {
     "@nuxt/content": "1.15.1",
