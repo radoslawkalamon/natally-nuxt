@@ -52,8 +52,7 @@ export default {
     }
   },
   buildModules: [
-    '@nuxt/typescript-build',
-    '@nuxtjs/stylelint-module'
+    '@nuxt/typescript-build'
   ],
   css: [
     '@/assets/styles/variables.css',
