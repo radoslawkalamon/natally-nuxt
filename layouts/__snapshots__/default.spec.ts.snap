@@ -55,9 +55,9 @@ exports[`Layouts / Default Integration shall pass integration sanity test 1`] = 
       </ul>
     </div>
   </lazyhydrate-stub>
-  <div class=\\"main layout-default__main\\">
+  <main class=\\"main layout-default__main\\">
     <nuxt-stub class=\\"layout-default__article\\"></nuxt-stub>
-  </div>
+  </main>
   <lazyhydrate-stub idletimeout=\\"2000\\" whenvisible=\\"true\\">
     <footer class=\\"footer\\">
       <nav class=\\"navigation-footer\\">
