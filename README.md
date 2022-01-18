@@ -1,4 +1,4 @@
-# Nuxt Static Site for 169cm.pl | natally-nuxt 3.1.1 
+# Nuxt Static Site for 169cm.pl
 
 ## Entry points
 - [https://169cm.pl](https://169cm.pl)
