@@ -30,9 +30,9 @@
 
   # Feed
   RewriteRule ^feed/$ /feed.xml [R=301,L,NC]
-  RewriteRule ^page-sitemap.xml$ /feed.xml [R=301,L,NC]
-  RewriteRule ^post-sitemap.xml$ /feed.xml [R=301,L,NC]
-  RewriteRule ^sitemap_index.xml$ /feed.xml [R=301,L,NC]
+  RewriteRule ^page-sitemap.xml$ /sitemap.xml [R=301,L,NC]
+  RewriteRule ^post-sitemap.xml$ /sitemap.xml [R=301,L,NC]
+  RewriteRule ^sitemap_index.xml$ /sitemap.xml [R=301,L,NC]
 
   # Stories
   RewriteRule ^opowiadania/$ / [R=301,L,NC]
