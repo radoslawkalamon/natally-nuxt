@@ -1,7 +1,7 @@
 <template>
-  <div class="main">
+  <main class="main">
     <slot />
-  </div>
+  </main>
 </template>
 
 <script src="./Main.ts" lang="ts"></script>
