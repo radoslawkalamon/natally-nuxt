@@ -4,17 +4,17 @@ exports[`Page / Error Integration shall pass integration sanity test 1`] = `
 "<article class=\\"page-error\\">
   <div aria-label=\\"Animacja przedstawia rozdymkę unoszącą się na wodzie\\" class=\\"animation-pufferfish\\"><img srcset=\\"./images/puffer-fish.1x.webp 1x, ./images/puffer-fish.2x.webp 2x\\" src=\\"./images/puffer-fish.1x.webp\\" width=\\"200\\" height=\\"168\\" class=\\"animation-pufferfish__fish\\"> <img srcset=\\"./images/wave.1x.webp 1x, ./images/wave.2x.webp 2x\\" src=\\"./images/wave.1x.webp\\" width=\\"162\\" height=\\"48\\" class=\\"animation-pufferfish__wave animation-pufferfish__wave--1\\"><img srcset=\\"./images/wave.1x.webp 1x, ./images/wave.2x.webp 2x\\" src=\\"./images/wave.1x.webp\\" width=\\"162\\" height=\\"48\\" class=\\"animation-pufferfish__wave animation-pufferfish__wave--2\\"><img srcset=\\"./images/wave.1x.webp 1x, ./images/wave.2x.webp 2x\\" src=\\"./images/wave.1x.webp\\" width=\\"162\\" height=\\"48\\" class=\\"animation-pufferfish__wave animation-pufferfish__wave--3\\"></div>
   <section class=\\"section page-meta-404\\">
-    <header data-test=\\"wrappers-section-header\\" class=\\"section__header\\">
+    <div data-test=\\"wrappers-section-header\\" class=\\"section__header\\">
       <h1 class=\\"title title--design-1 title--underscore\\">Porobiło się!</h1>
-    </header>
+    </div>
     <div class=\\"section__inner\\">
       <div class=\\"text\\">
         <p>Strona, której szukasz nie istnieje lub została usunięta!</p>
       </div>
     </div>
-    <footer data-test=\\"wrappers-section-footer\\" class=\\"section__footer\\">
+    <div data-test=\\"wrappers-section-footer\\" class=\\"section__footer\\">
       <nuxtlink to=\\"/\\" class=\\"button-link\\">Wróć na Stronę Główną</nuxtlink>
-    </footer>
+    </div>
   </section>
 </article>"
 `;

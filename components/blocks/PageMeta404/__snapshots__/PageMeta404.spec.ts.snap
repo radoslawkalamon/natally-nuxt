@@ -2,17 +2,17 @@
 
 exports[`Blocks / Page Meta 404 Integration shall pass integration sanity test 1`] = `
 "<section class=\\"section page-meta-404\\">
-  <header data-test=\\"wrappers-section-header\\" class=\\"section__header\\">
+  <div data-test=\\"wrappers-section-header\\" class=\\"section__header\\">
     <h1 class=\\"title title--design-1 title--underscore\\">Porobiło się!</h1>
-  </header>
+  </div>
   <div class=\\"section__inner\\">
     <div class=\\"text\\">
       <p>Strona, której szukasz nie istnieje lub została usunięta!</p>
     </div>
   </div>
-  <footer data-test=\\"wrappers-section-footer\\" class=\\"section__footer\\">
+  <div data-test=\\"wrappers-section-footer\\" class=\\"section__footer\\">
     <nuxtlink to=\\"/\\" class=\\"button-link\\">Wróć na Stronę Główną</nuxtlink>
-  </footer>
+  </div>
 </section>"
 `;
 

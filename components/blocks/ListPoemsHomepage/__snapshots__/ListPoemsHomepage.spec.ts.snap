@@ -2,15 +2,15 @@
 
 exports[`Blocks / List Poems Homepage Integration shall pass integration sanity test 1`] = `
 "<section class=\\"section list-poems-homepage\\">
-  <header data-test=\\"wrappers-section-header\\" class=\\"section__header\\">
+  <div data-test=\\"wrappers-section-header\\" class=\\"section__header\\">
     <h2 class=\\"list-poems-homepage__title title title--design-2 title--underscore\\">Poezja 3.14</h2>
-  </header>
+  </div>
   <div class=\\"section__inner\\">
     <div class=\\"list-poems list-poems-homepage__poems\\"></div>
   </div>
-  <footer data-test=\\"wrappers-section-footer\\" class=\\"section__footer\\">
+  <div data-test=\\"wrappers-section-footer\\" class=\\"section__footer\\">
     <nuxtlink to=\\"/poezja-314/\\" class=\\"button-link\\">Więcej Poezji 3.14</nuxtlink>
-  </footer>
+  </div>
 </section>"
 `;
 
