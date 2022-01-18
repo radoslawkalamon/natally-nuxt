@@ -2,7 +2,7 @@
 
 exports[`Wrappers / Section Unit shall pass unit sanity test | no footer slot 1`] = `
 "<section class=\\"section\\">
-  <header data-test=\\"wrappers-section-header\\" class=\\"section__header\\">This is header slot test</header>
+  <div data-test=\\"wrappers-section-header\\" class=\\"section__header\\">This is header slot test</div>
   <div class=\\"section__inner\\">This is default slot test</div>
   <!---->
 </section>"
@@ -12,6 +12,6 @@ exports[`Wrappers / Section Unit shall pass unit sanity test | no header slot 1`
 "<section class=\\"section\\">
   <!---->
   <div class=\\"section__inner\\">This is default slot test</div>
-  <footer data-test=\\"wrappers-section-footer\\" class=\\"section__footer\\">This is footer slot test</footer>
+  <div data-test=\\"wrappers-section-footer\\" class=\\"section__footer\\">This is footer slot test</div>
 </section>"
 `;

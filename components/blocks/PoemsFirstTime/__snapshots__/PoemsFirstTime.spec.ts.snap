@@ -2,17 +2,17 @@
 
 exports[`Blocks / Poems First Time Integration shall pass integration sanity test 1`] = `
 "<section class=\\"section poems-first-time\\">
-  <header data-test=\\"wrappers-section-header\\" class=\\"section__header\\">
+  <div data-test=\\"wrappers-section-header\\" class=\\"section__header\\">
     <h2 class=\\"title title--design-2 title--underscore\\">Pierwszy raz?</h2>
-  </header>
+  </div>
   <div class=\\"section__inner\\">
     <div class=\\"text\\">
       <p>Chcesz dowiedzieć&nbsp;się więcej o&nbsp;Poezji&nbsp;3.14?</p>
     </div>
   </div>
-  <footer data-test=\\"wrappers-section-footer\\" class=\\"section__footer\\">
+  <div data-test=\\"wrappers-section-footer\\" class=\\"section__footer\\">
     <nuxtlink to=\\"/poezja-314/\\" class=\\"button-link\\">Tak, z przyjemnością!</nuxtlink>
-  </footer>
+  </div>
 </section>"
 `;
 
