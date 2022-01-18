@@ -33,7 +33,6 @@
 
 .text >>> p {
   -webkit-hyphens: auto;
-  -ms-hyphens: auto;
   hyphens: auto;
 }
 

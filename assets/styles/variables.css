@@ -1,23 +1,23 @@
 body {
   /* Colors */
-  --color-off-white-1: rgba(249, 249, 249, 1);
-  --color-off-white-2: rgba(243, 243, 243, 1);
-  --color-off-white-3: rgba(228, 228, 228, 1);
-  --color-off-white-4: rgba(215, 215, 215, 1);
-  --color-off-white-transparent-1: rgba(243, 243, 243, 0.15);
-  --color-off-white-transparent-2: rgba(243, 243, 243, 0.35);
-  --color-off-black-1: rgba(15, 15, 15, 1);
-  --color-off-black-2: rgba(30, 30, 30, 1);
-  --color-off-black-3: rgba(45, 45, 45, 1);
-  --color-off-black-4: rgba(55, 55, 55, 1);
-  --color-off-black-transparent-1: rgba(30, 30, 30, 0.15);
-  --color-off-black-transparent-2: rgba(30, 30, 30, 0.35);
-  --color-red: rgb(226, 0, 14);
-  --color-gray: rgba(128, 128, 128, 1);
+  --color-off-white-1: rgb(249 249 249 / 100%);
+  --color-off-white-2: rgb(243 243 243 / 100%);
+  --color-off-white-3: rgb(228 228 228 / 100%);
+  --color-off-white-4: rgb(215 215 215 / 100%);
+  --color-off-white-transparent-1: rgb(243 243 243 / 15%);
+  --color-off-white-transparent-2: rgb(243 243 243 / 35%);
+  --color-off-black-1: rgb(15 15 15 / 100%);
+  --color-off-black-2: rgb(30 30 30 / 100%);
+  --color-off-black-3: rgb(45 45 45 / 100%);
+  --color-off-black-4: rgb(55 55 55 / 100%);
+  --color-off-black-transparent-1: rgb(30 30 30 / 15%);
+  --color-off-black-transparent-2: rgb(30 30 30 / 35%);
+  --color-red: rgb(226 0 14);
+  --color-gray: rgb(128 128 128 / 100%);
 
   /* Fonts */
-  --font-family-sans: 'Tahoma', 'Segoe UI', 'Geneva', 'Verdana', sans-serif;
-  --font-family-serif: 'Georgia', 'Times', 'Times New Roman', serif;
+  --font-family-sans: "Tahoma", "Segoe UI", "Geneva", "Verdana", sans-serif;
+  --font-family-serif: "Georgia", "Times", "Times New Roman", serif;
 
   /* Font sizes */
   --font-size-footnotes: 12px;
@@ -57,9 +57,9 @@ body {
   --height-audiobook-player: 128px;
 
   /* Contents */
-  --content-arrows-left: '«';
-  --content-arrows-right: '»';
-  --content-after-header: '_';
+  --content-arrows-left: "«";
+  --content-arrows-right: "»";
+  --content-after-header: "_";
 
   /* Miscellaneous */
   --time-animation: 0.25s;

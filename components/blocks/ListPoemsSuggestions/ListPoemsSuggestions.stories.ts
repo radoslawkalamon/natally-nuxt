@@ -15,7 +15,7 @@ export const Default: Story = (_args, { argTypes }) => ({
   },
   props: Object.keys(argTypes),
   template: process.env.NODE_ENV !== 'production'
-    ? '<div class="__storybook-section__"><BlocksListPoemsSuggestions v-bind="$props" /></div>'
+    ? '<div class="scoped__storybook-section"><BlocksListPoemsSuggestions v-bind="$props" /></div>'
     : storybookOnlyDevTemplate
 })
 Default.args = {

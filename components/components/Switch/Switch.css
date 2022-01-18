@@ -42,7 +42,7 @@
   background-color: var(--color-base);
   border-radius: 50%;
   box-sizing: border-box;
-  content: '';
+  content: "";
   display: block;
   height: var(--switch-knob-size);
   left: calc(var(--switch-padding) - var(--border-size));

@@ -13,6 +13,6 @@ export const Default: Story = () => ({
     BlocksListPoemsMain
   },
   template: process.env.NODE_ENV !== 'production'
-    ? '<div class="__storybook-section__"><BlocksListPoemsMain /></div>'
+    ? '<div class="scoped__storybook-section"><BlocksListPoemsMain /></div>'
     : storybookOnlyDevTemplate
 })

@@ -13,7 +13,7 @@ export const Default: Story = () => ({
     PoemsMieta,
     WrappersTextPoems
   },
-  template: `<div class="__storybook-section__">
+  template: `<div class="scoped__storybook-section">
     <WrappersTextPoems>
       <PoemsMieta />
     </WrappersTextPoems>

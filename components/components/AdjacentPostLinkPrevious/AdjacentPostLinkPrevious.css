@@ -16,7 +16,7 @@
 
 .adjacent-post-link-previous__label::before {
   color: var(--color-accent);
-  content: var(--content-arrows-left) ' ';
+  content: var(--content-arrows-left) " ";
 }
 
 .adjacent-post-link-previous__title {

@@ -13,7 +13,7 @@ export const Default: Story = () => ({
     PoemsWsparcie,
     WrappersTextPoems
   },
-  template: `<div class="__storybook-section__" style="background-color: var(--color-background-1)">
+  template: `<div class="scoped__storybook-section" style="background-color: var(--color-background-1)">
     <WrappersTextPoems>
       <PoemsWsparcie />
     </WrappersTextPoems>

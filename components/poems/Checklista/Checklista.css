@@ -52,7 +52,7 @@
 .checklista__input + .checklista__fake-input::after {
   background-color: var(--color-base);
   border-radius: 1px;
-  content: '';
+  content: "";
   display: block;
   height: 2px;
   left: 2px;

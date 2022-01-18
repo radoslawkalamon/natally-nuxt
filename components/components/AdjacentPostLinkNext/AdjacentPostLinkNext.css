@@ -16,7 +16,7 @@
 
 .adjacent-post-link-next__label::after {
   color: var(--color-accent);
-  content: ' ' var(--content-arrows-right);
+  content: " " var(--content-arrows-right);
 }
 
 .adjacent-post-link-next__title {

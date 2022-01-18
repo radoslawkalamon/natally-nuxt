@@ -94,7 +94,7 @@
   border-radius: 100px;
   bottom: 75%;
   color: var(--color-off-white-1);
-  content: '-100%';
+  content: "-100%";
   display: block;
   font-size: 0.6em;
   left: calc(100% + 4px);

@@ -2,15 +2,15 @@
   display: grid;
   gap: var(--gap);
   grid-template-areas:
-    'image'
-    'text';
+    "image"
+    "text";
   justify-items: center;
 }
 
 @media screen and (min-width: 480px) {
   .about-me {
     align-items: center;
-    grid-template-areas: 'image text';
+    grid-template-areas: "image text";
     justify-items: stretch;
   }
 }

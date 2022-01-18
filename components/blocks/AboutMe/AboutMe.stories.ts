@@ -11,5 +11,5 @@ export const Default: Story = () => ({
   components: {
     BlocksAboutMe
   },
-  template: '<div class="__storybook-section__"><BlocksAboutMe /></div>'
+  template: '<div class="scoped__storybook-section"><BlocksAboutMe /></div>'
 })

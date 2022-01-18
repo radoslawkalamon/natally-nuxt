@@ -21,7 +21,7 @@ export const ShowPrompt: Story = (_args, { argTypes }) => ({
   },
   mixins: [mixinPrivacyStorage],
   props: Object.keys(argTypes),
-  template: '<div class="__storybook-section__"><BlocksAudiobook v-bind="$props" /></div>'
+  template: '<div class="scoped__storybook-section"><BlocksAudiobook v-bind="$props" /></div>'
 })
 ShowPrompt.args = {
   id: '1152714406'
@@ -37,7 +37,7 @@ export const ShowPlayer: Story = (_args, { argTypes }) => ({
   },
   mixins: [mixinPrivacyStorage],
   props: Object.keys(argTypes),
-  template: '<div class="__storybook-section__"><BlocksAudiobook v-bind="$props" /></div>'
+  template: '<div class="scoped__storybook-section"><BlocksAudiobook v-bind="$props" /></div>'
 })
 ShowPlayer.args = {
   id: '1152714406'

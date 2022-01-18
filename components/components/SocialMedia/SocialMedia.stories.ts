@@ -11,5 +11,5 @@ export const Default: Story = () => ({
   components: {
     ComponentsSocialMedia
   },
-  template: '<div class="__storybook-section__"><ComponentsSocialMedia /></div>'
+  template: '<div class="scoped__storybook-section"><ComponentsSocialMedia /></div>'
 })
