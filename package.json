@@ -1,6 +1,6 @@
 {
   "name": "natally-nuxt",
-  "version": "3.1.4",
+  "version": "3.1.5",
   "private": true,
   "scripts": {
     "bootstrap:component": "ts-node ./bootstrap.component.ts",
@@ -33,7 +33,7 @@
   "devDependencies": {
     "@babel/core": "7.16.7",
     "@babel/eslint-parser": "7.16.5",
-    "@commitlint/cli": "16.0.2",
+    "@commitlint/cli": "16.0.3",
     "@commitlint/config-conventional": "16.0.0",
     "@nuxt/types": "2.15.8",
     "@nuxt/typescript-build": "2.1.0",
@@ -44,7 +44,7 @@
     "babel-jest": "27.4.6",
     "basic-ftp": "4.6.6",
     "dotenv": "14.2.0",
-    "eslint": "8.3.0",
+    "eslint": "8.7.0",
     "eslint-plugin-nuxt": "3.1.0",
     "flush-promises": "1.0.2",
     "husky": "7.0.4",
