@@ -5,7 +5,7 @@ export type DTOMetaPostPoemConstructor = DTOMetaPageConstructor & {
 }
 
 export class DTOMetaPostPoem extends DTOMetaPage {
-  readonly imageCover: string;
+  readonly imageCover: string
 
   constructor ({
     createdAt,

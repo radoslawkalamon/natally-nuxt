@@ -33,13 +33,13 @@ function decoratorLogCall () {
 }
 
 export class ServiceDeploy {
-  readonly host: string;
-  readonly port: number;
-  readonly username: string;
-  readonly password: string;
-  readonly remoteCatalog: string;
-  readonly remoteIgnoreFile: string[];
-  readonly localCatalog: string;
+  readonly host: string
+  readonly port: number
+  readonly username: string
+  readonly password: string
+  readonly remoteCatalog: string
+  readonly remoteIgnoreFile: string[]
+  readonly localCatalog: string
   FTPClient = new Client()
 
   constructor (config: ServiceDeployConfig) {

@@ -1,8 +1,8 @@
 import path from 'path'
-import dotenv from 'dotenv'
+import { config } from 'dotenv'
 import { ServiceDeploy } from './devtools/service.deploy'
 
-dotenv.config();
+config();
 
 (async () => {
   const serviceDeploy = new ServiceDeploy({

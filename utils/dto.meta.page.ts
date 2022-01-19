@@ -13,12 +13,12 @@ const getPath = (path: string) => {
 }
 
 export class DTOMetaPage {
-  readonly createdAt: Date;
-  readonly description: string;
-  readonly imageOpenGraph: string;
-  readonly path: string;
-  readonly title: string;
-  readonly updatedAt: Date;
+  readonly createdAt: Date
+  readonly description: string
+  readonly imageOpenGraph: string
+  readonly path: string
+  readonly title: string
+  readonly updatedAt: Date
 
   constructor ({
     createdAt,

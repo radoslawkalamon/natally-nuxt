@@ -8,10 +8,10 @@ export type DTOMetaPostStoryConstructor = DTOMetaPageConstructor & {
 }
 
 export class DTOMetaPostStory extends DTOMetaPage {
-  readonly audiobookId: string;
-  readonly imageCover: string;
-  readonly imageCover2x: string;
-  readonly timeReading: number;
+  readonly audiobookId: string
+  readonly imageCover: string
+  readonly imageCover2x: string
+  readonly timeReading: number
 
   constructor ({
     audiobookId = '0',
