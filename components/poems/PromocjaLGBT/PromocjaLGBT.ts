@@ -70,9 +70,10 @@ export default Vue.extend({
     }
   },
   created (): void {
-    this.buyClick = throttle(this.buyClick, animationDuration, { trailing: false })
-
-    this.sliderInterval = setInterval(() => this.changeSlide(), 3000)
+    if (process.client) {
+      this.buyClick = throttle(this.buyClick, animationDuration, { trailing: false })
+      this.sliderInterval = setInterval(() => this.changeSlide(), 3000)
+    }
   },
   destroyed (): void {
     clearInterval(Number(this.sliderInterval))

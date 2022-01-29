@@ -5,6 +5,8 @@ import { createUnitTestWrapper } from '@/devtools/jest.common.spec.utils'
 jest.mock('lodash/throttle', () => (cb: Function) => cb)
 jest.useFakeTimers()
 
+process.client = true
+
 describe('Poems / Promocja LGBT', () => {
   describe('Unit', () => {
     shallPassUnitSanityTest({
