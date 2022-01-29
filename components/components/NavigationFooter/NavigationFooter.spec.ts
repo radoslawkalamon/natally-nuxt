@@ -8,7 +8,7 @@ describe('Components / Navigation Footer', () => {
       component: NavigationFooter,
       options: {
         stubs: [
-          'ComponentsButtonText',
+          'ComponentsButton',
           'ComponentsLinkText',
           'WrappersNavigation'
         ]

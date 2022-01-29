@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components / Button Unit shall pass unit sanity test 1`] = `"<button type=\\"button\\" class=\\"button\\">Item label</button>"`;
+exports[`Components / Button Unit shall pass unit sanity test | General 1`] = `"<button type=\\"button\\" class=\\"button button--general\\">Item label</button>"`;
+
+exports[`Components / Button Unit shall pass unit sanity test | Text Button 1`] = `"<button type=\\"button\\" class=\\"button button--text\\">Item label</button>"`;

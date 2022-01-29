@@ -1,6 +1,6 @@
 import Button from '@/components/components/Button/Button.vue'
-import { expectWrapperEmit, shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
-import { createDefaultOptionsFactory, createUnitTestWrapper } from '@/devtools/jest.common.spec.utils'
+import { shallPassUnitSanityTest } from '@/devtools/jest.common.spec'
+import { createDefaultOptionsFactory } from '@/devtools/jest.common.spec.utils'
 
 const defaultOptionsFactory = createDefaultOptionsFactory({
   propsData: {
@@ -12,20 +12,18 @@ describe('Components / Button', () => {
   describe('Unit', () => {
     shallPassUnitSanityTest({
       component: Button,
+      description: 'General',
       options: defaultOptionsFactory()
     })
 
-    test('shall emit "click" on @click', async () => {
-      const wrapper = await createUnitTestWrapper({
-        component: Button,
-        options: defaultOptionsFactory()
+    shallPassUnitSanityTest({
+      component: Button,
+      description: 'Text Button',
+      options: defaultOptionsFactory({
+        propsData: {
+          type: 'text'
+        }
       })
-      wrapper.trigger('click')
-      expectWrapperEmit({
-        emit: 'click',
-        wrapper
-      })
-      wrapper.destroy()
     })
   })
 })
