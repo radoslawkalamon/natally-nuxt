@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Components / Link Text Unit shall pass unit sanity test 1`] = `"<nuxtlink-stub class=\\"link-text\\">Item label</nuxtlink-stub>"`;

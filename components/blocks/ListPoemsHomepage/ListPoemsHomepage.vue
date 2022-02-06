@@ -24,9 +24,10 @@
     </WrappersListPoems>
 
     <template #footer>
-      <ComponentsButtonLink
+      <ComponentsLink
         label="Więcej Poezji 3.14"
         to="/poezja-314/"
+        type="button"
       />
     </template>
   </WrappersSection>

@@ -16,9 +16,10 @@
     </WrappersText>
 
     <template #footer>
-      <ComponentsButtonLink
+      <ComponentsLink
         label="Tak, z przyjemnością!"
         to="/poezja-314/"
+        type="button"
       />
     </template>
   </WrappersSection>

@@ -8,7 +8,7 @@ describe('Components / Navigation Drawer', () => {
       component: NavigationDrawer,
       options: {
         stubs: [
-          'ComponentsLinkText',
+          'ComponentsLink',
           'WrappersNavigation'
         ]
       }

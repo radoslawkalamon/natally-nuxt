@@ -7,8 +7,8 @@ describe('Blocks / List Stories Suggestions', () => {
       component: ListStoriesSuggestions,
       options: {
         stubs: [
-          'ComponentsButtonLink',
           'ComponentsCardPoem',
+          'ComponentsLink',
           'ComponentsTitle',
           'WrappersListStories',
           'WrappersSection'

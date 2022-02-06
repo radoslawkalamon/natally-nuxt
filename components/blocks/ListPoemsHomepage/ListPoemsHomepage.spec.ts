@@ -7,8 +7,8 @@ describe('Blocks / List Poems Homepage', () => {
       component: ListPoemsHomepage,
       options: {
         stubs: [
-          'ComponentsButtonLink',
           'ComponentsCardPoem',
+          'ComponentsLink',
           'ComponentsTitle',
           'WrappersListPoems',
           'WrappersSection'

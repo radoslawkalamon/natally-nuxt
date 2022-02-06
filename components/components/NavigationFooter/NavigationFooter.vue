@@ -1,7 +1,7 @@
 <template>
   <nav class="navigation-footer">
     <WrappersNavigation>
-      <ComponentsLinkText
+      <ComponentsLink
         label="Polityka prywatności"
         to="/polityka-prywatnosci/"
       />

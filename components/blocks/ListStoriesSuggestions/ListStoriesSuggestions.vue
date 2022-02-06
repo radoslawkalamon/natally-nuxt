@@ -26,9 +26,10 @@
     </WrappersListStories>
 
     <template #footer>
-      <ComponentsButtonLink
+      <ComponentsLink
         label="Więcej opowiadań"
         to="/"
+        type="button"
       />
     </template>
   </WrappersSection>
