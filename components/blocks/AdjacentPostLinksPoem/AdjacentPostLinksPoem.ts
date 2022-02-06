@@ -4,8 +4,7 @@ import { DTOMetaPostPoem, DTOMetaPostPoemConstructor } from '@/utils/dto.meta.po
 export default Vue.extend({
   name: 'BlocksAdjacentPostLinksPoem',
   components: {
-    ComponentsAdjacentPostLinkNext: () => import(/* webpackChunkName: "components" */'@/components/components/AdjacentPostLinkNext/AdjacentPostLinkNext.vue'),
-    ComponentsAdjacentPostLinkPrevious: () => import(/* webpackChunkName: "components" */'@/components/components/AdjacentPostLinkPrevious/AdjacentPostLinkPrevious.vue')
+    ComponentsAdjacentPostLink: () => import(/* webpackChunkName: "components" */'@/components/components/AdjacentPostLink/AdjacentPostLink.vue')
   },
   props: {
     slug: {

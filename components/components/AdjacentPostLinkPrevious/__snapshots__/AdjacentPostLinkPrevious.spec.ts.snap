@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Components / Adjacent Post Link Previous Unit shall pass unit sanity test 1`] = `"<nuxtlink-stub to=\\"/post/test-path/\\" class=\\"adjacent-post-link-previous\\"><span class=\\"adjacent-post-link-previous__title\\">Post testowy</span> <span class=\\"adjacent-post-link-previous__label\\">Następny</span></nuxtlink-stub>"`;

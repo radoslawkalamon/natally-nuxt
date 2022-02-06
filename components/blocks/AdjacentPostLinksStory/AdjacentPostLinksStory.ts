@@ -4,8 +4,7 @@ import { DTOMetaPostStory, DTOMetaPostStoryConstructor } from '@/utils/dto.meta.
 export default Vue.extend({
   name: 'BlocksAdjacentPostLinksStory',
   components: {
-    ComponentsAdjacentPostLinkNext: () => import(/* webpackChunkName: "components" */'@/components/components/AdjacentPostLinkNext/AdjacentPostLinkNext.vue'),
-    ComponentsAdjacentPostLinkPrevious: () => import(/* webpackChunkName: "components" */'@/components/components/AdjacentPostLinkPrevious/AdjacentPostLinkPrevious.vue')
+    ComponentsAdjacentPostLink: () => import(/* webpackChunkName: "components" */'@/components/components/AdjacentPostLink/AdjacentPostLink.vue')
   },
   props: {
     slug: {

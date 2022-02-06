@@ -1,18 +1,20 @@
 <template>
   <div class="adjacent-post-links-poem">
-    <ComponentsAdjacentPostLinkPrevious
+    <ComponentsAdjacentPostLink
       v-if="previousPoem"
       class="adjacent-post-links-poem__previous"
       label="Poprzednia"
       :path="previousPoem.path"
       :title="previousPoem.title"
+      type="previous"
     />
-    <ComponentsAdjacentPostLinkNext
+    <ComponentsAdjacentPostLink
       v-if="nextPoem"
       class="adjacent-post-links-poem__next"
       label="Następna"
       :path="nextPoem.path"
       :title="nextPoem.title"
+      type="next"
     />
   </div>
 </template>

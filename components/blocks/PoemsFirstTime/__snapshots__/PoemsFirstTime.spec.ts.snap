@@ -11,7 +11,7 @@ exports[`Blocks / Poems First Time Integration shall pass integration sanity tes
     </div>
   </div>
   <div data-test=\\"wrappers-section-footer\\" class=\\"section__footer\\">
-    <nuxtlink to=\\"/poezja-314/\\" class=\\"button-link\\">Tak, z przyjemnością!</nuxtlink>
+    <nuxtlink to=\\"/poezja-314/\\" class=\\"link link--button\\">Tak, z przyjemnością!</nuxtlink>
   </div>
 </section>"
 `;

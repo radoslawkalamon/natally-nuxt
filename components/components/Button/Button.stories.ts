@@ -4,7 +4,15 @@ import ComponentsButton from '@/components/components/Button/Button.vue'
 
 const meta: Meta = {
   title: 'Components / Button',
-  component: ComponentsButton
+  component: ComponentsButton,
+  argTypes: {
+    type: {
+      options: ['general', 'text'],
+      control: {
+        type: 'inline-radio'
+      }
+    }
+  }
 }
 export default meta
 
@@ -23,5 +31,6 @@ const Template: Story = (_args, { argTypes }) => ({
 
 export const Default: Story = Template.bind({})
 Default.args = {
-  label: 'Click here'
+  label: 'Click here',
+  type: 'general'
 }

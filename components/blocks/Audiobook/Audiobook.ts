@@ -8,7 +8,7 @@ export default (Vue as VueConstructor<
 >).extend({
   name: 'BlocksAudiobook',
   components: {
-    ComponentsButtonText: () => import(/* webpackChunkName: "components-button-text" */'@/components/components/ButtonText/ButtonText.vue'),
+    ComponentsButton: () => import(/* webpackChunkName: "components" */'@/components/components/Button/Button.vue'),
     WrappersText: () => import(/* webpackChunkName: "wrappers" */'@/components/wrappers/Text/Text.vue')
   },
   mixins: [mixinPrivacyStorage],

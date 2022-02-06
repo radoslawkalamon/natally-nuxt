@@ -7,9 +7,10 @@
       <p>Strona, której szukasz nie istnieje lub została usunięta!</p>
     </WrappersText>
     <template #footer>
-      <ComponentsButtonLink
+      <ComponentsLink
         label="Wróć na Stronę Główną"
         to="/"
+        type="button"
       />
     </template>
   </WrappersSection>

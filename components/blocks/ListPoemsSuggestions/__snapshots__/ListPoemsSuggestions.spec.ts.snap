@@ -9,7 +9,7 @@ exports[`Blocks / List Poems Suggestions Integration shall pass integration sani
     <div class=\\"list-poems list-poems-suggestions__poems\\"></div>
   </div>
   <div data-test=\\"wrappers-section-footer\\" class=\\"section__footer\\">
-    <nuxtlink to=\\"/poezja-314/\\" class=\\"button-link\\">Więcej Poezji 3.14</nuxtlink>
+    <nuxtlink to=\\"/poezja-314/\\" class=\\"link link--button\\">Więcej Poezji 3.14</nuxtlink>
   </div>
 </section>"
 `;

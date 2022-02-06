@@ -10,7 +10,7 @@ exports[`Blocks / Audiobook Integration shall pass integration sanity test | Pro
 "<div class=\\"audiobook\\">
   <clientonly-stub>
     <div class=\\"text\\">
-      Aby odsłuchać audiobooka,<br> <button type=\\"button\\" data-test=\\"blocks-audiobook-privacy-modal-open\\" class=\\"button-text\\">zmień ustawienia prywatności</button></div>
+      Aby odsłuchać audiobooka,<br> <button type=\\"button\\" data-test=\\"blocks-audiobook-privacy-modal-open\\" class=\\"button button--text\\">zmień ustawienia prywatności</button></div>
   </clientonly-stub>
 </div>"
 `;
@@ -28,7 +28,7 @@ exports[`Blocks / Audiobook Unit shall pass unit sanity test | Prompt 1`] = `
   <clientonly>
     <wrapperstext-stub>
       Aby odsłuchać audiobooka,<br>
-      <componentsbuttontext-stub data-test=\\"blocks-audiobook-privacy-modal-open\\" label=\\"zmień ustawienia prywatności\\"></componentsbuttontext-stub>
+      <componentsbutton-stub data-test=\\"blocks-audiobook-privacy-modal-open\\" label=\\"zmień ustawienia prywatności\\" type=\\"text\\"></componentsbutton-stub>
     </wrapperstext-stub>
   </clientonly>
 </div>"
@@ -39,7 +39,7 @@ exports[`Blocks / Audiobook Unit shall pass unit sanity test | Prompt on server 
   <clientonly>
     <wrapperstext-stub>
       Aby odsłuchać audiobooka,<br>
-      <componentsbuttontext-stub data-test=\\"blocks-audiobook-privacy-modal-open\\" label=\\"zmień ustawienia prywatności\\"></componentsbuttontext-stub>
+      <componentsbutton-stub data-test=\\"blocks-audiobook-privacy-modal-open\\" label=\\"zmień ustawienia prywatności\\" type=\\"text\\"></componentsbutton-stub>
     </wrapperstext-stub>
   </clientonly>
 </div>"

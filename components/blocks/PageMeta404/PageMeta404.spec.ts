@@ -7,7 +7,7 @@ describe('Blocks / Page Meta 404', () => {
       component: PageMeta404,
       options: {
         stubs: [
-          'ComponentsButtonLink',
+          'ComponentsLink',
           'ComponentsTitle',
           'WrappersText',
           'WrappersSection'

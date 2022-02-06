@@ -4,7 +4,7 @@ import { createDefaultOptionsFactory, createUnitTestWrapper } from '@/devtools/j
 
 const defaultOptionsUnitFactory = createDefaultOptionsFactory({
   stubs: [
-    'ComponentsButtonLink',
+    'ComponentsLink',
     'WrappersSection',
     'WrappersText'
   ]

@@ -15,9 +15,10 @@
       />
       <WrappersText v-else>
         Aby odsłuchać audiobooka,<br>
-        <ComponentsButtonText
+        <ComponentsButton
           data-test="blocks-audiobook-privacy-modal-open"
           label="zmień ustawienia prywatności"
+          type="text"
           @click="togglePrivacyModal"
         />
       </WrappersText>

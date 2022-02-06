@@ -3,8 +3,8 @@ import Vue from 'vue'
 export default Vue.extend({
   name: 'ComponentsNavigationFooter',
   components: {
-    ComponentsButtonText: () => import(/* webpackChunkName: "components-button-text" */'@/components/components/ButtonText/ButtonText.vue'),
-    ComponentsLinkText: () => import(/* webpackChunkName: "components-link-text" */'@/components/components/LinkText/LinkText.vue'),
+    ComponentsButton: () => import(/* webpackChunkName: "components" */'@/components/components/Button/Button.vue'),
+    ComponentsLink: () => import(/* webpackChunkName: "components" */'@/components/components/Link/Link.vue'),
     WrappersNavigation: () => import(/* webpackChunkName: "wrappers-navigation" */'@/components/wrappers/Navigation/Navigation.vue')
   },
   methods: {

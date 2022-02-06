@@ -19,19 +19,19 @@ exports[`Layouts / Default Integration shall pass integration sanity test 1`] = 
       <nav class=\\"drawer__navigation\\">
         <ul class=\\"navigation\\">
           <li class=\\"navigation__item\\">
-            <nuxtlink data-test=\\"navigation-item\\" to=\\"/\\" class=\\"link-text\\">Strona główna</nuxtlink>
+            <nuxtlink data-test=\\"navigation-item\\" to=\\"/\\" class=\\"link link--general\\">Strona główna</nuxtlink>
           </li>
           <li class=\\"navigation__item\\">
-            <nuxtlink data-test=\\"navigation-item\\" target=\\"_blank\\" to=\\"/o-mnie/\\" rel=\\"noopener noreferrer\\" class=\\"link-text\\">O mnie</nuxtlink>
+            <nuxtlink data-test=\\"navigation-item\\" target=\\"_blank\\" to=\\"/o-mnie/\\" rel=\\"noopener noreferrer\\" class=\\"link link--general\\">O mnie</nuxtlink>
           </li>
           <li class=\\"navigation__item\\">
-            <nuxtlink data-test=\\"navigation-item\\" to=\\"/poezja-314/\\" class=\\"link-text\\">Poezja 3.14</nuxtlink>
+            <nuxtlink data-test=\\"navigation-item\\" to=\\"/poezja-314/\\" class=\\"link link--general\\">Poezja 3.14</nuxtlink>
           </li>
           <li class=\\"navigation__item\\">
-            <nuxtlink data-test=\\"navigation-item\\" to=\\"/audiobooki/\\" class=\\"link-text\\">Audiobooki</nuxtlink>
+            <nuxtlink data-test=\\"navigation-item\\" to=\\"/audiobooki/\\" class=\\"link link--general\\">Audiobooki</nuxtlink>
           </li>
           <li class=\\"navigation__item\\">
-            <nuxtlink data-test=\\"navigation-item\\" target=\\"_blank\\" to=\\"/kontakt/\\" rel=\\"noopener noreferrer\\" class=\\"link-text\\">Kontakt</nuxtlink>
+            <nuxtlink data-test=\\"navigation-item\\" target=\\"_blank\\" to=\\"/kontakt/\\" rel=\\"noopener noreferrer\\" class=\\"link link--general\\">Kontakt</nuxtlink>
           </li>
         </ul>
       </nav>
@@ -63,9 +63,9 @@ exports[`Layouts / Default Integration shall pass integration sanity test 1`] = 
       <nav class=\\"navigation-footer\\">
         <ul class=\\"navigation\\">
           <li class=\\"navigation__item\\">
-            <nuxtlink to=\\"/polityka-prywatnosci/\\" class=\\"link-text\\">Polityka prywatności</nuxtlink>
+            <nuxtlink to=\\"/polityka-prywatnosci/\\" class=\\"link link--general\\">Polityka prywatności</nuxtlink>
           </li>
-          <li class=\\"navigation__item\\"><button type=\\"button\\" data-test=\\"open-privacy-modal\\" class=\\"button-text\\">Ustawienia prywatności</button></li>
+          <li class=\\"navigation__item\\"><button type=\\"button\\" data-test=\\"open-privacy-modal\\" class=\\"button button--text\\">Ustawienia prywatności</button></li>
         </ul>
       </nav> <a href=\\"https://pieczywotwarde.pl\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\"><img alt=\\"Logo firmy Pieczywo Twarde\\" height=\\"128\\" src=\\"./images/crusty-bread.svg\\" title=\\"Logo firmy Pieczywo Twarde\\" width=\\"56\\"></a>
       <div class=\\"text\\">

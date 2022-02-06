@@ -1,13 +1,14 @@
 <template>
   <nav class="navigation-footer">
     <WrappersNavigation>
-      <ComponentsLinkText
+      <ComponentsLink
         label="Polityka prywatności"
         to="/polityka-prywatnosci/"
       />
-      <ComponentsButtonText
+      <ComponentsButton
         data-test="open-privacy-modal"
         label="Ustawienia prywatności"
+        type="text"
         @click="togglePrivacyModal"
       />
     </WrappersNavigation>

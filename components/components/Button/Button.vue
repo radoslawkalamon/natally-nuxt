@@ -1,8 +1,9 @@
 <template>
   <button
-    class="button"
+    :class="classNames"
     type="button"
-    @click="onClick"
+    v-bind="$attrs"
+    v-on="$listeners"
     v-text="label"
   />
 </template>

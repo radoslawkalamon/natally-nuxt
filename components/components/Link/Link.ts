@@ -1,7 +1,7 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'ComponentsButton',
+  name: 'ComponentsLink',
   inheritAttrs: false,
   props: {
     label: {
@@ -11,14 +11,14 @@ export default Vue.extend({
     type: {
       type: String,
       default: 'general',
-      validator: v => ['general', 'text'].includes(v)
+      validator: v => ['general', 'button'].includes(v)
     }
   },
   computed: {
     classNames () {
       return [
-        'button',
-        `button--${this.type}`
+        'link',
+        `link--${this.type}`
       ]
     }
   }

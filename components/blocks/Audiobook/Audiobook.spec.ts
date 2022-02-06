@@ -7,7 +7,7 @@ const defaultOptionsUnitFactory = createDefaultOptionsFactory({
     id: '1234567890'
   },
   stubs: [
-    'ComponentsButtonText',
+    'ComponentsButton',
     'WrappersText'
   ]
 })

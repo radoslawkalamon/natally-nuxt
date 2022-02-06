@@ -2,7 +2,7 @@
   <nav>
     <WrappersNavigation>
       <template v-for="item in list">
-        <ComponentsLinkText
+        <ComponentsLink
           :key="item.to"
           data-test="navigation-item"
           v-bind="item"

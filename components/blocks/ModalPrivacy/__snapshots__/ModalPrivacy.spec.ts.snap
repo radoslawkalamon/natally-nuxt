@@ -24,7 +24,7 @@ exports[`Blocks / Modal Privacy Integration shall open & hide on "privacy/modal/
             Na&nbsp;blogu osadzany jest odtwarzacz audiobooków. W&nbsp;związku z&nbsp;tym, wykorzystywane są&nbsp;pliki cookies SoundCloud. Jeżeli włączysz te&nbsp;pliki cookies, audiobooki będą dla Ciebie dostępne.
           </p>
         </div>
-      </div> <button type=\\"button\\" class=\\"button modal-privacy__button\\" data-test=\\"blocks-modal-privacy-apply-settings\\">Zapisz ustawienia</button>
+      </div> <button type=\\"button\\" data-test=\\"blocks-modal-privacy-apply-settings\\" class=\\"modal-privacy__button button button--general\\">Zapisz ustawienia</button>
     </div>
   </div>
 </article>"

@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components / Adjacent Post Link Unit shall pass unit sanity test | Next 1`] = `"<nuxtlink-stub to=\\"/post/test-path/\\" class=\\"adjacent-post-link adjacent-post-link--next\\"><span class=\\"adjacent-post-link__title\\">Post testowy</span> <span class=\\"adjacent-post-link__label\\">Następny</span></nuxtlink-stub>"`;
+
+exports[`Components / Adjacent Post Link Unit shall pass unit sanity test | Previous 1`] = `"<nuxtlink-stub to=\\"/post/test-path/\\" class=\\"adjacent-post-link adjacent-post-link--previous\\"><span class=\\"adjacent-post-link__title\\">Post testowy</span> <span class=\\"adjacent-post-link__label\\">Poprzedni</span></nuxtlink-stub>"`;
