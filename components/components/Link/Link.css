@@ -1,4 +1,13 @@
-.button-link {
+.link--general {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.link--general:hover {
+  text-decoration: none;
+}
+
+.link--button {
   background-color: var(--color-accent);
   border: var(--border-size) solid var(--color-clickable-border);
   border-radius: var(--border-radius);
@@ -14,6 +23,6 @@
   transition: box-shadow var(--time-animation) ease, opacity var(--time-animation) ease;
 }
 
-.button-link:hover {
+.link--button:hover {
   text-decoration: underline;
 }
