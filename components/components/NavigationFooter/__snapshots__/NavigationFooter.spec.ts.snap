@@ -4,7 +4,7 @@ exports[`Components / Navigation Footer Integration shall pass integration sanit
 "<nav class=\\"navigation-footer\\">
   <ul class=\\"navigation\\">
     <li class=\\"navigation__item\\">
-      <nuxtlink to=\\"/polityka-prywatnosci/\\" class=\\"link-text\\">Polityka prywatności</nuxtlink>
+      <nuxtlink to=\\"/polityka-prywatnosci/\\" class=\\"link link--general\\">Polityka prywatności</nuxtlink>
     </li>
     <li class=\\"navigation__item\\"><button type=\\"button\\" data-test=\\"open-privacy-modal\\" class=\\"button button--text\\">Ustawienia prywatności</button></li>
   </ul>
@@ -14,7 +14,7 @@ exports[`Components / Navigation Footer Integration shall pass integration sanit
 exports[`Components / Navigation Footer Unit shall pass unit sanity test 1`] = `
 "<nav class=\\"navigation-footer\\">
   <wrappersnavigation-stub>
-    <componentslinktext-stub label=\\"Polityka prywatności\\" to=\\"/polityka-prywatnosci/\\"></componentslinktext-stub>
+    <componentslink-stub label=\\"Polityka prywatności\\" to=\\"/polityka-prywatnosci/\\"></componentslink-stub>
     <componentsbutton-stub data-test=\\"open-privacy-modal\\" label=\\"Ustawienia prywatności\\" type=\\"text\\"></componentsbutton-stub>
   </wrappersnavigation-stub>
 </nav>"

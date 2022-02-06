@@ -11,7 +11,7 @@ exports[`Blocks / Page Meta 404 Integration shall pass integration sanity test 1
     </div>
   </div>
   <div data-test=\\"wrappers-section-footer\\" class=\\"section__footer\\">
-    <nuxtlink to=\\"/\\" class=\\"button-link\\">Wróć na Stronę Główną</nuxtlink>
+    <nuxtlink to=\\"/\\" class=\\"link link--button\\">Wróć na Stronę Główną</nuxtlink>
   </div>
 </section>"
 `;

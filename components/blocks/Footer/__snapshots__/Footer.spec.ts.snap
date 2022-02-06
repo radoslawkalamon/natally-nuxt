@@ -5,7 +5,7 @@ exports[`Blocks / Footer Integration shall pass integration sanity test 1`] = `
   <nav class=\\"navigation-footer\\">
     <ul class=\\"navigation\\">
       <li class=\\"navigation__item\\">
-        <nuxtlink to=\\"/polityka-prywatnosci/\\" class=\\"link-text\\">Polityka prywatności</nuxtlink>
+        <nuxtlink to=\\"/polityka-prywatnosci/\\" class=\\"link link--general\\">Polityka prywatności</nuxtlink>
       </li>
       <li class=\\"navigation__item\\"><button type=\\"button\\" data-test=\\"open-privacy-modal\\" class=\\"button button--text\\">Ustawienia prywatności</button></li>
     </ul>
