@@ -151,22 +151,5 @@ export default {
       })
     },
     trailingSlash: true
-  },
-  storybook: {
-    parameters: {
-      controls: {
-        hideNoControlsWarning: true
-      },
-      options: {
-        storySort: {
-          method: 'alphabetical'
-        }
-      },
-      previewTabs: {
-        'storybook/docs/panel': {
-          hidden: true
-        }
-      }
-    }
   }
 }
