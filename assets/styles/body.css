@@ -6,12 +6,3 @@ body {
   margin: 0;
   padding: 0;
 }
-
-.scoped__storybook-section {
-  border: 2px dashed purple;
-  box-sizing: border-box;
-  margin: 0 auto;
-  max-width: var(--max-width-body);
-  padding: var(--gap);
-  width: 100%;
-}

@@ -3,7 +3,6 @@
 ## Entry points
 - [https://169cm.pl](https://169cm.pl)
 - [https://stage.169cm.pl](https://stage.169cm.pl)
-- [https://storybook.169cm.pl](https://storybook.169cm.pl)
 
 ## Commands
 
@@ -31,13 +30,8 @@ $ npm run bootstrap:component [type] [name]
 $ npm run bootstrap:component poems Nastawienie
 
 # deploy code on server (need .env file)
-$ npm run deploy:storybook
 $ npm run deploy:stage
 $ npm run deploy:prod
-
-# storybook
-$ npm run storybook:run
-$ npm run storybook:build
 ```
 
 ## Wait, there is more!
