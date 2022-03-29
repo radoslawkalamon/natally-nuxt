@@ -13,7 +13,7 @@ export default {
       presets ({ isClient }, preset) {
         if (isClient) {
           preset[1].targets = {
-            chrome: '95'
+            chrome: '98'
           }
         }
         return [preset]
