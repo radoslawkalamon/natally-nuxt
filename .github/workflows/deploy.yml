@@ -1,15 +1,21 @@
-name: ci
+name: Deploy
 
 on:
   push:
     branches:
       - master
-  pull_request:
-    branches:
-      - master
+
+env:
+  DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+  DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
+  DEPLOY_USERNAME: ${{ secrets.DEPLOY_USERNAME }}
+  DEPLOY_PASSWORD: ${{ secrets.DEPLOY_PASSWORD }}
+  DEPLOY_REMOTE_CATALOG: ${{ secrets.DEPLOY_REMOTE_CATALOG }}
+  DEPLOY_REMOTE_IGNORE_FILE: ${{ secrets.DEPLOY_REMOTE_IGNORE_FILE }}
+  DEPLOY_LOCAL_CATALOG: ${{ secrets.DEPLOY_LOCAL_CATALOG }}
 
 jobs:
-  ci:
+  deploy:
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -19,16 +25,16 @@ jobs:
 
     steps:
       - name: Checkout 🛎
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
 
       - name: Setup node env 🏗
-        uses: actions/setup-node@v2.1.5
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
           check-latest: true
 
       - name: Cache node_modules 📦
-        uses: actions/cache@v2.1.4
+        uses: actions/cache@v3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -38,8 +44,5 @@ jobs:
       - name: Install dependencies 👨🏻‍💻
         run: npm ci --prefer-offline --no-audit
 
-      - name: Run linter 👀
-        run: npm run lint
-
-      - name: Run tests 🧪
-        run: npm run test
+      - name: Deploy 🚀
+        run: npm run deploy
