@@ -5,6 +5,7 @@ import { DTOMetaPage } from './utils/dto.meta.page'
 import { factoryHead } from './utils/factory.head'
 import { getTitle, getURL, headDefault } from './utils/factory.head.utils'
 import { nuxtHooksContentFileBeforeParseTextAlignment } from './utils/nuxt.hooks.content.file.beforeParse.textAlignment'
+import pkg from './package.json'
 
 export default {
   target: 'static',
@@ -59,6 +60,9 @@ export default {
     '@/assets/styles/schemas.css',
     '@/assets/styles/body.css'
   ],
+  env: {
+    DEPLOY_COMMIT_SHA: process.env.DEPLOY_COMMIT_SHA || `v${pkg.version}`
+  },
   feed () {
     return [{
       path: '/feed.xml',

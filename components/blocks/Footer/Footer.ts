@@ -1,5 +1,4 @@
 import Vue from 'vue'
-import pkg from '@/package.json'
 
 export default Vue.extend({
   name: 'BlocksFooter',
@@ -19,7 +18,7 @@ export default Vue.extend({
       return '169cm.pl'
     },
     commitSha (): string {
-      return process.env.DEPLOY_COMMIT_SHA || `v${pkg.version}`
+      return String(process.env.DEPLOY_COMMIT_SHA)
     }
   }
 })

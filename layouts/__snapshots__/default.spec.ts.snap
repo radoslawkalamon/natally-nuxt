@@ -72,7 +72,7 @@ exports[`Layouts / Default Integration shall pass integration sanity test 1`] = 
         <p>169cm.pl © 2021</p>
       </div>
       <div class=\\"footer__commit-sha text\\">
-        <p>vTEST_ENVIROMENT</p>
+        <p>9.9.9.TEST_ENVIROMENT</p>
       </div>
     </footer>
   </lazyhydrate-stub>
