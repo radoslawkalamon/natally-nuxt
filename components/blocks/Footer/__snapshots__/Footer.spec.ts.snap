@@ -13,6 +13,9 @@ exports[`Blocks / Footer Integration shall pass integration sanity test 1`] = `
   <div class=\\"text\\">
     <p>169cm.pl © 2021</p>
   </div>
+  <div class=\\"footer__commit-sha text\\">
+    <p>vTEST_ENVIROMENT</p>
+  </div>
 </footer>"
 `;
 
@@ -23,6 +26,9 @@ exports[`Blocks / Footer Unit shall pass unit sanity test 1`] = `
   </a>
   <wrapperstext-stub>
     <p>169cm.pl © 2021</p>
+  </wrapperstext-stub>
+  <wrapperstext-stub class=\\"footer__commit-sha\\">
+    <p>vTEST_ENVIROMENT</p>
   </wrapperstext-stub>
 </footer>"
 `;

@@ -11,6 +11,9 @@
     <WrappersText>
       <p>{{ websiteName }} &copy; {{ fullYear }}</p>
     </WrappersText>
+    <WrappersText class="footer__commit-sha">
+      <p>{{ commitSha }}</p>
+    </WrappersText>
   </footer>
 </template>
 
