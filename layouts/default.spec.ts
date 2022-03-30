@@ -3,6 +3,7 @@ import { expectRootEmit, shallPassIntegrationSanityTest } from '@/devtools/jest.
 import { createDefaultOptionsFactory, createIntegrationTestWrapper } from '@/devtools/jest.common.spec.utils'
 import { JestMockMatchMedia } from '@/devtools/jest.mock.matchMedia'
 
+jest.mock('@/package.json', () => ({ version: 'TEST_ENVIROMENT' }))
 jest.mock('lodash/throttle', () => (cb: Function) => cb)
 JestMockMatchMedia()
 

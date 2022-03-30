@@ -71,6 +71,9 @@ exports[`Layouts / Default Integration shall pass integration sanity test 1`] = 
       <div class=\\"text\\">
         <p>169cm.pl © 2021</p>
       </div>
+      <div class=\\"footer__commit-sha text\\">
+        <p>vTEST_ENVIROMENT</p>
+      </div>
     </footer>
   </lazyhydrate-stub>
   <lazyhydrate-stub idletimeout=\\"2000\\" whenidle=\\"true\\">
