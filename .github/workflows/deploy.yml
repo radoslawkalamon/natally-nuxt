@@ -5,15 +5,6 @@ on:
     branches:
       - master
 
-env:
-  DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
-  DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
-  DEPLOY_USERNAME: ${{ secrets.DEPLOY_USERNAME }}
-  DEPLOY_PASSWORD: ${{ secrets.DEPLOY_PASSWORD }}
-  DEPLOY_REMOTE_CATALOG: ${{ secrets.DEPLOY_REMOTE_CATALOG }}
-  DEPLOY_REMOTE_IGNORE_FILE: ${{ secrets.DEPLOY_REMOTE_IGNORE_FILE }}
-  DEPLOY_LOCAL_CATALOG: ${{ secrets.DEPLOY_LOCAL_CATALOG }}
-
 jobs:
   deploy:
     runs-on: ${{ matrix.os }}
@@ -44,5 +35,16 @@ jobs:
       - name: Install dependencies 👨🏻‍💻
         run: npm ci --prefer-offline --no-audit
 
+      - name: Fetch Git Modules 🦄
+        run: git submodule init && git submodule update
+
       - name: Deploy 🚀
         run: npm run deploy
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
+          DEPLOY_USERNAME: ${{ secrets.DEPLOY_USERNAME }}
+          DEPLOY_PASSWORD: ${{ secrets.DEPLOY_PASSWORD }}
+          DEPLOY_REMOTE_CATALOG: ${{ secrets.DEPLOY_REMOTE_CATALOG }}
+          DEPLOY_REMOTE_IGNORE_FILE: ${{ secrets.DEPLOY_REMOTE_IGNORE_FILE }}
+          DEPLOY_LOCAL_CATALOG: ${{ secrets.DEPLOY_LOCAL_CATALOG }}
