@@ -17,6 +17,9 @@ jobs:
     steps:
       - name: Checkout 🛎
         uses: actions/checkout@v3
+        with:
+          submodules: recursive
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup node env 🏗
         uses: actions/setup-node@v3
@@ -34,9 +37,6 @@ jobs:
 
       - name: Install dependencies 👨🏻‍💻
         run: npm ci --prefer-offline --no-audit
-
-      - name: Fetch Git Modules 🦄
-        run: git submodule init && git submodule update
 
       - name: Deploy 🚀
         run: npm run deploy
