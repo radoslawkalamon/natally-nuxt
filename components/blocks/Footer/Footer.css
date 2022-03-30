@@ -4,3 +4,8 @@
   flex-flow: column nowrap;
   gap: var(--gap);
 }
+
+.footer__commit-sha.text {
+  font-size: 0.75rem;
+  opacity: 0.5;
+}

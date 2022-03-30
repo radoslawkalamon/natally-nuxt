@@ -30,7 +30,8 @@
       "@nuxt/content",
       "@types/node",
       "@types/jest"
-    ]
+    ],
+    "resolveJsonModule": true
   },
   "exclude": [
     "node_modules",

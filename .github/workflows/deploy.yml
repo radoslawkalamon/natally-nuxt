@@ -43,3 +43,4 @@ jobs:
           DEPLOY_REMOTE_CATALOG: ${{ secrets.DEPLOY_REMOTE_CATALOG }}
           DEPLOY_REMOTE_IGNORE_FILE: ${{ secrets.DEPLOY_REMOTE_IGNORE_FILE }}
           DEPLOY_LOCAL_CATALOG: ${{ secrets.DEPLOY_LOCAL_CATALOG }}
+          DEPLOY_COMMIT_SHA: ${{ github.sha }}
