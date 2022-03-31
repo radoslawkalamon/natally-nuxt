@@ -1,6 +1,10 @@
-/* eslint-disable no-console */
-import { Client, FileInfo, FTPResponse } from 'basic-ftp'
-import { ProgressInfo } from 'basic-ftp/dist/ProgressTracker'
+import fs from 'fs'
+import path from 'path'
+import type { FileInfo, FTPResponse } from 'basic-ftp'
+import type { ProgressInfo } from 'basic-ftp/dist/ProgressTracker'
+import archiver from 'archiver'
+import axios from 'axios'
+import { Client } from 'basic-ftp'
 import { formatterCapitalize } from '../utils/formatter.capitalize'
 import { formatterSpacelize } from '../utils/formatter.spacelize'
 
@@ -11,7 +15,9 @@ type ServiceDeployConfig = {
   password: string;
   remoteCatalog: string;
   remoteIgnoreFile: string[];
+  remoteHostname: string;
   localCatalog: string;
+  zipName: string;
 }
 
 type RemoveStrategies = {
@@ -24,6 +30,7 @@ function decoratorLogCall () {
 
     descriptor.value = function (...args: any[]) {
       const formattedName = formatterSpacelize(formatterCapitalize(propertyKey))
+      /* eslint-disable-next-line no-console */
       console.log(`::: ${formattedName} :::`)
       return targetMethod.apply(this, args)
     }
@@ -39,7 +46,10 @@ export class ServiceDeploy {
   readonly password: string
   readonly remoteCatalog: string
   readonly remoteIgnoreFile: string[]
+  readonly remoteHostname: string
   readonly localCatalog: string
+  readonly outputZipPath: string
+  readonly outputHelperPath: string
   FTPClient = new Client()
 
   constructor (config: ServiceDeployConfig) {
@@ -49,22 +59,44 @@ export class ServiceDeploy {
     this.password = config.password
     this.remoteCatalog = config.remoteCatalog
     this.remoteIgnoreFile = config.remoteIgnoreFile
+    this.remoteHostname = config.remoteHostname
     this.localCatalog = config.localCatalog
+    this.outputZipPath = path.join(__dirname, `${config.zipName}.zip`)
+    this.outputHelperPath = path.join(__dirname, `${config.zipName}.php`)
   }
 
   public async start (): Promise<void> {
     try {
+      await this.zipDestinationFolder()
+      await this.prepareFileToSend()
       await this.openConnection()
       await this.ensureRemoteCatalog()
       await this.openRemoteCatalog()
       await this.cleanRemoteCatalog()
       await this.uploadToRemoteCatalog()
+      await this.callHelperFile()
     } catch (e) {
+      /* eslint-disable-next-line no-console */
       console.error(e)
-      throw e
     } finally {
       this.closeConnection()
+      this.cleanup()
     }
+  }
+
+  @decoratorLogCall()
+  private async zipDestinationFolder (): Promise<void> {
+    const outputZipStream = fs.createWriteStream(this.outputZipPath)
+    const archive = archiver('zip')
+    archive.pipe(outputZipStream)
+    archive.directory(this.localCatalog, false)
+    await archive.finalize()
+  }
+
+  @decoratorLogCall()
+  private prepareFileToSend (): void {
+    const helperPath = path.join(__dirname, `helper.${path.basename(__filename, '.ts')}.php`)
+    fs.copyFileSync(helperPath, this.outputHelperPath)
   }
 
   @decoratorLogCall()
@@ -110,7 +142,8 @@ export class ServiceDeploy {
   @decoratorLogCall()
   private async uploadToRemoteCatalog (): Promise<void> {
     this.FTPClient.trackProgress(this.handlerUploadProgress)
-    await this.FTPClient.uploadFromDir(this.localCatalog)
+    await this.FTPClient.uploadFrom(this.outputZipPath, path.basename(this.outputZipPath))
+    await this.FTPClient.uploadFrom(this.outputHelperPath, path.basename(this.outputHelperPath))
     this.FTPClient.trackProgress()
   }
 
@@ -121,7 +154,19 @@ export class ServiceDeploy {
   }
 
   @decoratorLogCall()
+  private async callHelperFile (): Promise<void> {
+    const helperRemotePath = new URL(path.basename(this.outputHelperPath), this.remoteHostname)
+    await axios.get(helperRemotePath.toString())
+  }
+
+  @decoratorLogCall()
   private closeConnection (): void {
     this.FTPClient.close()
+  }
+
+  @decoratorLogCall()
+  private cleanup (): void {
+    fs.unlinkSync(this.outputZipPath)
+    fs.unlinkSync(this.outputHelperPath)
   }
 }
