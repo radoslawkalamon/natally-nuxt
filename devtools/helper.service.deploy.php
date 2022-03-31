@@ -14,5 +14,5 @@ try {
 
 } finally {
   unlink($archive_path);
-  unlink($script_filepath);
+  unlink($script_path);
 }
