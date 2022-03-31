@@ -12,7 +12,9 @@ config();
     password: process.env.DEPLOY_PASSWORD || '',
     remoteCatalog: process.env.DEPLOY_REMOTE_CATALOG || '/',
     remoteIgnoreFile: (process.env.DEPLOY_REMOTE_IGNORE_FILE || '').split(','),
-    localCatalog: path.resolve(__dirname, process.env.DEPLOY_LOCAL_CATALOG || './dist')
+    remoteHostname: process.env.DEPLOY_REMOTE_HOSTNAME || 'https://127.0.0.1',
+    localCatalog: path.resolve(__dirname, process.env.DEPLOY_LOCAL_CATALOG || './dist'),
+    zipName: process.env.DEPLOY_ZIP_NAME || '__ZIPNAME__'
   })
   await serviceDeploy.start()
 })()
