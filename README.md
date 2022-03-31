@@ -30,17 +30,15 @@ $ npm run bootstrap:component [type] [name]
 $ npm run bootstrap:component poems Nastawienie
 
 # deploy code on server (need .env file)
-$ npm run deploy:stage
-$ npm run deploy:prod
+$ npm run deploy
 ```
 
 ## Wait, there is more!
 
-You need access to 3 more repositories to start the project:
+You need access to 2 more repositories to start the project:
 
 - `natally-nuxt-content` - where markdown files lives,
 - `natally-nuxt-images` - where any public images are placed (e.g. covers & open graphs),
-- `natally-nuxt-deploy` - where CI/CD happens
 
 Please note: This repository is portfolio-like to showcase my latest development skill ;)
 
