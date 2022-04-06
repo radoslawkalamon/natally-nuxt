@@ -10,8 +10,9 @@
     "lint:script": "eslint --ignore-path .gitignore ./**/*.{js,ts,vue}",
     "lint:style": "stylelint --ignore-path .gitignore **/*.css",
     "prepare": "husky install",
-    "test": "npm run test:unit",
-    "test:unit": "jest"
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:unit": "jest",
+    "test:e2e": "cypress run --headless"
   },
   "lint-staged": {
     "*.{js,ts,vue}": "eslint",
@@ -41,6 +42,7 @@
     "axios": "0.26.1",
     "babel-jest": "27.5.1",
     "basic-ftp": "4.6.6",
+    "cypress": "9.5.3",
     "dotenv": "16.0.0",
     "eslint": "8.12.0",
     "eslint-plugin-nuxt": "3.2.0",
