@@ -1,4 +1,3 @@
-
 import { createWrapper } from '@vue/test-utils'
 import {
   createComponentFromMixin,
