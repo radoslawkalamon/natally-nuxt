@@ -3,13 +3,17 @@
 exports[`Blocks / List Stories Suggestions Integration shall pass integration sanity test 1`] = `
 "<section class=\\"section list-stories-suggestions\\">
   <div data-test=\\"wrappers-section-header\\" class=\\"section__header\\">
-    <h2 class=\\"list-stories-suggestions__title title title--design-2 title--underscore\\">Opowiadania</h2>
+    <h2 class=\\"list-stories-suggestions__title title title--design-2 title--underscore\\">
+      Opowiadania
+    </h2>
   </div>
   <div class=\\"section__inner\\">
     <div class=\\"list-stories list-stories-suggestions__stories\\"></div>
   </div>
   <div data-test=\\"wrappers-section-footer\\" class=\\"section__footer\\">
-    <nuxtlink to=\\"/\\" class=\\"link link--button\\">Więcej opowiadań</nuxtlink>
+    <nuxtlink to=\\"/\\" class=\\"link link--button\\">
+      Więcej opowiadań
+    </nuxtlink>
   </div>
 </section>"
 `;

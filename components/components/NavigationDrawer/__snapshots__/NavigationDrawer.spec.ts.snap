@@ -4,19 +4,29 @@ exports[`Components / Navigation Drawer Integration shall pass integration sanit
 "<nav>
   <ul class=\\"navigation\\">
     <li class=\\"navigation__item\\">
-      <nuxtlink data-test=\\"navigation-item\\" to=\\"/\\" class=\\"link link--general\\">Strona główna</nuxtlink>
+      <nuxtlink data-test=\\"navigation-item\\" to=\\"/\\" class=\\"link link--general\\">
+        Strona główna
+      </nuxtlink>
     </li>
     <li class=\\"navigation__item\\">
-      <nuxtlink data-test=\\"navigation-item\\" target=\\"_blank\\" to=\\"/o-mnie/\\" rel=\\"noopener noreferrer\\" class=\\"link link--general\\">O mnie</nuxtlink>
+      <nuxtlink data-test=\\"navigation-item\\" target=\\"_blank\\" to=\\"/o-mnie/\\" rel=\\"noopener noreferrer\\" class=\\"link link--general\\">
+        O mnie
+      </nuxtlink>
     </li>
     <li class=\\"navigation__item\\">
-      <nuxtlink data-test=\\"navigation-item\\" to=\\"/poezja-314/\\" class=\\"link link--general\\">Poezja 3.14</nuxtlink>
+      <nuxtlink data-test=\\"navigation-item\\" to=\\"/poezja-314/\\" class=\\"link link--general\\">
+        Poezja 3.14
+      </nuxtlink>
     </li>
     <li class=\\"navigation__item\\">
-      <nuxtlink data-test=\\"navigation-item\\" to=\\"/audiobooki/\\" class=\\"link link--general\\">Audiobooki</nuxtlink>
+      <nuxtlink data-test=\\"navigation-item\\" to=\\"/audiobooki/\\" class=\\"link link--general\\">
+        Audiobooki
+      </nuxtlink>
     </li>
     <li class=\\"navigation__item\\">
-      <nuxtlink data-test=\\"navigation-item\\" target=\\"_blank\\" to=\\"/kontakt/\\" rel=\\"noopener noreferrer\\" class=\\"link link--general\\">Kontakt</nuxtlink>
+      <nuxtlink data-test=\\"navigation-item\\" target=\\"_blank\\" to=\\"/kontakt/\\" rel=\\"noopener noreferrer\\" class=\\"link link--general\\">
+        Kontakt
+      </nuxtlink>
     </li>
   </ul>
 </nav>"

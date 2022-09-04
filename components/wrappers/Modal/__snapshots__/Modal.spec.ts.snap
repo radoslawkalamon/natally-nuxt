@@ -4,7 +4,9 @@ exports[`Wrappers / Modal Integration shall pass integration sanity test 1`] = `
 "<transition-stub name=\\"fade\\">
   <article class=\\"modal\\">
     <div class=\\"modal__frame\\">
-      <h1 class=\\"modal__title title title--design-2 title--underscore\\">Test title</h1>
+      <h1 class=\\"modal__title title title--design-2 title--underscore\\">
+        Test title
+      </h1>
       <div class=\\"modal__canvas\\">This is default slot test</div>
     </div>
   </article>

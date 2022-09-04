@@ -3,7 +3,9 @@
 exports[`Blocks / Page Meta Integration shall pass integration sanity test | no date 1`] = `
 "<div class=\\"page-meta\\">
   <header>
-    <h1 class=\\"title title--design-1 title--underscore\\">This is test title</h1>
+    <h1 class=\\"title title--design-1 title--underscore\\">
+      This is test title
+    </h1>
   </header>
   <!---->
 </div>"
@@ -12,7 +14,9 @@ exports[`Blocks / Page Meta Integration shall pass integration sanity test | no 
 exports[`Blocks / Page Meta Integration shall pass integration sanity test | with date 1`] = `
 "<div class=\\"page-meta\\">
   <header>
-    <h1 class=\\"title title--design-1 title--underscore\\">This is test title</h1>
+    <h1 class=\\"title title--design-1 title--underscore\\">
+      This is test title
+    </h1>
   </header>
   <footer data-test=\\"blocks-page-meta-footer\\">
     <p class=\\"text-meta\\" aria-label=\\"Opublikowano 02.12.2021\\" title=\\"Opublikowano 02.12.2021\\">02.12.2021</p>

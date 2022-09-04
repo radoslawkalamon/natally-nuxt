@@ -11,7 +11,9 @@ exports[`Components / Card Story Integration shall pass integration sanity test 
         <p class=\\"text-meta card-story__audiobook\\" aria-label=\\"Post posiada wersję dźwiękową\\" data-test=\\"components-card-story-audiobook\\" title=\\"Post posiada wersję dźwiękową\\">Audiobook</p>
       </footer>
       <header class=\\"card-story__header\\">
-        <h1 class=\\"card-story__title title title--design-3\\">Test title</h1>
+        <h1 class=\\"card-story__title title title--design-3\\">
+          Test title
+        </h1>
       </header>
     </div>
   </nuxtlink-stub>
@@ -29,7 +31,9 @@ exports[`Components / Card Story Integration shall pass integration sanity test 
         <p class=\\"text-meta card-story__audiobook card-story__audiobook--disabled\\" aria-label=\\"Post nie posiada wersji dźwiękowej\\" data-test=\\"components-card-story-audiobook\\" title=\\"Post nie posiada wersji dźwiękowej\\">Audiobook</p>
       </footer>
       <header class=\\"card-story__header\\">
-        <h1 class=\\"card-story__title title title--design-3\\">Test title</h1>
+        <h1 class=\\"card-story__title title title--design-3\\">
+          Test title
+        </h1>
       </header>
     </div>
   </nuxtlink-stub>

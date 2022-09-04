@@ -3,7 +3,9 @@
 exports[`Blocks / Poems First Time Integration shall pass integration sanity test 1`] = `
 "<section class=\\"section poems-first-time\\">
   <div data-test=\\"wrappers-section-header\\" class=\\"section__header\\">
-    <h2 class=\\"title title--design-2 title--underscore\\">Pierwszy raz?</h2>
+    <h2 class=\\"title title--design-2 title--underscore\\">
+      Pierwszy raz?
+    </h2>
   </div>
   <div class=\\"section__inner\\">
     <div class=\\"text\\">
@@ -11,7 +13,9 @@ exports[`Blocks / Poems First Time Integration shall pass integration sanity tes
     </div>
   </div>
   <div data-test=\\"wrappers-section-footer\\" class=\\"section__footer\\">
-    <nuxtlink to=\\"/poezja-314/\\" class=\\"link link--button\\">Tak, z przyjemnością!</nuxtlink>
+    <nuxtlink to=\\"/poezja-314/\\" class=\\"link link--button\\">
+      Tak, z przyjemnością!
+    </nuxtlink>
   </div>
 </section>"
 `;

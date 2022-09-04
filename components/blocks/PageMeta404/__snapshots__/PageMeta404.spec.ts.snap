@@ -3,7 +3,9 @@
 exports[`Blocks / Page Meta 404 Integration shall pass integration sanity test 1`] = `
 "<section class=\\"section page-meta-404\\">
   <div data-test=\\"wrappers-section-header\\" class=\\"section__header\\">
-    <h1 class=\\"title title--design-1 title--underscore\\">Porobiło się!</h1>
+    <h1 class=\\"title title--design-1 title--underscore\\">
+      Porobiło się!
+    </h1>
   </div>
   <div class=\\"section__inner\\">
     <div class=\\"text\\">
@@ -11,7 +13,9 @@ exports[`Blocks / Page Meta 404 Integration shall pass integration sanity test 1
     </div>
   </div>
   <div data-test=\\"wrappers-section-footer\\" class=\\"section__footer\\">
-    <nuxtlink to=\\"/\\" class=\\"link link--button\\">Wróć na Stronę Główną</nuxtlink>
+    <nuxtlink to=\\"/\\" class=\\"link link--button\\">
+      Wróć na Stronę Główną
+    </nuxtlink>
   </div>
 </section>"
 `;
