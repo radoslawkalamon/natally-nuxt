@@ -74,9 +74,5 @@ It is gloriously superb for the SSR, but with the SSG is terribly bad. Why?
 - strange fallback page behavior - no `nuxt/content` fetch there,
 - hard-coded content on pages - no content randomization for the Related Posts section.
 
-### Why not 100% test coverage?
-Because of the Nuxt's asyncData / fetch hooks. These cannot be called when doing integration tests of blocks.
-Yes, I am looking at you! Feel free to create an issue if you have a solution for this!
-
 ### Why ... ?
 If you have any questions, feel free to create an issue!
