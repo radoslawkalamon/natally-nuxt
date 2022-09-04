@@ -1,4 +1,4 @@
-@import url("../Text/Text.css");
+@import "../Text/Text.css";
 
 .text-stories >>> p {
   text-indent: calc(2 * var(--gap));
