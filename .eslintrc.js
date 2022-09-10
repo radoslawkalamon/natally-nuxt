@@ -15,6 +15,7 @@ module.exports = {
       multiline: 1
     }],
     'vue/order-in-components': 'error',
-    'vue/multi-word-component-names': 'off'
+    'vue/multi-word-component-names': 'off',
+    'vue/no-v-text-v-html-on-component': 'off'
   }
 }

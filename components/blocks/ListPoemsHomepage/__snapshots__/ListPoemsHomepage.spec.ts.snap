@@ -3,9 +3,7 @@
 exports[`Blocks / List Poems Homepage Integration shall pass integration sanity test 1`] = `
 "<section class=\\"section list-poems-homepage\\">
   <div data-test=\\"wrappers-section-header\\" class=\\"section__header\\">
-    <h2 class=\\"list-poems-homepage__title title title--design-2 title--underscore\\">
-      Poezja 3.14
-    </h2>
+    <h2 class=\\"list-poems-homepage__title title title--design-2 title--underscore\\">Poezja 3.14</h2>
   </div>
   <div class=\\"section__inner\\">
     <div class=\\"list-poems list-poems-homepage__poems\\"></div>
