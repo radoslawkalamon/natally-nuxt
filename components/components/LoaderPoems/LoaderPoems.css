@@ -1,0 +1,24 @@
+@keyframes animation-loader-poems {
+  0% {
+    opacity: 0.1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+
+.loader-poems {
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: animation-loader-poems;
+  animation-timing-function: ease-in-out;
+  background-color: var(--color-betwixt);
+  border-radius: var(--border-radius);
+  height: 60vh;
+  width: 100%;
+}
