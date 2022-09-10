@@ -1,7 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Utils / DTO / Meta / Post / Poem shall match snapshot 1`] = `
+exports[`Utils / DTO / Meta / Post / Poem with custom component shall match snapshot 1`] = `
 DTOMetaPostPoem {
+  "component": "PoemsTest",
+  "createdAt": 2021-11-01T00:00:00.000Z,
+  "description": "Test Description",
+  "imageCover": "/images/image-cover.webp",
+  "imageOpenGraph": "/images/image-open-graph.png",
+  "path": "/test-url/",
+  "title": "Test title",
+  "updatedAt": 2021-11-01T00:00:00.000Z,
+}
+`;
+
+exports[`Utils / DTO / Meta / Post / Poem without custom component shall match snapshot 1`] = `
+DTOMetaPostPoem {
+  "component": undefined,
   "createdAt": 2021-11-01T00:00:00.000Z,
   "description": "Test Description",
   "imageCover": "/images/image-cover.webp",
