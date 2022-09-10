@@ -3,9 +3,8 @@
     :class="classNames"
     v-bind="$attrs"
     v-on="$listeners"
-  >
-    {{ label }}
-  </NuxtLink>
+    v-text="label"
+  />
 </template>
 
 <script src="./Link.ts" lang="ts"></script>
