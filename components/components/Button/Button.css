@@ -8,7 +8,6 @@
   background-color: var(--color-accent);
   border: var(--border-size) solid var(--color-clickable-border);
   border-radius: var(--border-radius);
-  box-shadow: 0 var(--border-size) 0 var(--color-clickable-shadow);
   color: var(--color-off-white-1);
   display: inline-block;
   font-family: var(--font-family-sans);
@@ -24,7 +23,6 @@
 .button--text {
   background-color: transparent;
   border: 0;
-  box-shadow: none;
   color: inherit;
   font-family: var(--font-family-serif);
   font-size: inherit;

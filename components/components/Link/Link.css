@@ -11,7 +11,6 @@
   background-color: var(--color-accent);
   border: var(--border-size) solid var(--color-clickable-border);
   border-radius: var(--border-radius);
-  box-shadow: 0 var(--border-size) 0 var(--color-clickable-shadow);
   color: var(--color-off-white-1);
   display: inline-block;
   font-family: var(--font-family-sans);
@@ -20,7 +19,7 @@
   margin: 0;
   padding: 0.5em 1em;
   text-decoration: none;
-  transition: box-shadow var(--time-animation) ease, opacity var(--time-animation) ease;
+  transition: opacity var(--time-animation) ease;
 }
 
 .link--button:hover {
