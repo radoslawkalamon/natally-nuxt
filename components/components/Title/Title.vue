@@ -2,9 +2,8 @@
   <component
     :is="titleTag"
     :class="titleClasses"
-  >
-    {{ title }}
-  </component>
+    v-text="title"
+  />
 </template>
 
 <script src="./Title.ts" lang="ts"></script>

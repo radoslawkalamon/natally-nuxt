@@ -5,9 +5,7 @@ exports[`Blocks / Modal Privacy Integration shall open & hide on "privacy/modal/
 exports[`Blocks / Modal Privacy Integration shall open & hide on "privacy/modal/toggle" 2`] = `
 "<article class=\\"modal modal-privacy fade-enter fade-enter-active\\">
   <div class=\\"modal__frame\\">
-    <h1 class=\\"modal__title title title--design-2 title--underscore\\">
-      Ustawienia prywatności
-    </h1>
+    <h1 class=\\"modal__title title title--design-2 title--underscore\\">Ustawienia prywatności</h1>
     <div class=\\"modal__canvas\\">
       <div class=\\"switch\\"><label for=\\"cookies-core\\" class=\\"switch__label-wrapper\\"><input id=\\"cookies-core\\" type=\\"checkbox\\" name=\\"cookies-core\\" disabled=\\"disabled\\" class=\\"switch__checkbox\\">
           <div class=\\"switch__fake-checkbox\\"></div> <span class=\\"switch__label\\">Funkcjonalności własne</span>
