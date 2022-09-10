@@ -28,7 +28,6 @@
   background-color: var(--color-background-2);
   border: var(--border-size) solid var(--color-clickable-border);
   border-radius: var(--border-radius);
-  box-shadow: 0 var(--border-size) 0 var(--color-clickable-shadow);
   color: var(--color-base);
   cursor: pointer;
   font-family: var(--font-family-sans);

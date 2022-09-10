@@ -2,7 +2,6 @@ body {
   --color-base: var(--color-off-black-2);
   --color-contra: var(--color-off-white-1);
   --color-clickable-border: var(--color-off-white-3);
-  --color-clickable-shadow: var(--color-off-white-4);
   --color-floating-border: var(--color-off-white-3);
   --color-floating-shadow: var(--color-off-black-transparent-2);
   --color-floating-smoke: var(--color-off-black-transparent-2);
@@ -17,7 +16,6 @@ body {
     --color-base: var(--color-off-white-1);
     --color-contra: var(--color-off-black-2);
     --color-clickable-border: var(--color-off-black-4);
-    --color-clickable-shadow: var(--color-off-black-1);
     --color-floating-border: var(--color-off-black-4);
     --color-floating-shadow: var(--color-off-black-transparent-2);
     --color-floating-smoke: var(--color-off-white-transparent-2);
