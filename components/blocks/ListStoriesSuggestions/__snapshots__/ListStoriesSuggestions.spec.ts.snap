@@ -9,9 +9,7 @@ exports[`Blocks / List Stories Suggestions Integration shall pass integration sa
     <div class=\\"list-stories list-stories-suggestions__stories\\"></div>
   </div>
   <div data-test=\\"wrappers-section-footer\\" class=\\"section__footer\\">
-    <nuxtlink to=\\"/\\" class=\\"link link--button\\">
-      Więcej opowiadań
-    </nuxtlink>
+    <nuxtlink to=\\"/\\" class=\\"link link--button\\">Więcej opowiadań</nuxtlink>
   </div>
 </section>"
 `;

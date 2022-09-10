@@ -1,13 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components / Link Unit shall pass unit sanity test | Button Type 1`] = `
-"<nuxtlink-stub to=\\"/test-path/\\" class=\\"link link--button\\">
-  Item label
-</nuxtlink-stub>"
-`;
+exports[`Components / Link Unit shall pass unit sanity test | Button Type 1`] = `"<nuxtlink-stub to=\\"/test-path/\\" class=\\"link link--button\\">Item label</nuxtlink-stub>"`;
 
-exports[`Components / Link Unit shall pass unit sanity test | General Type 1`] = `
-"<nuxtlink-stub to=\\"/test-path/\\" class=\\"link link--general\\">
-  Item label
-</nuxtlink-stub>"
-`;
+exports[`Components / Link Unit shall pass unit sanity test | General Type 1`] = `"<nuxtlink-stub to=\\"/test-path/\\" class=\\"link link--general\\">Item label</nuxtlink-stub>"`;
