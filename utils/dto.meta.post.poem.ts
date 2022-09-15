@@ -1,13 +1,16 @@
 import { DTOMetaPage, DTOMetaPageConstructor } from '@/utils/dto.meta.page'
 
 export type DTOMetaPostPoemConstructor = DTOMetaPageConstructor & {
+  component?: string
   imageCover: string
 }
 
 export class DTOMetaPostPoem extends DTOMetaPage {
+  readonly component?: string
   readonly imageCover: string
 
   constructor ({
+    component,
     createdAt,
     description,
     imageCover,
@@ -25,6 +28,7 @@ export class DTOMetaPostPoem extends DTOMetaPage {
       updatedAt
     })
 
+    this.component = component
     this.imageCover = `/images/${imageCover}`
   }
 }
