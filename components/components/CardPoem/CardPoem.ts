@@ -22,6 +22,9 @@ export default (Vue as VueConstructor<
     }
   },
   computed: {
+    'common/intersectionObserver/cacheKey' (): string {
+      return this.metaPostPoem.imageCover
+    },
     path (): string {
       return this.metaPostPoem.path
     },

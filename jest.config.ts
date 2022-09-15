@@ -1,4 +1,6 @@
-export default {
+import type { Config } from 'jest'
+
+const config: Config = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
     '^vue$': 'vue/dist/vue.common.js'
@@ -21,6 +23,16 @@ export default {
     '<rootDir>/layouts/**/*.vue',
     '<rootDir>/utils/**/*.ts'
   ],
+  coverageThreshold: {
+    global: {
+      branches: 100,
+      functions: 100,
+      lines: 100,
+      statements: 100
+    }
+  },
   testEnvironment: 'jsdom',
   testPathIgnorePatterns: ['<rootDir>/devtools/', '<rootDir>/cypress/']
 }
+
+export default config
