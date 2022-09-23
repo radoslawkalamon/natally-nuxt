@@ -1,24 +1,20 @@
 @keyframes animation-loader-poems {
   0% {
-    opacity: 0.1;
-  }
-
-  50% {
-    opacity: 0;
+    transform: rotate(0deg);
   }
 
   100% {
-    opacity: 0.1;
+    transform: rotate(360deg);
   }
 }
 
 .loader-poems {
-  animation-duration: 3s;
+  animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-name: animation-loader-poems;
-  animation-timing-function: ease-in-out;
-  background-color: var(--color-betwixt);
-  border-radius: var(--border-radius);
-  height: 60vh;
-  width: 100%;
+  animation-timing-function: linear;
+  background-color: var(--color-accent);
+  height: calc(var(--font-size-base) / 4);
+  margin: 0 auto;
+  width: calc(var(--font-size-base) * 2);
 }
