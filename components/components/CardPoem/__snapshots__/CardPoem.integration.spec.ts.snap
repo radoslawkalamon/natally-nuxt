@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components / Card Poem Integration shall pass integration sanity test | in the viewport 1`] = `
-"<article class=\\"card-poem\\">
-  <nuxtlink-stub to=\\"/test-url/\\" class=\\"card-poem__link\\">
-    <div aria-hidden=\\"true\\" class=\\"cover card-poem__cover\\"></div>
-    <div class=\\"card-poem__content\\">
-      <header class=\\"card-poem__header\\">
-        <h1 class=\\"card-poem__title title title--design-3\\">Test title</h1>
+"<article class="card-poem">
+  <nuxtlink-stub to="/test-url/" class="card-poem__link">
+    <div aria-hidden="true" class="cover card-poem__cover"></div>
+    <div class="card-poem__content">
+      <header class="card-poem__header">
+        <h1 class="card-poem__title title title--design-3">Test title</h1>
       </header>
-      <footer class=\\"card-poem__footer\\">
-        <p class=\\"text-meta card-poem__meta\\" aria-label=\\"Opublikowano 01.11.2021\\" title=\\"Opublikowano 01.11.2021\\">01.11.2021</p>
+      <footer class="card-poem__footer">
+        <p class="text-meta card-poem__meta" aria-label="Opublikowano 01.11.2021" title="Opublikowano 01.11.2021">01.11.2021</p>
       </footer>
     </div>
   </nuxtlink-stub>
@@ -17,15 +17,15 @@ exports[`Components / Card Poem Integration shall pass integration sanity test |
 `;
 
 exports[`Components / Card Poem Integration shall pass integration sanity test | not in the viewport 1`] = `
-"<article class=\\"card-poem\\">
-  <nuxtlink-stub to=\\"/test-url/\\" class=\\"card-poem__link\\">
-    <div aria-hidden=\\"true\\" class=\\"cover card-poem__cover\\"></div>
-    <div class=\\"card-poem__content\\">
-      <header class=\\"card-poem__header\\">
-        <h1 class=\\"card-poem__title title title--design-3\\">Test title</h1>
+"<article class="card-poem">
+  <nuxtlink-stub to="/test-url/" class="card-poem__link">
+    <div aria-hidden="true" class="cover card-poem__cover"></div>
+    <div class="card-poem__content">
+      <header class="card-poem__header">
+        <h1 class="card-poem__title title title--design-3">Test title</h1>
       </header>
-      <footer class=\\"card-poem__footer\\">
-        <p class=\\"text-meta card-poem__meta\\" aria-label=\\"Opublikowano 01.11.2021\\" title=\\"Opublikowano 01.11.2021\\">01.11.2021</p>
+      <footer class="card-poem__footer">
+        <p class="text-meta card-poem__meta" aria-label="Opublikowano 01.11.2021" title="Opublikowano 01.11.2021">01.11.2021</p>
       </footer>
     </div>
   </nuxtlink-stub>

@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Wrappers / Text Poems Integration shall pass integration sanity test 1`] = `
-"<div class=\\"text-poems-wrapper\\">
-  <div class=\\"text\\">Slot default text</div>
+"<div class="text-poems-wrapper">
+  <div class="text">Slot default text</div>
 </div>"
 `;
 
 exports[`Wrappers / Text Poems Unit shall pass unit sanity test 1`] = `
-"<div class=\\"text-poems-wrapper\\">
+"<div class="text-poems-wrapper">
   <wrapperstext-stub>Slot default text</wrapperstext-stub>
 </div>"
 `;

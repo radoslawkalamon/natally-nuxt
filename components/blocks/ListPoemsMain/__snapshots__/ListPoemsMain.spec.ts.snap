@@ -1,5 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Blocks / List Poems Main Integration shall pass integration sanity test 1`] = `"<div class=\\"list-poems list-poems-main\\"></div>"`;
+exports[`Blocks / List Poems Main Integration shall pass integration sanity test 1`] = `"<div class="list-poems list-poems-main"></div>"`;
 
-exports[`Blocks / List Poems Main Unit shall pass unit sanity test 1`] = `"<wrapperslistpoems-stub class=\\"list-poems-main\\"></wrapperslistpoems-stub>"`;
+exports[`Blocks / List Poems Main Unit shall pass unit sanity test 1`] = `"<wrapperslistpoems-stub class="list-poems-main"></wrapperslistpoems-stub>"`;

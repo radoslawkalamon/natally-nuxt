@@ -1,3 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components / Progress Bar Unit shall pass unit sanity test 1`] = `"<div class=\\"progress-bar\\" style=\\"width: 25.00%;\\"></div>"`;
+exports[`Components / Progress Bar Unit shall pass unit sanity test 1`] = `"<div class="progress-bar" style="width: 25.00%;"></div>"`;

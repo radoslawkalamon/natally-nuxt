@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Wrappers / Navigation shall pass unit sanity test | No children 1`] = `"<ul class=\\"navigation\\"></ul>"`;
+exports[`Wrappers / Navigation shall pass unit sanity test | No children 1`] = `"<ul class="navigation"></ul>"`;
 
 exports[`Wrappers / Navigation shall pass unit sanity test | with children 1`] = `
-"<ul class=\\"navigation\\">
-  <li class=\\"navigation__item\\"><span>Tag child 1</span></li>
-  <li class=\\"navigation__item\\"><template></template></li>
-  <li class=\\"navigation__item\\"><span>Tag child 2</span></li>
+"<ul class="navigation">
+  <li class="navigation__item"><span>Tag child 1</span></li>
+  <li class="navigation__item"><template></template></li>
+  <li class="navigation__item"><span>Tag child 2</span></li>
 </ul>"
 `;

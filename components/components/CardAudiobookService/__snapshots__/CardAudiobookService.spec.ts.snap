@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components / Card Audiobook Service Unit shall pass unit sanity test 1`] = `
-"<a href=\\"https://apple.com\\" rel=\\"noopener noreferrer\\" target=\\"_blank\\" class=\\"card-audiobook-service\\">
-  <div class=\\"card-audiobook-service__logo-wrapper\\"><img alt=\\"Ikona serwisu Apple Podcasts\\" src=\\"/images/podcasts/apple.svg\\" class=\\"card-audiobook-service__logo\\"></div>
-  <div class=\\"card-audiobook-service__meta-wrapper\\"><span class=\\"card-audiobook-service__cta\\">
+"<a href="https://apple.com" rel="noopener noreferrer" target="_blank" class="card-audiobook-service">
+  <div class="card-audiobook-service__logo-wrapper"><img alt="Ikona serwisu Apple Podcasts" src="/images/podcasts/apple.svg" class="card-audiobook-service__logo"></div>
+  <div class="card-audiobook-service__meta-wrapper"><span class="card-audiobook-service__cta">
       Posłuchaj w
-    </span> <span class=\\"card-audiobook-service__name\\">Apple Podcasts</span></div>
+    </span> <span class="card-audiobook-service__name">Apple Podcasts</span></div>
 </a>"
 `;

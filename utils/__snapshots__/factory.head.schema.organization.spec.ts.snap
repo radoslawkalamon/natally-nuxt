@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Utils / Factory / Head / Schema / Organization shall match snapshot 1`] = `
-Object {
+{
   "@id": "https://169cm.pl/#organization",
   "@type": "Organization",
-  "image": Object {
+  "image": {
     "@id": "https://169cm.pl/#logo",
   },
-  "logo": Object {
+  "logo": {
     "@id": "https://169cm.pl/#logo",
     "@type": "ImageObject",
     "caption": "169cm.pl",
@@ -18,7 +18,7 @@ Object {
     "width": 448,
   },
   "name": "169cm.pl",
-  "sameAs": Array [
+  "sameAs": [
     "https://facebook.com/169cmpl",
     "https://soundcloud.com/169cmpl",
   ],

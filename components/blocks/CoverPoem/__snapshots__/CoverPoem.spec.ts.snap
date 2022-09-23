@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Blocks / Cover Poem Integration shall pass integration sanity test | no images 1`] = `"<div aria-hidden=\\"true\\" class=\\"cover cover-poem\\"></div>"`;
+exports[`Blocks / Cover Poem Integration shall pass integration sanity test | no images 1`] = `"<div aria-hidden="true" class="cover cover-poem"></div>"`;
 
-exports[`Blocks / Cover Poem Integration shall pass integration sanity test | with images 1`] = `"<div aria-hidden=\\"true\\" class=\\"cover cover-poem\\"></div>"`;
+exports[`Blocks / Cover Poem Integration shall pass integration sanity test | with images 1`] = `"<div aria-hidden="true" class="cover cover-poem"></div>"`;
 
-exports[`Blocks / Cover Poem Unit shall pass unit sanity test | no images 1`] = `"<componentscover-stub images=\\"\\" class=\\"cover-poem\\"></componentscover-stub>"`;
+exports[`Blocks / Cover Poem Unit shall pass unit sanity test | no images 1`] = `"<componentscover-stub images="" class="cover-poem"></componentscover-stub>"`;
 
-exports[`Blocks / Cover Poem Unit shall pass unit sanity test | with images 1`] = `"<componentscover-stub images=\\"/images/post.test-post.1x.jpg\\" class=\\"cover-poem\\"></componentscover-stub>"`;
+exports[`Blocks / Cover Poem Unit shall pass unit sanity test | with images 1`] = `"<componentscover-stub images="/images/post.test-post.1x.jpg" class="cover-poem"></componentscover-stub>"`;
