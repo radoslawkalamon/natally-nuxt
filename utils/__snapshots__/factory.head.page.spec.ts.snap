@@ -1,48 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Utils / Factory / Head / Page shall match snapshot | * | CollectionPage 1`] = `
-Object {
-  "link": Array [
-    Object {
+{
+  "link": [
+    {
       "hid": "link:canonical",
       "href": "https://169cm.pl/",
       "rel": "canonical",
     },
   ],
-  "meta": Array [
-    Object {
+  "meta": [
+    {
       "content": "Posłuchaj audiobooków na podstawie moich opowiadań, na swoich ulubionych platformach podcasterskich.",
       "hid": "meta:description",
       "name": "description",
     },
-    Object {
+    {
       "content": "Strona główna • 169cm.pl",
       "hid": "meta:og:title",
       "property": "og:title",
     },
-    Object {
+    {
       "content": "Posłuchaj audiobooków na podstawie moich opowiadań, na swoich ulubionych platformach podcasterskich.",
       "hid": "meta:og:description",
       "property": "og:description",
     },
-    Object {
+    {
       "content": "https://169cm.pl/",
       "hid": "meta:og:url",
       "property": "og:url",
     },
   ],
-  "script": Array [
-    Object {
-      "json": Object {
+  "script": [
+    {
+      "json": {
         "@context": "http://schema.org",
-        "@graph": Array [
-          Object {
+        "@graph": [
+          {
             "@id": "https://169cm.pl/#organization",
             "@type": "Organization",
-            "image": Object {
+            "image": {
               "@id": "https://169cm.pl/#logo",
             },
-            "logo": Object {
+            "logo": {
               "@id": "https://169cm.pl/#logo",
               "@type": "ImageObject",
               "caption": "169cm.pl",
@@ -53,24 +53,24 @@ Object {
               "width": 448,
             },
             "name": "169cm.pl",
-            "sameAs": Array [
+            "sameAs": [
               "https://facebook.com/169cmpl",
               "https://soundcloud.com/169cmpl",
             ],
             "url": "https://169cm.pl/",
           },
-          Object {
+          {
             "@id": "https://169cm.pl/#website",
             "@type": "WebSite",
             "description": "Liczy się każda historia!",
             "inLanguage": "pl-PL",
             "name": "169cm.pl",
-            "publisher": Object {
+            "publisher": {
               "@id": "https://169cm.pl/#organization",
             },
             "url": "https://169cm.pl/",
           },
-          Object {
+          {
             "@id": "https://169cm.pl/#primaryimage",
             "@type": "ImageObject",
             "contentUrl": "https://169cm.pl/images/common.opengraph.png",
@@ -80,40 +80,40 @@ Object {
             "url": "https://169cm.pl/images/common.opengraph.png",
             "width": 1200,
           },
-          Object {
+          {
             "@id": "https://169cm.pl/#webpage",
             "@type": "CollectionPage",
-            "about": Object {
+            "about": {
               "@id": "https://169cm.pl/#organization",
             },
-            "breadcrumb": Object {
+            "breadcrumb": {
               "@id": "https://169cm.pl/#breadcrumb",
             },
             "dateModified": "2016-12-28T21:23:23.000Z",
             "datePublished": "2021-08-07T16:08:02.000Z",
             "inLanguage": "pl-PL",
-            "isPartOf": Object {
+            "isPartOf": {
               "@id": "https://169cm.pl/#website",
             },
             "name": "Strona główna • 169cm.pl",
-            "potentialAction": Array [
-              Object {
+            "potentialAction": [
+              {
                 "@type": "ReadAction",
-                "target": Array [
+                "target": [
                   "https://169cm.pl/",
                 ],
               },
             ],
-            "primaryImageOfPage": Object {
+            "primaryImageOfPage": {
               "@id": "https://169cm.pl/#primaryimage",
             },
             "url": "https://169cm.pl/",
           },
-          Object {
+          {
             "@id": "https://169cm.pl/#breadcrumb",
             "@type": "BreadcrumbList",
-            "itemListElement": Array [
-              Object {
+            "itemListElement": [
+              {
                 "@type": "ListItem",
                 "item": "https://169cm.pl/",
                 "name": "169cm.pl",
@@ -131,48 +131,48 @@ Object {
 `;
 
 exports[`Utils / Factory / Head / Page shall match snapshot | * | WebPage 1`] = `
-Object {
-  "link": Array [
-    Object {
+{
+  "link": [
+    {
       "hid": "link:canonical",
       "href": "https://169cm.pl/poezja-314/",
       "rel": "canonical",
     },
   ],
-  "meta": Array [
-    Object {
+  "meta": [
+    {
       "content": "Rzeczywistość uwypuklona. Staram się spojrzeć z zupełnie innej perspektywy na rzeczy, zjawiska, a nawet słowa.",
       "hid": "meta:description",
       "name": "description",
     },
-    Object {
+    {
       "content": "Poezja 3.14 • 169cm.pl",
       "hid": "meta:og:title",
       "property": "og:title",
     },
-    Object {
+    {
       "content": "Rzeczywistość uwypuklona. Staram się spojrzeć z zupełnie innej perspektywy na rzeczy, zjawiska, a nawet słowa.",
       "hid": "meta:og:description",
       "property": "og:description",
     },
-    Object {
+    {
       "content": "https://169cm.pl/poezja-314/",
       "hid": "meta:og:url",
       "property": "og:url",
     },
   ],
-  "script": Array [
-    Object {
-      "json": Object {
+  "script": [
+    {
+      "json": {
         "@context": "http://schema.org",
-        "@graph": Array [
-          Object {
+        "@graph": [
+          {
             "@id": "https://169cm.pl/#organization",
             "@type": "Organization",
-            "image": Object {
+            "image": {
               "@id": "https://169cm.pl/#logo",
             },
-            "logo": Object {
+            "logo": {
               "@id": "https://169cm.pl/#logo",
               "@type": "ImageObject",
               "caption": "169cm.pl",
@@ -183,24 +183,24 @@ Object {
               "width": 448,
             },
             "name": "169cm.pl",
-            "sameAs": Array [
+            "sameAs": [
               "https://facebook.com/169cmpl",
               "https://soundcloud.com/169cmpl",
             ],
             "url": "https://169cm.pl/",
           },
-          Object {
+          {
             "@id": "https://169cm.pl/#website",
             "@type": "WebSite",
             "description": "Liczy się każda historia!",
             "inLanguage": "pl-PL",
             "name": "169cm.pl",
-            "publisher": Object {
+            "publisher": {
               "@id": "https://169cm.pl/#organization",
             },
             "url": "https://169cm.pl/",
           },
-          Object {
+          {
             "@id": "https://169cm.pl/poezja-314/#primaryimage",
             "@type": "ImageObject",
             "contentUrl": "https://169cm.pl/images/common.opengraph.png",
@@ -210,46 +210,46 @@ Object {
             "url": "https://169cm.pl/images/common.opengraph.png",
             "width": 1200,
           },
-          Object {
+          {
             "@id": "https://169cm.pl/poezja-314/#webpage",
             "@type": "WebPage",
-            "about": Object {
+            "about": {
               "@id": "https://169cm.pl/#organization",
             },
-            "breadcrumb": Object {
+            "breadcrumb": {
               "@id": "https://169cm.pl/poezja-314/#breadcrumb",
             },
             "dateModified": "2016-12-28T21:23:23.000Z",
             "datePublished": "2021-08-07T16:08:02.000Z",
             "inLanguage": "pl-PL",
-            "isPartOf": Object {
+            "isPartOf": {
               "@id": "https://169cm.pl/#website",
             },
             "name": "Poezja 3.14 • 169cm.pl",
-            "potentialAction": Array [
-              Object {
+            "potentialAction": [
+              {
                 "@type": "ReadAction",
-                "target": Array [
+                "target": [
                   "https://169cm.pl/poezja-314/",
                 ],
               },
             ],
-            "primaryImageOfPage": Object {
+            "primaryImageOfPage": {
               "@id": "https://169cm.pl/poezja-314/#primaryimage",
             },
             "url": "https://169cm.pl/",
           },
-          Object {
+          {
             "@id": "https://169cm.pl/poezja-314/#breadcrumb",
             "@type": "BreadcrumbList",
-            "itemListElement": Array [
-              Object {
+            "itemListElement": [
+              {
                 "@type": "ListItem",
                 "item": "https://169cm.pl/",
                 "name": "169cm.pl",
                 "position": 1,
               },
-              Object {
+              {
                 "@type": "ListItem",
                 "item": "https://169cm.pl/poezja-314/",
                 "name": "Poezja 3.14",

@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Blocks / List Poems Suggestions Integration shall pass integration sanity test 1`] = `
-"<section class=\\"section list-poems-suggestions\\">
-  <div data-test=\\"wrappers-section-header\\" class=\\"section__header\\">
-    <h2 class=\\"list-poems-suggestions__title title title--design-2 title--underscore\\">Poezja 3.14</h2>
+"<section class="section list-poems-suggestions">
+  <div data-test="wrappers-section-header" class="section__header">
+    <h2 class="list-poems-suggestions__title title title--design-2 title--underscore">Poezja 3.14</h2>
   </div>
-  <div class=\\"section__inner\\">
-    <div class=\\"list-poems list-poems-suggestions__poems\\"></div>
+  <div class="section__inner">
+    <div class="list-poems list-poems-suggestions__poems"></div>
   </div>
-  <div data-test=\\"wrappers-section-footer\\" class=\\"section__footer\\">
-    <nuxtlink to=\\"/poezja-314/\\" class=\\"link link--button\\">Więcej Poezji 3.14</nuxtlink>
+  <div data-test="wrappers-section-footer" class="section__footer">
+    <nuxtlink to="/poezja-314/" class="link link--button">Więcej Poezji 3.14</nuxtlink>
   </div>
 </section>"
 `;
 
 exports[`Blocks / List Poems Suggestions Unit shall pass unit sanity test 1`] = `
-"<wrapperssection-stub class=\\"list-poems-suggestions\\">
-  <wrapperslistpoems-stub limit=\\"6\\" randomize=\\"true\\" without=\\"\\" class=\\"list-poems-suggestions__poems\\"></wrapperslistpoems-stub>
+"<wrapperssection-stub class="list-poems-suggestions">
+  <wrapperslistpoems-stub limit="6" randomize="true" without="" class="list-poems-suggestions__poems"></wrapperslistpoems-stub>
 </wrapperssection-stub>"
 `;

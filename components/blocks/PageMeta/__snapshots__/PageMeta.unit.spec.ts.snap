@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Blocks / Page Meta Unit shall pass unit sanity test | no date 1`] = `
-"<div class=\\"page-meta\\">
+"<div class="page-meta">
   <header>
-    <componentstitle-stub title=\\"This is test title\\"></componentstitle-stub>
+    <componentstitle-stub title="This is test title"></componentstitle-stub>
   </header>
   <!---->
 </div>"
 `;
 
 exports[`Blocks / Page Meta Unit shall pass unit sanity test | with date 1`] = `
-"<div class=\\"page-meta\\">
+"<div class="page-meta">
   <header>
-    <componentstitle-stub title=\\"This is test title\\"></componentstitle-stub>
+    <componentstitle-stub title="This is test title"></componentstitle-stub>
   </header>
-  <footer data-test=\\"blocks-page-meta-footer\\">
-    <componentstextmeta-stub aria-label=\\"Opublikowano Mocked date formatter\\" text=\\"Mocked date formatter\\" title=\\"Opublikowano Mocked date formatter\\"></componentstextmeta-stub>
+  <footer data-test="blocks-page-meta-footer">
+    <componentstextmeta-stub aria-label="Opublikowano Mocked date formatter" text="Mocked date formatter" title="Opublikowano Mocked date formatter"></componentstextmeta-stub>
   </footer>
 </div>"
 `;

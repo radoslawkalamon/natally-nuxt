@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Poems / Dysonans Unit shall pass unit sanity test 1`] = `
-"<div class=\\"dysonans\\">
-  <p>Czasami <span class=\\"dysonans__superscript\\">sztuka wysoka</span></p>
+"<div class="dysonans">
+  <p>Czasami <span class="dysonans__superscript">sztuka wysoka</span></p>
   <p>to</p>
-  <p>kompletne <span class=\\"dysonans__subscript\\">dno.</span></p>
+  <p>kompletne <span class="dysonans__subscript">dno.</span></p>
 </div>"
 `;

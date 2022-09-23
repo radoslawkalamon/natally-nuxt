@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components / Card Story Unit shall pass unit sanity test | audiobook / in the viewport 1`] = `
-"<article class=\\"card-story\\">
-  <nuxtlink-stub to=\\"/test-url/\\" class=\\"card-story__link\\">
-    <componentscover-stub images=\\"/images/image-cover.webp,/images/image-cover.2x.webp\\" class=\\"card-story__cover\\"></componentscover-stub>
-    <div class=\\"card-story__content\\">
-      <footer class=\\"card-story__footer\\">
-        <componentstextmeta-stub aria-label=\\"Opublikowano Mocked date formatter\\" text=\\"Mocked date formatter\\" title=\\"Opublikowano Mocked date formatter\\" class=\\"card-story__date-published\\"></componentstextmeta-stub>
-        <componentstextmeta-stub aria-label=\\"Tekst przeczytasz w Mocked time formatter\\" text=\\"Mocked time formatter\\" title=\\"Tekst przeczytasz w Mocked time formatter\\" class=\\"card-story__reading-time\\"></componentstextmeta-stub>
-        <componentstextmeta-stub aria-label=\\"Post posiada wersję dźwiękową\\" data-test=\\"components-card-story-audiobook\\" text=\\"Audiobook\\" title=\\"Post posiada wersję dźwiękową\\" class=\\"card-story__audiobook\\"></componentstextmeta-stub>
+"<article class="card-story">
+  <nuxtlink-stub to="/test-url/" class="card-story__link">
+    <componentscover-stub images="/images/image-cover.webp,/images/image-cover.2x.webp" class="card-story__cover"></componentscover-stub>
+    <div class="card-story__content">
+      <footer class="card-story__footer">
+        <componentstextmeta-stub aria-label="Opublikowano Mocked date formatter" text="Mocked date formatter" title="Opublikowano Mocked date formatter" class="card-story__date-published"></componentstextmeta-stub>
+        <componentstextmeta-stub aria-label="Tekst przeczytasz w Mocked time formatter" text="Mocked time formatter" title="Tekst przeczytasz w Mocked time formatter" class="card-story__reading-time"></componentstextmeta-stub>
+        <componentstextmeta-stub aria-label="Post posiada wersję dźwiękową" data-test="components-card-story-audiobook" text="Audiobook" title="Post posiada wersję dźwiękową" class="card-story__audiobook"></componentstextmeta-stub>
       </footer>
-      <header class=\\"card-story__header\\">
-        <componentstitle-stub design=\\"3\\" title=\\"Test title\\" type=\\"1\\" class=\\"card-story__title\\"></componentstitle-stub>
+      <header class="card-story__header">
+        <componentstitle-stub design="3" title="Test title" type="1" class="card-story__title"></componentstitle-stub>
       </header>
     </div>
   </nuxtlink-stub>
@@ -19,17 +19,17 @@ exports[`Components / Card Story Unit shall pass unit sanity test | audiobook / 
 `;
 
 exports[`Components / Card Story Unit shall pass unit sanity test | no audiobook / not in the viewport 1`] = `
-"<article class=\\"card-story\\">
-  <nuxtlink-stub to=\\"/test-url/\\" class=\\"card-story__link\\">
-    <componentscover-stub images=\\"\\" class=\\"card-story__cover\\"></componentscover-stub>
-    <div class=\\"card-story__content\\">
-      <footer class=\\"card-story__footer\\">
-        <componentstextmeta-stub aria-label=\\"Opublikowano Mocked date formatter\\" text=\\"Mocked date formatter\\" title=\\"Opublikowano Mocked date formatter\\" class=\\"card-story__date-published\\"></componentstextmeta-stub>
-        <componentstextmeta-stub aria-label=\\"Tekst przeczytasz w Mocked time formatter\\" text=\\"Mocked time formatter\\" title=\\"Tekst przeczytasz w Mocked time formatter\\" class=\\"card-story__reading-time\\"></componentstextmeta-stub>
-        <componentstextmeta-stub aria-label=\\"Post nie posiada wersji dźwiękowej\\" data-test=\\"components-card-story-audiobook\\" text=\\"Audiobook\\" title=\\"Post nie posiada wersji dźwiękowej\\" class=\\"card-story__audiobook card-story__audiobook--disabled\\"></componentstextmeta-stub>
+"<article class="card-story">
+  <nuxtlink-stub to="/test-url/" class="card-story__link">
+    <componentscover-stub images="" class="card-story__cover"></componentscover-stub>
+    <div class="card-story__content">
+      <footer class="card-story__footer">
+        <componentstextmeta-stub aria-label="Opublikowano Mocked date formatter" text="Mocked date formatter" title="Opublikowano Mocked date formatter" class="card-story__date-published"></componentstextmeta-stub>
+        <componentstextmeta-stub aria-label="Tekst przeczytasz w Mocked time formatter" text="Mocked time formatter" title="Tekst przeczytasz w Mocked time formatter" class="card-story__reading-time"></componentstextmeta-stub>
+        <componentstextmeta-stub aria-label="Post nie posiada wersji dźwiękowej" data-test="components-card-story-audiobook" text="Audiobook" title="Post nie posiada wersji dźwiękowej" class="card-story__audiobook card-story__audiobook--disabled"></componentstextmeta-stub>
       </footer>
-      <header class=\\"card-story__header\\">
-        <componentstitle-stub design=\\"3\\" title=\\"Test title\\" type=\\"1\\" class=\\"card-story__title\\"></componentstitle-stub>
+      <header class="card-story__header">
+        <componentstitle-stub design="3" title="Test title" type="1" class="card-story__title"></componentstitle-stub>
       </header>
     </div>
   </nuxtlink-stub>

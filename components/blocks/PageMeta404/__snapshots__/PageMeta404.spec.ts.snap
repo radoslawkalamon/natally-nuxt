@@ -1,23 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Blocks / Page Meta 404 Integration shall pass integration sanity test 1`] = `
-"<section class=\\"section page-meta-404\\">
-  <div data-test=\\"wrappers-section-header\\" class=\\"section__header\\">
-    <h1 class=\\"title title--design-1 title--underscore\\">Porobiło się!</h1>
+"<section class="section page-meta-404">
+  <div data-test="wrappers-section-header" class="section__header">
+    <h1 class="title title--design-1 title--underscore">Porobiło się!</h1>
   </div>
-  <div class=\\"section__inner\\">
-    <div class=\\"text\\">
+  <div class="section__inner">
+    <div class="text">
       <p>Strona, której szukasz nie istnieje lub została usunięta!</p>
     </div>
   </div>
-  <div data-test=\\"wrappers-section-footer\\" class=\\"section__footer\\">
-    <nuxtlink to=\\"/\\" class=\\"link link--button\\">Wróć na Stronę Główną</nuxtlink>
+  <div data-test="wrappers-section-footer" class="section__footer">
+    <nuxtlink to="/" class="link link--button">Wróć na Stronę Główną</nuxtlink>
   </div>
 </section>"
 `;
 
 exports[`Blocks / Page Meta 404 Unit shall pass unit sanity test 1`] = `
-"<wrapperssection-stub class=\\"page-meta-404\\">
+"<wrapperssection-stub class="page-meta-404">
   <wrapperstext-stub>
     <p>Strona, której szukasz nie istnieje lub została usunięta!</p>
   </wrapperstext-stub>

@@ -1,23 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Utils / Factory / Head / Schema / Breadcrumbs shall match snapshot 1`] = `
-Object {
+{
   "@id": "https://169cm.pl/test/path/#breadcrumb",
   "@type": "BreadcrumbList",
-  "itemListElement": Array [
-    Object {
+  "itemListElement": [
+    {
       "@type": "ListItem",
       "item": "https://169cm.pl/",
       "name": "169cm.pl",
       "position": 1,
     },
-    Object {
+    {
       "@type": "ListItem",
       "item": "https://169cm.pl/test/",
       "name": "Test",
       "position": 2,
     },
-    Object {
+    {
       "@type": "ListItem",
       "item": "https://169cm.pl/test/path/",
       "name": "Path",

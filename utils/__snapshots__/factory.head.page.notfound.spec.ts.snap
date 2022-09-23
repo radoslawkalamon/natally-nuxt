@@ -1,41 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Utils / Factory / Head / Page / 404 shall match snapshot 1`] = `
-Object {
-  "meta": Array [
-    Object {
+{
+  "meta": [
+    {
       "content": "noindex, follow",
       "hid": "meta:robots",
       "name": "robots",
     },
-    Object {
+    {
       "content": "Porobiło się! Niestety strona, której szukasz nie istnieje!",
       "hid": "meta:description",
       "name": "description",
     },
-    Object {
+    {
       "content": "Strony nie znaleziono • 169cm.pl",
       "hid": "meta:og:title",
       "property": "og:title",
     },
-    Object {
+    {
       "content": "Porobiło się! Niestety strona, której szukasz nie istnieje!",
       "hid": "meta:og:description",
       "property": "og:description",
     },
   ],
-  "script": Array [
-    Object {
-      "json": Object {
+  "script": [
+    {
+      "json": {
         "@context": "http://schema.org",
-        "@graph": Array [
-          Object {
+        "@graph": [
+          {
             "@id": "https://169cm.pl/#organization",
             "@type": "Organization",
-            "image": Object {
+            "image": {
               "@id": "https://169cm.pl/#logo",
             },
-            "logo": Object {
+            "logo": {
               "@id": "https://169cm.pl/#logo",
               "@type": "ImageObject",
               "caption": "169cm.pl",
@@ -46,19 +46,19 @@ Object {
               "width": 448,
             },
             "name": "169cm.pl",
-            "sameAs": Array [
+            "sameAs": [
               "https://facebook.com/169cmpl",
               "https://soundcloud.com/169cmpl",
             ],
             "url": "https://169cm.pl/",
           },
-          Object {
+          {
             "@id": "https://169cm.pl/#website",
             "@type": "WebSite",
             "description": "Liczy się każda historia!",
             "inLanguage": "pl-PL",
             "name": "169cm.pl",
-            "publisher": Object {
+            "publisher": {
               "@id": "https://169cm.pl/#organization",
             },
             "url": "https://169cm.pl/",

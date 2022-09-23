@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Utils / Factory / Head / Schema / Website shall match snapshot 1`] = `
-Object {
+{
   "@id": "https://169cm.pl/#website",
   "@type": "WebSite",
   "description": "Liczy się każda historia!",
   "inLanguage": "pl-PL",
   "name": "169cm.pl",
-  "publisher": Object {
+  "publisher": {
     "@id": "https://169cm.pl/#organization",
   },
   "url": "https://169cm.pl/",

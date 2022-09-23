@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components / Cover Unit shall pass unit sanity test 1`] = `"<div aria-hidden=\\"true\\" class=\\"cover\\"></div>"`;
+exports[`Components / Cover Unit shall pass unit sanity test 1`] = `"<div aria-hidden="true" class="cover"></div>"`;
 
-exports[`Components / Cover Unit shall vm.style output empty object with 0 image 1`] = `Object {}`;
+exports[`Components / Cover Unit shall vm.style output empty object with 0 image 1`] = `{}`;
 
 exports[`Components / Cover Unit shall vm.style output image-set with 1 image 1`] = `
-Object {
-  "backgroundImage": "-webkit-image-set(url(\\"/images/post.test-post.1x.jpg\\") 1x)",
+{
+  "backgroundImage": "-webkit-image-set(url("/images/post.test-post.1x.jpg") 1x)",
 }
 `;
 
 exports[`Components / Cover Unit shall vm.style output image-set with 2 image 1`] = `
-Object {
-  "backgroundImage": "-webkit-image-set(url(\\"/images/post.test-post.1x.jpg\\") 1x, url(\\"/images/post.test-post.2x.jpg\\") 2x)",
+{
+  "backgroundImage": "-webkit-image-set(url("/images/post.test-post.1x.jpg") 1x, url("/images/post.test-post.2x.jpg") 2x)",
 }
 `;

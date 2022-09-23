@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Poems / Checklista Unit shall pass unit sanity test 1`] = `
-"<div class=\\"checklista\\"><label for=\\"byle-by-byc\\" class=\\"checklista__checkbox\\"><input id=\\"byle-by-byc\\" type=\\"checkbox\\" name=\\"byle-by-byc\\" class=\\"checklista__input\\">
-    <div class=\\"checklista__fake-input\\"></div> <span class=\\"checklista__label\\">Byle by być</span>
-  </label><label for=\\"byle-by-zaliczyc\\" class=\\"checklista__checkbox\\"><input id=\\"byle-by-zaliczyc\\" type=\\"checkbox\\" name=\\"byle-by-zaliczyc\\" class=\\"checklista__input\\">
-    <div class=\\"checklista__fake-input\\"></div> <span class=\\"checklista__label\\">Byle by zaliczyć</span>
-  </label><label for=\\"punkt-po-punkcie\\" class=\\"checklista__checkbox\\"><input id=\\"punkt-po-punkcie\\" type=\\"checkbox\\" name=\\"punkt-po-punkcie\\" class=\\"checklista__input\\">
-    <div class=\\"checklista__fake-input\\"></div> <span class=\\"checklista__label\\">Punkt po punkcie</span>
-  </label><label for=\\"zycie\\" class=\\"checklista__checkbox\\"><input id=\\"zycie\\" type=\\"checkbox\\" name=\\"zycie\\" class=\\"checklista__input\\">
-    <div class=\\"checklista__fake-input\\"></div> <span class=\\"checklista__label\\">Życie</span>
+"<div class="checklista"><label for="byle-by-byc" class="checklista__checkbox"><input id="byle-by-byc" type="checkbox" name="byle-by-byc" class="checklista__input">
+    <div class="checklista__fake-input"></div> <span class="checklista__label">Byle by być</span>
+  </label><label for="byle-by-zaliczyc" class="checklista__checkbox"><input id="byle-by-zaliczyc" type="checkbox" name="byle-by-zaliczyc" class="checklista__input">
+    <div class="checklista__fake-input"></div> <span class="checklista__label">Byle by zaliczyć</span>
+  </label><label for="punkt-po-punkcie" class="checklista__checkbox"><input id="punkt-po-punkcie" type="checkbox" name="punkt-po-punkcie" class="checklista__input">
+    <div class="checklista__fake-input"></div> <span class="checklista__label">Punkt po punkcie</span>
+  </label><label for="zycie" class="checklista__checkbox"><input id="zycie" type="checkbox" name="zycie" class="checklista__input">
+    <div class="checklista__fake-input"></div> <span class="checklista__label">Życie</span>
   </label>
-  <p class=\\"checklista__last-line\\"><span class=\\"checklista__gradient\\">Życie w niebycie</span></p>
+  <p class="checklista__last-line"><span class="checklista__gradient">Życie w niebycie</span></p>
 </div>"
 `;

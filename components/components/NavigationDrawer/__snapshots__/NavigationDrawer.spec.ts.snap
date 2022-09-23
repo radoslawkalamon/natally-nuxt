@@ -2,21 +2,21 @@
 
 exports[`Components / Navigation Drawer Integration shall pass integration sanity test 1`] = `
 "<nav>
-  <ul class=\\"navigation\\">
-    <li class=\\"navigation__item\\">
-      <nuxtlink data-test=\\"navigation-item\\" to=\\"/\\" class=\\"link link--general\\">Strona główna</nuxtlink>
+  <ul class="navigation">
+    <li class="navigation__item">
+      <nuxtlink data-test="navigation-item" to="/" class="link link--general">Strona główna</nuxtlink>
     </li>
-    <li class=\\"navigation__item\\">
-      <nuxtlink data-test=\\"navigation-item\\" target=\\"_blank\\" to=\\"/o-mnie/\\" rel=\\"noopener noreferrer\\" class=\\"link link--general\\">O mnie</nuxtlink>
+    <li class="navigation__item">
+      <nuxtlink data-test="navigation-item" target="_blank" to="/o-mnie/" rel="noopener noreferrer" class="link link--general">O mnie</nuxtlink>
     </li>
-    <li class=\\"navigation__item\\">
-      <nuxtlink data-test=\\"navigation-item\\" to=\\"/poezja-314/\\" class=\\"link link--general\\">Poezja 3.14</nuxtlink>
+    <li class="navigation__item">
+      <nuxtlink data-test="navigation-item" to="/poezja-314/" class="link link--general">Poezja 3.14</nuxtlink>
     </li>
-    <li class=\\"navigation__item\\">
-      <nuxtlink data-test=\\"navigation-item\\" to=\\"/audiobooki/\\" class=\\"link link--general\\">Audiobooki</nuxtlink>
+    <li class="navigation__item">
+      <nuxtlink data-test="navigation-item" to="/audiobooki/" class="link link--general">Audiobooki</nuxtlink>
     </li>
-    <li class=\\"navigation__item\\">
-      <nuxtlink data-test=\\"navigation-item\\" target=\\"_blank\\" to=\\"/kontakt/\\" rel=\\"noopener noreferrer\\" class=\\"link link--general\\">Kontakt</nuxtlink>
+    <li class="navigation__item">
+      <nuxtlink data-test="navigation-item" target="_blank" to="/kontakt/" rel="noopener noreferrer" class="link link--general">Kontakt</nuxtlink>
     </li>
   </ul>
 </nav>"
@@ -25,11 +25,11 @@ exports[`Components / Navigation Drawer Integration shall pass integration sanit
 exports[`Components / Navigation Drawer Unit shall pass unit sanity test 1`] = `
 "<nav>
   <wrappersnavigation-stub>
-    <componentslink-stub data-test=\\"navigation-item\\" label=\\"Strona główna\\" to=\\"/\\"></componentslink-stub>
-    <componentslink-stub data-test=\\"navigation-item\\" label=\\"O mnie\\" target=\\"_blank\\" to=\\"/o-mnie/\\" rel=\\"noopener noreferrer\\"></componentslink-stub>
-    <componentslink-stub data-test=\\"navigation-item\\" label=\\"Poezja 3.14\\" to=\\"/poezja-314/\\"></componentslink-stub>
-    <componentslink-stub data-test=\\"navigation-item\\" label=\\"Audiobooki\\" to=\\"/audiobooki/\\"></componentslink-stub>
-    <componentslink-stub data-test=\\"navigation-item\\" label=\\"Kontakt\\" target=\\"_blank\\" to=\\"/kontakt/\\" rel=\\"noopener noreferrer\\"></componentslink-stub>
+    <componentslink-stub data-test="navigation-item" label="Strona główna" to="/"></componentslink-stub>
+    <componentslink-stub data-test="navigation-item" label="O mnie" target="_blank" to="/o-mnie/" rel="noopener noreferrer"></componentslink-stub>
+    <componentslink-stub data-test="navigation-item" label="Poezja 3.14" to="/poezja-314/"></componentslink-stub>
+    <componentslink-stub data-test="navigation-item" label="Audiobooki" to="/audiobooki/"></componentslink-stub>
+    <componentslink-stub data-test="navigation-item" label="Kontakt" target="_blank" to="/kontakt/" rel="noopener noreferrer"></componentslink-stub>
   </wrappersnavigation-stub>
 </nav>"
 `;
