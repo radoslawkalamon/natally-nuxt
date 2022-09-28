@@ -7,7 +7,7 @@ import ComponentsLoaderPoems from '@/components/components/LoaderPoems/LoaderPoe
 
 const usePoemLoader = (component: Promise<typeof import('*.vue')>) => ({
   component,
-  delay: 100,
+  delay: 1,
   loading: ComponentsLoaderPoems
 })
 
