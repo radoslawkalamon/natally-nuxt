@@ -46,29 +46,3 @@ jobs:
           DEPLOY_LOCAL_CATALOG: ${{ secrets.DEPLOY_LOCAL_CATALOG }}
           DEPLOY_COMMIT_SHA: ${{ github.sha }}
           DEPLOY_ZIP_NAME: ${{ github.sha }}
-
-  e2e_chrome:
-    needs: deploy
-    runs-on: ubuntu-latest
-    environment: stage
-    steps:
-      - name: Checkout 🛎
-        uses: actions/checkout@v3
-
-      - name: Run e2e tests @ Chrome 🧪
-        uses: cypress-io/github-action@v3
-        with:
-          browser: chrome
-
-  e2e_firefox:
-    needs: deploy
-    runs-on: ubuntu-latest
-    environment: stage
-    steps:
-      - name: Checkout 🛎
-        uses: actions/checkout@v3
-
-      - name: Run e2e tests @ Firefox 🧪
-        uses: cypress-io/github-action@v3
-        with:
-          browser: firefox
