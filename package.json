@@ -1,6 +1,6 @@
 {
   "name": "natally-nuxt",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "scripts": {
     "bootstrap:component": "ts-node ./bootstrap.component.ts",
     "deploy": "npm run generate && ts-node ./deploy.ts",
@@ -10,9 +10,8 @@
     "lint:script": "eslint --ignore-path .gitignore ./**/*.{js,ts,vue}",
     "lint:style": "stylelint --ignore-path .gitignore **/*.css",
     "prepare": "husky install",
-    "test": "npm run test:unit && npm run test:e2e",
-    "test:unit": "jest",
-    "test:e2e": "cypress run --headless"
+    "test": "npm run test:unit",
+    "test:unit": "jest"
   },
   "lint-staged": {
     "*.{js,ts,vue}": "eslint",
@@ -43,7 +42,6 @@
     "axios": "0.27.2",
     "babel-jest": "29.0.3",
     "basic-ftp": "5.0.2",
-    "cypress": "10.8.0",
     "dotenv": "16.0.2",
     "eslint": "8.23.1",
     "eslint-plugin-nuxt": "4.0.0",

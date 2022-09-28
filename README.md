@@ -2,7 +2,7 @@
 
 ## Entry points
 - [https://169cm.pl](https://169cm.pl)
-- [https://stage.169cm.pl](https://stage.169cm.pl)
+- ~~[https://stage.169cm.pl](https://stage.169cm.pl)~~
 
 ## Commands
 
@@ -18,6 +18,7 @@ $ npm install
 $ npm run dev
 
 # run tests
+$ npm run lint
 $ npm run test
 
 # generate static project
@@ -52,9 +53,6 @@ Please note: This repository is portfolio-like to showcase my latest development
 
 ### Do you like Nuxt?
 Version 2 is quite nice, but I am looking for Version 3. It is faster & have better TypeScript support. Yet, mein gott! This project was a Nuxt crash course for me. Modules, Head, Plugins, Lazy Hydration, SSR / SSG, no browser context on the server side, Content Mismatch & a bit of Lighthouse performance fights :D
-
-### Why not Nuxt 3?
-I started development in August 2021. There were no Nuxt 3 beta then. Also, I tried the `nuxt/content` and it not supports v3 yet.
 
 ### Where is the SASS / LESS / Stylus / other CSS preprocessor?
 Is it possible to create medium size project with CSS only? It was fun, but I missed SCSS a lot (especially mixins and tooling). Today, I would go with the SCSS from the beginning.
