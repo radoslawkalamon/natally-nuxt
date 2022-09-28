@@ -32,7 +32,7 @@ const config: Config = {
     }
   },
   testEnvironment: 'jsdom',
-  testPathIgnorePatterns: ['<rootDir>/devtools/', '<rootDir>/cypress/']
+  testPathIgnorePatterns: ['<rootDir>/devtools/']
 }
 
 export default config
